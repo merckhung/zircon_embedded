@@ -1,0 +1,903 @@
+{
+  "name": "fuchsia.ldsvc",
+  "platform": "fuchsia",
+  "available": {
+    "fuchsia": [
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "NEXT",
+      "HEAD"
+    ]
+  },
+  "maybe_attributes": [
+    {
+      "name": "available",
+      "arguments": [
+        {
+          "name": "added",
+          "type": "uint32",
+          "value": {
+            "kind": "literal",
+            "value": "7",
+            "expression": "7",
+            "literal": {
+              "kind": "numeric",
+              "value": "7",
+              "expression": "7"
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+            "line": 4,
+            "column": 12,
+            "length": 7
+          }
+        }
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+        "line": 4,
+        "column": 1,
+        "length": 19
+      }
+    }
+  ],
+  "experiments": [],
+  "library_dependencies": [
+    {
+      "name": "zx",
+      "declarations": {
+        "zx/Rights": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "zx/CHANNEL_MAX_MSG_BYTES": {
+          "kind": "const"
+        },
+        "zx/CHANNEL_MAX_MSG_HANDLES": {
+          "kind": "const"
+        },
+        "zx/DEFAULT_CHANNEL_RIGHTS": {
+          "kind": "const"
+        },
+        "zx/DEFAULT_EVENT_RIGHTS": {
+          "kind": "const"
+        },
+        "zx/IOB_MAX_REGIONS": {
+          "kind": "const"
+        },
+        "zx/MAX_CPUS": {
+          "kind": "const"
+        },
+        "zx/MAX_NAME_LEN": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_BASIC": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_IO": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_POLICY": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_PROPERTY": {
+          "kind": "const"
+        },
+        "zx/ObjType": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "zx/Handle": {
+          "kind": "experimental_resource"
+        },
+        "zx/Duration": {
+          "kind": "alias"
+        },
+        "zx/DurationBoot": {
+          "kind": "alias"
+        },
+        "zx/DurationMono": {
+          "kind": "alias"
+        },
+        "zx/InstantBoot": {
+          "kind": "alias"
+        },
+        "zx/InstantBootTicks": {
+          "kind": "alias"
+        },
+        "zx/InstantMono": {
+          "kind": "alias"
+        },
+        "zx/InstantMonoTicks": {
+          "kind": "alias"
+        },
+        "zx/Koid": {
+          "kind": "alias"
+        },
+        "zx/Off": {
+          "kind": "alias"
+        },
+        "zx/Result": {
+          "kind": "alias"
+        },
+        "zx/Signals": {
+          "kind": "alias"
+        },
+        "zx/Status": {
+          "kind": "alias"
+        },
+        "zx/Ticks": {
+          "kind": "alias"
+        },
+        "zx/Time": {
+          "kind": "alias"
+        }
+      }
+    }
+  ],
+  "bits_declarations": [],
+  "const_declarations": [],
+  "enum_declarations": [],
+  "experimental_resource_declarations": [],
+  "protocol_declarations": [
+    {
+      "name": "fuchsia.ldsvc/Loader",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+        "line": 15,
+        "column": 17,
+        "length": 6
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " See //docs/concepts/process/program_loading.md for a more complete\n description of this and related process bootstrapping protocols, and\n for specifics about the default global loader service's\n interpretation of names, paths, and configurations.\n",
+                "expression": "/// See //docs/concepts/process/program_loading.md for a more complete\n/// description of this and related process bootstrapping protocols, and\n/// for specifics about the default global loader service's\n/// interpretation of names, paths, and configurations.",
+                "literal": {
+                  "kind": "string",
+                  "value": " See //docs/concepts/process/program_loading.md for a more complete\n description of this and related process bootstrapping protocols, and\n for specifics about the default global loader service's\n interpretation of names, paths, and configurations.\n",
+                  "expression": "/// See //docs/concepts/process/program_loading.md for a more complete\n/// description of this and related process bootstrapping protocols, and\n/// for specifics about the default global loader service's\n/// interpretation of names, paths, and configurations."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+                "line": 11,
+                "column": 1,
+                "length": 259
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+            "line": 11,
+            "column": 1,
+            "length": 259
+          }
+        }
+      ],
+      "openness": "closed",
+      "composed_protocols": [],
+      "methods": [
+        {
+          "kind": "oneway",
+          "ordinal": 7186174313520107521,
+          "name": "Done",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+            "line": 17,
+            "column": 12,
+            "length": 4
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Cleanly shutdown the connection to the Loader service.\n",
+                    "expression": "/// Cleanly shutdown the connection to the Loader service.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Cleanly shutdown the connection to the Loader service.\n",
+                      "expression": "/// Cleanly shutdown the connection to the Loader service."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+                    "line": 16,
+                    "column": 5,
+                    "length": 58
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+                "line": 16,
+                "column": 5,
+                "length": 58
+              }
+            }
+          ],
+          "has_response": false,
+          "is_composed": false,
+          "has_error": false
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 5243774714012182611,
+          "name": "LoadObject",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+            "line": 21,
+            "column": 12,
+            "length": 10
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The dynamic linker sends `object_name` and gets back a VMO\n handle containing the file.\n",
+                    "expression": "/// The dynamic linker sends `object_name` and gets back a VMO\n    /// handle containing the file.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The dynamic linker sends `object_name` and gets back a VMO\n handle containing the file.\n",
+                      "expression": "/// The dynamic linker sends `object_name` and gets back a VMO\n    /// handle containing the file."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+                    "line": 19,
+                    "column": 5,
+                    "length": 98
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+                "line": 19,
+                "column": 5,
+                "length": 98
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.ldsvc/LoaderLoadObjectRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 1024,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.ldsvc/LoaderLoadObjectResponse",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": false
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 7676977189692319809,
+          "name": "Config",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+            "line": 32,
+            "column": 12,
+            "length": 6
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The dynamic linker sends a `config` identifying its load\n configuration.  This is intended to affect how later\n `LoadObject` requests decide what particular implementation\n file to supply for a given name.\n",
+                    "expression": "/// The dynamic linker sends a `config` identifying its load\n    /// configuration.  This is intended to affect how later\n    /// `LoadObject` requests decide what particular implementation\n    /// file to supply for a given name.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The dynamic linker sends a `config` identifying its load\n configuration.  This is intended to affect how later\n `LoadObject` requests decide what particular implementation\n file to supply for a given name.\n",
+                      "expression": "/// The dynamic linker sends a `config` identifying its load\n    /// configuration.  This is intended to affect how later\n    /// `LoadObject` requests decide what particular implementation\n    /// file to supply for a given name."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+                    "line": 28,
+                    "column": 5,
+                    "length": 230
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+                "line": 28,
+                "column": 5,
+                "length": 230
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.ldsvc/LoaderConfigRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 1024,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.ldsvc/LoaderConfigResponse",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": false
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 6333824321947847721,
+          "name": "Clone",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+            "line": 39,
+            "column": 12,
+            "length": 5
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Obtain a new loader service connection.\n",
+                    "expression": "/// Obtain a new loader service connection.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Obtain a new loader service connection.\n",
+                      "expression": "/// Obtain a new loader service connection."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+                    "line": 38,
+                    "column": 5,
+                    "length": 43
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+                "line": 38,
+                "column": 5,
+                "length": 43
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.ldsvc/LoaderCloneRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.ldsvc/LoaderCloneResponse",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": false
+        }
+      ]
+    }
+  ],
+  "service_declarations": [],
+  "struct_declarations": [
+    {
+      "name": "fuchsia.ldsvc/LoaderCloneRequest",
+      "naming_context": [
+        "Loader",
+        "Clone",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+        "line": 39,
+        "column": 18,
+        "length": 57
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "endpoint",
+            "role": "server",
+            "protocol": "fuchsia.ldsvc/Loader",
+            "nullable": false,
+            "protocol_transport": "Channel",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "loader",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+            "line": 40,
+            "column": 9,
+            "length": 6
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 4,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 1,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.ldsvc/LoaderCloneResponse",
+      "naming_context": [
+        "Loader",
+        "Clone",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+        "line": 41,
+        "column": 12,
+        "length": 36
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Result",
+            "args": [],
+            "nullable": false
+          },
+          "name": "rv",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+            "line": 42,
+            "column": 9,
+            "length": 2
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 4,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.ldsvc/LoaderConfigRequest",
+      "naming_context": [
+        "Loader",
+        "Config",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+        "line": 32,
+        "column": 19,
+        "length": 42
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "string",
+            "maybe_element_count": 1024,
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 1024,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "config",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+            "line": 33,
+            "column": 9,
+            "length": 6
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 1024,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.ldsvc/LoaderConfigResponse",
+      "naming_context": [
+        "Loader",
+        "Config",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+        "line": 34,
+        "column": 12,
+        "length": 36
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Result",
+            "args": [],
+            "nullable": false
+          },
+          "name": "rv",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+            "line": 35,
+            "column": 9,
+            "length": 2
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 4,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.ldsvc/LoaderLoadObjectRequest",
+      "naming_context": [
+        "Loader",
+        "LoadObject",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+        "line": 21,
+        "column": 23,
+        "length": 47
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "string",
+            "maybe_element_count": 1024,
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 1024,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "object_name",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+            "line": 22,
+            "column": 9,
+            "length": 11
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 1024,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.ldsvc/LoaderLoadObjectResponse",
+      "naming_context": [
+        "Loader",
+        "LoadObject",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+        "line": 23,
+        "column": 12,
+        "length": 87
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Result",
+            "args": [],
+            "nullable": false
+          },
+          "name": "rv",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+            "line": 24,
+            "column": 9,
+            "length": 2
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "handle",
+            "obj_type": 3,
+            "subtype": "vmo",
+            "rights": 2147483648,
+            "nullable": true,
+            "resource_identifier": "zx/Handle",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "object",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.ldsvc/ldsvc.fidl",
+            "line": 25,
+            "column": 9,
+            "length": 6
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 4,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 8,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 1,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    }
+  ],
+  "external_struct_declarations": [],
+  "table_declarations": [],
+  "union_declarations": [],
+  "alias_declarations": [],
+  "new_type_declarations": [],
+  "declaration_order": [
+    "fuchsia.ldsvc/LoaderLoadObjectRequest",
+    "fuchsia.ldsvc/LoaderLoadObjectResponse",
+    "fuchsia.ldsvc/LoaderConfigRequest",
+    "fuchsia.ldsvc/LoaderConfigResponse",
+    "fuchsia.ldsvc/LoaderCloneRequest",
+    "fuchsia.ldsvc/LoaderCloneResponse",
+    "fuchsia.ldsvc/Loader"
+  ],
+  "declarations": {
+    "fuchsia.ldsvc/Loader": "protocol",
+    "fuchsia.ldsvc/LoaderCloneRequest": "struct",
+    "fuchsia.ldsvc/LoaderCloneResponse": "struct",
+    "fuchsia.ldsvc/LoaderConfigRequest": "struct",
+    "fuchsia.ldsvc/LoaderConfigResponse": "struct",
+    "fuchsia.ldsvc/LoaderLoadObjectRequest": "struct",
+    "fuchsia.ldsvc/LoaderLoadObjectResponse": "struct"
+  }
+}

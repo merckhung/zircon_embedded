@@ -1,0 +1,10 @@
+host_x64/obj/third_party/rust_crates/serde_derive-v1_0_229.actual/libserde_derive-6e5702ca913dc32e.so
+host_x64/obj/third_party/rust_crates/serde_derive-v1_0_229.actual/libserde_derive-6e5702ca913dc32e.rmeta
+obj/third_party/rust_crates/serde_core-v1_0_229.actual/libserde_core-fa0896c771ca5b37.rlib
+obj/third_party/rust_crates/serde_core-v1_0_229.actual/libserde_core-fa0896c771ca5b37.rmeta
+obj/third_party/rust_crates/bitflags-v2_13_0.actual/libbitflags-2043246776ae7a71.rlib
+obj/third_party/rust_crates/bitflags-v2_13_0.actual/libbitflags-2043246776ae7a71.rmeta
+host_x64/obj/third_party/rust_crates/zerocopy-derive-v0_8_48.actual/libzerocopy_derive-4a1dfc7e9e1ba93b.so
+host_x64/obj/third_party/rust_crates/zerocopy-derive-v0_8_48.actual/libzerocopy_derive-4a1dfc7e9e1ba93b.rmeta
+obj/third_party/rust_crates/zerocopy-v0_8_48.actual/libzerocopy-2b12925d406dcbcb.rlib
+obj/third_party/rust_crates/zerocopy-v0_8_48.actual/libzerocopy-2b12925d406dcbcb.rmeta

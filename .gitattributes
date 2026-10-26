@@ -1,0 +1,4 @@
+# Large distributable artifacts use Git LFS to fit GitHub's file-size limits.
+chromium/prebuilt/chrome filter=lfs diff=lfs merge=lfs -text
+chromium/prebuilt_arm64/chrome filter=lfs diff=lfs merge=lfs -text
+chromium/runtime_sources/*.tar.xz filter=lfs diff=lfs merge=lfs -text

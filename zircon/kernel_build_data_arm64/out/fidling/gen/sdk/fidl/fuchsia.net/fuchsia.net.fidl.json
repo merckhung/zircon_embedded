@@ -1,0 +1,2725 @@
+{
+  "name": "fuchsia.net",
+  "platform": "fuchsia",
+  "available": {
+    "fuchsia": [
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "NEXT",
+      "HEAD"
+    ]
+  },
+  "maybe_attributes": [
+    {
+      "name": "available",
+      "arguments": [
+        {
+          "name": "added",
+          "type": "uint32",
+          "value": {
+            "kind": "literal",
+            "value": "7",
+            "expression": "7",
+            "literal": {
+              "kind": "numeric",
+              "value": "7",
+              "expression": "7"
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/overview.fidl",
+            "line": 4,
+            "column": 12,
+            "length": 7
+          }
+        }
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net/overview.fidl",
+        "line": 4,
+        "column": 1,
+        "length": 19
+      }
+    }
+  ],
+  "experiments": [],
+  "library_dependencies": [],
+  "bits_declarations": [],
+  "const_declarations": [
+    {
+      "name": "fuchsia.net/MARK_DOMAIN_SOCKET_UID",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+        "line": 114,
+        "column": 7,
+        "length": 22
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Fuchsia does not have UIDs, we use the `MARK_2` domain mark to store the\n UID of the process that created the sockets when the socket was created\n by a process running in Starnix. This mark should be left unset otherwise.\n",
+                "expression": "/// Fuchsia does not have UIDs, we use the `MARK_2` domain mark to store the\n/// UID of the process that created the sockets when the socket was created\n/// by a process running in Starnix. This mark should be left unset otherwise.",
+                "literal": {
+                  "kind": "string",
+                  "value": " Fuchsia does not have UIDs, we use the `MARK_2` domain mark to store the\n UID of the process that created the sockets when the socket was created\n by a process running in Starnix. This mark should be left unset otherwise.\n",
+                  "expression": "/// Fuchsia does not have UIDs, we use the `MARK_2` domain mark to store the\n/// UID of the process that created the sockets when the socket was created\n/// by a process running in Starnix. This mark should be left unset otherwise."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 110,
+                "column": 1,
+                "length": 231
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 110,
+            "column": 1,
+            "length": 231
+          }
+        },
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "identifier",
+                "value": "4292870144",
+                "expression": "HEAD",
+                "identifier": "fidl/HEAD"
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 113,
+                "column": 12,
+                "length": 10
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 113,
+            "column": 1,
+            "length": 22
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "identifier",
+        "identifier": "fuchsia.net/MarkDomain",
+        "nullable": false,
+        "type_shape_v2": {
+          "inline_size": 1,
+          "alignment": 1,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "identifier",
+        "value": "2",
+        "expression": "MarkDomain.MARK_2",
+        "identifier": "fuchsia.net/MarkDomain.MARK_2"
+      }
+    },
+    {
+      "name": "fuchsia.net/MARK_DOMAIN_SO_MARK",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+        "line": 108,
+        "column": 7,
+        "length": 19
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " `MARK_1` domain is used to store the `SO_MARK` value set by Starnix\n processes. If a mark in this domain is absent, it will be reported to\n applications as a `0` since that is the default mark value on Linux.\n",
+                "expression": "/// `MARK_1` domain is used to store the `SO_MARK` value set by Starnix\n/// processes. If a mark in this domain is absent, it will be reported to\n/// applications as a `0` since that is the default mark value on Linux.",
+                "literal": {
+                  "kind": "string",
+                  "value": " `MARK_1` domain is used to store the `SO_MARK` value set by Starnix\n processes. If a mark in this domain is absent, it will be reported to\n applications as a `0` since that is the default mark value on Linux.\n",
+                  "expression": "/// `MARK_1` domain is used to store the `SO_MARK` value set by Starnix\n/// processes. If a mark in this domain is absent, it will be reported to\n/// applications as a `0` since that is the default mark value on Linux."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 104,
+                "column": 1,
+                "length": 218
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 104,
+            "column": 1,
+            "length": 218
+          }
+        },
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "identifier",
+                "value": "4292870144",
+                "expression": "HEAD",
+                "identifier": "fidl/HEAD"
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 107,
+                "column": 12,
+                "length": 10
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 107,
+            "column": 1,
+            "length": 22
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "identifier",
+        "identifier": "fuchsia.net/MarkDomain",
+        "nullable": false,
+        "type_shape_v2": {
+          "inline_size": 1,
+          "alignment": 1,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "identifier",
+        "value": "1",
+        "expression": "MarkDomain.MARK_1",
+        "identifier": "fuchsia.net/MarkDomain.MARK_1"
+      }
+    },
+    {
+      "name": "fuchsia.net/MAX_HOSTNAME_SIZE",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+        "line": 9,
+        "column": 7,
+        "length": 17
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " The maximum length of a hostname, as per\n [RFC 1035 section 2.3.4](https://tools.ietf.org/html/rfc1035#section-2.3.4).\n",
+                "expression": "/// The maximum length of a hostname, as per\n/// [RFC 1035 section 2.3.4](https://tools.ietf.org/html/rfc1035#section-2.3.4).",
+                "literal": {
+                  "kind": "string",
+                  "value": " The maximum length of a hostname, as per\n [RFC 1035 section 2.3.4](https://tools.ietf.org/html/rfc1035#section-2.3.4).\n",
+                  "expression": "/// The maximum length of a hostname, as per\n/// [RFC 1035 section 2.3.4](https://tools.ietf.org/html/rfc1035#section-2.3.4)."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 6,
+                "column": 1,
+                "length": 125
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 6,
+            "column": 1,
+            "length": 125
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "255",
+        "expression": "255",
+        "literal": {
+          "kind": "numeric",
+          "value": "255",
+          "expression": "255"
+        }
+      }
+    }
+  ],
+  "enum_declarations": [
+    {
+      "name": "fuchsia.net/IpVersion",
+      "naming_context": [
+        "IpVersion"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+        "line": 25,
+        "column": 6,
+        "length": 9
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " IpVersion is an IP version.\n",
+                "expression": "/// IpVersion is an IP version.",
+                "literal": {
+                  "kind": "string",
+                  "value": " IpVersion is an IP version.\n",
+                  "expression": "/// IpVersion is an IP version."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 23,
+                "column": 1,
+                "length": 31
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 23,
+            "column": 1,
+            "length": 31
+          }
+        },
+        {
+          "name": "strict_audit",
+          "arguments": [
+            {
+              "name": "bug",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "https://fxbug.dev/467128725",
+                "expression": "\"https://fxbug.dev/467128725\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "https://fxbug.dev/467128725",
+                  "expression": "\"https://fxbug.dev/467128725\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 24,
+                "column": 15,
+                "length": 33
+              }
+            },
+            {
+              "name": "state",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "PENDING_REVIEW",
+                "expression": "\"PENDING_REVIEW\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "PENDING_REVIEW",
+                  "expression": "\"PENDING_REVIEW\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 24,
+                "column": 50,
+                "length": 22
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 24,
+            "column": 1,
+            "length": 72
+          }
+        }
+      ],
+      "type": "uint32",
+      "members": [
+        {
+          "name": "V4",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 26,
+            "column": 5,
+            "length": 2
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "1",
+            "expression": "1",
+            "literal": {
+              "kind": "numeric",
+              "value": "1",
+              "expression": "1"
+            }
+          }
+        },
+        {
+          "name": "V6",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 27,
+            "column": 5,
+            "length": 2
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "2",
+            "expression": "2",
+            "literal": {
+              "kind": "numeric",
+              "value": "2",
+              "expression": "2"
+            }
+          }
+        }
+      ],
+      "strict": true
+    },
+    {
+      "name": "fuchsia.net/MarkDomain",
+      "naming_context": [
+        "MarkDomain"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+        "line": 99,
+        "column": 6,
+        "length": 10
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Domains for a mark. This allows multiple marks to be set and retrieved\n independently.\n",
+                "expression": "/// Domains for a mark. This allows multiple marks to be set and retrieved\n/// independently.",
+                "literal": {
+                  "kind": "string",
+                  "value": " Domains for a mark. This allows multiple marks to be set and retrieved\n independently.\n",
+                  "expression": "/// Domains for a mark. This allows multiple marks to be set and retrieved\n/// independently."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 96,
+                "column": 1,
+                "length": 93
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 96,
+            "column": 1,
+            "length": 93
+          }
+        },
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "identifier",
+                "value": "4292870144",
+                "expression": "HEAD",
+                "identifier": "fidl/HEAD"
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 98,
+                "column": 12,
+                "length": 10
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 98,
+            "column": 1,
+            "length": 22
+          }
+        }
+      ],
+      "type": "uint8",
+      "members": [
+        {
+          "name": "MARK_1",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 100,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "1",
+            "expression": "1",
+            "literal": {
+              "kind": "numeric",
+              "value": "1",
+              "expression": "1"
+            }
+          }
+        },
+        {
+          "name": "MARK_2",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 101,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "2",
+            "expression": "2",
+            "literal": {
+              "kind": "numeric",
+              "value": "2",
+              "expression": "2"
+            }
+          }
+        }
+      ],
+      "strict": true
+    }
+  ],
+  "experimental_resource_declarations": [],
+  "protocol_declarations": [],
+  "service_declarations": [],
+  "struct_declarations": [
+    {
+      "name": "fuchsia.net/Ipv4Address",
+      "naming_context": [
+        "Ipv4Address"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+        "line": 32,
+        "column": 6,
+        "length": 11
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Ipv4Address is expressed in network byte order, so the most significant byte\n (\"127\" in the address \"127.0.0.1\") will be at index 0.\n",
+                "expression": "/// Ipv4Address is expressed in network byte order, so the most significant byte\n/// (\"127\" in the address \"127.0.0.1\") will be at index 0.",
+                "literal": {
+                  "kind": "string",
+                  "value": " Ipv4Address is expressed in network byte order, so the most significant byte\n (\"127\" in the address \"127.0.0.1\") will be at index 0.\n",
+                  "expression": "/// Ipv4Address is expressed in network byte order, so the most significant byte\n/// (\"127\" in the address \"127.0.0.1\") will be at index 0."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 30,
+                "column": 1,
+                "length": 139
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 30,
+            "column": 1,
+            "length": 139
+          }
+        }
+      ],
+      "members": [
+        {
+          "type": {
+            "kind_v2": "array",
+            "element_type": {
+              "kind_v2": "primitive",
+              "subtype": "uint8",
+              "type_shape_v2": {
+                "inline_size": 1,
+                "alignment": 1,
+                "depth": 0,
+                "max_handles": 0,
+                "max_out_of_line": 0,
+                "has_padding": false,
+                "has_flexible_envelope": false
+              }
+            },
+            "element_count": 4,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "addr",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 35,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "sensitive",
+              "arguments": [],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 34,
+                "column": 5,
+                "length": 10
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 4,
+        "alignment": 1,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.net/Ipv4AddressWithPrefix",
+      "naming_context": [
+        "Ipv4AddressWithPrefix"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+        "line": 69,
+        "column": 6,
+        "length": 21
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " An IPv4 address with its subnet prefix length.\n",
+                "expression": "/// An IPv4 address with its subnet prefix length.",
+                "literal": {
+                  "kind": "string",
+                  "value": " An IPv4 address with its subnet prefix length.\n",
+                  "expression": "/// An IPv4 address with its subnet prefix length."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 68,
+                "column": 1,
+                "length": 50
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 68,
+            "column": 1,
+            "length": 50
+          }
+        }
+      ],
+      "members": [
+        {
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net/Ipv4Address",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "addr",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 71,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The IPv4 address.\n",
+                    "expression": "/// The IPv4 address.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The IPv4 address.\n",
+                      "expression": "/// The IPv4 address."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                    "line": 70,
+                    "column": 5,
+                    "length": 21
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 70,
+                "column": 5,
+                "length": 21
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint8",
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "prefix_len",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 74,
+            "column": 5,
+            "length": 10
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The prefix length. Must be in the range [0, 32].\n",
+                    "expression": "/// The prefix length. Must be in the range [0, 32].",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The prefix length. Must be in the range [0, 32].\n",
+                      "expression": "/// The prefix length. Must be in the range [0, 32]."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                    "line": 73,
+                    "column": 5,
+                    "length": 52
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 73,
+                "column": 5,
+                "length": 52
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 4,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 5,
+        "alignment": 1,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.net/Ipv4SocketAddress",
+      "naming_context": [
+        "Ipv4SocketAddress"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+        "line": 11,
+        "column": 6,
+        "length": 17
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " An IPv4 socket address, composed of an IPv4 address and a port.\n\n Inspired by the address definition in the [POSIX specification].\n\n [POSIX specification]: https://pubs.opengroup.org/onlinepubs/9699919799/\n",
+                "expression": "/// An IPv4 socket address, composed of an IPv4 address and a port.\n///\n/// Inspired by the address definition in the [POSIX specification].\n///\n/// [POSIX specification]: https://pubs.opengroup.org/onlinepubs/9699919799/",
+                "literal": {
+                  "kind": "string",
+                  "value": " An IPv4 socket address, composed of an IPv4 address and a port.\n\n Inspired by the address definition in the [POSIX specification].\n\n [POSIX specification]: https://pubs.opengroup.org/onlinepubs/9699919799/\n",
+                  "expression": "/// An IPv4 socket address, composed of an IPv4 address and a port.\n///\n/// Inspired by the address definition in the [POSIX specification].\n///\n/// [POSIX specification]: https://pubs.opengroup.org/onlinepubs/9699919799/"
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+                "line": 6,
+                "column": 1,
+                "length": 221
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+            "line": 6,
+            "column": 1,
+            "length": 221
+          }
+        }
+      ],
+      "members": [
+        {
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net/Ipv4Address",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "address",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+            "line": 13,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " IPv4 Address.\n",
+                    "expression": "/// IPv4 Address.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " IPv4 Address.\n",
+                      "expression": "/// IPv4 Address."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+                    "line": 12,
+                    "column": 5,
+                    "length": 17
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+                "line": 12,
+                "column": 5,
+                "length": 17
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint16",
+            "type_shape_v2": {
+              "inline_size": 2,
+              "alignment": 2,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "port",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+            "line": 15,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Transport-layer port.\n",
+                    "expression": "/// Transport-layer port.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Transport-layer port.\n",
+                      "expression": "/// Transport-layer port."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+                    "line": 14,
+                    "column": 5,
+                    "length": 25
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+                "line": 14,
+                "column": 5,
+                "length": 25
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 4,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 6,
+        "alignment": 2,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.net/Ipv6Address",
+      "naming_context": [
+        "Ipv6Address"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+        "line": 40,
+        "column": 6,
+        "length": 11
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Ipv6Address is expressed in network byte order, so the most significant byte\n (\"ff\" in the address \"ff02::1\") will be at index 0.\n",
+                "expression": "/// Ipv6Address is expressed in network byte order, so the most significant byte\n/// (\"ff\" in the address \"ff02::1\") will be at index 0.",
+                "literal": {
+                  "kind": "string",
+                  "value": " Ipv6Address is expressed in network byte order, so the most significant byte\n (\"ff\" in the address \"ff02::1\") will be at index 0.\n",
+                  "expression": "/// Ipv6Address is expressed in network byte order, so the most significant byte\n/// (\"ff\" in the address \"ff02::1\") will be at index 0."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 38,
+                "column": 1,
+                "length": 136
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 38,
+            "column": 1,
+            "length": 136
+          }
+        }
+      ],
+      "members": [
+        {
+          "type": {
+            "kind_v2": "array",
+            "element_type": {
+              "kind_v2": "primitive",
+              "subtype": "uint8",
+              "type_shape_v2": {
+                "inline_size": 1,
+                "alignment": 1,
+                "depth": 0,
+                "max_handles": 0,
+                "max_out_of_line": 0,
+                "has_padding": false,
+                "has_flexible_envelope": false
+              }
+            },
+            "element_count": 16,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "addr",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 43,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "sensitive",
+              "arguments": [],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 42,
+                "column": 5,
+                "length": 10
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 1,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.net/Ipv6AddressWithPrefix",
+      "naming_context": [
+        "Ipv6AddressWithPrefix"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+        "line": 78,
+        "column": 6,
+        "length": 21
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " An IPv6 address with its subnet prefix length.\n",
+                "expression": "/// An IPv6 address with its subnet prefix length.",
+                "literal": {
+                  "kind": "string",
+                  "value": " An IPv6 address with its subnet prefix length.\n",
+                  "expression": "/// An IPv6 address with its subnet prefix length."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 77,
+                "column": 1,
+                "length": 50
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 77,
+            "column": 1,
+            "length": 50
+          }
+        }
+      ],
+      "members": [
+        {
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net/Ipv6Address",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "addr",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 80,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The IPv6 address.\n",
+                    "expression": "/// The IPv6 address.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The IPv6 address.\n",
+                      "expression": "/// The IPv6 address."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                    "line": 79,
+                    "column": 5,
+                    "length": 21
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 79,
+                "column": 5,
+                "length": 21
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint8",
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "prefix_len",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 83,
+            "column": 5,
+            "length": 10
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The prefix length. Must be in the range [0, 128].\n",
+                    "expression": "/// The prefix length. Must be in the range [0, 128].",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The prefix length. Must be in the range [0, 128].\n",
+                      "expression": "/// The prefix length. Must be in the range [0, 128]."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                    "line": 82,
+                    "column": 5,
+                    "length": 53
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 82,
+                "column": 5,
+                "length": 53
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 16,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 17,
+        "alignment": 1,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.net/Ipv6SocketAddress",
+      "naming_context": [
+        "Ipv6SocketAddress"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+        "line": 23,
+        "column": 6,
+        "length": 17
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " An IPV6 socket address, composed of an IPv6 address, a port, and a scope identifier.\n\n Inspired by the address definition in the [POSIX specification].\n\n [POSIX specification]: https://pubs.opengroup.org/onlinepubs/9699919799/\n",
+                "expression": "/// An IPV6 socket address, composed of an IPv6 address, a port, and a scope identifier.\n///\n/// Inspired by the address definition in the [POSIX specification].\n///\n/// [POSIX specification]: https://pubs.opengroup.org/onlinepubs/9699919799/",
+                "literal": {
+                  "kind": "string",
+                  "value": " An IPV6 socket address, composed of an IPv6 address, a port, and a scope identifier.\n\n Inspired by the address definition in the [POSIX specification].\n\n [POSIX specification]: https://pubs.opengroup.org/onlinepubs/9699919799/\n",
+                  "expression": "/// An IPV6 socket address, composed of an IPv6 address, a port, and a scope identifier.\n///\n/// Inspired by the address definition in the [POSIX specification].\n///\n/// [POSIX specification]: https://pubs.opengroup.org/onlinepubs/9699919799/"
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+                "line": 18,
+                "column": 1,
+                "length": 242
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+            "line": 18,
+            "column": 1,
+            "length": 242
+          }
+        }
+      ],
+      "members": [
+        {
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net/Ipv6Address",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "address",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+            "line": 25,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " IPv6 Address.\n",
+                    "expression": "/// IPv6 Address.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " IPv6 Address.\n",
+                      "expression": "/// IPv6 Address."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+                    "line": 24,
+                    "column": 5,
+                    "length": 17
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+                "line": 24,
+                "column": 5,
+                "length": 17
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint16",
+            "type_shape_v2": {
+              "inline_size": 2,
+              "alignment": 2,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "port",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+            "line": 27,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Transport-layer port.\n",
+                    "expression": "/// Transport-layer port.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Transport-layer port.\n",
+                      "expression": "/// Transport-layer port."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+                    "line": 26,
+                    "column": 5,
+                    "length": 25
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+                "line": 26,
+                "column": 5,
+                "length": 25
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 16,
+            "padding": 6
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint64",
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "fuchsia.net/InterfaceId",
+            "args": [],
+            "nullable": false
+          },
+          "name": "zone_index",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+            "line": 39,
+            "column": 5,
+            "length": 10
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Provides a means to identify to which zone a non-global address belongs.\n\n A node may have interfaces attached to different zones of the same scope, for example\n different link-local zones are disambiguated by the use of a `zone_index` providing the\n interface identifier.\n\n `zone_index` 0 is the default zone.\n\n See [RFC 4007] for terminology and examples.\n\n [RFC 4007]: https://tools.ietf.org/html/rfc4007\n",
+                    "expression": "/// Provides a means to identify to which zone a non-global address belongs.\n    ///\n    /// A node may have interfaces attached to different zones of the same scope, for example\n    /// different link-local zones are disambiguated by the use of a `zone_index` providing the\n    /// interface identifier.\n    ///\n    /// `zone_index` 0 is the default zone.\n    ///\n    /// See [RFC 4007] for terminology and examples.\n    ///\n    /// [RFC 4007]: https://tools.ietf.org/html/rfc4007",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Provides a means to identify to which zone a non-global address belongs.\n\n A node may have interfaces attached to different zones of the same scope, for example\n different link-local zones are disambiguated by the use of a `zone_index` providing the\n interface identifier.\n\n `zone_index` 0 is the default zone.\n\n See [RFC 4007] for terminology and examples.\n\n [RFC 4007]: https://tools.ietf.org/html/rfc4007\n",
+                      "expression": "/// Provides a means to identify to which zone a non-global address belongs.\n    ///\n    /// A node may have interfaces attached to different zones of the same scope, for example\n    /// different link-local zones are disambiguated by the use of a `zone_index` providing the\n    /// interface identifier.\n    ///\n    /// `zone_index` 0 is the default zone.\n    ///\n    /// See [RFC 4007] for terminology and examples.\n    ///\n    /// [RFC 4007]: https://tools.ietf.org/html/rfc4007"
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+                    "line": 28,
+                    "column": 5,
+                    "length": 481
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+                "line": 28,
+                "column": 5,
+                "length": 481
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 24,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 32,
+        "alignment": 8,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.net/MacAddress",
+      "naming_context": [
+        "MacAddress"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+        "line": 87,
+        "column": 6,
+        "length": 10
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " A MAC address used to identify a network interface on the data link layer within the network.\n",
+                "expression": "/// A MAC address used to identify a network interface on the data link layer within the network.",
+                "literal": {
+                  "kind": "string",
+                  "value": " A MAC address used to identify a network interface on the data link layer within the network.\n",
+                  "expression": "/// A MAC address used to identify a network interface on the data link layer within the network."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 86,
+                "column": 1,
+                "length": 97
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 86,
+            "column": 1,
+            "length": 97
+          }
+        }
+      ],
+      "members": [
+        {
+          "type": {
+            "kind_v2": "array",
+            "element_type": {
+              "kind_v2": "primitive",
+              "subtype": "uint8",
+              "type_shape_v2": {
+                "inline_size": 1,
+                "alignment": 1,
+                "depth": 0,
+                "max_handles": 0,
+                "max_out_of_line": 0,
+                "has_padding": false,
+                "has_flexible_envelope": false
+              }
+            },
+            "element_count": 6,
+            "type_shape_v2": {
+              "inline_size": 6,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "octets",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 89,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "sensitive",
+              "arguments": [],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 88,
+                "column": 5,
+                "length": 10
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 6,
+        "alignment": 1,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.net/Subnet",
+      "naming_context": [
+        "Subnet"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+        "line": 56,
+        "column": 6,
+        "length": 6
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " An IP address with its subnet prefix length.\n",
+                "expression": "/// An IP address with its subnet prefix length.",
+                "literal": {
+                  "kind": "string",
+                  "value": " An IP address with its subnet prefix length.\n",
+                  "expression": "/// An IP address with its subnet prefix length."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 55,
+                "column": 1,
+                "length": 48
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 55,
+            "column": 1,
+            "length": 48
+          }
+        }
+      ],
+      "members": [
+        {
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net/IpAddress",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 16,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "addr",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 58,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The IPv4 or IPv6 address.\n",
+                    "expression": "/// The IPv4 or IPv6 address.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The IPv4 or IPv6 address.\n",
+                      "expression": "/// The IPv4 or IPv6 address."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                    "line": 57,
+                    "column": 5,
+                    "length": 29
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 57,
+                "column": 5,
+                "length": 29
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint8",
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "prefix_len",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 65,
+            "column": 5,
+            "length": 10
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The number of bits set to 1 in the subnet mask.\n\n When [`addr`] is [`IpAddress.ipv4`], must be in the range `[0, 32]`.\n When [`addr`] is [`IpAddress.ipv6`], must be in the range `[0, 128]`.\n",
+                    "expression": "/// The number of bits set to 1 in the subnet mask.\n    ///\n    /// When [`addr`] is [`IpAddress.ipv4`], must be in the range `[0, 32]`.\n    /// When [`addr`] is [`IpAddress.ipv6`], must be in the range `[0, 128]`.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The number of bits set to 1 in the subnet mask.\n\n When [`addr`] is [`IpAddress.ipv4`], must be in the range `[0, 32]`.\n When [`addr`] is [`IpAddress.ipv6`], must be in the range `[0, 128]`.\n",
+                      "expression": "/// The number of bits set to 1 in the subnet mask.\n    ///\n    /// When [`addr`] is [`IpAddress.ipv4`], must be in the range `[0, 32]`.\n    /// When [`addr`] is [`IpAddress.ipv6`], must be in the range `[0, 128]`."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                    "line": 60,
+                    "column": 5,
+                    "length": 214
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 60,
+                "column": 5,
+                "length": 214
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 16,
+            "padding": 7
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 24,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 16,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    }
+  ],
+  "external_struct_declarations": [],
+  "table_declarations": [
+    {
+      "name": "fuchsia.net/Marks",
+      "naming_context": [
+        "Marks"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+        "line": 119,
+        "column": 6,
+        "length": 5
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Includes all the marks the platform supports.\n",
+                "expression": "/// Includes all the marks the platform supports.",
+                "literal": {
+                  "kind": "string",
+                  "value": " Includes all the marks the platform supports.\n",
+                  "expression": "/// Includes all the marks the platform supports."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 117,
+                "column": 1,
+                "length": 49
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 117,
+            "column": 1,
+            "length": 49
+          }
+        },
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "identifier",
+                "value": "4292870144",
+                "expression": "HEAD",
+                "identifier": "fidl/HEAD"
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 118,
+                "column": 12,
+                "length": 10
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 118,
+            "column": 1,
+            "length": 22
+          }
+        }
+      ],
+      "members": [
+        {
+          "ordinal": 1,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "fuchsia.net/Mark",
+            "args": [],
+            "nullable": false
+          },
+          "name": "mark_1",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 121,
+            "column": 8,
+            "length": 6
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The mark in the `MARK_1` domain.\n",
+                    "expression": "/// The mark in the `MARK_1` domain.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The mark in the `MARK_1` domain.\n",
+                      "expression": "/// The mark in the `MARK_1` domain."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                    "line": 120,
+                    "column": 5,
+                    "length": 36
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 120,
+                "column": 5,
+                "length": 36
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 2,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "fuchsia.net/Mark",
+            "args": [],
+            "nullable": false
+          },
+          "name": "mark_2",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 123,
+            "column": 8,
+            "length": 6
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The mark in the `MARK_2` domain.\n",
+                    "expression": "/// The mark in the `MARK_2` domain.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The mark in the `MARK_2` domain.\n",
+                      "expression": "/// The mark in the `MARK_2` domain."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                    "line": 122,
+                    "column": 5,
+                    "length": 36
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 122,
+                "column": 5,
+                "length": 36
+              }
+            }
+          ]
+        }
+      ],
+      "strict": false,
+      "resource": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 2,
+        "max_handles": 0,
+        "max_out_of_line": 16,
+        "has_padding": false,
+        "has_flexible_envelope": true
+      }
+    }
+  ],
+  "union_declarations": [
+    {
+      "name": "fuchsia.net/IpAddress",
+      "naming_context": [
+        "IpAddress"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+        "line": 48,
+        "column": 6,
+        "length": 9
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Represents an IP address that may be either v4 or v6.\n",
+                "expression": "/// Represents an IP address that may be either v4 or v6.",
+                "literal": {
+                  "kind": "string",
+                  "value": " Represents an IP address that may be either v4 or v6.\n",
+                  "expression": "/// Represents an IP address that may be either v4 or v6."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 46,
+                "column": 1,
+                "length": 57
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 46,
+            "column": 1,
+            "length": 57
+          }
+        },
+        {
+          "name": "strict_audit",
+          "arguments": [
+            {
+              "name": "bug",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "https://fxbug.dev/467128725",
+                "expression": "\"https://fxbug.dev/467128725\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "https://fxbug.dev/467128725",
+                  "expression": "\"https://fxbug.dev/467128725\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 47,
+                "column": 15,
+                "length": 33
+              }
+            },
+            {
+              "name": "state",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "PENDING_REVIEW",
+                "expression": "\"PENDING_REVIEW\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "PENDING_REVIEW",
+                  "expression": "\"PENDING_REVIEW\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 47,
+                "column": 50,
+                "length": 22
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 47,
+            "column": 1,
+            "length": 72
+          }
+        }
+      ],
+      "members": [
+        {
+          "ordinal": 1,
+          "name": "ipv4",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net/Ipv4Address",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 49,
+            "column": 8,
+            "length": 4
+          },
+          "deprecated": false
+        },
+        {
+          "ordinal": 2,
+          "name": "ipv6",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net/Ipv6Address",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 50,
+            "column": 8,
+            "length": 4
+          },
+          "deprecated": false
+        }
+      ],
+      "strict": true,
+      "resource": false,
+      "is_result": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 16,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.net/SocketAddress",
+      "naming_context": [
+        "SocketAddress"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+        "line": 44,
+        "column": 6,
+        "length": 13
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Represents an IP socket address that may be either v4 or v6.\n",
+                "expression": "/// Represents an IP socket address that may be either v4 or v6.",
+                "literal": {
+                  "kind": "string",
+                  "value": " Represents an IP socket address that may be either v4 or v6.\n",
+                  "expression": "/// Represents an IP socket address that may be either v4 or v6."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+                "line": 42,
+                "column": 1,
+                "length": 64
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+            "line": 42,
+            "column": 1,
+            "length": 64
+          }
+        },
+        {
+          "name": "strict_audit",
+          "arguments": [
+            {
+              "name": "bug",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "https://fxbug.dev/467128725",
+                "expression": "\"https://fxbug.dev/467128725\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "https://fxbug.dev/467128725",
+                  "expression": "\"https://fxbug.dev/467128725\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+                "line": 43,
+                "column": 15,
+                "length": 33
+              }
+            },
+            {
+              "name": "state",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "PENDING_REVIEW",
+                "expression": "\"PENDING_REVIEW\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "PENDING_REVIEW",
+                  "expression": "\"PENDING_REVIEW\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+                "line": 43,
+                "column": 50,
+                "length": 22
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+            "line": 43,
+            "column": 1,
+            "length": 72
+          }
+        }
+      ],
+      "members": [
+        {
+          "ordinal": 1,
+          "name": "ipv4",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net/Ipv4SocketAddress",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 6,
+              "alignment": 2,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+            "line": 45,
+            "column": 8,
+            "length": 4
+          },
+          "deprecated": false
+        },
+        {
+          "ordinal": 2,
+          "name": "ipv6",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net/Ipv6SocketAddress",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 32,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/socket.fidl",
+            "line": 46,
+            "column": 8,
+            "length": 4
+          },
+          "deprecated": false
+        }
+      ],
+      "strict": true,
+      "resource": false,
+      "is_result": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 32,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    }
+  ],
+  "alias_declarations": [
+    {
+      "name": "fuchsia.net/Hostname",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+        "line": 18,
+        "column": 7,
+        "length": 8
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " A hostname.\n\n Although the maximum length of a domain or hostname is 255 characters,\n each label within a name must not be longer than 63 characters as per\n [RFC 1035 section 2.3.4](https://tools.ietf.org/html/rfc1035#section-2.3.4).\n A label in a host name is the alphanumeric characters or hyphens, seperated\n by a period (e.g. abc.com has two labels, 'abc' and 'com').\n",
+                "expression": "/// A hostname.\n///\n/// Although the maximum length of a domain or hostname is 255 characters,\n/// each label within a name must not be longer than 63 characters as per\n/// [RFC 1035 section 2.3.4](https://tools.ietf.org/html/rfc1035#section-2.3.4).\n/// A label in a host name is the alphanumeric characters or hyphens, seperated\n/// by a period (e.g. abc.com has two labels, 'abc' and 'com').",
+                "literal": {
+                  "kind": "string",
+                  "value": " A hostname.\n\n Although the maximum length of a domain or hostname is 255 characters,\n each label within a name must not be longer than 63 characters as per\n [RFC 1035 section 2.3.4](https://tools.ietf.org/html/rfc1035#section-2.3.4).\n A label in a host name is the alphanumeric characters or hyphens, seperated\n by a period (e.g. abc.com has two labels, 'abc' and 'com').\n",
+                  "expression": "/// A hostname.\n///\n/// Although the maximum length of a domain or hostname is 255 characters,\n/// each label within a name must not be longer than 63 characters as per\n/// [RFC 1035 section 2.3.4](https://tools.ietf.org/html/rfc1035#section-2.3.4).\n/// A label in a host name is the alphanumeric characters or hyphens, seperated\n/// by a period (e.g. abc.com has two labels, 'abc' and 'com')."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 11,
+                "column": 1,
+                "length": 393
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 11,
+            "column": 1,
+            "length": 393
+          }
+        }
+      ],
+      "partial_type_ctor": {
+        "name": "string",
+        "args": [],
+        "nullable": false,
+        "maybe_size": {
+          "kind": "identifier",
+          "value": "255",
+          "expression": "MAX_HOSTNAME_SIZE",
+          "identifier": "fuchsia.net/MAX_HOSTNAME_SIZE"
+        }
+      },
+      "type": {
+        "kind_v2": "string",
+        "maybe_element_count": 255,
+        "nullable": false,
+        "type_shape_v2": {
+          "inline_size": 16,
+          "alignment": 8,
+          "depth": 1,
+          "max_handles": 0,
+          "max_out_of_line": 256,
+          "has_padding": true,
+          "has_flexible_envelope": false
+        }
+      }
+    },
+    {
+      "name": "fuchsia.net/InterfaceId",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+        "line": 21,
+        "column": 7,
+        "length": 11
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " A unique non-zero interface identifier.\n",
+                "expression": "/// A unique non-zero interface identifier.",
+                "literal": {
+                  "kind": "string",
+                  "value": " A unique non-zero interface identifier.\n",
+                  "expression": "/// A unique non-zero interface identifier."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 20,
+                "column": 1,
+                "length": 43
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 20,
+            "column": 1,
+            "length": 43
+          }
+        }
+      ],
+      "partial_type_ctor": {
+        "name": "uint64",
+        "args": [],
+        "nullable": false
+      },
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      }
+    },
+    {
+      "name": "fuchsia.net/Mark",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+        "line": 94,
+        "column": 7,
+        "length": 4
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " A mark that is used to make route decisions and can be attached to packets.\n",
+                "expression": "/// A mark that is used to make route decisions and can be attached to packets.",
+                "literal": {
+                  "kind": "string",
+                  "value": " A mark that is used to make route decisions and can be attached to packets.\n",
+                  "expression": "/// A mark that is used to make route decisions and can be attached to packets."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 92,
+                "column": 1,
+                "length": 79
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 92,
+            "column": 1,
+            "length": 79
+          }
+        },
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "identifier",
+                "value": "4292870144",
+                "expression": "HEAD",
+                "identifier": "fidl/HEAD"
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 93,
+                "column": 12,
+                "length": 10
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 93,
+            "column": 1,
+            "length": 22
+          }
+        }
+      ],
+      "partial_type_ctor": {
+        "name": "uint32",
+        "args": [],
+        "nullable": false
+      },
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint32",
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      }
+    },
+    {
+      "name": "fuchsia.net/RouteMetric",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+        "line": 127,
+        "column": 7,
+        "length": 11
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " The metric of a route. Lower metrics indicate higher priority.\n",
+                "expression": "/// The metric of a route. Lower metrics indicate higher priority.",
+                "literal": {
+                  "kind": "string",
+                  "value": " The metric of a route. Lower metrics indicate higher priority.\n",
+                  "expression": "/// The metric of a route. Lower metrics indicate higher priority."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+                "line": 126,
+                "column": 1,
+                "length": 66
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net/net.fidl",
+            "line": 126,
+            "column": 1,
+            "length": 66
+          }
+        }
+      ],
+      "partial_type_ctor": {
+        "name": "uint32",
+        "args": [],
+        "nullable": false
+      },
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint32",
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      }
+    }
+  ],
+  "new_type_declarations": [],
+  "declaration_order": [
+    "fuchsia.net/MAX_HOSTNAME_SIZE",
+    "fuchsia.net/Hostname",
+    "fuchsia.net/InterfaceId",
+    "fuchsia.net/Ipv4Address",
+    "fuchsia.net/Ipv6Address",
+    "fuchsia.net/IpAddress",
+    "fuchsia.net/IpVersion",
+    "fuchsia.net/Ipv4AddressWithPrefix",
+    "fuchsia.net/Ipv4SocketAddress",
+    "fuchsia.net/Ipv6AddressWithPrefix",
+    "fuchsia.net/Ipv6SocketAddress",
+    "fuchsia.net/MarkDomain",
+    "fuchsia.net/MARK_DOMAIN_SOCKET_UID",
+    "fuchsia.net/MARK_DOMAIN_SO_MARK",
+    "fuchsia.net/MacAddress",
+    "fuchsia.net/Mark",
+    "fuchsia.net/Marks",
+    "fuchsia.net/RouteMetric",
+    "fuchsia.net/SocketAddress",
+    "fuchsia.net/Subnet"
+  ],
+  "declarations": {
+    "fuchsia.net/MARK_DOMAIN_SOCKET_UID": "const",
+    "fuchsia.net/MARK_DOMAIN_SO_MARK": "const",
+    "fuchsia.net/MAX_HOSTNAME_SIZE": "const",
+    "fuchsia.net/IpVersion": "enum",
+    "fuchsia.net/MarkDomain": "enum",
+    "fuchsia.net/Ipv4Address": "struct",
+    "fuchsia.net/Ipv4AddressWithPrefix": "struct",
+    "fuchsia.net/Ipv4SocketAddress": "struct",
+    "fuchsia.net/Ipv6Address": "struct",
+    "fuchsia.net/Ipv6AddressWithPrefix": "struct",
+    "fuchsia.net/Ipv6SocketAddress": "struct",
+    "fuchsia.net/MacAddress": "struct",
+    "fuchsia.net/Subnet": "struct",
+    "fuchsia.net/Marks": "table",
+    "fuchsia.net/IpAddress": "union",
+    "fuchsia.net/SocketAddress": "union",
+    "fuchsia.net/Hostname": "alias",
+    "fuchsia.net/InterfaceId": "alias",
+    "fuchsia.net/Mark": "alias",
+    "fuchsia.net/RouteMetric": "alias"
+  }
+}

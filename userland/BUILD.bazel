@@ -1,0 +1,55 @@
+load("//bazel:zircon_rules.bzl", "linux_static_cc_binary", "zircon_cc_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+linux_static_cc_binary(
+    name = "zx_test",
+    srcs = ["zx_test.cc"],
+)
+
+linux_static_cc_binary(
+    name = "zx_test_arm64",
+    arch = "arm64",
+    srcs = ["zx_test.cc"],
+)
+
+# Raw X11 protocol client shared by x11_fb_bridge and x11_probe.
+X11_CLIENT_SRCS = [
+    "x11_client.cc",
+    "x11_client.h",
+]
+
+linux_static_cc_binary(
+    name = "x11_fb_bridge",
+    srcs = ["x11_fb_bridge.cc"] + X11_CLIENT_SRCS,
+)
+
+linux_static_cc_binary(
+    name = "x11_fb_bridge_arm64",
+    arch = "arm64",
+    srcs = ["x11_fb_bridge.cc"] + X11_CLIENT_SRCS,
+)
+
+linux_static_cc_binary(
+    name = "x11_probe",
+    srcs = ["x11_probe.cc"] + X11_CLIENT_SRCS,
+)
+
+linux_static_cc_binary(
+    name = "x11_probe_arm64",
+    arch = "arm64",
+    srcs = ["x11_probe.cc"] + X11_CLIENT_SRCS,
+)
+
+linux_static_cc_binary(
+    name = "chromium_page_probe",
+    srcs = ["chromium_page_probe.cc"],
+    hdrs = ["//third_party:rapidjson_headers"],
+)
+
+linux_static_cc_binary(
+    name = "chromium_page_probe_arm64",
+    arch = "arm64",
+    srcs = ["chromium_page_probe.cc"],
+    hdrs = ["//third_party:rapidjson_headers"],
+)

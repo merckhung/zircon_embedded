@@ -1,0 +1,25 @@
+{
+  "counts": {
+    "files": 129862,
+    "metadata_entries": 136316,
+    "payload_bytes_read": 917632367,
+    "sparse_zero_bytes_skipped": 120536867212
+  },
+  "findings": [],
+  "opaque_invalid_tar_fixtures_scanned_as_raw_bytes": [
+    "gcc-10_10.2.1.orig.tar.xz!gcc-10-10.2.0/gcc-10.2.0-dfsg.tar.xz!gcc-10.2.0/libgo/go/archive/tar/testdata/issue12435.tar",
+    "gcc-10_10.2.1.orig.tar.xz!gcc-10-10.2.0/gcc-10.2.0-dfsg.tar.xz!gcc-10.2.0/libgo/go/archive/tar/testdata/neg-size.tar",
+    "gcc-10_10.2.1.orig.tar.xz!gcc-10-10.2.0/gcc-10.2.0-dfsg.tar.xz!gcc-10.2.0/libgo/go/archive/tar/testdata/writer-big.tar",
+    "gcc-10_10.2.1.orig.tar.xz!gcc-10-10.2.0/gcc-10.2.0-dfsg.tar.xz!gcc-10.2.0/libgo/go/archive/tar/testdata/issue11169.tar",
+    "gcc-10_10.2.1.orig.tar.xz!gcc-10-10.2.0/gcc-10.2.0-dfsg.tar.xz!gcc-10.2.0/libgo/go/archive/tar/testdata/issue10968.tar",
+    "gcc-10_10.2.1.orig.tar.xz!gcc-10-10.2.0/gcc-10.2.0-dfsg.tar.xz!gcc-10.2.0/libgo/go/archive/tar/testdata/writer-big-long.tar",
+    "gcc-10_10.2.1.orig.tar.xz!gcc-10-10.2.0/gcc-10.2.0-dfsg.tar.xz!gcc-10.2.0/libgo/go/archive/tar/testdata/pax-bad-hdr-file.tar",
+    "gcc-10_10.2.1.orig.tar.xz!gcc-10-10.2.0/gcc-10.2.0-dfsg.tar.xz!gcc-10.2.0/libgo/go/archive/tar/testdata/pax-path-hdr.tar"
+  ],
+  "archive_hashes": {
+    "glibc_2.31-13+deb11u5.debian.tar.xz": "bb679f8e65d5b692f4479848848ec60e6eaa40e40b7eba7f5c2cf7bc79e3a415",
+    "glibc_2.31.orig.tar.xz": "3dc7704b6166839c37d7047626fd199f3d4c09aca0d90e48c51c31c967dce34e",
+    "gcc-10_10.2.1-6.debian.tar.xz": "a95d6b9da2be83f9751850b002021281411ff1003d9feb77298b131da47820b3",
+    "gcc-10_10.2.1.orig.tar.xz": "a1dc9eb513c6c5e68c9fac35b36afd7d1c0f3eaedcebbf072d7563991faea7a2"
+  }
+}

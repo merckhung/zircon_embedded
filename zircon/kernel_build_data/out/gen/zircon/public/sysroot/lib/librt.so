@@ -1,0 +1,1 @@
+/* Empty librt.so placeholder because it's already implicit in -lc. */

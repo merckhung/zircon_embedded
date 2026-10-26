@@ -1,0 +1,5030 @@
+{
+  "name": "fuchsia.hardware.pty",
+  "platform": "fuchsia",
+  "available": {
+    "fuchsia": [
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "NEXT",
+      "HEAD"
+    ]
+  },
+  "maybe_attributes": [
+    {
+      "name": "doc",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "string",
+          "value": {
+            "kind": "literal",
+            "value": " A PTY (pseudoterminal) emulates terminal devices, with a \"server\" side\n (which represents the keyboard+monitor side of the terminal and is obtained\n by opening /dev/misc/ptmx) and a number of \"client\" sides which are obtained\n by calling `OpenClient`.\n\n Client PTYs are identified by the `id` used in the `OpenClient` call. The\n first Client PTY *must* be 0, and it is the only Client PTY that is allowed\n to create additional Client PTYs, receive Events, etc. It is the\n Controlling PTY.\n",
+            "expression": "/// A PTY (pseudoterminal) emulates terminal devices, with a \"server\" side\n/// (which represents the keyboard+monitor side of the terminal and is obtained\n/// by opening /dev/misc/ptmx) and a number of \"client\" sides which are obtained\n/// by calling `OpenClient`.\n///\n/// Client PTYs are identified by the `id` used in the `OpenClient` call. The\n/// first Client PTY *must* be 0, and it is the only Client PTY that is allowed\n/// to create additional Client PTYs, receive Events, etc. It is the\n/// Controlling PTY.",
+            "literal": {
+              "kind": "string",
+              "value": " A PTY (pseudoterminal) emulates terminal devices, with a \"server\" side\n (which represents the keyboard+monitor side of the terminal and is obtained\n by opening /dev/misc/ptmx) and a number of \"client\" sides which are obtained\n by calling `OpenClient`.\n\n Client PTYs are identified by the `id` used in the `OpenClient` call. The\n first Client PTY *must* be 0, and it is the only Client PTY that is allowed\n to create additional Client PTYs, receive Events, etc. It is the\n Controlling PTY.\n",
+              "expression": "/// A PTY (pseudoterminal) emulates terminal devices, with a \"server\" side\n/// (which represents the keyboard+monitor side of the terminal and is obtained\n/// by opening /dev/misc/ptmx) and a number of \"client\" sides which are obtained\n/// by calling `OpenClient`.\n///\n/// Client PTYs are identified by the `id` used in the `OpenClient` call. The\n/// first Client PTY *must* be 0, and it is the only Client PTY that is allowed\n/// to create additional Client PTYs, receive Events, etc. It is the\n/// Controlling PTY."
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 4,
+            "column": 1,
+            "length": 516
+          }
+        }
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 4,
+        "column": 1,
+        "length": 516
+      }
+    },
+    {
+      "name": "available",
+      "arguments": [
+        {
+          "name": "added",
+          "type": "uint32",
+          "value": {
+            "kind": "literal",
+            "value": "11",
+            "expression": "11",
+            "literal": {
+              "kind": "numeric",
+              "value": "11",
+              "expression": "11"
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 13,
+            "column": 12,
+            "length": 8
+          }
+        }
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 13,
+        "column": 1,
+        "length": 20
+      }
+    }
+  ],
+  "experiments": [],
+  "library_dependencies": [
+    {
+      "name": "fuchsia.io",
+      "declarations": {
+        "fuchsia.io/AllocateMode": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileSignal": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Flags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FscryptPolicyFlags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/ModeType": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeAttributeFlags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeAttributesQuery": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeProtocolKinds": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/OpenFlags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Operations": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/UnlinkFlags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/VmoFlags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/WatchMask": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DIRECTORY_PROTOCOL_NAME": {
+          "kind": "const"
+        },
+        "fuchsia.io/FILE_PROTOCOL_NAME": {
+          "kind": "const"
+        },
+        "fuchsia.io/FLAG_TEMPORARY_AS_NOT_LINKABLE": {
+          "kind": "const"
+        },
+        "fuchsia.io/INHERITED_WRITE_PERMISSIONS": {
+          "kind": "const"
+        },
+        "fuchsia.io/INO_UNKNOWN": {
+          "kind": "const"
+        },
+        "fuchsia.io/MASK_KNOWN_PERMISSIONS": {
+          "kind": "const"
+        },
+        "fuchsia.io/MASK_KNOWN_PROTOCOLS": {
+          "kind": "const"
+        },
+        "fuchsia.io/MASK_PERMISSION_FLAGS": {
+          "kind": "const"
+        },
+        "fuchsia.io/MASK_POSIX_FLAGS": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_ATTRIBUTE_NAME": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_BUF": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_FILENAME": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_FS_NAME_BUFFER": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_INLINE_ATTRIBUTE_VALUE": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_LIST_ATTRIBUTES_CHUNK": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_NAME_LENGTH": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_PATH_LENGTH": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_SELINUX_CONTEXT_ATTRIBUTE_LEN": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_TRANSFER_SIZE": {
+          "kind": "const"
+        },
+        "fuchsia.io/NODE_PROTOCOL_NAME": {
+          "kind": "const"
+        },
+        "fuchsia.io/OPEN_FLAGS_ALLOWED_WITH_NODE_REFERENCE": {
+          "kind": "const"
+        },
+        "fuchsia.io/OPEN_RIGHTS": {
+          "kind": "const"
+        },
+        "fuchsia.io/PERM_EXECUTABLE": {
+          "kind": "const"
+        },
+        "fuchsia.io/PERM_READABLE": {
+          "kind": "const"
+        },
+        "fuchsia.io/PERM_WRITABLE": {
+          "kind": "const"
+        },
+        "fuchsia.io/RW_STAR_DIR": {
+          "kind": "const"
+        },
+        "fuchsia.io/RX_STAR_DIR": {
+          "kind": "const"
+        },
+        "fuchsia.io/R_STAR_DIR": {
+          "kind": "const"
+        },
+        "fuchsia.io/SELINUX_CONTEXT_NAME": {
+          "kind": "const"
+        },
+        "fuchsia.io/SYMLINK_PROTOCOL_NAME": {
+          "kind": "const"
+        },
+        "fuchsia.io/W_STAR_DIR": {
+          "kind": "const"
+        },
+        "fuchsia.io/X_STAR_DIR": {
+          "kind": "const"
+        },
+        "fuchsia.io/AdvisoryLockType": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirentType": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/HashAlgorithm": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/SeekOrigin": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/SetExtendedAttributeMode": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/WatchEvent": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/AdvisoryLocking": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/Directory": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/DirectoryWatcher": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/ExtendedAttributeIterator": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/File": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/Linkable": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/Node": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/Openable": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/Readable": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/Symlink": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/Writable": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/AdvisoryLockRange": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/AdvisoryLockingAdvisoryLockRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 48,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/AdvisoryLocking_AdvisoryLock_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryCreateSymlinkRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 40,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 1,
+            "max_out_of_line": 4352,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryDeprecatedOpenRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 32,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 1,
+            "max_out_of_line": 4096,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryGetTokenResponse": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryLinkRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 40,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 1,
+            "max_out_of_line": 512,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryLinkResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryObject": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryReadDirentsRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryReadDirentsResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8192,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryRenameRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 40,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 1,
+            "max_out_of_line": 512,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryRewindResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryUnlinkRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 32,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 272,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/DirectoryWatchRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 12,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryWatchResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Directory_CreateSymlink_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Directory_Rename_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Directory_Unlink_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/EmptyStruct": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/ExtendedAttributeIterator_GetNext_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 34816,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileAllocateRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileEnableVerityRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 3,
+            "max_handles": 0,
+            "max_out_of_line": 64,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/FileGetBackingMemoryRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileObject": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 2,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileReadAtRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileResizeRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileSeekRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileWriteAtRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8192,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_Allocate_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_EnableVerity_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_GetBackingMemory_Response": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_ReadAt_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8192,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_Resize_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_Seek_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_WriteAt_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FilesystemInfo": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 96,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FscryptPolicy": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 17,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/LinkableLinkIntoRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 1,
+            "max_out_of_line": 256,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Linkable_LinkInto_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeAttributes": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 56,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeAttributes2": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 32,
+            "alignment": 8,
+            "depth": 5,
+            "max_handles": 0,
+            "max_out_of_line": 720,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/NodeDeprecatedCloneRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeDeprecatedGetAttrResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 64,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeDeprecatedGetFlagsResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeDeprecatedSetAttrRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 64,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeDeprecatedSetAttrResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeDeprecatedSetFlagsRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeDeprecatedSetFlagsResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeGetAttributesRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeGetExtendedAttributeRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 256,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeListExtendedAttributesRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeOnOpenRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 2,
+            "max_out_of_line": 4112,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeQueryFilesystemResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 96,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeRemoveExtendedAttributeRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 256,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeSetExtendedAttributeRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 40,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 1,
+            "max_out_of_line": 33040,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/NodeSetFlagsRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_GetFlags_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_RemoveExtendedAttribute_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_SetExtendedAttribute_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_SetFlags_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_Sync_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_UpdateAttributes_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/OpenableOpenRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 48,
+            "alignment": 8,
+            "depth": 6,
+            "max_handles": 1,
+            "max_out_of_line": 4560,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/ReadableReadRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Readable_Read_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8192,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Service": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/SymlinkObject": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 4096,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/WritableWriteRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8192,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Writable_Write_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/AdvisoryLockRequest": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 48,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/ConnectionInfo": {
+          "kind": "table",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 16,
+            "has_padding": false,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/DirectoryInfo": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 7,
+            "max_handles": 0,
+            "max_out_of_line": 760,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/FileInfo": {
+          "kind": "table",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 7,
+            "max_handles": 2,
+            "max_out_of_line": 784,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/ImmutableNodeAttributes": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 5,
+            "max_handles": 0,
+            "max_out_of_line": 296,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/MutableNodeAttributes": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 4,
+            "max_handles": 0,
+            "max_out_of_line": 424,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/NodeInfo": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 7,
+            "max_handles": 0,
+            "max_out_of_line": 760,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/Options": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 6,
+            "max_handles": 0,
+            "max_out_of_line": 464,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/SymlinkInfo": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 7,
+            "max_handles": 0,
+            "max_out_of_line": 4880,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/UnlinkOptions": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 16,
+            "has_padding": false,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/VerificationOptions": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 3,
+            "max_handles": 0,
+            "max_out_of_line": 64,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/AdvisoryLocking_AdvisoryLock_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Directory_CreateSymlink_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Directory_Rename_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Directory_Unlink_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/ExtendedAttributeIterator_GetNext_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 3,
+            "max_handles": 0,
+            "max_out_of_line": 34840,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/ExtendedAttributeValue": {
+          "kind": "union",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 1,
+            "max_out_of_line": 32784,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/File_Allocate_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_EnableVerity_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_GetBackingMemory_Result": {
+          "kind": "union",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_ReadAt_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 8208,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_Resize_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_Seek_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_WriteAt_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Linkable_LinkInto_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeInfoDeprecated": {
+          "kind": "union",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 2,
+            "max_out_of_line": 4112,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_GetAttributes_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 6,
+            "max_handles": 0,
+            "max_out_of_line": 752,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/Node_GetExtendedAttribute_Result": {
+          "kind": "union",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 3,
+            "max_handles": 1,
+            "max_out_of_line": 32800,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/Node_GetFlags_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_RemoveExtendedAttribute_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_SetExtendedAttribute_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_SetFlags_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_Sync_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_UpdateAttributes_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Readable_Read_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 8208,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Representation": {
+          "kind": "union",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 8,
+            "max_handles": 2,
+            "max_out_of_line": 4896,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/SelinuxContext": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 272,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/Symlink_Describe_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 8,
+            "max_handles": 0,
+            "max_out_of_line": 4896,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/Writable_Write_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Abilities": {
+          "kind": "alias"
+        },
+        "fuchsia.io/ExtendedAttributeName": {
+          "kind": "alias"
+        },
+        "fuchsia.io/Id": {
+          "kind": "alias"
+        },
+        "fuchsia.io/Name": {
+          "kind": "alias"
+        },
+        "fuchsia.io/Path": {
+          "kind": "alias"
+        },
+        "fuchsia.io/Rights": {
+          "kind": "alias"
+        },
+        "fuchsia.io/SymlinkTarget": {
+          "kind": "alias"
+        },
+        "fuchsia.io/Token": {
+          "kind": "alias"
+        },
+        "fuchsia.io/Transfer": {
+          "kind": "alias"
+        }
+      }
+    },
+    {
+      "name": "fuchsia.unknown",
+      "declarations": {
+        "fuchsia.unknown/Cloneable": {
+          "kind": "protocol"
+        },
+        "fuchsia.unknown/Closeable": {
+          "kind": "protocol"
+        },
+        "fuchsia.unknown/Queryable": {
+          "kind": "protocol"
+        },
+        "fuchsia.unknown/CloneableCloneRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.unknown/Closeable_Close_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.unknown/QueryableQueryResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 4294967295,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.unknown/Closeable_Close_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        }
+      }
+    },
+    {
+      "name": "zx",
+      "declarations": {
+        "zx/Rights": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "zx/CHANNEL_MAX_MSG_BYTES": {
+          "kind": "const"
+        },
+        "zx/CHANNEL_MAX_MSG_HANDLES": {
+          "kind": "const"
+        },
+        "zx/DEFAULT_CHANNEL_RIGHTS": {
+          "kind": "const"
+        },
+        "zx/DEFAULT_EVENT_RIGHTS": {
+          "kind": "const"
+        },
+        "zx/IOB_MAX_REGIONS": {
+          "kind": "const"
+        },
+        "zx/MAX_CPUS": {
+          "kind": "const"
+        },
+        "zx/MAX_NAME_LEN": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_BASIC": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_IO": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_POLICY": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_PROPERTY": {
+          "kind": "const"
+        },
+        "zx/ObjType": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "zx/Handle": {
+          "kind": "experimental_resource"
+        },
+        "zx/Duration": {
+          "kind": "alias"
+        },
+        "zx/DurationBoot": {
+          "kind": "alias"
+        },
+        "zx/DurationMono": {
+          "kind": "alias"
+        },
+        "zx/InstantBoot": {
+          "kind": "alias"
+        },
+        "zx/InstantBootTicks": {
+          "kind": "alias"
+        },
+        "zx/InstantMono": {
+          "kind": "alias"
+        },
+        "zx/InstantMonoTicks": {
+          "kind": "alias"
+        },
+        "zx/Koid": {
+          "kind": "alias"
+        },
+        "zx/Off": {
+          "kind": "alias"
+        },
+        "zx/Result": {
+          "kind": "alias"
+        },
+        "zx/Signals": {
+          "kind": "alias"
+        },
+        "zx/Status": {
+          "kind": "alias"
+        },
+        "zx/Ticks": {
+          "kind": "alias"
+        },
+        "zx/Time": {
+          "kind": "alias"
+        }
+      }
+    }
+  ],
+  "bits_declarations": [],
+  "const_declarations": [
+    {
+      "name": "fuchsia.hardware.pty/DEVICE_PROTOCOL_NAME",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 43,
+        "column": 7,
+        "length": 20
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Legacy protocol name. Use the generated discoverable protocol name instead.\n",
+                "expression": "/// Legacy protocol name. Use the generated discoverable protocol name instead.",
+                "literal": {
+                  "kind": "string",
+                  "value": " Legacy protocol name. Use the generated discoverable protocol name instead.\n",
+                  "expression": "/// Legacy protocol name. Use the generated discoverable protocol name instead."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                "line": 41,
+                "column": 1,
+                "length": 79
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 41,
+            "column": 1,
+            "length": 79
+          }
+        },
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "removed",
+              "type": "uint32",
+              "value": {
+                "kind": "literal",
+                "value": "29",
+                "expression": "29",
+                "literal": {
+                  "kind": "numeric",
+                  "value": "29",
+                  "expression": "29"
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                "line": 42,
+                "column": 12,
+                "length": 10
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 42,
+            "column": 1,
+            "length": 22
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "string",
+        "nullable": false,
+        "type_shape_v2": {
+          "inline_size": 16,
+          "alignment": 8,
+          "depth": 1,
+          "max_handles": 0,
+          "max_out_of_line": 4294967295,
+          "has_padding": true,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "fuchsia.hardware.pty/Device",
+        "expression": "\"fuchsia.hardware.pty/Device\"",
+        "literal": {
+          "kind": "string",
+          "value": "fuchsia.hardware.pty/Device",
+          "expression": "\"fuchsia.hardware.pty/Device\""
+        }
+      }
+    },
+    {
+      "name": "fuchsia.hardware.pty/EVENT_HANGUP",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 30,
+        "column": 7,
+        "length": 12
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " The terminal has no active client.\n",
+                "expression": "/// The terminal has no active client.",
+                "literal": {
+                  "kind": "string",
+                  "value": " The terminal has no active client.\n",
+                  "expression": "/// The terminal has no active client."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                "line": 29,
+                "column": 1,
+                "length": 38
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 29,
+            "column": 1,
+            "length": 38
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint32",
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "1",
+        "expression": "1",
+        "literal": {
+          "kind": "numeric",
+          "value": "1",
+          "expression": "1"
+        }
+      }
+    },
+    {
+      "name": "fuchsia.hardware.pty/EVENT_INTERRUPT",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 32,
+        "column": 7,
+        "length": 15
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " The terminal received a ^C control character.\n",
+                "expression": "/// The terminal received a ^C control character.",
+                "literal": {
+                  "kind": "string",
+                  "value": " The terminal received a ^C control character.\n",
+                  "expression": "/// The terminal received a ^C control character."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                "line": 31,
+                "column": 1,
+                "length": 49
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 31,
+            "column": 1,
+            "length": 49
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint32",
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "2",
+        "expression": "2",
+        "literal": {
+          "kind": "numeric",
+          "value": "2",
+          "expression": "2"
+        }
+      }
+    },
+    {
+      "name": "fuchsia.hardware.pty/EVENT_MASK",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 39,
+        "column": 7,
+        "length": 10
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " All events\n",
+                "expression": "/// All events",
+                "literal": {
+                  "kind": "string",
+                  "value": " All events\n",
+                  "expression": "/// All events"
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                "line": 38,
+                "column": 1,
+                "length": 14
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 38,
+            "column": 1,
+            "length": 14
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint32",
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "15",
+        "expression": "15",
+        "literal": {
+          "kind": "numeric",
+          "value": "15",
+          "expression": "15"
+        }
+      }
+    },
+    {
+      "name": "fuchsia.hardware.pty/EVENT_SUSPEND",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 34,
+        "column": 7,
+        "length": 13
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " The terminal received a ^Z control character.\n",
+                "expression": "/// The terminal received a ^Z control character.",
+                "literal": {
+                  "kind": "string",
+                  "value": " The terminal received a ^Z control character.\n",
+                  "expression": "/// The terminal received a ^Z control character."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                "line": 33,
+                "column": 1,
+                "length": 49
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 33,
+            "column": 1,
+            "length": 49
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint32",
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "4",
+        "expression": "4",
+        "literal": {
+          "kind": "numeric",
+          "value": "4",
+          "expression": "4"
+        }
+      }
+    },
+    {
+      "name": "fuchsia.hardware.pty/EVENT_WINDOW_SIZE",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 36,
+        "column": 7,
+        "length": 17
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " The terminal window has resized.\n",
+                "expression": "/// The terminal window has resized.",
+                "literal": {
+                  "kind": "string",
+                  "value": " The terminal window has resized.\n",
+                  "expression": "/// The terminal window has resized."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                "line": 35,
+                "column": 1,
+                "length": 36
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 35,
+            "column": 1,
+            "length": 36
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint32",
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "8",
+        "expression": "8",
+        "literal": {
+          "kind": "numeric",
+          "value": "8",
+          "expression": "8"
+        }
+      }
+    },
+    {
+      "name": "fuchsia.hardware.pty/FEATURE_RAW",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 22,
+        "column": 7,
+        "length": 11
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " When Feature Raw is enabled, OOB Events like ^c, ^z, etc are not generated.\n Instead the character is read from the read() input path.\n",
+                "expression": "/// When Feature Raw is enabled, OOB Events like ^c, ^z, etc are not generated.\n/// Instead the character is read from the read() input path.",
+                "literal": {
+                  "kind": "string",
+                  "value": " When Feature Raw is enabled, OOB Events like ^c, ^z, etc are not generated.\n Instead the character is read from the read() input path.\n",
+                  "expression": "/// When Feature Raw is enabled, OOB Events like ^c, ^z, etc are not generated.\n/// Instead the character is read from the read() input path."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                "line": 20,
+                "column": 1,
+                "length": 141
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 20,
+            "column": 1,
+            "length": 141
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint32",
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "1",
+        "expression": "1",
+        "literal": {
+          "kind": "numeric",
+          "value": "1",
+          "expression": "1"
+        }
+      }
+    }
+  ],
+  "enum_declarations": [],
+  "experimental_resource_declarations": [],
+  "protocol_declarations": [
+    {
+      "name": "fuchsia.hardware.pty/Device",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 46,
+        "column": 17,
+        "length": 6
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "discoverable",
+          "arguments": [],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 45,
+            "column": 1,
+            "length": 13
+          }
+        }
+      ],
+      "openness": "closed",
+      "composed_protocols": [
+        {
+          "name": "fuchsia.unknown/Cloneable",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 47,
+            "column": 13,
+            "length": 25
+          },
+          "deprecated": false
+        },
+        {
+          "name": "fuchsia.unknown/Closeable",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 48,
+            "column": 13,
+            "length": 25
+          },
+          "deprecated": false
+        },
+        {
+          "name": "fuchsia.unknown/Queryable",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 49,
+            "column": 13,
+            "length": 25
+          },
+          "deprecated": false
+        },
+        {
+          "name": "fuchsia.io/Readable",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 51,
+            "column": 13,
+            "length": 19
+          },
+          "deprecated": false
+        },
+        {
+          "name": "fuchsia.io/Writable",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 52,
+            "column": 13,
+            "length": 19
+          },
+          "deprecated": false
+        }
+      ],
+      "methods": [
+        {
+          "kind": "oneway",
+          "ordinal": 2366825959783828089,
+          "name": "Clone",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.unknown/unknown.fidl",
+            "line": 21,
+            "column": 12,
+            "length": 5
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "available",
+              "arguments": [
+                {
+                  "name": "added",
+                  "type": "uint32",
+                  "value": {
+                    "kind": "literal",
+                    "value": "26",
+                    "expression": "26",
+                    "literal": {
+                      "kind": "numeric",
+                      "value": "26",
+                      "expression": "26"
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.unknown/unknown.fidl",
+                    "line": 20,
+                    "column": 16,
+                    "length": 8
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.unknown/unknown.fidl",
+                "line": 20,
+                "column": 5,
+                "length": 20
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.unknown/CloneableCloneRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": false,
+          "is_composed": true,
+          "has_error": false
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 6540867515453498750,
+          "name": "Close",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.unknown/unknown.fidl",
+            "line": 39,
+            "column": 12,
+            "length": 5
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Terminates the connection.\n\n After calling `Close`, the client must not send any other requests.\n\n Servers, after sending the status response, should close the connection\n regardless of status and without sending an epitaph.\n\n Closing the client end of the channel should be semantically equivalent\n to calling `Close` without knowing when the close has completed or its\n status.\n",
+                    "expression": "/// Terminates the connection.\n    ///\n    /// After calling `Close`, the client must not send any other requests.\n    ///\n    /// Servers, after sending the status response, should close the connection\n    /// regardless of status and without sending an epitaph.\n    ///\n    /// Closing the client end of the channel should be semantically equivalent\n    /// to calling `Close` without knowing when the close has completed or its\n    /// status.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Terminates the connection.\n\n After calling `Close`, the client must not send any other requests.\n\n Servers, after sending the status response, should close the connection\n regardless of status and without sending an epitaph.\n\n Closing the client end of the channel should be semantically equivalent\n to calling `Close` without knowing when the close has completed or its\n status.\n",
+                      "expression": "/// Terminates the connection.\n    ///\n    /// After calling `Close`, the client must not send any other requests.\n    ///\n    /// Servers, after sending the status response, should close the connection\n    /// regardless of status and without sending an epitaph.\n    ///\n    /// Closing the client end of the channel should be semantically equivalent\n    /// to calling `Close` without knowing when the close has completed or its\n    /// status."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.unknown/unknown.fidl",
+                    "line": 28,
+                    "column": 5,
+                    "length": 446
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.unknown/unknown.fidl",
+                "line": 28,
+                "column": 5,
+                "length": 446
+              }
+            },
+            {
+              "name": "selector",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": "fuchsia.io/Node.Close",
+                    "expression": "\"fuchsia.io/Node.Close\"",
+                    "literal": {
+                      "kind": "string",
+                      "value": "fuchsia.io/Node.Close",
+                      "expression": "\"fuchsia.io/Node.Close\""
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.unknown/unknown.fidl",
+                    "line": 38,
+                    "column": 15,
+                    "length": 23
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.unknown/unknown.fidl",
+                "line": 38,
+                "column": 5,
+                "length": 34
+              }
+            }
+          ],
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.unknown/Closeable_Close_Result",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": true,
+          "has_error": true,
+          "maybe_response_success_type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.unknown/Closeable_Close_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "maybe_response_err_type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          }
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 2763219980499352582,
+          "name": "Query",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.unknown/unknown.fidl",
+            "line": 44,
+            "column": 12,
+            "length": 5
+          },
+          "deprecated": false,
+          "has_request": true,
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.unknown/QueryableQueryResponse",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 4294967295,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": true,
+          "has_error": false
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 395825947633028830,
+          "name": "Read",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.io/file.fidl",
+            "line": 301,
+            "column": 12,
+            "length": 4
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Reads up to 'count' bytes at the seek offset.\n The seek offset is moved forward by the number of bytes read.\n\n ## Invariants\n\n * The returned `data.length` will never be greater than `count`.\n * If `data.length` is less than `count`, it means that the seek offset\n   has reached the end of file as part of this operation.\n * If `data.length` is zero while `count` is not, it means that the\n   seek offset is already at or beyond the end of file, and no data could\n   be read.\n * If `count` is zero, the server should perform all the checks ensuring\n   read access without actually read anything, and return an empty\n   `data` vector.\n\n This method requires the [`Rights.READ_BYTES`] right.\n\n Returns `ZX_ERR_OUT_OF_RANGE` if `count` is greater than `MAX_TRANSFER_SIZE`.\n",
+                    "expression": "/// Reads up to 'count' bytes at the seek offset.\n    /// The seek offset is moved forward by the number of bytes read.\n    ///\n    /// ## Invariants\n    ///\n    /// * The returned `data.length` will never be greater than `count`.\n    /// * If `data.length` is less than `count`, it means that the seek offset\n    ///   has reached the end of file as part of this operation.\n    /// * If `data.length` is zero while `count` is not, it means that the\n    ///   seek offset is already at or beyond the end of file, and no data could\n    ///   be read.\n    /// * If `count` is zero, the server should perform all the checks ensuring\n    ///   read access without actually read anything, and return an empty\n    ///   `data` vector.\n    ///\n    /// This method requires the [`Rights.READ_BYTES`] right.\n    ///\n    /// Returns `ZX_ERR_OUT_OF_RANGE` if `count` is greater than `MAX_TRANSFER_SIZE`.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Reads up to 'count' bytes at the seek offset.\n The seek offset is moved forward by the number of bytes read.\n\n ## Invariants\n\n * The returned `data.length` will never be greater than `count`.\n * If `data.length` is less than `count`, it means that the seek offset\n   has reached the end of file as part of this operation.\n * If `data.length` is zero while `count` is not, it means that the\n   seek offset is already at or beyond the end of file, and no data could\n   be read.\n * If `count` is zero, the server should perform all the checks ensuring\n   read access without actually read anything, and return an empty\n   `data` vector.\n\n This method requires the [`Rights.READ_BYTES`] right.\n\n Returns `ZX_ERR_OUT_OF_RANGE` if `count` is greater than `MAX_TRANSFER_SIZE`.\n",
+                      "expression": "/// Reads up to 'count' bytes at the seek offset.\n    /// The seek offset is moved forward by the number of bytes read.\n    ///\n    /// ## Invariants\n    ///\n    /// * The returned `data.length` will never be greater than `count`.\n    /// * If `data.length` is less than `count`, it means that the seek offset\n    ///   has reached the end of file as part of this operation.\n    /// * If `data.length` is zero while `count` is not, it means that the\n    ///   seek offset is already at or beyond the end of file, and no data could\n    ///   be read.\n    /// * If `count` is zero, the server should perform all the checks ensuring\n    ///   read access without actually read anything, and return an empty\n    ///   `data` vector.\n    ///\n    /// This method requires the [`Rights.READ_BYTES`] right.\n    ///\n    /// Returns `ZX_ERR_OUT_OF_RANGE` if `count` is greater than `MAX_TRANSFER_SIZE`."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.io/file.fidl",
+                    "line": 282,
+                    "column": 5,
+                    "length": 892
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.io/file.fidl",
+                "line": 282,
+                "column": 5,
+                "length": 892
+              }
+            },
+            {
+              "name": "selector",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": "fuchsia.io/File.Read",
+                    "expression": "\"fuchsia.io/File.Read\"",
+                    "literal": {
+                      "kind": "string",
+                      "value": "fuchsia.io/File.Read",
+                      "expression": "\"fuchsia.io/File.Read\""
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.io/file.fidl",
+                    "line": 300,
+                    "column": 15,
+                    "length": 22
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.io/file.fidl",
+                "line": 300,
+                "column": 5,
+                "length": 33
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.io/ReadableReadRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.io/Readable_Read_Result",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 0,
+              "max_out_of_line": 8208,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": true,
+          "has_error": true,
+          "maybe_response_success_type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.io/Readable_Read_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 8192,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "maybe_response_err_type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          }
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 7651971425397809026,
+          "name": "Write",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.io/file.fidl",
+            "line": 333,
+            "column": 12,
+            "length": 5
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Writes data at the seek offset.\n The seek offset is moved forward by the number of bytes written.\n If the file is in append mode, the seek offset is first set to the end\n of the file, followed by the write, in one atomic step.\n\n The file size may grow if the seek offset plus `data.length` is beyond\n the current end of file.\n\n + request `data` the byte buffer to write to the file.\n - response `actual_count` the number of bytes written.\n\n ## Invariants\n\n * The returned `actual_count` will never be greater than `data.length`.\n * If the server is unable to write all the data due to e.g. not enough\n   space, `actual_count` may be less than `data.length`.  If no bytes\n   could be written, an error is returned.\n * If `data.length` is zero, the server should perform all the checks\n   ensuring write access without mutating the file and return a\n   successful write of zero bytes.  The seek offset is still updated if\n   in append mode.\n\n This method requires the [`Rights.WRITE_BYTES`] right.\n",
+                    "expression": "/// Writes data at the seek offset.\n    /// The seek offset is moved forward by the number of bytes written.\n    /// If the file is in append mode, the seek offset is first set to the end\n    /// of the file, followed by the write, in one atomic step.\n    ///\n    /// The file size may grow if the seek offset plus `data.length` is beyond\n    /// the current end of file.\n    ///\n    /// + request `data` the byte buffer to write to the file.\n    /// - response `actual_count` the number of bytes written.\n    ///\n    /// ## Invariants\n    ///\n    /// * The returned `actual_count` will never be greater than `data.length`.\n    /// * If the server is unable to write all the data due to e.g. not enough\n    ///   space, `actual_count` may be less than `data.length`.  If no bytes\n    ///   could be written, an error is returned.\n    /// * If `data.length` is zero, the server should perform all the checks\n    ///   ensuring write access without mutating the file and return a\n    ///   successful write of zero bytes.  The seek offset is still updated if\n    ///   in append mode.\n    ///\n    /// This method requires the [`Rights.WRITE_BYTES`] right.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Writes data at the seek offset.\n The seek offset is moved forward by the number of bytes written.\n If the file is in append mode, the seek offset is first set to the end\n of the file, followed by the write, in one atomic step.\n\n The file size may grow if the seek offset plus `data.length` is beyond\n the current end of file.\n\n + request `data` the byte buffer to write to the file.\n - response `actual_count` the number of bytes written.\n\n ## Invariants\n\n * The returned `actual_count` will never be greater than `data.length`.\n * If the server is unable to write all the data due to e.g. not enough\n   space, `actual_count` may be less than `data.length`.  If no bytes\n   could be written, an error is returned.\n * If `data.length` is zero, the server should perform all the checks\n   ensuring write access without mutating the file and return a\n   successful write of zero bytes.  The seek offset is still updated if\n   in append mode.\n\n This method requires the [`Rights.WRITE_BYTES`] right.\n",
+                      "expression": "/// Writes data at the seek offset.\n    /// The seek offset is moved forward by the number of bytes written.\n    /// If the file is in append mode, the seek offset is first set to the end\n    /// of the file, followed by the write, in one atomic step.\n    ///\n    /// The file size may grow if the seek offset plus `data.length` is beyond\n    /// the current end of file.\n    ///\n    /// + request `data` the byte buffer to write to the file.\n    /// - response `actual_count` the number of bytes written.\n    ///\n    /// ## Invariants\n    ///\n    /// * The returned `actual_count` will never be greater than `data.length`.\n    /// * If the server is unable to write all the data due to e.g. not enough\n    ///   space, `actual_count` may be less than `data.length`.  If no bytes\n    ///   could be written, an error is returned.\n    /// * If `data.length` is zero, the server should perform all the checks\n    ///   ensuring write access without mutating the file and return a\n    ///   successful write of zero bytes.  The seek offset is still updated if\n    ///   in append mode.\n    ///\n    /// This method requires the [`Rights.WRITE_BYTES`] right."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.io/file.fidl",
+                    "line": 309,
+                    "column": 5,
+                    "length": 1153
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.io/file.fidl",
+                "line": 309,
+                "column": 5,
+                "length": 1153
+              }
+            },
+            {
+              "name": "selector",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": "fuchsia.io/File.Write",
+                    "expression": "\"fuchsia.io/File.Write\"",
+                    "literal": {
+                      "kind": "string",
+                      "value": "fuchsia.io/File.Write",
+                      "expression": "\"fuchsia.io/File.Write\""
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.io/file.fidl",
+                    "line": 332,
+                    "column": 15,
+                    "length": 23
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.io/file.fidl",
+                "line": 332,
+                "column": 5,
+                "length": 34
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.io/WritableWriteRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 8192,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.io/Writable_Write_Result",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 8,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": true,
+          "has_error": true,
+          "maybe_response_success_type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.io/Writable_Write_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "maybe_response_err_type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          }
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 6367328156623935221,
+          "name": "Describe",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 54,
+            "column": 12,
+            "length": 8
+          },
+          "deprecated": false,
+          "has_request": true,
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.hardware.pty/DeviceDescribeResponse",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 1,
+              "max_out_of_line": 8,
+              "has_padding": false,
+              "has_flexible_envelope": true
+            }
+          },
+          "is_composed": false,
+          "has_error": false
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 544658546275511219,
+          "name": "OpenClient",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 70,
+            "column": 12,
+            "length": 10
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Open a client PTY device with a unique `id`. `client` should be a handle\n to one endpoint of a channel that (on success) will become an open\n connection to the newly created device. On failure, the channel will be\n closed. Closing the channel will close the connection and release the\n device. If the provided `id` is 0, then the new client is a controlling\n client and has the capability to open additional clients. If the\n current device is not a controlling client, `ZX_ERR_ACCESS_DENIED` will be\n returned. If `id` is not unique, `ZX_ERR_INVALID_ARGS` will be returned.\n Otherwise the status code from `device_add` is passed on.\n",
+                    "expression": "/// Open a client PTY device with a unique `id`. `client` should be a handle\n    /// to one endpoint of a channel that (on success) will become an open\n    /// connection to the newly created device. On failure, the channel will be\n    /// closed. Closing the channel will close the connection and release the\n    /// device. If the provided `id` is 0, then the new client is a controlling\n    /// client and has the capability to open additional clients. If the\n    /// current device is not a controlling client, `ZX_ERR_ACCESS_DENIED` will be\n    /// returned. If `id` is not unique, `ZX_ERR_INVALID_ARGS` will be returned.\n    /// Otherwise the status code from `device_add` is passed on.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Open a client PTY device with a unique `id`. `client` should be a handle\n to one endpoint of a channel that (on success) will become an open\n connection to the newly created device. On failure, the channel will be\n closed. Closing the channel will close the connection and release the\n device. If the provided `id` is 0, then the new client is a controlling\n client and has the capability to open additional clients. If the\n current device is not a controlling client, `ZX_ERR_ACCESS_DENIED` will be\n returned. If `id` is not unique, `ZX_ERR_INVALID_ARGS` will be returned.\n Otherwise the status code from `device_add` is passed on.\n",
+                      "expression": "/// Open a client PTY device with a unique `id`. `client` should be a handle\n    /// to one endpoint of a channel that (on success) will become an open\n    /// connection to the newly created device. On failure, the channel will be\n    /// closed. Closing the channel will close the connection and release the\n    /// device. If the provided `id` is 0, then the new client is a controlling\n    /// client and has the capability to open additional clients. If the\n    /// current device is not a controlling client, `ZX_ERR_ACCESS_DENIED` will be\n    /// returned. If `id` is not unique, `ZX_ERR_INVALID_ARGS` will be returned.\n    /// Otherwise the status code from `device_add` is passed on."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                    "line": 61,
+                    "column": 5,
+                    "length": 692
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                "line": 61,
+                "column": 5,
+                "length": 692
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.hardware.pty/DeviceOpenClientRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.hardware.pty/DeviceOpenClientResponse",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": false
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 7162861332185981278,
+          "name": "ClrSetFeature",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 80,
+            "column": 12,
+            "length": 13
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " allowed on Client PTYs\n -----------------------------\n Clear and/or Set PTY Features\n",
+                    "expression": "/// allowed on Client PTYs\n    /// -----------------------------\n    /// Clear and/or Set PTY Features",
+                    "literal": {
+                      "kind": "string",
+                      "value": " allowed on Client PTYs\n -----------------------------\n Clear and/or Set PTY Features\n",
+                      "expression": "/// allowed on Client PTYs\n    /// -----------------------------\n    /// Clear and/or Set PTY Features"
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                    "line": 77,
+                    "column": 5,
+                    "length": 102
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                "line": 77,
+                "column": 5,
+                "length": 102
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.hardware.pty/DeviceClrSetFeatureRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.hardware.pty/DeviceClrSetFeatureResponse",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": false
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 8393562933597436407,
+          "name": "GetWindowSize",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 89,
+            "column": 12,
+            "length": 13
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Obtain the window size (in character cells)\n",
+                    "expression": "/// Obtain the window size (in character cells)",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Obtain the window size (in character cells)\n",
+                      "expression": "/// Obtain the window size (in character cells)"
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                    "line": 88,
+                    "column": 5,
+                    "length": 47
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                "line": 88,
+                "column": 5,
+                "length": 47
+              }
+            }
+          ],
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.hardware.pty/DeviceGetWindowSizeResponse",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 12,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": false
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 2838275258017786466,
+          "name": "MakeActive",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 98,
+            "column": 12,
+            "length": 10
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " allowed on the Controlling PTY\n -------------------------------------\n Select which Client PTY receives input.\n Reads will simply block on non-active PTYs.\n",
+                    "expression": "/// allowed on the Controlling PTY\n    /// -------------------------------------\n    /// Select which Client PTY receives input.\n    /// Reads will simply block on non-active PTYs.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " allowed on the Controlling PTY\n -------------------------------------\n Select which Client PTY receives input.\n Reads will simply block on non-active PTYs.\n",
+                      "expression": "/// allowed on the Controlling PTY\n    /// -------------------------------------\n    /// Select which Client PTY receives input.\n    /// Reads will simply block on non-active PTYs."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                    "line": 94,
+                    "column": 5,
+                    "length": 180
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                "line": 94,
+                "column": 5,
+                "length": 180
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.hardware.pty/DeviceMakeActiveRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.hardware.pty/DeviceMakeActiveResponse",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": false
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 1071459735592865634,
+          "name": "ReadEvents",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 105,
+            "column": 12,
+            "length": 10
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Returns pending OOB events, simultaneously clearing them\n",
+                    "expression": "/// Returns pending OOB events, simultaneously clearing them",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Returns pending OOB events, simultaneously clearing them\n",
+                      "expression": "/// Returns pending OOB events, simultaneously clearing them"
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                    "line": 104,
+                    "column": 5,
+                    "length": 60
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                "line": 104,
+                "column": 5,
+                "length": 60
+              }
+            }
+          ],
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.hardware.pty/DeviceReadEventsResponse",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": false
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 1716376371019544872,
+          "name": "SetWindowSize",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 113,
+            "column": 12,
+            "length": 13
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " allowed on the Server PTY\n --------------------------------\n Sets the window size\n",
+                    "expression": "/// allowed on the Server PTY\n    /// --------------------------------\n    /// Sets the window size",
+                    "literal": {
+                      "kind": "string",
+                      "value": " allowed on the Server PTY\n --------------------------------\n Sets the window size\n",
+                      "expression": "/// allowed on the Server PTY\n    /// --------------------------------\n    /// Sets the window size"
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                    "line": 110,
+                    "column": 5,
+                    "length": 99
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                "line": 110,
+                "column": 5,
+                "length": 99
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.hardware.pty/DeviceSetWindowSizeRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.hardware.pty/DeviceSetWindowSizeResponse",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": false
+        }
+      ]
+    }
+  ],
+  "service_declarations": [
+    {
+      "name": "fuchsia.hardware.pty/Service",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 121,
+        "column": 9,
+        "length": 7
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "endpoint",
+            "role": "client",
+            "protocol": "fuchsia.hardware.pty/Device",
+            "nullable": false,
+            "protocol_transport": "Channel",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "device",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 122,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false
+        }
+      ]
+    }
+  ],
+  "struct_declarations": [
+    {
+      "name": "fuchsia.hardware.pty/DeviceClrSetFeatureRequest",
+      "naming_context": [
+        "Device",
+        "ClrSetFeature",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 80,
+        "column": 26,
+        "length": 54
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "clr",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 81,
+            "column": 9,
+            "length": 3
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "set",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 82,
+            "column": 9,
+            "length": 3
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 4,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 8,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.hardware.pty/DeviceClrSetFeatureResponse",
+      "naming_context": [
+        "Device",
+        "ClrSetFeature",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 83,
+        "column": 12,
+        "length": 65
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Result",
+            "args": [],
+            "nullable": false
+          },
+          "name": "status",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 84,
+            "column": 9,
+            "length": 6
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "features",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 85,
+            "column": 9,
+            "length": 8
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 4,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 8,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.hardware.pty/DeviceGetWindowSizeResponse",
+      "naming_context": [
+        "Device",
+        "GetWindowSize",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 89,
+        "column": 32,
+        "length": 65
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Result",
+            "args": [],
+            "nullable": false
+          },
+          "name": "status",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 90,
+            "column": 9,
+            "length": 6
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.hardware.pty/WindowSize",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "size",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 91,
+            "column": 9,
+            "length": 4
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 4,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 12,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.hardware.pty/DeviceMakeActiveRequest",
+      "naming_context": [
+        "Device",
+        "MakeActive",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 98,
+        "column": 23,
+        "length": 44
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "client_pty_id",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 99,
+            "column": 9,
+            "length": 13
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 4,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.hardware.pty/DeviceMakeActiveResponse",
+      "naming_context": [
+        "Device",
+        "MakeActive",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 100,
+        "column": 12,
+        "length": 40
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Result",
+            "args": [],
+            "nullable": false
+          },
+          "name": "status",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 101,
+            "column": 9,
+            "length": 6
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 4,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.hardware.pty/DeviceOpenClientRequest",
+      "naming_context": [
+        "Device",
+        "OpenClient",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 70,
+        "column": 23,
+        "length": 76
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "id",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 71,
+            "column": 9,
+            "length": 2
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "endpoint",
+            "role": "server",
+            "protocol": "fuchsia.hardware.pty/Device",
+            "nullable": false,
+            "protocol_transport": "Channel",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "client",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 72,
+            "column": 9,
+            "length": 6
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 4,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 8,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 1,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.hardware.pty/DeviceOpenClientResponse",
+      "naming_context": [
+        "Device",
+        "OpenClient",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 73,
+        "column": 12,
+        "length": 35
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Result",
+            "args": [],
+            "nullable": false
+          },
+          "name": "s",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 74,
+            "column": 9,
+            "length": 1
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 4,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.hardware.pty/DeviceReadEventsResponse",
+      "naming_context": [
+        "Device",
+        "ReadEvents",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 105,
+        "column": 29,
+        "length": 63
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Result",
+            "args": [],
+            "nullable": false
+          },
+          "name": "status",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 106,
+            "column": 9,
+            "length": 6
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "events",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 107,
+            "column": 9,
+            "length": 6
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 4,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 8,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.hardware.pty/DeviceSetWindowSizeRequest",
+      "naming_context": [
+        "Device",
+        "SetWindowSize",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 113,
+        "column": 26,
+        "length": 39
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.hardware.pty/WindowSize",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "size",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 114,
+            "column": 9,
+            "length": 4
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 8,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.hardware.pty/DeviceSetWindowSizeResponse",
+      "naming_context": [
+        "Device",
+        "SetWindowSize",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 115,
+        "column": 12,
+        "length": 40
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Result",
+            "args": [],
+            "nullable": false
+          },
+          "name": "status",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 116,
+            "column": 9,
+            "length": 6
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 4,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.hardware.pty/WindowSize",
+      "naming_context": [
+        "WindowSize"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 24,
+        "column": 6,
+        "length": 10
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "width",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 25,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "height",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 26,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 4,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 8,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    }
+  ],
+  "external_struct_declarations": [
+    {
+      "name": "fuchsia.io/ReadableReadRequest",
+      "naming_context": [
+        "Readable",
+        "Read",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.io/file.fidl",
+        "line": 301,
+        "column": 17,
+        "length": 36
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint64",
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "count",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.io/file.fidl",
+            "line": 302,
+            "column": 9,
+            "length": 5
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 8,
+        "alignment": 8,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.io/Readable_Read_Response",
+      "naming_context": [
+        "Readable",
+        "Read",
+        "Response",
+        "response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.io/file.fidl",
+        "line": 303,
+        "column": 12,
+        "length": 37
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "vector",
+            "element_type": {
+              "kind_v2": "primitive",
+              "subtype": "uint8",
+              "type_shape_v2": {
+                "inline_size": 1,
+                "alignment": 1,
+                "depth": 0,
+                "max_handles": 0,
+                "max_out_of_line": 0,
+                "has_padding": false,
+                "has_flexible_envelope": false
+              }
+            },
+            "maybe_element_count": 8192,
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 8192,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "fuchsia.io/Transfer",
+            "args": [],
+            "nullable": false
+          },
+          "name": "data",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.io/file.fidl",
+            "line": 304,
+            "column": 9,
+            "length": 4
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 8192,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.io/WritableWriteRequest",
+      "naming_context": [
+        "Writable",
+        "Write",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.io/file.fidl",
+        "line": 333,
+        "column": 18,
+        "length": 37
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "vector",
+            "element_type": {
+              "kind_v2": "primitive",
+              "subtype": "uint8",
+              "type_shape_v2": {
+                "inline_size": 1,
+                "alignment": 1,
+                "depth": 0,
+                "max_handles": 0,
+                "max_out_of_line": 0,
+                "has_padding": false,
+                "has_flexible_envelope": false
+              }
+            },
+            "maybe_element_count": 8192,
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 8192,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "fuchsia.io/Transfer",
+            "args": [],
+            "nullable": false
+          },
+          "name": "data",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.io/file.fidl",
+            "line": 334,
+            "column": 9,
+            "length": 4
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 8192,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.io/Writable_Write_Response",
+      "naming_context": [
+        "Writable",
+        "Write",
+        "Response",
+        "response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.io/file.fidl",
+        "line": 335,
+        "column": 12,
+        "length": 43
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint64",
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "actual_count",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.io/file.fidl",
+            "line": 336,
+            "column": 9,
+            "length": 12
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 8,
+        "alignment": 8,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.unknown/CloneableCloneRequest",
+      "naming_context": [
+        "Cloneable",
+        "Clone",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.unknown/unknown.fidl",
+        "line": 21,
+        "column": 18,
+        "length": 61
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "endpoint",
+            "role": "server",
+            "protocol": "fuchsia.unknown/Cloneable",
+            "nullable": false,
+            "protocol_transport": "Channel",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "request",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.unknown/unknown.fidl",
+            "line": 22,
+            "column": 9,
+            "length": 7
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 4,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 1,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.unknown/Closeable_Close_Response",
+      "naming_context": [
+        "Closeable",
+        "Close",
+        "Response",
+        "response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.unknown/unknown.fidl",
+        "line": 39,
+        "column": 23,
+        "length": 2
+      },
+      "deprecated": false,
+      "members": [],
+      "resource": false,
+      "is_empty_success_struct": true,
+      "type_shape_v2": {
+        "inline_size": 1,
+        "alignment": 1,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.unknown/QueryableQueryResponse",
+      "naming_context": [
+        "Queryable",
+        "Query",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.unknown/unknown.fidl",
+        "line": 44,
+        "column": 24,
+        "length": 98
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "vector",
+            "element_type": {
+              "kind_v2": "primitive",
+              "subtype": "uint8",
+              "type_shape_v2": {
+                "inline_size": 1,
+                "alignment": 1,
+                "depth": 0,
+                "max_handles": 0,
+                "max_out_of_line": 0,
+                "has_padding": false,
+                "has_flexible_envelope": false
+              }
+            },
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 4294967295,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "protocol",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.unknown/unknown.fidl",
+            "line": 46,
+            "column": 9,
+            "length": 8
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Identifies the underlying protocol.\n",
+                    "expression": "/// Identifies the underlying protocol.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Identifies the underlying protocol.\n",
+                      "expression": "/// Identifies the underlying protocol."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.unknown/unknown.fidl",
+                    "line": 45,
+                    "column": 9,
+                    "length": 39
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.unknown/unknown.fidl",
+                "line": 45,
+                "column": 9,
+                "length": 39
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 4294967295,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    }
+  ],
+  "table_declarations": [
+    {
+      "name": "fuchsia.hardware.pty/DeviceDescribeResponse",
+      "naming_context": [
+        "Device",
+        "Describe",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+        "line": 54,
+        "column": 27,
+        "length": 225
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "ordinal": 1,
+          "type": {
+            "kind_v2": "handle",
+            "obj_type": 16,
+            "subtype": "eventpair",
+            "rights": 2147483648,
+            "nullable": false,
+            "resource_identifier": "zx/Handle",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "event",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+            "line": 58,
+            "column": 12,
+            "length": 5
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " An optional event which transmits information about a device's state.\n\n The [`DeviceSignal`] values may be observed on this event.\n",
+                    "expression": "/// An optional event which transmits information about a device's state.\n        ///\n        /// The [`DeviceSignal`] values may be observed on this event.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " An optional event which transmits information about a device's state.\n\n The [`DeviceSignal`] values may be observed on this event.\n",
+                      "expression": "/// An optional event which transmits information about a device's state.\n        ///\n        /// The [`DeviceSignal`] values may be observed on this event."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                    "line": 55,
+                    "column": 9,
+                    "length": 156
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.hardware.pty/pty.fidl",
+                "line": 55,
+                "column": 9,
+                "length": 156
+              }
+            }
+          ]
+        }
+      ],
+      "strict": false,
+      "resource": true,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 2,
+        "max_handles": 1,
+        "max_out_of_line": 8,
+        "has_padding": false,
+        "has_flexible_envelope": true
+      }
+    }
+  ],
+  "union_declarations": [],
+  "alias_declarations": [],
+  "new_type_declarations": [],
+  "declaration_order": [
+    "fuchsia.hardware.pty/DEVICE_PROTOCOL_NAME",
+    "fuchsia.hardware.pty/DeviceDescribeResponse",
+    "fuchsia.hardware.pty/DeviceOpenClientResponse",
+    "fuchsia.hardware.pty/DeviceClrSetFeatureRequest",
+    "fuchsia.hardware.pty/DeviceClrSetFeatureResponse",
+    "fuchsia.hardware.pty/WindowSize",
+    "fuchsia.hardware.pty/DeviceGetWindowSizeResponse",
+    "fuchsia.hardware.pty/DeviceMakeActiveRequest",
+    "fuchsia.hardware.pty/DeviceMakeActiveResponse",
+    "fuchsia.hardware.pty/DeviceReadEventsResponse",
+    "fuchsia.hardware.pty/DeviceSetWindowSizeRequest",
+    "fuchsia.hardware.pty/DeviceSetWindowSizeResponse",
+    "fuchsia.hardware.pty/DeviceOpenClientRequest",
+    "fuchsia.hardware.pty/Device",
+    "fuchsia.hardware.pty/EVENT_HANGUP",
+    "fuchsia.hardware.pty/EVENT_INTERRUPT",
+    "fuchsia.hardware.pty/EVENT_MASK",
+    "fuchsia.hardware.pty/EVENT_SUSPEND",
+    "fuchsia.hardware.pty/EVENT_WINDOW_SIZE",
+    "fuchsia.hardware.pty/FEATURE_RAW",
+    "fuchsia.hardware.pty/Service"
+  ],
+  "declarations": {
+    "fuchsia.hardware.pty/DEVICE_PROTOCOL_NAME": "const",
+    "fuchsia.hardware.pty/EVENT_HANGUP": "const",
+    "fuchsia.hardware.pty/EVENT_INTERRUPT": "const",
+    "fuchsia.hardware.pty/EVENT_MASK": "const",
+    "fuchsia.hardware.pty/EVENT_SUSPEND": "const",
+    "fuchsia.hardware.pty/EVENT_WINDOW_SIZE": "const",
+    "fuchsia.hardware.pty/FEATURE_RAW": "const",
+    "fuchsia.hardware.pty/Device": "protocol",
+    "fuchsia.hardware.pty/Service": "service",
+    "fuchsia.hardware.pty/DeviceClrSetFeatureRequest": "struct",
+    "fuchsia.hardware.pty/DeviceClrSetFeatureResponse": "struct",
+    "fuchsia.hardware.pty/DeviceGetWindowSizeResponse": "struct",
+    "fuchsia.hardware.pty/DeviceMakeActiveRequest": "struct",
+    "fuchsia.hardware.pty/DeviceMakeActiveResponse": "struct",
+    "fuchsia.hardware.pty/DeviceOpenClientRequest": "struct",
+    "fuchsia.hardware.pty/DeviceOpenClientResponse": "struct",
+    "fuchsia.hardware.pty/DeviceReadEventsResponse": "struct",
+    "fuchsia.hardware.pty/DeviceSetWindowSizeRequest": "struct",
+    "fuchsia.hardware.pty/DeviceSetWindowSizeResponse": "struct",
+    "fuchsia.hardware.pty/WindowSize": "struct",
+    "fuchsia.hardware.pty/DeviceDescribeResponse": "table"
+  }
+}

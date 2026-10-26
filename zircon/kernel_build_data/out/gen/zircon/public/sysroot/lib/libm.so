@@ -1,0 +1,1 @@
+/* Empty libm.so placeholder because it's already implicit in -lc. */

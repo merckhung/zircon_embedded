@@ -1,0 +1,44 @@
+[
+  {
+    "file": "glibc_2.31-13+deb11u5.dsc",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/glibc/glibc_2.31-13+deb11u5.dsc",
+    "sha256": "77e3760f65a2f850bf492c8248690aed6eaec2eb988a261e0439cdcada110487"
+  },
+  {
+    "file": "glibc_2.31.orig.tar.xz",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/glibc/glibc_2.31.orig.tar.xz",
+    "sha256": "3dc7704b6166839c37d7047626fd199f3d4c09aca0d90e48c51c31c967dce34e",
+    "size": 17254692
+  },
+  {
+    "file": "glibc_2.31-13+deb11u5.debian.tar.xz",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/glibc/glibc_2.31-13+deb11u5.debian.tar.xz",
+    "sha256": "bb679f8e65d5b692f4479848848ec60e6eaa40e40b7eba7f5c2cf7bc79e3a415",
+    "size": 954032
+  },
+  {
+    "file": "upstream-descriptors/gcc-10_10.2.1-6.dsc",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/gcc-10/gcc-10_10.2.1-6.dsc",
+    "sha256": "24024c1e225ca968f37ce39047ff5f1058219976db9e88a807173c2f07fa6029"
+  },
+  {
+    "file": "gcc-10_10.2.1.orig.tar.xz",
+    "sha256": "a1dc9eb513c6c5e68c9fac35b36afd7d1c0f3eaedcebbf072d7563991faea7a2",
+    "size": 84549972,
+    "upstream_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/gcc-10/gcc-10_10.2.1.orig.tar.xz",
+    "upstream_sha256": "ea3c05faa381486e6b859c047dc14977418bf1ccda4567064e016493fd6fffec",
+    "publication_changes": "publication-redactions.json"
+  },
+  {
+    "file": "gcc-10_10.2.1-6.debian.tar.xz",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/gcc-10/gcc-10_10.2.1-6.debian.tar.xz",
+    "sha256": "a95d6b9da2be83f9751850b002021281411ff1003d9feb77298b131da47820b3",
+    "size": 2366560
+  },
+  {
+    "file": "gcc-10_10.2.1-6.dsc",
+    "sha256": "a1cbfa7c7c42f6a257aef8efb06755bd2d083aad19f035da3aa03bef2b68879e",
+    "derived_from": "upstream-descriptors/gcc-10_10.2.1-6.dsc",
+    "publication_changes": "publication-redactions.json"
+  }
+]

@@ -1,0 +1,868 @@
+{
+  "name": "fuchsia.net.resources",
+  "platform": "fuchsia",
+  "available": {
+    "fuchsia": [
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "NEXT",
+      "HEAD"
+    ]
+  },
+  "maybe_attributes": [
+    {
+      "name": "doc",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "string",
+          "value": {
+            "kind": "literal",
+            "value": " A library for common types used across netstack FIDL APIs, similar to\n fuchsia.net, but specifically meant to house *resource* types, i.e. types\n that contain handles to Zircon objects.\n",
+            "expression": "/// A library for common types used across netstack FIDL APIs, similar to\n/// fuchsia.net, but specifically meant to house *resource* types, i.e. types\n/// that contain handles to Zircon objects.",
+            "literal": {
+              "kind": "string",
+              "value": " A library for common types used across netstack FIDL APIs, similar to\n fuchsia.net, but specifically meant to house *resource* types, i.e. types\n that contain handles to Zircon objects.\n",
+              "expression": "/// A library for common types used across netstack FIDL APIs, similar to\n/// fuchsia.net, but specifically meant to house *resource* types, i.e. types\n/// that contain handles to Zircon objects."
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+            "line": 5,
+            "column": 1,
+            "length": 195
+          }
+        }
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+        "line": 5,
+        "column": 1,
+        "length": 195
+      }
+    },
+    {
+      "name": "available",
+      "arguments": [
+        {
+          "name": "added",
+          "type": "uint32",
+          "value": {
+            "kind": "identifier",
+            "value": "4292870144",
+            "expression": "HEAD",
+            "identifier": "fidl/HEAD"
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+            "line": 8,
+            "column": 12,
+            "length": 10
+          }
+        }
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+        "line": 8,
+        "column": 1,
+        "length": 22
+      }
+    }
+  ],
+  "experiments": [],
+  "library_dependencies": [
+    {
+      "name": "fuchsia.net",
+      "declarations": {
+        "fuchsia.net/MARK_DOMAIN_SOCKET_UID": {
+          "kind": "const"
+        },
+        "fuchsia.net/MARK_DOMAIN_SO_MARK": {
+          "kind": "const"
+        },
+        "fuchsia.net/MAX_HOSTNAME_SIZE": {
+          "kind": "const"
+        },
+        "fuchsia.net/IpVersion": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/MarkDomain": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Ipv4Address": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Ipv4AddressWithPrefix": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 5,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Ipv4SocketAddress": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 6,
+            "alignment": 2,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Ipv6Address": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Ipv6AddressWithPrefix": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 17,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Ipv6SocketAddress": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 32,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/MacAddress": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 6,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Subnet": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 16,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Marks": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 16,
+            "has_padding": false,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.net/IpAddress": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 16,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/SocketAddress": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 32,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Hostname": {
+          "kind": "alias"
+        },
+        "fuchsia.net/InterfaceId": {
+          "kind": "alias"
+        },
+        "fuchsia.net/Mark": {
+          "kind": "alias"
+        },
+        "fuchsia.net/RouteMetric": {
+          "kind": "alias"
+        }
+      }
+    },
+    {
+      "name": "zx",
+      "declarations": {
+        "zx/Rights": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "zx/CHANNEL_MAX_MSG_BYTES": {
+          "kind": "const"
+        },
+        "zx/CHANNEL_MAX_MSG_HANDLES": {
+          "kind": "const"
+        },
+        "zx/DEFAULT_CHANNEL_RIGHTS": {
+          "kind": "const"
+        },
+        "zx/DEFAULT_EVENT_RIGHTS": {
+          "kind": "const"
+        },
+        "zx/IOB_MAX_REGIONS": {
+          "kind": "const"
+        },
+        "zx/MAX_CPUS": {
+          "kind": "const"
+        },
+        "zx/MAX_NAME_LEN": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_BASIC": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_IO": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_POLICY": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_PROPERTY": {
+          "kind": "const"
+        },
+        "zx/ObjType": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "zx/Handle": {
+          "kind": "experimental_resource"
+        },
+        "zx/Duration": {
+          "kind": "alias"
+        },
+        "zx/DurationBoot": {
+          "kind": "alias"
+        },
+        "zx/DurationMono": {
+          "kind": "alias"
+        },
+        "zx/InstantBoot": {
+          "kind": "alias"
+        },
+        "zx/InstantBootTicks": {
+          "kind": "alias"
+        },
+        "zx/InstantMono": {
+          "kind": "alias"
+        },
+        "zx/InstantMonoTicks": {
+          "kind": "alias"
+        },
+        "zx/Koid": {
+          "kind": "alias"
+        },
+        "zx/Off": {
+          "kind": "alias"
+        },
+        "zx/Result": {
+          "kind": "alias"
+        },
+        "zx/Signals": {
+          "kind": "alias"
+        },
+        "zx/Status": {
+          "kind": "alias"
+        },
+        "zx/Ticks": {
+          "kind": "alias"
+        },
+        "zx/Time": {
+          "kind": "alias"
+        }
+      }
+    }
+  ],
+  "bits_declarations": [],
+  "const_declarations": [],
+  "enum_declarations": [],
+  "experimental_resource_declarations": [],
+  "protocol_declarations": [],
+  "service_declarations": [],
+  "struct_declarations": [
+    {
+      "name": "fuchsia.net.resources/GrantForInterfaceAuthorization",
+      "naming_context": [
+        "GrantForInterfaceAuthorization"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+        "line": 17,
+        "column": 6,
+        "length": 30
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " An authorization credential for an interface, which allows the caller to\n prove ownership of the interface (e.g. by converting the credential into a\n [`ProofOfInterfaceAuthorization`].\n",
+                "expression": "/// An authorization credential for an interface, which allows the caller to\n/// prove ownership of the interface (e.g. by converting the credential into a\n/// [`ProofOfInterfaceAuthorization`].",
+                "literal": {
+                  "kind": "string",
+                  "value": " An authorization credential for an interface, which allows the caller to\n prove ownership of the interface (e.g. by converting the credential into a\n [`ProofOfInterfaceAuthorization`].\n",
+                  "expression": "/// An authorization credential for an interface, which allows the caller to\n/// prove ownership of the interface (e.g. by converting the credential into a\n/// [`ProofOfInterfaceAuthorization`]."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+                "line": 14,
+                "column": 1,
+                "length": 194
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+            "line": 14,
+            "column": 1,
+            "length": 194
+          }
+        }
+      ],
+      "members": [
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint64",
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "fuchsia.net/InterfaceId",
+            "args": [],
+            "nullable": false
+          },
+          "name": "interface_id",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+            "line": 19,
+            "column": 5,
+            "length": 12
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The ID of the interface this credential is authenticating.\n",
+                    "expression": "/// The ID of the interface this credential is authenticating.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The ID of the interface this credential is authenticating.\n",
+                      "expression": "/// The ID of the interface this credential is authenticating."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+                    "line": 18,
+                    "column": 5,
+                    "length": 62
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+                "line": 18,
+                "column": 5,
+                "length": 62
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "handle",
+            "obj_type": 5,
+            "subtype": "event",
+            "rights": 3,
+            "nullable": false,
+            "resource_identifier": "zx/Handle",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "token",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+            "line": 21,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The EVENT providing authentication over this interface.\n",
+                    "expression": "/// The EVENT providing authentication over this interface.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The EVENT providing authentication over this interface.\n",
+                      "expression": "/// The EVENT providing authentication over this interface."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+                    "line": 20,
+                    "column": 5,
+                    "length": 59
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+                "line": 20,
+                "column": 5,
+                "length": 59
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 8,
+            "padding": 4
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 0,
+        "max_handles": 1,
+        "max_out_of_line": 0,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.net.resources/ProofOfInterfaceAuthorization",
+      "naming_context": [
+        "ProofOfInterfaceAuthorization"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+        "line": 28,
+        "column": 6,
+        "length": 29
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " A credential passed into the `fuchsia.net.*` family of APIs to authenticate\n access to a particular interface. The Netstack only needs the ability to\n inspect the token's basic info when proving that the client is authorized\n to access a resource.\n",
+                "expression": "/// A credential passed into the `fuchsia.net.*` family of APIs to authenticate\n/// access to a particular interface. The Netstack only needs the ability to\n/// inspect the token's basic info when proving that the client is authorized\n/// to access a resource.",
+                "literal": {
+                  "kind": "string",
+                  "value": " A credential passed into the `fuchsia.net.*` family of APIs to authenticate\n access to a particular interface. The Netstack only needs the ability to\n inspect the token's basic info when proving that the client is authorized\n to access a resource.\n",
+                  "expression": "/// A credential passed into the `fuchsia.net.*` family of APIs to authenticate\n/// access to a particular interface. The Netstack only needs the ability to\n/// inspect the token's basic info when proving that the client is authorized\n/// to access a resource."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+                "line": 24,
+                "column": 1,
+                "length": 260
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+            "line": 24,
+            "column": 1,
+            "length": 260
+          }
+        }
+      ],
+      "members": [
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint64",
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "fuchsia.net/InterfaceId",
+            "args": [],
+            "nullable": false
+          },
+          "name": "interface_id",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+            "line": 30,
+            "column": 5,
+            "length": 12
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The ID of the interface this credential is authenticating.\n",
+                    "expression": "/// The ID of the interface this credential is authenticating.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The ID of the interface this credential is authenticating.\n",
+                      "expression": "/// The ID of the interface this credential is authenticating."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+                    "line": 29,
+                    "column": 5,
+                    "length": 62
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+                "line": 29,
+                "column": 5,
+                "length": 62
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "handle",
+            "obj_type": 5,
+            "subtype": "event",
+            "rights": 0,
+            "nullable": false,
+            "resource_identifier": "zx/Handle",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "token",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+            "line": 34,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The EVENT providing authentication over this interface.\n",
+                    "expression": "/// The EVENT providing authentication over this interface.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The EVENT providing authentication over this interface.\n",
+                      "expression": "/// The EVENT providing authentication over this interface."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+                    "line": 31,
+                    "column": 5,
+                    "length": 59
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+                "line": 31,
+                "column": 5,
+                "length": 59
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 8,
+            "padding": 4
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 0,
+        "max_handles": 1,
+        "max_out_of_line": 0,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.net.resources/WakeGroupToken",
+      "naming_context": [
+        "WakeGroupToken"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+        "line": 40,
+        "column": 6,
+        "length": 14
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " A token representing a wake group that can be provided to networking\n resources (such as sockets) to add them to the group, and waited upon to\n receive wake signals.\n",
+                "expression": "/// A token representing a wake group that can be provided to networking\n/// resources (such as sockets) to add them to the group, and waited upon to\n/// receive wake signals.",
+                "literal": {
+                  "kind": "string",
+                  "value": " A token representing a wake group that can be provided to networking\n resources (such as sockets) to add them to the group, and waited upon to\n receive wake signals.\n",
+                  "expression": "/// A token representing a wake group that can be provided to networking\n/// resources (such as sockets) to add them to the group, and waited upon to\n/// receive wake signals."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+                "line": 37,
+                "column": 1,
+                "length": 175
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+            "line": 37,
+            "column": 1,
+            "length": 175
+          }
+        }
+      ],
+      "members": [
+        {
+          "type": {
+            "kind_v2": "handle",
+            "obj_type": 5,
+            "subtype": "event",
+            "rights": 16387,
+            "nullable": false,
+            "resource_identifier": "zx/Handle",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "token",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.resources/resources.fidl",
+            "line": 41,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 4,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 1,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    }
+  ],
+  "external_struct_declarations": [],
+  "table_declarations": [],
+  "union_declarations": [],
+  "alias_declarations": [],
+  "new_type_declarations": [],
+  "declaration_order": [
+    "fuchsia.net.resources/GrantForInterfaceAuthorization",
+    "fuchsia.net.resources/ProofOfInterfaceAuthorization",
+    "fuchsia.net.resources/WakeGroupToken"
+  ],
+  "declarations": {
+    "fuchsia.net.resources/GrantForInterfaceAuthorization": "struct",
+    "fuchsia.net.resources/ProofOfInterfaceAuthorization": "struct",
+    "fuchsia.net.resources/WakeGroupToken": "struct"
+  }
+}

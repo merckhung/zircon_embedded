@@ -1,0 +1,289 @@
+{
+  "chromium_revision": "7cc9d0d833549df75d31f9049130b05e3d1c9f84",
+  "architecture": "arm64",
+  "build_sysroot_url": "https://commondatastorage.googleapis.com/chrome-linux-sysroot/63b2bcd2a1800a143d51590784bb84caa98a695cf65614364968a8be9cd31173",
+  "build_sysroot_sha256": "63b2bcd2a1800a143d51590784bb84caa98a695cf65614364968a8be9cd31173",
+  "runtime_source": "unmodified Debian package payloads; build sysroot supplies version selection only",
+  "libraries": [
+    {
+      "file": "lib/ld-linux-aarch64.so.1",
+      "package": "libc6",
+      "version": "2.31-13+deb11u5",
+      "source_package": "glibc",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/glibc/libc6_2.31-13+deb11u5_arm64.deb",
+      "package_file": "lib/aarch64-linux-gnu/ld-2.31.so",
+      "sha256": "585ea8ab582624fe720e73cdec311fdaf1c4ed481319929dd0ce4c3af8bd21c4",
+      "package_sha256": "6f32b8a6bf691b2fa63ba9a4eddba9a29f34c209fd7a64df86585d2b58c567f8"
+    },
+    {
+      "file": "lib/libX11.so.6",
+      "package": "libx11-6",
+      "version": "2:1.7.2-1+deb11u2",
+      "source_package": "libx11",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libx11/libx11-6_1.7.2-1+deb11u2_arm64.deb",
+      "package_file": "usr/lib/aarch64-linux-gnu/libX11.so.6.4.0",
+      "sha256": "8d896250090855176b1f73acc47ab0ee63f5141ff1a2ce3a81f0fd6f1ce6a844",
+      "package_sha256": "1ddb1a4d3dbdaeac8fd8d0009a27e6453b15d97362fdd1d3efb1d5f577364f30"
+    },
+    {
+      "file": "lib/libXau.so.6",
+      "package": "libxau6",
+      "version": "1:1.0.9-1",
+      "source_package": "libxau",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxau/libxau6_1.0.9-1_arm64.deb",
+      "package_file": "usr/lib/aarch64-linux-gnu/libXau.so.6.0.0",
+      "sha256": "d43657a20d5b1b779e91e417f31e3deaccbcede10d7dd38991e31b86e550152b",
+      "package_sha256": "36c2bf400641a80521093771dc2562c903df4065f9eb03add50d90564337ea6c"
+    },
+    {
+      "file": "lib/libXcomposite.so.1",
+      "package": "libxcomposite1",
+      "version": "1:0.4.5-1",
+      "source_package": "libxcomposite",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxcomposite/libxcomposite1_0.4.5-1_arm64.deb",
+      "package_file": "usr/lib/aarch64-linux-gnu/libXcomposite.so.1.0.0",
+      "sha256": "bc3619d6c7bd9b7177bf19b5a4609f4c5640149d4638c4956382ace19fe1c98b",
+      "package_sha256": "cfe39326fdb822e9d060ed5eb3f95b14459dd6b73793c5290000f9b27f8bad37"
+    },
+    {
+      "file": "lib/libXcursor.so.1",
+      "package": "libxcursor1",
+      "version": "1:1.2.0-2",
+      "source_package": "libxcursor",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxcursor/libxcursor1_1.2.0-2_arm64.deb",
+      "package_file": "usr/lib/aarch64-linux-gnu/libXcursor.so.1.0.2",
+      "sha256": "e03d92bbb2a4fd210f1bc3b0055e9656ae7165b7ee34fba1991f231d1665363d",
+      "package_sha256": "2e309833ccf7e6b62560240cd84e325cafcb2ce70b1fb297469957360cee4478"
+    },
+    {
+      "file": "lib/libXdamage.so.1",
+      "package": "libxdamage1",
+      "version": "1:1.1.5-2",
+      "source_package": "libxdamage",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxdamage/libxdamage1_1.1.5-2_arm64.deb",
+      "package_file": "usr/lib/aarch64-linux-gnu/libXdamage.so.1.1.0",
+      "sha256": "dea399b9217bf6c54f3b86f5a526a1f01537e5411587f3b76999e67a20af89c8",
+      "package_sha256": "696cb56f414e7c0ea9a3bcbcb63b07f6ed8e980023c1b35006d5c1dc0d0213ed"
+    },
+    {
+      "file": "lib/libXdmcp.so.6",
+      "package": "libxdmcp6",
+      "version": "1:1.1.2-3",
+      "source_package": "libxdmcp",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxdmcp/libxdmcp6_1.1.2-3_arm64.deb",
+      "package_file": "usr/lib/aarch64-linux-gnu/libXdmcp.so.6.0.0",
+      "sha256": "cff589ca553d339123ba32528cdf45f071761624aef1ebb4b3970fe9180b7e3b",
+      "package_sha256": "e92569ac33247261aa09adfadc34ced3994ac301cf8b58de415a2d5dbf15ccfc"
+    },
+    {
+      "file": "lib/libXext.so.6",
+      "package": "libxext6",
+      "version": "2:1.3.3-1.1",
+      "source_package": "libxext",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxext/libxext6_1.3.3-1.1_arm64.deb",
+      "package_file": "usr/lib/aarch64-linux-gnu/libXext.so.6.4.0",
+      "sha256": "dc8ba51df716b102eac066f69686f573a03ce2f0ef25b998f24c76c46393f109",
+      "package_sha256": "57237ecf54662372e206b154c0ab6096e05955e048552575b45d3ad14a6ff6e5"
+    },
+    {
+      "file": "lib/libXfixes.so.3",
+      "package": "libxfixes3",
+      "version": "1:5.0.3-2",
+      "source_package": "libxfixes",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxfixes/libxfixes3_5.0.3-2_arm64.deb",
+      "package_file": "usr/lib/aarch64-linux-gnu/libXfixes.so.3.1.0",
+      "sha256": "632a5ee0c46dc4dbf1fe9548a5d4e7162a0316ad2aa8f604a53adde50d66fcc6",
+      "package_sha256": "eb70f12af1d13e1632ee29ddf103617af00a078faf6c3a2531ab3d01b395606b"
+    },
+    {
+      "file": "lib/libXrandr.so.2",
+      "package": "libxrandr2",
+      "version": "2:1.5.1-1",
+      "source_package": "libxrandr",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxrandr/libxrandr2_1.5.1-1_arm64.deb",
+      "package_file": "usr/lib/aarch64-linux-gnu/libXrandr.so.2.2.0",
+      "sha256": "9c2da0e02b1dc934a8d0b2f16162731ae951ec474c4cbfa859aaf708f34602b8",
+      "package_sha256": "04c9c59ba1e9648e0ec80d66fa34bab7bf039822f32eb31f706656968052e915"
+    },
+    {
+      "file": "lib/libXrender.so.1",
+      "package": "libxrender1",
+      "version": "1:0.9.10-1",
+      "source_package": "libxrender",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxrender/libxrender1_0.9.10-1_arm64.deb",
+      "package_file": "usr/lib/aarch64-linux-gnu/libXrender.so.1.3.0",
+      "sha256": "7af329737a4f29b14155791f4f5d3f077ebf68f4e70ee841f23d3bf1697b8746",
+      "package_sha256": "fcae69900b599e7b31b31eafa203a184e00376ade1d2f74f9b3d7b24991573a0"
+    },
+    {
+      "file": "lib/libbsd.so.0",
+      "package": "libbsd0",
+      "version": "0.11.3-1+deb11u1",
+      "source_package": "libbsd",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libb/libbsd/libbsd0_0.11.3-1+deb11u1_arm64.deb",
+      "package_file": "usr/lib/aarch64-linux-gnu/libbsd.so.0.11.3",
+      "sha256": "e159310b4adfdc2cbe0f50ea2ce73157a8580f4b04deb2e6ad4d6f271e128a39",
+      "package_sha256": "614d36d41b670955a75526865bd321703f2accb6e0c07ee4c283fbba12e494df"
+    },
+    {
+      "file": "lib/libc.so.6",
+      "package": "libc6",
+      "version": "2.31-13+deb11u5",
+      "source_package": "glibc",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/glibc/libc6_2.31-13+deb11u5_arm64.deb",
+      "package_file": "lib/aarch64-linux-gnu/libc-2.31.so",
+      "sha256": "e7ff33fe09c75416e22aa74c0a22024b7b709c04512c6163ca65d1d5245d75ad",
+      "package_sha256": "6f32b8a6bf691b2fa63ba9a4eddba9a29f34c209fd7a64df86585d2b58c567f8"
+    },
+    {
+      "file": "lib/libdl.so.2",
+      "package": "libc6",
+      "version": "2.31-13+deb11u5",
+      "source_package": "glibc",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/glibc/libc6_2.31-13+deb11u5_arm64.deb",
+      "package_file": "lib/aarch64-linux-gnu/libdl-2.31.so",
+      "sha256": "8a68bff83c8079ca027df33d70add7dca6b4379ed5b31afa5f72f67268b2ad2a",
+      "package_sha256": "6f32b8a6bf691b2fa63ba9a4eddba9a29f34c209fd7a64df86585d2b58c567f8"
+    },
+    {
+      "file": "lib/libdrm.so.2",
+      "package": "libdrm2",
+      "version": "2.4.104-1",
+      "source_package": "libdrm",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libd/libdrm/libdrm2_2.4.104-1_arm64.deb",
+      "package_file": "usr/lib/aarch64-linux-gnu/libdrm.so.2.4.0",
+      "sha256": "f64b33bd5db2f02e691c73edf95c0dc5b3fd3ca2c7bb8c72fe65fe50c425f5dd",
+      "package_sha256": "1dc606aa361307a8c5277c2a5ddedea40a4125874e887c98e82b33dacaa853b0"
+    },
+    {
+      "file": "lib/libexpat.so.1",
+      "package": "libexpat1",
+      "version": "2.2.10-2+deb11u5",
+      "source_package": "expat",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/e/expat/libexpat1_2.2.10-2+deb11u5_arm64.deb",
+      "package_file": "lib/aarch64-linux-gnu/libexpat.so.1.6.12",
+      "sha256": "d6b56f41aa696622f76e4da38ff319b3e0f9a40a6a029e3c685e139d23941a40",
+      "package_sha256": "8d20bfd061845bda0321d01accd6f8386ead5b1d7250a585d12b8d5fb1408ffa"
+    },
+    {
+      "file": "lib/libffi.so.7",
+      "package": "libffi7",
+      "version": "3.3-6",
+      "source_package": "libffi",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libf/libffi/libffi7_3.3-6_arm64.deb",
+      "package_file": "usr/lib/aarch64-linux-gnu/libffi.so.7.1.0",
+      "sha256": "969970590ccfcc01404cfff25e378debe5e4f85eef4872f3fa17d2cbf195672a",
+      "package_sha256": "eb748e33ae4ed46f5a4c14b7a2a09792569f2029ede319d0979c373829ba1532"
+    },
+    {
+      "file": "lib/libgbm.so.1",
+      "package": "libgbm1",
+      "version": "20.3.5-1",
+      "source_package": "mesa",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/m/mesa/libgbm1_20.3.5-1_arm64.deb",
+      "package_file": "usr/lib/aarch64-linux-gnu/libgbm.so.1.0.0",
+      "sha256": "3ee212809317e4102e12179afcc4efc7baacf3e247fa592285fccf08ead28547",
+      "package_sha256": "991e5db7978e44ef745a1f7f18100927d304ddf1eaaab840167b5f07e3bdc7e8"
+    },
+    {
+      "file": "lib/libgcc_s.so.1",
+      "package": "libgcc-s1",
+      "version": "10.2.1-6",
+      "source_package": "gcc-10",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/gcc-10/libgcc-s1_10.2.1-6_arm64.deb",
+      "package_file": "lib/aarch64-linux-gnu/libgcc_s.so.1",
+      "sha256": "4fe749ef03239678d5b1a49649d77a8579fe82ea49698ba1f113f8f0bd6bc445",
+      "package_sha256": "e2fcdb378d3c1ad1bcb64d4fb6b37aab44011152beca12a4944f435a2582df1f"
+    },
+    {
+      "file": "lib/libm.so.6",
+      "package": "libc6",
+      "version": "2.31-13+deb11u5",
+      "source_package": "glibc",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/glibc/libc6_2.31-13+deb11u5_arm64.deb",
+      "package_file": "lib/aarch64-linux-gnu/libm-2.31.so",
+      "sha256": "faa394287347689f0a5f32711a86c51bce33865841e23c7d95c3e1034233d4a8",
+      "package_sha256": "6f32b8a6bf691b2fa63ba9a4eddba9a29f34c209fd7a64df86585d2b58c567f8"
+    },
+    {
+      "file": "lib/libmd.so.0",
+      "package": "libmd0",
+      "version": "1.0.3-3",
+      "source_package": "libmd",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libm/libmd/libmd0_1.0.3-3_arm64.deb",
+      "package_file": "usr/lib/aarch64-linux-gnu/libmd.so.0.0.4",
+      "sha256": "1845530f6dbe9f4f3e4c3ce2965374eaafbbac9da7292567fee98e5b2adf9d2c",
+      "package_sha256": "3c490cdcce9d25e702e6587b6166cd8e7303fce8343642d9d5d99695282a9e5c"
+    },
+    {
+      "file": "lib/libnss_dns.so.2",
+      "package": "libc6",
+      "version": "2.31-13+deb11u5",
+      "source_package": "glibc",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/glibc/libc6_2.31-13+deb11u5_arm64.deb",
+      "package_file": "lib/aarch64-linux-gnu/libnss_dns-2.31.so",
+      "sha256": "e019f5e754a9463a9fe32499faa3faabb83bc060dfc7392ae13084266febbe73",
+      "package_sha256": "6f32b8a6bf691b2fa63ba9a4eddba9a29f34c209fd7a64df86585d2b58c567f8"
+    },
+    {
+      "file": "lib/libnss_files.so.2",
+      "package": "libc6",
+      "version": "2.31-13+deb11u5",
+      "source_package": "glibc",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/glibc/libc6_2.31-13+deb11u5_arm64.deb",
+      "package_file": "lib/aarch64-linux-gnu/libnss_files-2.31.so",
+      "sha256": "fc9ca9b460b0e38d343988824292d0aad537222bf61c0066740194aac9c3c8a4",
+      "package_sha256": "6f32b8a6bf691b2fa63ba9a4eddba9a29f34c209fd7a64df86585d2b58c567f8"
+    },
+    {
+      "file": "lib/libpthread.so.0",
+      "package": "libc6",
+      "version": "2.31-13+deb11u5",
+      "source_package": "glibc",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/glibc/libc6_2.31-13+deb11u5_arm64.deb",
+      "package_file": "lib/aarch64-linux-gnu/libpthread-2.31.so",
+      "sha256": "29db8bca17f39b763a3c33b649d8b86931ed50367a3cc83c0335a076fec6dc99",
+      "package_sha256": "6f32b8a6bf691b2fa63ba9a4eddba9a29f34c209fd7a64df86585d2b58c567f8"
+    },
+    {
+      "file": "lib/libresolv.so.2",
+      "package": "libc6",
+      "version": "2.31-13+deb11u5",
+      "source_package": "glibc",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/glibc/libc6_2.31-13+deb11u5_arm64.deb",
+      "package_file": "lib/aarch64-linux-gnu/libresolv-2.31.so",
+      "sha256": "88e260503dbb47e067c32c972af2caa97c6da1d523bf708db0138d0f1a3d0dfd",
+      "package_sha256": "6f32b8a6bf691b2fa63ba9a4eddba9a29f34c209fd7a64df86585d2b58c567f8"
+    },
+    {
+      "file": "lib/librt.so.1",
+      "package": "libc6",
+      "version": "2.31-13+deb11u5",
+      "source_package": "glibc",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/glibc/libc6_2.31-13+deb11u5_arm64.deb",
+      "package_file": "lib/aarch64-linux-gnu/librt-2.31.so",
+      "sha256": "cf28b76891ee4ecd32aeec63d2ded7e4e1f5573c7c4688057f3d1a6e115608c9",
+      "package_sha256": "6f32b8a6bf691b2fa63ba9a4eddba9a29f34c209fd7a64df86585d2b58c567f8"
+    },
+    {
+      "file": "lib/libwayland-server.so.0",
+      "package": "libwayland-server0",
+      "version": "1.18.0-2~exp1.1",
+      "source_package": "wayland",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/w/wayland/libwayland-server0_1.18.0-2~exp1.1_arm64.deb",
+      "package_file": "usr/lib/aarch64-linux-gnu/libwayland-server.so.0.1.0",
+      "sha256": "6b8aed443a9d13494bd22cb7d78bcba60ed11501dbd31a8c89bc6e8af6e36153",
+      "package_sha256": "3bbcb9e41159b6268b40ce16b1512e5bcf38e63b8bcf2426eaa54b19c6988257"
+    },
+    {
+      "file": "lib/libxcb.so.1",
+      "package": "libxcb1",
+      "version": "1.14-3",
+      "source_package": "libxcb",
+      "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxcb/libxcb1_1.14-3_arm64.deb",
+      "package_file": "usr/lib/aarch64-linux-gnu/libxcb.so.1.1.0",
+      "sha256": "3c5c95e54c143bfaa98cff5b0b982ab957f56e321c5abbf2fa72345b68a972ef",
+      "package_sha256": "48f82b65c93adb7af7757961fdd2730928316459f008d767b7104a56bc20a8f1"
+    }
+  ]
+}

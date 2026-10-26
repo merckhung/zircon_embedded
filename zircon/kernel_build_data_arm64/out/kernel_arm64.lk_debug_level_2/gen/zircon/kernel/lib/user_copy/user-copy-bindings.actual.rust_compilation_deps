@@ -1,0 +1,10 @@
+host_x64/obj/third_party/rust_crates/zerocopy-derive-v0_8_48.actual/libzerocopy_derive-4a1dfc7e9e1ba93b.so
+host_x64/obj/third_party/rust_crates/zerocopy-derive-v0_8_48.actual/libzerocopy_derive-4a1dfc7e9e1ba93b.rmeta
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/target.json
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/lib/libcompiler_builtins.rlib
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/lib/libprofiler_builtins.rlib
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/lib/libcore.rlib
+kernel_arm64.lk_debug_level_2/obj/third_party/rust_crates/zerocopy-v0_8_48.actual/libzerocopy-2b12925d406dcbcb.rlib
+kernel_arm64.lk_debug_level_2/obj/third_party/rust_crates/zerocopy-v0_8_48.actual/libzerocopy-2b12925d406dcbcb.rmeta
+kernel_arm64.lk_debug_level_2/obj/sdk/rust/zx-types/zx-types.actual/libzx_types.rlib
+kernel_arm64.lk_debug_level_2/obj/sdk/rust/zx-types/zx-types.actual/libzx_types.rmeta

@@ -1,0 +1,12 @@
+[
+  {
+    "label": "//zircon/kernel/arch/x86/retpoline:__x86_indirect_thunk_basic_r11(//zircon/kernel/switch/set/lk_debug_level_2:kernel_x64.lk_debug_level_2)",
+    "name": "__x86_indirect_thunk_basic_r11",
+    "path": "kernel_x64.lk_debug_level_2/obj/zircon/kernel/arch/x86/retpoline/__x86_indirect_thunk_basic_r11.bin"
+  },
+  {
+    "label": "//zircon/kernel/arch/x86/retpoline:__x86_indirect_thunk_unsafe_r11(//zircon/kernel/switch/set/lk_debug_level_2:kernel_x64.lk_debug_level_2)",
+    "name": "__x86_indirect_thunk_unsafe_r11",
+    "path": "kernel_x64.lk_debug_level_2/obj/zircon/kernel/arch/x86/retpoline/__x86_indirect_thunk_unsafe_r11.bin"
+  }
+]

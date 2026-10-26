@@ -1,0 +1,5 @@
+../../zircon/kernel/lib/smbios/rust/src/entry_point.rs
+../../zircon/kernel/lib/smbios/rust/src/lib.rs
+../../zircon/kernel/lib/smbios/rust/src/string_table.rs
+../../zircon/kernel/lib/smbios/rust/src/structures.rs
+../../zircon/kernel/lib/smbios/rust/src/tests.rs

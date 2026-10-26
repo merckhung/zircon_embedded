@@ -1,0 +1,6 @@
+obj/third_party/rust_crates/memchr-v2_8_3.actual/libmemchr-9e14128c4d04268c.rlib
+obj/third_party/rust_crates/memchr-v2_8_3.actual/libmemchr-9e14128c4d04268c.rmeta
+host_x64/obj/third_party/rust_crates/serde_derive-v1_0_229.actual/libserde_derive-6e5702ca913dc32e.so
+host_x64/obj/third_party/rust_crates/serde_derive-v1_0_229.actual/libserde_derive-6e5702ca913dc32e.rmeta
+obj/third_party/rust_crates/serde_core-v1_0_229.actual/libserde_core-fa0896c771ca5b37.rlib
+obj/third_party/rust_crates/serde_core-v1_0_229.actual/libserde_core-fa0896c771ca5b37.rmeta

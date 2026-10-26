@@ -1,0 +1,10 @@
+[
+  {
+    "candidate": "fidling/gen/zircon/vdso/zx/zither/zircon_ifs/libzircon.json",
+    "golden": "src/zircon/lib/zircon/libzircon.json"
+  },
+  {
+    "candidate": "fidling/gen/zircon/vdso/zx/zither/zircon_ifs/zircon.ifs",
+    "golden": "src/zircon/lib/zircon/zircon.ifs"
+  }
+]

@@ -1,0 +1,6 @@
+kernel_x64.lk_debug_level_2/gen/target/lib/rustlib/kernel_x64.lk_debug_level_2/target.json
+kernel_x64.lk_debug_level_2/gen/target/lib/rustlib/kernel_x64.lk_debug_level_2/lib/libcompiler_builtins.rlib
+kernel_x64.lk_debug_level_2/gen/target/lib/rustlib/kernel_x64.lk_debug_level_2/lib/libprofiler_builtins.rlib
+kernel_x64.lk_debug_level_2/gen/target/lib/rustlib/kernel_x64.lk_debug_level_2/lib/libcore.rlib
+kernel_x64.lk_debug_level_2/obj/zircon/system/ulib/mmio-ptr/mmio-ptr-rs.actual/libmmio_ptr.rlib
+kernel_x64.lk_debug_level_2/obj/zircon/system/ulib/mmio-ptr/mmio-ptr-rs.actual/libmmio_ptr.rmeta

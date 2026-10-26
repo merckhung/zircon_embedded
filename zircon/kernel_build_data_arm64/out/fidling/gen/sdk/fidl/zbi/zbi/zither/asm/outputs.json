@@ -1,0 +1,12 @@
+[
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/asm/zbi/asm/reboot.h",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/asm/zbi/asm/zbi.h",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/asm/zbi/asm/cpu.h",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/asm/zbi/asm/graphics.h",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/asm/zbi/asm/kernel.h",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/asm/zbi/asm/partition.h",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/asm/zbi/asm/secure-entropy.h",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/asm/zbi/asm/board.h",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/asm/zbi/asm/driver-config.h",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/asm/zbi/asm/memory.h"
+]

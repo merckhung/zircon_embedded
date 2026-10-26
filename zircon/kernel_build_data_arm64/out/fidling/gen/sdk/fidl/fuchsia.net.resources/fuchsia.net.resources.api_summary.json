@@ -1,0 +1,51 @@
+[
+    {
+        "kind": "struct/member",
+        "name": "fuchsia.net.resources/GrantForInterfaceAuthorization.interface_id",
+        "ordinal": "1",
+        "type": "uint64"
+    },
+    {
+        "kind": "struct/member",
+        "name": "fuchsia.net.resources/GrantForInterfaceAuthorization.token",
+        "ordinal": "2",
+        "type": "zx/Handle:<EVENT,zx.DUPLICATE,zx.TRANSFER>"
+    },
+    {
+        "kind": "struct",
+        "name": "fuchsia.net.resources/GrantForInterfaceAuthorization",
+        "resourceness": "resource"
+    },
+    {
+        "kind": "struct/member",
+        "name": "fuchsia.net.resources/ProofOfInterfaceAuthorization.interface_id",
+        "ordinal": "1",
+        "type": "uint64"
+    },
+    {
+        "kind": "struct/member",
+        "name": "fuchsia.net.resources/ProofOfInterfaceAuthorization.token",
+        "ordinal": "2",
+        "type": "zx/Handle:EVENT"
+    },
+    {
+        "kind": "struct",
+        "name": "fuchsia.net.resources/ProofOfInterfaceAuthorization",
+        "resourceness": "resource"
+    },
+    {
+        "kind": "struct/member",
+        "name": "fuchsia.net.resources/WakeGroupToken.token",
+        "ordinal": "1",
+        "type": "zx/Handle:<EVENT,zx.DUPLICATE,zx.TRANSFER,zx.WAIT>"
+    },
+    {
+        "kind": "struct",
+        "name": "fuchsia.net.resources/WakeGroupToken",
+        "resourceness": "resource"
+    },
+    {
+        "kind": "library",
+        "name": "fuchsia.net.resources"
+    }
+]

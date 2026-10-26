@@ -1,0 +1,8 @@
+package(default_visibility = ["//visibility:public"])
+
+# Sources under build/ read by the from-source kernel build (scripts invoked
+# by build edges, linker scripts, libc/libc++ link stubs).
+filegroup(
+    name = "build_files",
+    srcs = glob(["**/*"], exclude = ["BUILD.bazel"]),
+)

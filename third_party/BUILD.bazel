@@ -1,0 +1,11 @@
+package(default_visibility = ["//visibility:public"])
+
+filegroup(
+    name = "third_party_files",
+    srcs = glob(["**/*"]),
+)
+
+filegroup(
+    name = "rapidjson_headers",
+    srcs = glob(["rapidjson/include/**/*.h"]),
+)

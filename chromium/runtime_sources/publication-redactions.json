@@ -1,0 +1,36 @@
+{
+  "upstream_archive_sha256": "ea3c05faa381486e6b859c047dc14977418bf1ccda4567064e016493fd6fffec",
+  "published_archive_sha256": "a1dc9eb513c6c5e68c9fac35b36afd7d1c0f3eaedcebbf072d7563991faea7a2",
+  "modified_files": [
+    {
+      "file": "gcc-10.2.0/libgo/go/internal/trace/testdata/user_task_span_1_11_good",
+      "replacements": 9,
+      "bytes": 2000,
+      "upstream_sha256": "0c425c55863d2adf9383d37058286f4c6b01621434c3a17be01752ccc3c8799d",
+      "published_sha256": "71053f4dd780406cd7e136157e9a4b036060fbfa9459791b8a9a1f5a4d260159"
+    },
+    {
+      "file": "gcc-10.2.0/libgo/go/internal/trace/testdata/stress_start_stop_1_11_good",
+      "replacements": 13,
+      "bytes": 4882,
+      "upstream_sha256": "bb52a43a3283037251deac978575ea75dab94e0f8cd7dcc101daede758018807",
+      "published_sha256": "fba5f75fce8896b3cf46c1a78f57f8fdaaef147324ad609d22b6c4cdbfee1c45"
+    },
+    {
+      "file": "gcc-10.2.0/libgo/go/internal/trace/testdata/http_1_11_good",
+      "replacements": 16,
+      "bytes": 2779,
+      "upstream_sha256": "6c8865769b67e9a5ea2730fbce0b4621fa5f3e2f075763964fe74b1e950bd4cc",
+      "published_sha256": "3257e1668f5e3d4e07e18dbae906dc4015148210780304f41d8c731e8e17e2f5"
+    },
+    {
+      "file": "gcc-10.2.0/libgo/go/internal/trace/testdata/stress_1_11_good",
+      "replacements": 36,
+      "bytes": 370129,
+      "upstream_sha256": "9878383c755505fbd034e542490c7b9ce49e6d9c33432a725968a2df067a4f28",
+      "published_sha256": "209580b2fc9a1eae9ab9f93878a027713d1fea4c46e81e0c8b303a7fa5406564"
+    }
+  ],
+  "notice": "gcc-10.2.0/PUBLICATION-SANITIZATION.txt",
+  "scope": "Trace-fixture source prefixes only; compiler and runtime sources unchanged."
+}

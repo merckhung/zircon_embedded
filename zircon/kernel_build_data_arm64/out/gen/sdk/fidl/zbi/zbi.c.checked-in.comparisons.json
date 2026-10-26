@@ -1,0 +1,46 @@
+[
+  {
+    "candidate": "fidling/gen/sdk/fidl/zbi/zbi/zither/c/README.md",
+    "golden": "sdk/lib/zbi-format/README.md"
+  },
+  {
+    "candidate": "fidling/gen/sdk/fidl/zbi/zbi/zither/c/lib/zbi-format/board.h",
+    "golden": "sdk/lib/zbi-format/include/lib/zbi-format/board.h"
+  },
+  {
+    "candidate": "fidling/gen/sdk/fidl/zbi/zbi/zither/c/lib/zbi-format/cpu.h",
+    "golden": "sdk/lib/zbi-format/include/lib/zbi-format/cpu.h"
+  },
+  {
+    "candidate": "fidling/gen/sdk/fidl/zbi/zbi/zither/c/lib/zbi-format/driver-config.h",
+    "golden": "sdk/lib/zbi-format/include/lib/zbi-format/driver-config.h"
+  },
+  {
+    "candidate": "fidling/gen/sdk/fidl/zbi/zbi/zither/c/lib/zbi-format/graphics.h",
+    "golden": "sdk/lib/zbi-format/include/lib/zbi-format/graphics.h"
+  },
+  {
+    "candidate": "fidling/gen/sdk/fidl/zbi/zbi/zither/c/lib/zbi-format/kernel.h",
+    "golden": "sdk/lib/zbi-format/include/lib/zbi-format/kernel.h"
+  },
+  {
+    "candidate": "fidling/gen/sdk/fidl/zbi/zbi/zither/c/lib/zbi-format/memory.h",
+    "golden": "sdk/lib/zbi-format/include/lib/zbi-format/memory.h"
+  },
+  {
+    "candidate": "fidling/gen/sdk/fidl/zbi/zbi/zither/c/lib/zbi-format/partition.h",
+    "golden": "sdk/lib/zbi-format/include/lib/zbi-format/partition.h"
+  },
+  {
+    "candidate": "fidling/gen/sdk/fidl/zbi/zbi/zither/c/lib/zbi-format/reboot.h",
+    "golden": "sdk/lib/zbi-format/include/lib/zbi-format/reboot.h"
+  },
+  {
+    "candidate": "fidling/gen/sdk/fidl/zbi/zbi/zither/c/lib/zbi-format/secure-entropy.h",
+    "golden": "sdk/lib/zbi-format/include/lib/zbi-format/secure-entropy.h"
+  },
+  {
+    "candidate": "fidling/gen/sdk/fidl/zbi/zbi/zither/c/lib/zbi-format/zbi.h",
+    "golden": "sdk/lib/zbi-format/include/lib/zbi-format/zbi.h"
+  }
+]

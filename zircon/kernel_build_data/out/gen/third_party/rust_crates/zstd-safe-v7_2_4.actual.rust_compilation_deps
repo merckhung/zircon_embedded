@@ -1,0 +1,4 @@
+obj/third_party/rust_crates/libc-v0_2_189.actual/liblibc-375c370d62462000.rlib
+obj/third_party/rust_crates/libc-v0_2_189.actual/liblibc-375c370d62462000.rmeta
+obj/third_party/rust_crates/zstd-sys-v2_0_16+zstd_1_5_7.actual/libzstd_sys-66b1706dcab3102.rlib
+obj/third_party/rust_crates/zstd-sys-v2_0_16+zstd_1_5_7.actual/libzstd_sys-66b1706dcab3102.rmeta

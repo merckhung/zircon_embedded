@@ -1,0 +1,23 @@
+# Bazel outputs and symlinks
+bazel-*
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary and editor files
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Ignore temporary screenshots, preserve docs/screenshots/
+*.png
+!docs/screenshots/*.png
+
+# Machine-specific Bazel settings
+user.bazelrc
+
+# Incomplete publication artifact writes
+*.publication-tmp

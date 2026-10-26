@@ -1,0 +1,82 @@
+load("//bazel:zircon_rules.bzl", "zircon_kernel_build")
+
+package(default_visibility = ["//visibility:public"])
+
+# Builds, from this repository's sources, everything Zircon-side the system
+# images need: the Linux/x86 boot shim, physload, physboot, the kernel proper
+# (C++ and Rust), the vDSO, userboot, the kernel.eng.zbi package, the Fuchsia
+# libc + sysroot used by the PID 1 shim, and the zbi host tool.
+# See bazel/kernel_build/replay.py and zircon/kernel_build_data/README.md.
+zircon_kernel_build(
+    name = "kernel_build",
+    arch = "x86_64",
+    srcs = glob(
+        ["**/*"],
+        exclude = ["BUILD.bazel"],
+    ) + [
+        "//:rustfmt.toml",
+        "//build:build_files",
+        "//sdk:sdk_files",
+        "//src:src_files",
+        "//third_party:third_party_files",
+    ],
+)
+
+zircon_kernel_build(
+    name = "kernel_build_arm64",
+    arch = "arm64",
+    srcs = glob(
+        ["**/*"],
+        exclude = ["BUILD.bazel"],
+    ) + [
+        "//:rustfmt.toml",
+        "//build:build_files",
+        "//sdk:sdk_files",
+        "//src:src_files",
+        "//third_party:third_party_files",
+    ],
+)
+
+[
+    filegroup(
+        name = name,
+        srcs = [":kernel_build"],
+        output_group = group,
+    )
+    for name, group in [
+        ("boot_shim", "boot_shim"),
+        ("physload", "physload"),
+        ("kernel_eng_zbi", "kernel_zbi"),
+        ("libc_so", "libc"),
+        ("vdso_so", "vdso"),
+        ("zbi_tool", "zbi_tool"),
+        ("sysroot", "sysroot"),
+    ]
+]
+
+[
+    filegroup(
+        name = name + "_arm64",
+        srcs = [":kernel_build_arm64"],
+        output_group = group,
+    )
+    for name, group in [
+        ("boot_shim", "boot_shim"),
+        ("physload", "physload"),
+        ("kernel_eng_zbi", "kernel_zbi"),
+        ("libc_so", "libc"),
+        ("vdso_so", "vdso"),
+        ("zbi_tool", "zbi_tool"),
+        ("sysroot", "sysroot"),
+    ]
+]
+
+alias(
+    name = "kernel",
+    actual = ":kernel_build",
+)
+
+alias(
+    name = "kernel_arm64",
+    actual = ":kernel_build_arm64",
+)

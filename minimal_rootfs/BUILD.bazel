@@ -1,0 +1,78 @@
+load("@zircon_toolchains//:paths.bzl", "FUCHSIA_QEMU_AARCH64", "FUCHSIA_QEMU_X64")
+load("//bazel:zircon_rules.bzl", "zircon_qemu_runner", "zircon_zbi_image")
+
+package(default_visibility = ["//visibility:public"])
+
+genrule(
+    name = "rootfs_tar",
+    srcs = [
+        "init.sh",
+        "//rootfs:build_rootfs_tar.py",
+        "//userland:zx_test",
+        "//userland/tests:mm_test",
+        "//userland/tests:proc_test",
+        "@alpine_x86_64//:minimal_apks",
+    ],
+    outs = ["minimal_rootfs.tar"],
+    cmd = """
+        python3 $(location //rootfs:build_rootfs_tar.py) \
+            --output $@ \
+            --init $(location init.sh) \
+            --extra-bin bin/zx_test=$(location //userland:zx_test) \
+            --extra-bin bin/mm_test=$(location //userland/tests:mm_test) \
+            --extra-bin bin/proc_test=$(location //userland/tests:proc_test) \
+            $(locations @alpine_x86_64//:minimal_apks)
+    """,
+)
+
+genrule(
+    name = "rootfs_tar_arm64",
+    srcs = [
+        "init.sh",
+        "//rootfs:build_rootfs_tar.py",
+        "//userland:zx_test_arm64",
+        "//userland/tests:mm_test_arm64",
+        "//userland/tests:proc_test_arm64",
+        "@alpine_aarch64//:minimal_apks",
+    ],
+    outs = ["minimal_rootfs_arm64.tar"],
+    cmd = """
+        python3 $(location //rootfs:build_rootfs_tar.py) \
+            --output $@ \
+            --init $(location init.sh) \
+            --extra-bin bin/zx_test=$(location //userland:zx_test_arm64) \
+            --extra-bin bin/mm_test=$(location //userland/tests:mm_test_arm64) \
+            --extra-bin bin/proc_test=$(location //userland/tests:proc_test_arm64) \
+            $(locations @alpine_aarch64//:minimal_apks)
+    """,
+)
+
+zircon_zbi_image(
+    name = "minimal_system",
+    arch = "x86_64",
+    init_bin = "//src/shim:zircon_linux_init",
+    rootfs_tar = ":rootfs_tar",
+)
+
+zircon_zbi_image(
+    name = "minimal_system_arm64",
+    arch = "arm64",
+    init_bin = "//src/shim:zircon_linux_init_arm64",
+    rootfs_tar = ":rootfs_tar_arm64",
+)
+
+zircon_qemu_runner(
+    name = "verify",
+    arch = "x86_64",
+    qemu_bin = FUCHSIA_QEMU_X64,
+    script = "verify_minimal.py",
+    zbi_image = ":minimal_system",
+)
+
+zircon_qemu_runner(
+    name = "verify_arm64",
+    arch = "arm64",
+    qemu_bin = FUCHSIA_QEMU_AARCH64,
+    script = "verify_minimal.py",
+    zbi_image = ":minimal_system_arm64",
+)

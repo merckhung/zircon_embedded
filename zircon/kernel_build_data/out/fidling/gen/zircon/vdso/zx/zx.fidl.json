@@ -1,0 +1,2139 @@
+{
+  "name": "zx",
+  "platform": "fuchsia",
+  "available": {
+    "fuchsia": [
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "NEXT",
+      "HEAD"
+    ]
+  },
+  "maybe_attributes": [
+    {
+      "name": "available",
+      "arguments": [
+        {
+          "name": "platform",
+          "type": "string",
+          "value": {
+            "kind": "literal",
+            "value": "fuchsia",
+            "expression": "\"fuchsia\"",
+            "literal": {
+              "kind": "string",
+              "value": "fuchsia",
+              "expression": "\"fuchsia\""
+            }
+          },
+          "location": {
+            "filename": "../../zircon/vdso/overview.fidl",
+            "line": 4,
+            "column": 12,
+            "length": 18
+          }
+        },
+        {
+          "name": "added",
+          "type": "uint32",
+          "value": {
+            "kind": "literal",
+            "value": "7",
+            "expression": "7",
+            "literal": {
+              "kind": "numeric",
+              "value": "7",
+              "expression": "7"
+            }
+          },
+          "location": {
+            "filename": "../../zircon/vdso/overview.fidl",
+            "line": 4,
+            "column": 32,
+            "length": 7
+          }
+        }
+      ],
+      "location": {
+        "filename": "../../zircon/vdso/overview.fidl",
+        "line": 4,
+        "column": 1,
+        "length": 39
+      }
+    }
+  ],
+  "experiments": [],
+  "library_dependencies": [],
+  "bits_declarations": [
+    {
+      "name": "zx/Rights",
+      "naming_context": [
+        "Rights"
+      ],
+      "location": {
+        "filename": "../../zircon/vdso/rights.fidl",
+        "line": 7,
+        "column": 6,
+        "length": 6
+      },
+      "deprecated": false,
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint32",
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "mask": "2181038079",
+      "members": [
+        {
+          "name": "DUPLICATE",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 10,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "1",
+            "expression": "0x00000001",
+            "literal": {
+              "kind": "numeric",
+              "value": "1",
+              "expression": "0x00000001"
+            }
+          }
+        },
+        {
+          "name": "TRANSFER",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 11,
+            "column": 5,
+            "length": 8
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "2",
+            "expression": "0x00000002",
+            "literal": {
+              "kind": "numeric",
+              "value": "2",
+              "expression": "0x00000002"
+            }
+          }
+        },
+        {
+          "name": "READ",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 12,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "4",
+            "expression": "0x00000004",
+            "literal": {
+              "kind": "numeric",
+              "value": "4",
+              "expression": "0x00000004"
+            }
+          }
+        },
+        {
+          "name": "WRITE",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 13,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "8",
+            "expression": "0x00000008",
+            "literal": {
+              "kind": "numeric",
+              "value": "8",
+              "expression": "0x00000008"
+            }
+          }
+        },
+        {
+          "name": "EXECUTE",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 14,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "16",
+            "expression": "0x00000010",
+            "literal": {
+              "kind": "numeric",
+              "value": "16",
+              "expression": "0x00000010"
+            }
+          }
+        },
+        {
+          "name": "MAP",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 15,
+            "column": 5,
+            "length": 3
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "32",
+            "expression": "0x00000020",
+            "literal": {
+              "kind": "numeric",
+              "value": "32",
+              "expression": "0x00000020"
+            }
+          }
+        },
+        {
+          "name": "GET_PROPERTY",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 16,
+            "column": 5,
+            "length": 12
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "64",
+            "expression": "0x00000040",
+            "literal": {
+              "kind": "numeric",
+              "value": "64",
+              "expression": "0x00000040"
+            }
+          }
+        },
+        {
+          "name": "SET_PROPERTY",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 17,
+            "column": 5,
+            "length": 12
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "128",
+            "expression": "0x00000080",
+            "literal": {
+              "kind": "numeric",
+              "value": "128",
+              "expression": "0x00000080"
+            }
+          }
+        },
+        {
+          "name": "ENUMERATE",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 18,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "256",
+            "expression": "0x00000100",
+            "literal": {
+              "kind": "numeric",
+              "value": "256",
+              "expression": "0x00000100"
+            }
+          }
+        },
+        {
+          "name": "DESTROY",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 19,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "512",
+            "expression": "0x00000200",
+            "literal": {
+              "kind": "numeric",
+              "value": "512",
+              "expression": "0x00000200"
+            }
+          }
+        },
+        {
+          "name": "SET_POLICY",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 20,
+            "column": 5,
+            "length": 10
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "1024",
+            "expression": "0x00000400",
+            "literal": {
+              "kind": "numeric",
+              "value": "1024",
+              "expression": "0x00000400"
+            }
+          }
+        },
+        {
+          "name": "GET_POLICY",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 21,
+            "column": 5,
+            "length": 10
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "2048",
+            "expression": "0x00000800",
+            "literal": {
+              "kind": "numeric",
+              "value": "2048",
+              "expression": "0x00000800"
+            }
+          }
+        },
+        {
+          "name": "SIGNAL",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 22,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "4096",
+            "expression": "0x00001000",
+            "literal": {
+              "kind": "numeric",
+              "value": "4096",
+              "expression": "0x00001000"
+            }
+          }
+        },
+        {
+          "name": "SIGNAL_PEER",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 23,
+            "column": 5,
+            "length": 11
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "8192",
+            "expression": "0x00002000",
+            "literal": {
+              "kind": "numeric",
+              "value": "8192",
+              "expression": "0x00002000"
+            }
+          }
+        },
+        {
+          "name": "WAIT",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 24,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "16384",
+            "expression": "0x00004000",
+            "literal": {
+              "kind": "numeric",
+              "value": "16384",
+              "expression": "0x00004000"
+            }
+          }
+        },
+        {
+          "name": "INSPECT",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 25,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "32768",
+            "expression": "0x00008000",
+            "literal": {
+              "kind": "numeric",
+              "value": "32768",
+              "expression": "0x00008000"
+            }
+          }
+        },
+        {
+          "name": "MANAGE_JOB",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 26,
+            "column": 5,
+            "length": 10
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "65536",
+            "expression": "0x00010000",
+            "literal": {
+              "kind": "numeric",
+              "value": "65536",
+              "expression": "0x00010000"
+            }
+          }
+        },
+        {
+          "name": "MANAGE_PROCESS",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 27,
+            "column": 5,
+            "length": 14
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "131072",
+            "expression": "0x00020000",
+            "literal": {
+              "kind": "numeric",
+              "value": "131072",
+              "expression": "0x00020000"
+            }
+          }
+        },
+        {
+          "name": "MANAGE_THREAD",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 28,
+            "column": 5,
+            "length": 13
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "262144",
+            "expression": "0x00040000",
+            "literal": {
+              "kind": "numeric",
+              "value": "262144",
+              "expression": "0x00040000"
+            }
+          }
+        },
+        {
+          "name": "APPLY_PROFILE",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 29,
+            "column": 5,
+            "length": 13
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "524288",
+            "expression": "0x00080000",
+            "literal": {
+              "kind": "numeric",
+              "value": "524288",
+              "expression": "0x00080000"
+            }
+          }
+        },
+        {
+          "name": "MANAGE_SOCKET",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 30,
+            "column": 5,
+            "length": 13
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "1048576",
+            "expression": "0x00100000",
+            "literal": {
+              "kind": "numeric",
+              "value": "1048576",
+              "expression": "0x00100000"
+            }
+          }
+        },
+        {
+          "name": "OP_CHILDREN",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 31,
+            "column": 5,
+            "length": 11
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "2097152",
+            "expression": "0x00200000",
+            "literal": {
+              "kind": "numeric",
+              "value": "2097152",
+              "expression": "0x00200000"
+            }
+          }
+        },
+        {
+          "name": "RESIZE",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 32,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "4194304",
+            "expression": "0x00400000",
+            "literal": {
+              "kind": "numeric",
+              "value": "4194304",
+              "expression": "0x00400000"
+            }
+          }
+        },
+        {
+          "name": "ATTACH_VMO",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 33,
+            "column": 5,
+            "length": 10
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "8388608",
+            "expression": "0x00800000",
+            "literal": {
+              "kind": "numeric",
+              "value": "8388608",
+              "expression": "0x00800000"
+            }
+          }
+        },
+        {
+          "name": "MANAGE_VMO",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 34,
+            "column": 5,
+            "length": 10
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "16777216",
+            "expression": "0x01000000",
+            "literal": {
+              "kind": "numeric",
+              "value": "16777216",
+              "expression": "0x01000000"
+            }
+          }
+        },
+        {
+          "name": "SAME_RIGHTS",
+          "location": {
+            "filename": "../../zircon/vdso/rights.fidl",
+            "line": 35,
+            "column": 5,
+            "length": 11
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "2147483648",
+            "expression": "0x80000000",
+            "literal": {
+              "kind": "numeric",
+              "value": "2147483648",
+              "expression": "0x80000000"
+            }
+          }
+        }
+      ],
+      "strict": true
+    }
+  ],
+  "const_declarations": [
+    {
+      "name": "zx/CHANNEL_MAX_MSG_BYTES",
+      "location": {
+        "filename": "../../zircon/vdso/zx_common.fidl",
+        "line": 60,
+        "column": 7,
+        "length": 21
+      },
+      "deprecated": false,
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "65536",
+        "expression": "65536",
+        "literal": {
+          "kind": "numeric",
+          "value": "65536",
+          "expression": "65536"
+        }
+      }
+    },
+    {
+      "name": "zx/CHANNEL_MAX_MSG_HANDLES",
+      "location": {
+        "filename": "../../zircon/vdso/zx_common.fidl",
+        "line": 61,
+        "column": 7,
+        "length": 23
+      },
+      "deprecated": false,
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "64",
+        "expression": "64",
+        "literal": {
+          "kind": "numeric",
+          "value": "64",
+          "expression": "64"
+        }
+      }
+    },
+    {
+      "name": "zx/DEFAULT_CHANNEL_RIGHTS",
+      "location": {
+        "filename": "../../zircon/vdso/rights.fidl",
+        "line": 43,
+        "column": 7,
+        "length": 22
+      },
+      "deprecated": false,
+      "type": {
+        "kind_v2": "identifier",
+        "identifier": "zx/Rights",
+        "nullable": false,
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "binary_operator",
+        "value": "61454",
+        "expression": "Rights.TRANSFER | Rights.WAIT | Rights.INSPECT | RIGHTS_IO | Rights.SIGNAL | Rights.SIGNAL_PEER"
+      }
+    },
+    {
+      "name": "zx/DEFAULT_EVENT_RIGHTS",
+      "location": {
+        "filename": "../../zircon/vdso/rights.fidl",
+        "line": 45,
+        "column": 7,
+        "length": 20
+      },
+      "deprecated": false,
+      "type": {
+        "kind_v2": "identifier",
+        "identifier": "zx/Rights",
+        "nullable": false,
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "binary_operator",
+        "value": "53251",
+        "expression": "RIGHTS_BASIC | Rights.SIGNAL"
+      }
+    },
+    {
+      "name": "zx/IOB_MAX_REGIONS",
+      "location": {
+        "filename": "../../zircon/vdso/zx_common.fidl",
+        "line": 62,
+        "column": 7,
+        "length": 15
+      },
+      "deprecated": false,
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "64",
+        "expression": "64",
+        "literal": {
+          "kind": "numeric",
+          "value": "64",
+          "expression": "64"
+        }
+      }
+    },
+    {
+      "name": "zx/MAX_CPUS",
+      "location": {
+        "filename": "../../zircon/vdso/zx_common.fidl",
+        "line": 64,
+        "column": 7,
+        "length": 8
+      },
+      "deprecated": false,
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "512",
+        "expression": "512",
+        "literal": {
+          "kind": "numeric",
+          "value": "512",
+          "expression": "512"
+        }
+      }
+    },
+    {
+      "name": "zx/MAX_NAME_LEN",
+      "location": {
+        "filename": "../../zircon/vdso/zx_common.fidl",
+        "line": 63,
+        "column": 7,
+        "length": 12
+      },
+      "deprecated": false,
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "32",
+        "expression": "32",
+        "literal": {
+          "kind": "numeric",
+          "value": "32",
+          "expression": "32"
+        }
+      }
+    },
+    {
+      "name": "zx/RIGHTS_BASIC",
+      "location": {
+        "filename": "../../zircon/vdso/rights.fidl",
+        "line": 38,
+        "column": 7,
+        "length": 12
+      },
+      "deprecated": false,
+      "type": {
+        "kind_v2": "identifier",
+        "identifier": "zx/Rights",
+        "nullable": false,
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "binary_operator",
+        "value": "49155",
+        "expression": "Rights.TRANSFER | Rights.DUPLICATE | Rights.WAIT | Rights.INSPECT"
+      }
+    },
+    {
+      "name": "zx/RIGHTS_IO",
+      "location": {
+        "filename": "../../zircon/vdso/rights.fidl",
+        "line": 39,
+        "column": 7,
+        "length": 9
+      },
+      "deprecated": false,
+      "type": {
+        "kind_v2": "identifier",
+        "identifier": "zx/Rights",
+        "nullable": false,
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "binary_operator",
+        "value": "12",
+        "expression": "Rights.READ | Rights.WRITE"
+      }
+    },
+    {
+      "name": "zx/RIGHTS_POLICY",
+      "location": {
+        "filename": "../../zircon/vdso/rights.fidl",
+        "line": 41,
+        "column": 7,
+        "length": 13
+      },
+      "deprecated": false,
+      "type": {
+        "kind_v2": "identifier",
+        "identifier": "zx/Rights",
+        "nullable": false,
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "binary_operator",
+        "value": "3072",
+        "expression": "Rights.GET_POLICY | Rights.SET_POLICY"
+      }
+    },
+    {
+      "name": "zx/RIGHTS_PROPERTY",
+      "location": {
+        "filename": "../../zircon/vdso/rights.fidl",
+        "line": 40,
+        "column": 7,
+        "length": 15
+      },
+      "deprecated": false,
+      "type": {
+        "kind_v2": "identifier",
+        "identifier": "zx/Rights",
+        "nullable": false,
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "binary_operator",
+        "value": "192",
+        "expression": "Rights.GET_PROPERTY | Rights.SET_PROPERTY"
+      }
+    }
+  ],
+  "enum_declarations": [
+    {
+      "name": "zx/ObjType",
+      "naming_context": [
+        "ObjType"
+      ],
+      "location": {
+        "filename": "../../zircon/vdso/zx_common.fidl",
+        "line": 66,
+        "column": 6,
+        "length": 7
+      },
+      "deprecated": false,
+      "type": "uint32",
+      "members": [
+        {
+          "name": "NONE",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 67,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "0",
+            "expression": "0",
+            "literal": {
+              "kind": "numeric",
+              "value": "0",
+              "expression": "0"
+            }
+          }
+        },
+        {
+          "name": "PROCESS",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 68,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "1",
+            "expression": "1",
+            "literal": {
+              "kind": "numeric",
+              "value": "1",
+              "expression": "1"
+            }
+          }
+        },
+        {
+          "name": "THREAD",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 69,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "2",
+            "expression": "2",
+            "literal": {
+              "kind": "numeric",
+              "value": "2",
+              "expression": "2"
+            }
+          }
+        },
+        {
+          "name": "VMO",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 70,
+            "column": 5,
+            "length": 3
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "3",
+            "expression": "3",
+            "literal": {
+              "kind": "numeric",
+              "value": "3",
+              "expression": "3"
+            }
+          }
+        },
+        {
+          "name": "CHANNEL",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 71,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "4",
+            "expression": "4",
+            "literal": {
+              "kind": "numeric",
+              "value": "4",
+              "expression": "4"
+            }
+          }
+        },
+        {
+          "name": "EVENT",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 72,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "5",
+            "expression": "5",
+            "literal": {
+              "kind": "numeric",
+              "value": "5",
+              "expression": "5"
+            }
+          }
+        },
+        {
+          "name": "PORT",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 73,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "6",
+            "expression": "6",
+            "literal": {
+              "kind": "numeric",
+              "value": "6",
+              "expression": "6"
+            }
+          }
+        },
+        {
+          "name": "INTERRUPT",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 74,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "9",
+            "expression": "9",
+            "literal": {
+              "kind": "numeric",
+              "value": "9",
+              "expression": "9"
+            }
+          }
+        },
+        {
+          "name": "PCI_DEVICE",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 75,
+            "column": 5,
+            "length": 10
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "11",
+            "expression": "11",
+            "literal": {
+              "kind": "numeric",
+              "value": "11",
+              "expression": "11"
+            }
+          }
+        },
+        {
+          "name": "LOG",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 76,
+            "column": 5,
+            "length": 3
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "12",
+            "expression": "12",
+            "literal": {
+              "kind": "numeric",
+              "value": "12",
+              "expression": "12"
+            }
+          }
+        },
+        {
+          "name": "SOCKET",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 77,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "14",
+            "expression": "14",
+            "literal": {
+              "kind": "numeric",
+              "value": "14",
+              "expression": "14"
+            }
+          }
+        },
+        {
+          "name": "RESOURCE",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 78,
+            "column": 5,
+            "length": 8
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "15",
+            "expression": "15",
+            "literal": {
+              "kind": "numeric",
+              "value": "15",
+              "expression": "15"
+            }
+          }
+        },
+        {
+          "name": "EVENTPAIR",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 79,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "16",
+            "expression": "16",
+            "literal": {
+              "kind": "numeric",
+              "value": "16",
+              "expression": "16"
+            }
+          }
+        },
+        {
+          "name": "JOB",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 80,
+            "column": 5,
+            "length": 3
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "17",
+            "expression": "17",
+            "literal": {
+              "kind": "numeric",
+              "value": "17",
+              "expression": "17"
+            }
+          }
+        },
+        {
+          "name": "VMAR",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 81,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "18",
+            "expression": "18",
+            "literal": {
+              "kind": "numeric",
+              "value": "18",
+              "expression": "18"
+            }
+          }
+        },
+        {
+          "name": "FIFO",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 82,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "19",
+            "expression": "19",
+            "literal": {
+              "kind": "numeric",
+              "value": "19",
+              "expression": "19"
+            }
+          }
+        },
+        {
+          "name": "GUEST",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 83,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "20",
+            "expression": "20",
+            "literal": {
+              "kind": "numeric",
+              "value": "20",
+              "expression": "20"
+            }
+          }
+        },
+        {
+          "name": "VCPU",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 84,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "21",
+            "expression": "21",
+            "literal": {
+              "kind": "numeric",
+              "value": "21",
+              "expression": "21"
+            }
+          }
+        },
+        {
+          "name": "TIMER",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 85,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "22",
+            "expression": "22",
+            "literal": {
+              "kind": "numeric",
+              "value": "22",
+              "expression": "22"
+            }
+          }
+        },
+        {
+          "name": "IOMMU",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 86,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "23",
+            "expression": "23",
+            "literal": {
+              "kind": "numeric",
+              "value": "23",
+              "expression": "23"
+            }
+          }
+        },
+        {
+          "name": "BTI",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 87,
+            "column": 5,
+            "length": 3
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "24",
+            "expression": "24",
+            "literal": {
+              "kind": "numeric",
+              "value": "24",
+              "expression": "24"
+            }
+          }
+        },
+        {
+          "name": "PROFILE",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 88,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "25",
+            "expression": "25",
+            "literal": {
+              "kind": "numeric",
+              "value": "25",
+              "expression": "25"
+            }
+          }
+        },
+        {
+          "name": "PMT",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 89,
+            "column": 5,
+            "length": 3
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "26",
+            "expression": "26",
+            "literal": {
+              "kind": "numeric",
+              "value": "26",
+              "expression": "26"
+            }
+          }
+        },
+        {
+          "name": "SUSPEND_TOKEN",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 90,
+            "column": 5,
+            "length": 13
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "27",
+            "expression": "27",
+            "literal": {
+              "kind": "numeric",
+              "value": "27",
+              "expression": "27"
+            }
+          }
+        },
+        {
+          "name": "PAGER",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 91,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "28",
+            "expression": "28",
+            "literal": {
+              "kind": "numeric",
+              "value": "28",
+              "expression": "28"
+            }
+          }
+        },
+        {
+          "name": "EXCEPTION",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 92,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "29",
+            "expression": "29",
+            "literal": {
+              "kind": "numeric",
+              "value": "29",
+              "expression": "29"
+            }
+          }
+        },
+        {
+          "name": "CLOCK",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 93,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "30",
+            "expression": "30",
+            "literal": {
+              "kind": "numeric",
+              "value": "30",
+              "expression": "30"
+            }
+          }
+        },
+        {
+          "name": "STREAM",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 94,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "31",
+            "expression": "31",
+            "literal": {
+              "kind": "numeric",
+              "value": "31",
+              "expression": "31"
+            }
+          }
+        },
+        {
+          "name": "MSI",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 95,
+            "column": 5,
+            "length": 3
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "32",
+            "expression": "32",
+            "literal": {
+              "kind": "numeric",
+              "value": "32",
+              "expression": "32"
+            }
+          }
+        },
+        {
+          "name": "IOB",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 96,
+            "column": 5,
+            "length": 3
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "33",
+            "expression": "33",
+            "literal": {
+              "kind": "numeric",
+              "value": "33",
+              "expression": "33"
+            }
+          }
+        },
+        {
+          "name": "COUNTER",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 101,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "34",
+            "expression": "34",
+            "literal": {
+              "kind": "numeric",
+              "value": "34",
+              "expression": "34"
+            }
+          }
+        }
+      ],
+      "strict": true
+    }
+  ],
+  "experimental_resource_declarations": [
+    {
+      "name": "zx/Handle",
+      "location": {
+        "filename": "../../zircon/vdso/zx_common.fidl",
+        "line": 104,
+        "column": 21,
+        "length": 6
+      },
+      "deprecated": false,
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint32",
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "properties": [
+        {
+          "name": "subtype",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 106,
+            "column": 9,
+            "length": 7
+          },
+          "deprecated": false,
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "zx/ObjType",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          }
+        },
+        {
+          "name": "rights",
+          "location": {
+            "filename": "../../zircon/vdso/zx_common.fidl",
+            "line": 107,
+            "column": 9,
+            "length": 6
+          },
+          "deprecated": false,
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "zx/Rights",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "protocol_declarations": [],
+  "service_declarations": [],
+  "struct_declarations": [],
+  "external_struct_declarations": [],
+  "table_declarations": [],
+  "union_declarations": [],
+  "alias_declarations": [
+    {
+      "name": "zx/Duration",
+      "location": {
+        "filename": "../../zircon/vdso/zx_common.fidl",
+        "line": 41,
+        "column": 7,
+        "length": 8
+      },
+      "deprecated": false,
+      "partial_type_ctor": {
+        "name": "int64",
+        "args": [],
+        "nullable": false
+      },
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "int64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      }
+    },
+    {
+      "name": "zx/DurationBoot",
+      "location": {
+        "filename": "../../zircon/vdso/zx_common.fidl",
+        "line": 45,
+        "column": 7,
+        "length": 12
+      },
+      "deprecated": false,
+      "partial_type_ctor": {
+        "name": "int64",
+        "args": [],
+        "nullable": false
+      },
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "int64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      }
+    },
+    {
+      "name": "zx/DurationMono",
+      "location": {
+        "filename": "../../zircon/vdso/zx_common.fidl",
+        "line": 43,
+        "column": 7,
+        "length": 12
+      },
+      "deprecated": false,
+      "partial_type_ctor": {
+        "name": "int64",
+        "args": [],
+        "nullable": false
+      },
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "int64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      }
+    },
+    {
+      "name": "zx/InstantBoot",
+      "location": {
+        "filename": "../../zircon/vdso/zx_common.fidl",
+        "line": 31,
+        "column": 7,
+        "length": 11
+      },
+      "deprecated": false,
+      "partial_type_ctor": {
+        "name": "int64",
+        "args": [],
+        "nullable": false
+      },
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "int64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      }
+    },
+    {
+      "name": "zx/InstantBootTicks",
+      "location": {
+        "filename": "../../zircon/vdso/zx_common.fidl",
+        "line": 38,
+        "column": 7,
+        "length": 16
+      },
+      "deprecated": false,
+      "partial_type_ctor": {
+        "name": "int64",
+        "args": [],
+        "nullable": false
+      },
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "int64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      }
+    },
+    {
+      "name": "zx/InstantMono",
+      "location": {
+        "filename": "../../zircon/vdso/zx_common.fidl",
+        "line": 29,
+        "column": 7,
+        "length": 11
+      },
+      "deprecated": false,
+      "partial_type_ctor": {
+        "name": "int64",
+        "args": [],
+        "nullable": false
+      },
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "int64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      }
+    },
+    {
+      "name": "zx/InstantMonoTicks",
+      "location": {
+        "filename": "../../zircon/vdso/zx_common.fidl",
+        "line": 36,
+        "column": 7,
+        "length": 16
+      },
+      "deprecated": false,
+      "partial_type_ctor": {
+        "name": "int64",
+        "args": [],
+        "nullable": false
+      },
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "int64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      }
+    },
+    {
+      "name": "zx/Koid",
+      "location": {
+        "filename": "../../zircon/vdso/zx_common.fidl",
+        "line": 48,
+        "column": 7,
+        "length": 4
+      },
+      "deprecated": false,
+      "partial_type_ctor": {
+        "name": "uint64",
+        "args": [],
+        "nullable": false
+      },
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      }
+    },
+    {
+      "name": "zx/Off",
+      "location": {
+        "filename": "../../zircon/vdso/zx_common.fidl",
+        "line": 51,
+        "column": 7,
+        "length": 3
+      },
+      "deprecated": false,
+      "partial_type_ctor": {
+        "name": "uint64",
+        "args": [],
+        "nullable": false
+      },
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      }
+    },
+    {
+      "name": "zx/Result",
+      "location": {
+        "filename": "../../zircon/vdso/zx_common.fidl",
+        "line": 18,
+        "column": 7,
+        "length": 6
+      },
+      "deprecated": false,
+      "partial_type_ctor": {
+        "name": "int32",
+        "args": [],
+        "nullable": false
+      },
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "int32",
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      }
+    },
+    {
+      "name": "zx/Signals",
+      "location": {
+        "filename": "../../zircon/vdso/zx_common.fidl",
+        "line": 55,
+        "column": 7,
+        "length": 7
+      },
+      "deprecated": false,
+      "partial_type_ctor": {
+        "name": "uint32",
+        "args": [],
+        "nullable": false
+      },
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint32",
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      }
+    },
+    {
+      "name": "zx/Status",
+      "location": {
+        "filename": "../../zircon/vdso/zx_common.fidl",
+        "line": 15,
+        "column": 7,
+        "length": 6
+      },
+      "deprecated": false,
+      "partial_type_ctor": {
+        "name": "int32",
+        "args": [],
+        "nullable": false
+      },
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "int32",
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      }
+    },
+    {
+      "name": "zx/Ticks",
+      "location": {
+        "filename": "../../zircon/vdso/zx_common.fidl",
+        "line": 34,
+        "column": 7,
+        "length": 5
+      },
+      "deprecated": false,
+      "partial_type_ctor": {
+        "name": "int64",
+        "args": [],
+        "nullable": false
+      },
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "int64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      }
+    },
+    {
+      "name": "zx/Time",
+      "location": {
+        "filename": "../../zircon/vdso/zx_common.fidl",
+        "line": 27,
+        "column": 7,
+        "length": 4
+      },
+      "deprecated": false,
+      "partial_type_ctor": {
+        "name": "int64",
+        "args": [],
+        "nullable": false
+      },
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "int64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      }
+    }
+  ],
+  "new_type_declarations": [],
+  "declaration_order": [
+    "zx/CHANNEL_MAX_MSG_BYTES",
+    "zx/CHANNEL_MAX_MSG_HANDLES",
+    "zx/Rights",
+    "zx/RIGHTS_IO",
+    "zx/DEFAULT_CHANNEL_RIGHTS",
+    "zx/RIGHTS_BASIC",
+    "zx/DEFAULT_EVENT_RIGHTS",
+    "zx/Duration",
+    "zx/DurationBoot",
+    "zx/DurationMono",
+    "zx/ObjType",
+    "zx/Handle",
+    "zx/IOB_MAX_REGIONS",
+    "zx/InstantBoot",
+    "zx/InstantBootTicks",
+    "zx/InstantMono",
+    "zx/InstantMonoTicks",
+    "zx/Koid",
+    "zx/MAX_CPUS",
+    "zx/MAX_NAME_LEN",
+    "zx/Off",
+    "zx/RIGHTS_POLICY",
+    "zx/RIGHTS_PROPERTY",
+    "zx/Result",
+    "zx/Signals",
+    "zx/Status",
+    "zx/Ticks",
+    "zx/Time"
+  ],
+  "declarations": {
+    "zx/Rights": "bits",
+    "zx/CHANNEL_MAX_MSG_BYTES": "const",
+    "zx/CHANNEL_MAX_MSG_HANDLES": "const",
+    "zx/DEFAULT_CHANNEL_RIGHTS": "const",
+    "zx/DEFAULT_EVENT_RIGHTS": "const",
+    "zx/IOB_MAX_REGIONS": "const",
+    "zx/MAX_CPUS": "const",
+    "zx/MAX_NAME_LEN": "const",
+    "zx/RIGHTS_BASIC": "const",
+    "zx/RIGHTS_IO": "const",
+    "zx/RIGHTS_POLICY": "const",
+    "zx/RIGHTS_PROPERTY": "const",
+    "zx/ObjType": "enum",
+    "zx/Handle": "experimental_resource",
+    "zx/Duration": "alias",
+    "zx/DurationBoot": "alias",
+    "zx/DurationMono": "alias",
+    "zx/InstantBoot": "alias",
+    "zx/InstantBootTicks": "alias",
+    "zx/InstantMono": "alias",
+    "zx/InstantMonoTicks": "alias",
+    "zx/Koid": "alias",
+    "zx/Off": "alias",
+    "zx/Result": "alias",
+    "zx/Signals": "alias",
+    "zx/Status": "alias",
+    "zx/Ticks": "alias",
+    "zx/Time": "alias"
+  }
+}

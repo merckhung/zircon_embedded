@@ -1,0 +1,8 @@
+host_x64/obj/src/lib/kprint/macro/kprint-macro.actual/libkprint_macro.so
+host_x64/obj/src/lib/kprint/macro/kprint-macro.actual/libkprint_macro.rmeta
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/target.json
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/lib/libcompiler_builtins.rlib
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/lib/libprofiler_builtins.rlib
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/lib/libcore.rlib
+kernel_arm64.lk_debug_level_2/obj/src/lib/kprint/kprint.actual/libkprint.rlib
+kernel_arm64.lk_debug_level_2/obj/src/lib/kprint/kprint.actual/libkprint.rmeta

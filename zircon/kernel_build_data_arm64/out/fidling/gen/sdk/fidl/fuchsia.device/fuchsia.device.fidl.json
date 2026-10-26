@@ -1,0 +1,2946 @@
+{
+  "name": "fuchsia.device",
+  "platform": "fuchsia",
+  "available": {
+    "fuchsia": [
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "NEXT",
+      "HEAD"
+    ]
+  },
+  "maybe_attributes": [
+    {
+      "name": "available",
+      "arguments": [
+        {
+          "name": "added",
+          "type": "uint32",
+          "value": {
+            "kind": "literal",
+            "value": "7",
+            "expression": "7",
+            "literal": {
+              "kind": "numeric",
+              "value": "7",
+              "expression": "7"
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/overview.fidl",
+            "line": 7,
+            "column": 12,
+            "length": 7
+          }
+        }
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/overview.fidl",
+        "line": 7,
+        "column": 1,
+        "length": 19
+      }
+    }
+  ],
+  "experiments": [],
+  "library_dependencies": [
+    {
+      "name": "zx",
+      "declarations": {
+        "zx/Rights": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "zx/CHANNEL_MAX_MSG_BYTES": {
+          "kind": "const"
+        },
+        "zx/CHANNEL_MAX_MSG_HANDLES": {
+          "kind": "const"
+        },
+        "zx/DEFAULT_CHANNEL_RIGHTS": {
+          "kind": "const"
+        },
+        "zx/DEFAULT_EVENT_RIGHTS": {
+          "kind": "const"
+        },
+        "zx/IOB_MAX_REGIONS": {
+          "kind": "const"
+        },
+        "zx/MAX_CPUS": {
+          "kind": "const"
+        },
+        "zx/MAX_NAME_LEN": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_BASIC": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_IO": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_POLICY": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_PROPERTY": {
+          "kind": "const"
+        },
+        "zx/ObjType": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "zx/Handle": {
+          "kind": "experimental_resource"
+        },
+        "zx/Duration": {
+          "kind": "alias"
+        },
+        "zx/DurationBoot": {
+          "kind": "alias"
+        },
+        "zx/DurationMono": {
+          "kind": "alias"
+        },
+        "zx/InstantBoot": {
+          "kind": "alias"
+        },
+        "zx/InstantBootTicks": {
+          "kind": "alias"
+        },
+        "zx/InstantMono": {
+          "kind": "alias"
+        },
+        "zx/InstantMonoTicks": {
+          "kind": "alias"
+        },
+        "zx/Koid": {
+          "kind": "alias"
+        },
+        "zx/Off": {
+          "kind": "alias"
+        },
+        "zx/Result": {
+          "kind": "alias"
+        },
+        "zx/Signals": {
+          "kind": "alias"
+        },
+        "zx/Status": {
+          "kind": "alias"
+        },
+        "zx/Ticks": {
+          "kind": "alias"
+        },
+        "zx/Time": {
+          "kind": "alias"
+        }
+      }
+    }
+  ],
+  "bits_declarations": [
+    {
+      "name": "fuchsia.device/DeviceSignal",
+      "naming_context": [
+        "DeviceSignal"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+        "line": 22,
+        "column": 6,
+        "length": 12
+      },
+      "deprecated": true,
+      "maybe_attributes": [
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "literal",
+                "value": "7",
+                "expression": "7",
+                "literal": {
+                  "kind": "numeric",
+                  "value": "7",
+                  "expression": "7"
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 21,
+                "column": 12,
+                "length": 7
+              }
+            },
+            {
+              "name": "deprecated",
+              "type": "uint32",
+              "value": {
+                "kind": "literal",
+                "value": "7",
+                "expression": "7",
+                "literal": {
+                  "kind": "numeric",
+                  "value": "7",
+                  "expression": "7"
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 21,
+                "column": 21,
+                "length": 12
+              }
+            },
+            {
+              "name": "note",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "Devices will be services in the future.",
+                "expression": "\"Devices will be services in the future.\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "Devices will be services in the future.",
+                  "expression": "\"Devices will be services in the future.\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 21,
+                "column": 35,
+                "length": 46
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 21,
+            "column": 1,
+            "length": 81
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint32",
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "mask": "520093696",
+      "members": [
+        {
+          "name": "READABLE",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 24,
+            "column": 5,
+            "length": 8
+          },
+          "deprecated": true,
+          "value": {
+            "kind": "literal",
+            "value": "16777216",
+            "expression": "0x01000000",
+            "literal": {
+              "kind": "numeric",
+              "value": "16777216",
+              "expression": "0x01000000"
+            }
+          },
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Indicates the device is ready for reading.\n",
+                    "expression": "/// Indicates the device is ready for reading.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Indicates the device is ready for reading.\n",
+                      "expression": "/// Indicates the device is ready for reading."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                    "line": 23,
+                    "column": 5,
+                    "length": 46
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 23,
+                "column": 5,
+                "length": 46
+              }
+            }
+          ]
+        },
+        {
+          "name": "OOB",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 26,
+            "column": 5,
+            "length": 3
+          },
+          "deprecated": true,
+          "value": {
+            "kind": "literal",
+            "value": "33554432",
+            "expression": "0x02000000",
+            "literal": {
+              "kind": "numeric",
+              "value": "33554432",
+              "expression": "0x02000000"
+            }
+          },
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Indicates an out-of-band state transition has occurred.\n",
+                    "expression": "/// Indicates an out-of-band state transition has occurred.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Indicates an out-of-band state transition has occurred.\n",
+                      "expression": "/// Indicates an out-of-band state transition has occurred."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                    "line": 25,
+                    "column": 5,
+                    "length": 59
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 25,
+                "column": 5,
+                "length": 59
+              }
+            }
+          ]
+        },
+        {
+          "name": "WRITABLE",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 28,
+            "column": 5,
+            "length": 8
+          },
+          "deprecated": true,
+          "value": {
+            "kind": "literal",
+            "value": "67108864",
+            "expression": "0x04000000",
+            "literal": {
+              "kind": "numeric",
+              "value": "67108864",
+              "expression": "0x04000000"
+            }
+          },
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Indicates the device is ready for writing.\n",
+                    "expression": "/// Indicates the device is ready for writing.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Indicates the device is ready for writing.\n",
+                      "expression": "/// Indicates the device is ready for writing."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                    "line": 27,
+                    "column": 5,
+                    "length": 46
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 27,
+                "column": 5,
+                "length": 46
+              }
+            }
+          ]
+        },
+        {
+          "name": "ERROR",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 30,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": true,
+          "value": {
+            "kind": "literal",
+            "value": "134217728",
+            "expression": "0x08000000",
+            "literal": {
+              "kind": "numeric",
+              "value": "134217728",
+              "expression": "0x08000000"
+            }
+          },
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Indicates the device has encountered an error state.\n",
+                    "expression": "/// Indicates the device has encountered an error state.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Indicates the device has encountered an error state.\n",
+                      "expression": "/// Indicates the device has encountered an error state."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                    "line": 29,
+                    "column": 5,
+                    "length": 56
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 29,
+                "column": 5,
+                "length": 56
+              }
+            }
+          ]
+        },
+        {
+          "name": "HANGUP",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 32,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": true,
+          "value": {
+            "kind": "literal",
+            "value": "268435456",
+            "expression": "0x10000000",
+            "literal": {
+              "kind": "numeric",
+              "value": "268435456",
+              "expression": "0x10000000"
+            }
+          },
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Indicates the device has hung up on the current connection.\n",
+                    "expression": "/// Indicates the device has hung up on the current connection.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Indicates the device has hung up on the current connection.\n",
+                      "expression": "/// Indicates the device has hung up on the current connection."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                    "line": 31,
+                    "column": 5,
+                    "length": 63
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 31,
+                "column": 5,
+                "length": 63
+              }
+            }
+          ]
+        }
+      ],
+      "strict": true
+    }
+  ],
+  "const_declarations": [
+    {
+      "name": "fuchsia.device/DEFAULT_DEVICE_NAME",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/name-provider.fidl",
+        "line": 9,
+        "column": 7,
+        "length": 19
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "identifier",
+                "value": "4292870144",
+                "expression": "HEAD",
+                "identifier": "fidl/HEAD"
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/name-provider.fidl",
+                "line": 8,
+                "column": 12,
+                "length": 10
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/name-provider.fidl",
+            "line": 8,
+            "column": 1,
+            "length": 22
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "string",
+        "nullable": false,
+        "type_shape_v2": {
+          "inline_size": 16,
+          "alignment": 8,
+          "depth": 1,
+          "max_handles": 0,
+          "max_out_of_line": 4294967295,
+          "has_padding": true,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "fuchsia",
+        "expression": "\"fuchsia\"",
+        "literal": {
+          "kind": "string",
+          "value": "fuchsia",
+          "expression": "\"fuchsia\""
+        }
+      }
+    },
+    {
+      "name": "fuchsia.device/DEVICE_NAME_MAX",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/name-provider.fidl",
+        "line": 14,
+        "column": 7,
+        "length": 15
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Maximum length of a device name (without a null byte), based on\n HOST_NAME_MAX as defined by <limits.h>.\n",
+                "expression": "/// Maximum length of a device name (without a null byte), based on\n/// HOST_NAME_MAX as defined by <limits.h>.",
+                "literal": {
+                  "kind": "string",
+                  "value": " Maximum length of a device name (without a null byte), based on\n HOST_NAME_MAX as defined by <limits.h>.\n",
+                  "expression": "/// Maximum length of a device name (without a null byte), based on\n/// HOST_NAME_MAX as defined by <limits.h>."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/name-provider.fidl",
+                "line": 11,
+                "column": 1,
+                "length": 111
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/name-provider.fidl",
+            "line": 11,
+            "column": 1,
+            "length": 111
+          }
+        },
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "literal",
+                "value": "7",
+                "expression": "7",
+                "literal": {
+                  "kind": "numeric",
+                  "value": "7",
+                  "expression": "7"
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/name-provider.fidl",
+                "line": 13,
+                "column": 12,
+                "length": 7
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/name-provider.fidl",
+            "line": 13,
+            "column": 1,
+            "length": 19
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint32",
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "255",
+        "expression": "255",
+        "literal": {
+          "kind": "numeric",
+          "value": "255",
+          "expression": "255"
+        }
+      }
+    },
+    {
+      "name": "fuchsia.device/MAX_DEVICE_NAME_LEN",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+        "line": 10,
+        "column": 7,
+        "length": 19
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Maxmium length for a device name\n",
+                "expression": "/// Maxmium length for a device name",
+                "literal": {
+                  "kind": "string",
+                  "value": " Maxmium length for a device name\n",
+                  "expression": "/// Maxmium length for a device name"
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 8,
+                "column": 1,
+                "length": 36
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 8,
+            "column": 1,
+            "length": 36
+          }
+        },
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "identifier",
+                "value": "4292870144",
+                "expression": "HEAD",
+                "identifier": "fidl/HEAD"
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 9,
+                "column": 12,
+                "length": 10
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 9,
+            "column": 1,
+            "length": 22
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "32",
+        "expression": "32",
+        "literal": {
+          "kind": "numeric",
+          "value": "32",
+          "expression": "32"
+        }
+      }
+    },
+    {
+      "name": "fuchsia.device/MAX_DEVICE_PATH_LEN",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+        "line": 13,
+        "column": 7,
+        "length": 19
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Maximum length of a device path\n",
+                "expression": "/// Maximum length of a device path",
+                "literal": {
+                  "kind": "string",
+                  "value": " Maximum length of a device path\n",
+                  "expression": "/// Maximum length of a device path"
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 11,
+                "column": 1,
+                "length": 35
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 11,
+            "column": 1,
+            "length": 35
+          }
+        },
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "identifier",
+                "value": "4292870144",
+                "expression": "HEAD",
+                "identifier": "fidl/HEAD"
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 12,
+                "column": 12,
+                "length": 10
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 12,
+            "column": 1,
+            "length": 22
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "1024",
+        "expression": "1024",
+        "literal": {
+          "kind": "numeric",
+          "value": "1024",
+          "expression": "1024"
+        }
+      }
+    },
+    {
+      "name": "fuchsia.device/MAX_DRIVER_NAME_LEN",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+        "line": 16,
+        "column": 7,
+        "length": 19
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Maxmium length for a driver name\n",
+                "expression": "/// Maxmium length for a driver name",
+                "literal": {
+                  "kind": "string",
+                  "value": " Maxmium length for a driver name\n",
+                  "expression": "/// Maxmium length for a driver name"
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 14,
+                "column": 1,
+                "length": 36
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 14,
+            "column": 1,
+            "length": 36
+          }
+        },
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "identifier",
+                "value": "4292870144",
+                "expression": "HEAD",
+                "identifier": "fidl/HEAD"
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 15,
+                "column": 12,
+                "length": 10
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 15,
+            "column": 1,
+            "length": 22
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "32",
+        "expression": "32",
+        "literal": {
+          "kind": "numeric",
+          "value": "32",
+          "expression": "32"
+        }
+      }
+    },
+    {
+      "name": "fuchsia.device/MAX_DRIVER_PATH_LEN",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+        "line": 19,
+        "column": 7,
+        "length": 19
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Maximum length for a driver path\n",
+                "expression": "/// Maximum length for a driver path",
+                "literal": {
+                  "kind": "string",
+                  "value": " Maximum length for a driver path\n",
+                  "expression": "/// Maximum length for a driver path"
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 17,
+                "column": 1,
+                "length": 36
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 17,
+            "column": 1,
+            "length": 36
+          }
+        },
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "identifier",
+                "value": "4292870144",
+                "expression": "HEAD",
+                "identifier": "fidl/HEAD"
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 18,
+                "column": 12,
+                "length": 10
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 18,
+            "column": 1,
+            "length": 22
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "1024",
+        "expression": "1024",
+        "literal": {
+          "kind": "numeric",
+          "value": "1024",
+          "expression": "1024"
+        }
+      }
+    }
+  ],
+  "enum_declarations": [],
+  "experimental_resource_declarations": [],
+  "protocol_declarations": [
+    {
+      "name": "fuchsia.device/Controller",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+        "line": 45,
+        "column": 17,
+        "length": 10
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Interface for manipulating a device in a devhost\n\n # Deprecation\n\n This interface is moving to fuchsia.device.fs.\n Tracking bug: https://fxbug.dev/340316138\n Please use that version of this protocol.\n Also, see //sdk/fidl/fuchsia.device.fs/README.md\n for future plans for DevFS.\n",
+                "expression": "/// Interface for manipulating a device in a devhost\n///\n/// # Deprecation\n///\n/// This interface is moving to fuchsia.device.fs.\n/// Tracking bug: https://fxbug.dev/340316138\n/// Please use that version of this protocol.\n/// Also, see //sdk/fidl/fuchsia.device.fs/README.md\n/// for future plans for DevFS.",
+                "literal": {
+                  "kind": "string",
+                  "value": " Interface for manipulating a device in a devhost\n\n # Deprecation\n\n This interface is moving to fuchsia.device.fs.\n Tracking bug: https://fxbug.dev/340316138\n Please use that version of this protocol.\n Also, see //sdk/fidl/fuchsia.device.fs/README.md\n for future plans for DevFS.\n",
+                  "expression": "/// Interface for manipulating a device in a devhost\n///\n/// # Deprecation\n///\n/// This interface is moving to fuchsia.device.fs.\n/// Tracking bug: https://fxbug.dev/340316138\n/// Please use that version of this protocol.\n/// Also, see //sdk/fidl/fuchsia.device.fs/README.md\n/// for future plans for DevFS."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 35,
+                "column": 1,
+                "length": 306
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 35,
+            "column": 1,
+            "length": 306
+          }
+        },
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "identifier",
+                "value": "4292870144",
+                "expression": "HEAD",
+                "identifier": "fidl/HEAD"
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 44,
+                "column": 12,
+                "length": 10
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 44,
+            "column": 1,
+            "length": 22
+          }
+        }
+      ],
+      "openness": "closed",
+      "composed_protocols": [],
+      "methods": [
+        {
+          "kind": "oneway",
+          "ordinal": 8735954460215418637,
+          "name": "ConnectToDeviceFidl",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 49,
+            "column": 12,
+            "length": 19
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Connect to the underlying device's FIDL protocol.\n This connection will not be multiplexed with fuchsia.device.Controller\n or fuchsia.io.Node.\n",
+                    "expression": "/// Connect to the underlying device's FIDL protocol.\n    /// This connection will not be multiplexed with fuchsia.device.Controller\n    /// or fuchsia.io.Node.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Connect to the underlying device's FIDL protocol.\n This connection will not be multiplexed with fuchsia.device.Controller\n or fuchsia.io.Node.\n",
+                      "expression": "/// Connect to the underlying device's FIDL protocol.\n    /// This connection will not be multiplexed with fuchsia.device.Controller\n    /// or fuchsia.io.Node."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                    "line": 46,
+                    "column": 5,
+                    "length": 160
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 46,
+                "column": 5,
+                "length": 160
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/ControllerConnectToDeviceFidlRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": false,
+          "is_composed": false,
+          "has_error": false
+        },
+        {
+          "kind": "oneway",
+          "ordinal": 7383455793070710992,
+          "name": "ConnectToController",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 54,
+            "column": 12,
+            "length": 19
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Connect to the same Controller FIDL protocol.\n",
+                    "expression": "/// Connect to the same Controller FIDL protocol.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Connect to the same Controller FIDL protocol.\n",
+                      "expression": "/// Connect to the same Controller FIDL protocol."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                    "line": 53,
+                    "column": 5,
+                    "length": 49
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 53,
+                "column": 5,
+                "length": 49
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/ControllerConnectToControllerRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": false,
+          "is_composed": false,
+          "has_error": false
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 3713483046889334633,
+          "name": "Bind",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 62,
+            "column": 12,
+            "length": 4
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Attempt to bind a driver to this device.\n + request `driver` This represents the suffix of a driver URL (e.g: \"fvm.cm\").\n            If this is non-empty, then the only drivers that will try to bind\n            are ones that match this url suffix.\n",
+                    "expression": "/// Attempt to bind a driver to this device.\n    /// + request `driver` This represents the suffix of a driver URL (e.g: \"fvm.cm\").\n    ///            If this is non-empty, then the only drivers that will try to bind\n    ///            are ones that match this url suffix.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Attempt to bind a driver to this device.\n + request `driver` This represents the suffix of a driver URL (e.g: \"fvm.cm\").\n            If this is non-empty, then the only drivers that will try to bind\n            are ones that match this url suffix.\n",
+                      "expression": "/// Attempt to bind a driver to this device.\n    /// + request `driver` This represents the suffix of a driver URL (e.g: \"fvm.cm\").\n    ///            If this is non-empty, then the only drivers that will try to bind\n    ///            are ones that match this url suffix."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                    "line": 58,
+                    "column": 5,
+                    "length": 272
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 58,
+                "column": 5,
+                "length": 272
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/ControllerBindRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 1024,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/Controller_Bind_Result",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": true,
+          "maybe_response_success_type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/Controller_Bind_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "maybe_response_err_type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          }
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 4057664154119930594,
+          "name": "Rebind",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 71,
+            "column": 12,
+            "length": 6
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Unbind all the children of this device, and then attempt to bind a driver to the device.\n This will not return until the bind completes.\n + request `driver` This represents the suffix of a driver URL (e.g: \"fvm.cm\").\n            If this is non-empty, then the only drivers that will try to bind\n            are ones that match this url suffix.\n",
+                    "expression": "/// Unbind all the children of this device, and then attempt to bind a driver to the device.\n    /// This will not return until the bind completes.\n    /// + request `driver` This represents the suffix of a driver URL (e.g: \"fvm.cm\").\n    ///            If this is non-empty, then the only drivers that will try to bind\n    ///            are ones that match this url suffix.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Unbind all the children of this device, and then attempt to bind a driver to the device.\n This will not return until the bind completes.\n + request `driver` This represents the suffix of a driver URL (e.g: \"fvm.cm\").\n            If this is non-empty, then the only drivers that will try to bind\n            are ones that match this url suffix.\n",
+                      "expression": "/// Unbind all the children of this device, and then attempt to bind a driver to the device.\n    /// This will not return until the bind completes.\n    /// + request `driver` This represents the suffix of a driver URL (e.g: \"fvm.cm\").\n    ///            If this is non-empty, then the only drivers that will try to bind\n    ///            are ones that match this url suffix."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                    "line": 66,
+                    "column": 5,
+                    "length": 375
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 66,
+                "column": 5,
+                "length": 375
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/ControllerRebindRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 1024,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/Controller_Rebind_Result",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": true,
+          "maybe_response_success_type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/Controller_Rebind_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "maybe_response_err_type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          }
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 3601446863455626278,
+          "name": "UnbindChildren",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 77,
+            "column": 12,
+            "length": 14
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " This api will unbind all the children of this device synchronously.\n This will avoid watching for device removal by the clients.\n",
+                    "expression": "/// This api will unbind all the children of this device synchronously.\n    /// This will avoid watching for device removal by the clients.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " This api will unbind all the children of this device synchronously.\n This will avoid watching for device removal by the clients.\n",
+                      "expression": "/// This api will unbind all the children of this device synchronously.\n    /// This will avoid watching for device removal by the clients."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                    "line": 75,
+                    "column": 5,
+                    "length": 139
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 75,
+                "column": 5,
+                "length": 139
+              }
+            }
+          ],
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/Controller_UnbindChildren_Result",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": true,
+          "maybe_response_success_type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/Controller_UnbindChildren_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "maybe_response_err_type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          }
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 437565675388207004,
+          "name": "ScheduleUnbind",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 81,
+            "column": 12,
+            "length": 14
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Disconnect this device and allow its parent to be bound again.\n This may not complete before it returns.\n",
+                    "expression": "/// Disconnect this device and allow its parent to be bound again.\n    /// This may not complete before it returns.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Disconnect this device and allow its parent to be bound again.\n This may not complete before it returns.\n",
+                      "expression": "/// Disconnect this device and allow its parent to be bound again.\n    /// This may not complete before it returns."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                    "line": 79,
+                    "column": 5,
+                    "length": 115
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 79,
+                "column": 5,
+                "length": 115
+              }
+            }
+          ],
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/Controller_ScheduleUnbind_Result",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": true,
+          "maybe_response_success_type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/Controller_ScheduleUnbind_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "maybe_response_err_type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          }
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 2776947966313760648,
+          "name": "GetTopologicalPath",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 84,
+            "column": 12,
+            "length": 18
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Return the topological path for this device\n",
+                    "expression": "/// Return the topological path for this device",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Return the topological path for this device\n",
+                      "expression": "/// Return the topological path for this device"
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                    "line": 83,
+                    "column": 5,
+                    "length": 47
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+                "line": 83,
+                "column": 5,
+                "length": 47
+              }
+            }
+          ],
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/Controller_GetTopologicalPath_Result",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 0,
+              "max_out_of_line": 1040,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": true,
+          "maybe_response_success_type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/Controller_GetTopologicalPath_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 1024,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "maybe_response_err_type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "fuchsia.device/NameProvider",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/name-provider.fidl",
+        "line": 19,
+        "column": 17,
+        "length": 12
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Interface for getting device names.\n",
+                "expression": "/// Interface for getting device names.",
+                "literal": {
+                  "kind": "string",
+                  "value": " Interface for getting device names.\n",
+                  "expression": "/// Interface for getting device names."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/name-provider.fidl",
+                "line": 16,
+                "column": 1,
+                "length": 39
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/name-provider.fidl",
+            "line": 16,
+            "column": 1,
+            "length": 39
+          }
+        },
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "literal",
+                "value": "7",
+                "expression": "7",
+                "literal": {
+                  "kind": "numeric",
+                  "value": "7",
+                  "expression": "7"
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/name-provider.fidl",
+                "line": 17,
+                "column": 12,
+                "length": 7
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/name-provider.fidl",
+            "line": 17,
+            "column": 1,
+            "length": 19
+          }
+        },
+        {
+          "name": "discoverable",
+          "arguments": [],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/name-provider.fidl",
+            "line": 18,
+            "column": 1,
+            "length": 13
+          }
+        }
+      ],
+      "openness": "closed",
+      "composed_protocols": [],
+      "methods": [
+        {
+          "kind": "twoway",
+          "ordinal": 6931284524237238990,
+          "name": "GetDeviceName",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/name-provider.fidl",
+            "line": 21,
+            "column": 12,
+            "length": 13
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Return the name of this Fuchsia device.\n",
+                    "expression": "/// Return the name of this Fuchsia device.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Return the name of this Fuchsia device.\n",
+                      "expression": "/// Return the name of this Fuchsia device."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device/name-provider.fidl",
+                    "line": 20,
+                    "column": 5,
+                    "length": 43
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device/name-provider.fidl",
+                "line": 20,
+                "column": 5,
+                "length": 43
+              }
+            }
+          ],
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/NameProvider_GetDeviceName_Result",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 0,
+              "max_out_of_line": 272,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": true,
+          "maybe_response_success_type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/NameProvider_GetDeviceName_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 256,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "maybe_response_err_type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "service_declarations": [],
+  "struct_declarations": [
+    {
+      "name": "fuchsia.device/ControllerBindRequest",
+      "naming_context": [
+        "Controller",
+        "Bind",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+        "line": 62,
+        "column": 17,
+        "length": 57
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "string",
+            "maybe_element_count": 1024,
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 1024,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "driver",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 63,
+            "column": 9,
+            "length": 6
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 1024,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.device/ControllerConnectToControllerRequest",
+      "naming_context": [
+        "Controller",
+        "ConnectToController",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+        "line": 54,
+        "column": 32,
+        "length": 61
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "endpoint",
+            "role": "server",
+            "protocol": "fuchsia.device/Controller",
+            "nullable": false,
+            "protocol_transport": "Channel",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "server",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 55,
+            "column": 9,
+            "length": 6
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 4,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 1,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.device/ControllerConnectToDeviceFidlRequest",
+      "naming_context": [
+        "Controller",
+        "ConnectToDeviceFidl",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+        "line": 49,
+        "column": 32,
+        "length": 57
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "handle",
+            "obj_type": 4,
+            "subtype": "channel",
+            "rights": 2147483648,
+            "nullable": false,
+            "resource_identifier": "zx/Handle",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "server",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 50,
+            "column": 9,
+            "length": 6
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 4,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 1,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.device/ControllerRebindRequest",
+      "naming_context": [
+        "Controller",
+        "Rebind",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+        "line": 71,
+        "column": 19,
+        "length": 57
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "string",
+            "maybe_element_count": 1024,
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 1024,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "driver",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 72,
+            "column": 9,
+            "length": 6
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 1024,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.device/Controller_Bind_Response",
+      "naming_context": [
+        "Controller",
+        "Bind",
+        "Response",
+        "response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+        "line": 64,
+        "column": 11,
+        "length": 2
+      },
+      "deprecated": false,
+      "members": [],
+      "resource": false,
+      "is_empty_success_struct": true,
+      "type_shape_v2": {
+        "inline_size": 1,
+        "alignment": 1,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.device/Controller_GetTopologicalPath_Response",
+      "naming_context": [
+        "Controller",
+        "GetTopologicalPath",
+        "Response",
+        "response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+        "line": 84,
+        "column": 37,
+        "length": 55
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "string",
+            "maybe_element_count": 1024,
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 1024,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "path",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+            "line": 85,
+            "column": 9,
+            "length": 4
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 1024,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.device/Controller_Rebind_Response",
+      "naming_context": [
+        "Controller",
+        "Rebind",
+        "Response",
+        "response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+        "line": 73,
+        "column": 11,
+        "length": 2
+      },
+      "deprecated": false,
+      "members": [],
+      "resource": false,
+      "is_empty_success_struct": true,
+      "type_shape_v2": {
+        "inline_size": 1,
+        "alignment": 1,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.device/Controller_ScheduleUnbind_Response",
+      "naming_context": [
+        "Controller",
+        "ScheduleUnbind",
+        "Response",
+        "response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+        "line": 81,
+        "column": 32,
+        "length": 2
+      },
+      "deprecated": false,
+      "members": [],
+      "resource": false,
+      "is_empty_success_struct": true,
+      "type_shape_v2": {
+        "inline_size": 1,
+        "alignment": 1,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.device/Controller_UnbindChildren_Response",
+      "naming_context": [
+        "Controller",
+        "UnbindChildren",
+        "Response",
+        "response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+        "line": 77,
+        "column": 32,
+        "length": 2
+      },
+      "deprecated": false,
+      "members": [],
+      "resource": false,
+      "is_empty_success_struct": true,
+      "type_shape_v2": {
+        "inline_size": 1,
+        "alignment": 1,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.device/NameProvider_GetDeviceName_Response",
+      "naming_context": [
+        "NameProvider",
+        "GetDeviceName",
+        "Response",
+        "response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/name-provider.fidl",
+        "line": 21,
+        "column": 32,
+        "length": 51
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "string",
+            "maybe_element_count": 255,
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 256,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "name",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device/name-provider.fidl",
+            "line": 22,
+            "column": 9,
+            "length": 4
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 256,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    }
+  ],
+  "external_struct_declarations": [],
+  "table_declarations": [],
+  "union_declarations": [
+    {
+      "name": "fuchsia.device/Controller_Bind_Result",
+      "naming_context": [
+        "Controller",
+        "Bind",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+        "line": 64,
+        "column": 11,
+        "length": 2
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "ordinal": 1,
+          "name": "response",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/Controller_Bind_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "location": {
+            "filename": "generated",
+            "line": 8,
+            "column": 1,
+            "length": 8
+          },
+          "deprecated": false
+        },
+        {
+          "ordinal": 2,
+          "name": "err",
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Status",
+            "args": [],
+            "nullable": false
+          },
+          "location": {
+            "filename": "generated",
+            "line": 9,
+            "column": 1,
+            "length": 3
+          },
+          "deprecated": false
+        }
+      ],
+      "strict": true,
+      "resource": false,
+      "is_result": true,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.device/Controller_GetTopologicalPath_Result",
+      "naming_context": [
+        "Controller",
+        "GetTopologicalPath",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+        "line": 84,
+        "column": 36,
+        "length": 57
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "ordinal": 1,
+          "name": "response",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/Controller_GetTopologicalPath_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 1024,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "location": {
+            "filename": "generated",
+            "line": 28,
+            "column": 1,
+            "length": 8
+          },
+          "deprecated": false
+        },
+        {
+          "ordinal": 2,
+          "name": "err",
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Status",
+            "args": [],
+            "nullable": false
+          },
+          "location": {
+            "filename": "generated",
+            "line": 29,
+            "column": 1,
+            "length": 3
+          },
+          "deprecated": false
+        }
+      ],
+      "strict": true,
+      "resource": false,
+      "is_result": true,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 2,
+        "max_handles": 0,
+        "max_out_of_line": 1040,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.device/Controller_Rebind_Result",
+      "naming_context": [
+        "Controller",
+        "Rebind",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+        "line": 73,
+        "column": 11,
+        "length": 2
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "ordinal": 1,
+          "name": "response",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/Controller_Rebind_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "location": {
+            "filename": "generated",
+            "line": 13,
+            "column": 1,
+            "length": 8
+          },
+          "deprecated": false
+        },
+        {
+          "ordinal": 2,
+          "name": "err",
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Status",
+            "args": [],
+            "nullable": false
+          },
+          "location": {
+            "filename": "generated",
+            "line": 14,
+            "column": 1,
+            "length": 3
+          },
+          "deprecated": false
+        }
+      ],
+      "strict": true,
+      "resource": false,
+      "is_result": true,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.device/Controller_ScheduleUnbind_Result",
+      "naming_context": [
+        "Controller",
+        "ScheduleUnbind",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+        "line": 81,
+        "column": 32,
+        "length": 2
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "ordinal": 1,
+          "name": "response",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/Controller_ScheduleUnbind_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "location": {
+            "filename": "generated",
+            "line": 23,
+            "column": 1,
+            "length": 8
+          },
+          "deprecated": false
+        },
+        {
+          "ordinal": 2,
+          "name": "err",
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Status",
+            "args": [],
+            "nullable": false
+          },
+          "location": {
+            "filename": "generated",
+            "line": 24,
+            "column": 1,
+            "length": 3
+          },
+          "deprecated": false
+        }
+      ],
+      "strict": true,
+      "resource": false,
+      "is_result": true,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.device/Controller_UnbindChildren_Result",
+      "naming_context": [
+        "Controller",
+        "UnbindChildren",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/controller.fidl",
+        "line": 77,
+        "column": 32,
+        "length": 2
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "ordinal": 1,
+          "name": "response",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/Controller_UnbindChildren_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "location": {
+            "filename": "generated",
+            "line": 18,
+            "column": 1,
+            "length": 8
+          },
+          "deprecated": false
+        },
+        {
+          "ordinal": 2,
+          "name": "err",
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Status",
+            "args": [],
+            "nullable": false
+          },
+          "location": {
+            "filename": "generated",
+            "line": 19,
+            "column": 1,
+            "length": 3
+          },
+          "deprecated": false
+        }
+      ],
+      "strict": true,
+      "resource": false,
+      "is_result": true,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.device/NameProvider_GetDeviceName_Result",
+      "naming_context": [
+        "NameProvider",
+        "GetDeviceName",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device/name-provider.fidl",
+        "line": 21,
+        "column": 31,
+        "length": 53
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "ordinal": 1,
+          "name": "response",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device/NameProvider_GetDeviceName_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 256,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "location": {
+            "filename": "generated",
+            "line": 40,
+            "column": 1,
+            "length": 8
+          },
+          "deprecated": false
+        },
+        {
+          "ordinal": 2,
+          "name": "err",
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Status",
+            "args": [],
+            "nullable": false
+          },
+          "location": {
+            "filename": "generated",
+            "line": 41,
+            "column": 1,
+            "length": 3
+          },
+          "deprecated": false
+        }
+      ],
+      "strict": true,
+      "resource": false,
+      "is_result": true,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 2,
+        "max_handles": 0,
+        "max_out_of_line": 272,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    }
+  ],
+  "alias_declarations": [],
+  "new_type_declarations": [],
+  "declaration_order": [
+    "fuchsia.device/ControllerConnectToDeviceFidlRequest",
+    "fuchsia.device/ControllerConnectToControllerRequest",
+    "fuchsia.device/MAX_DRIVER_PATH_LEN",
+    "fuchsia.device/ControllerBindRequest",
+    "fuchsia.device/Controller_Bind_Response",
+    "fuchsia.device/Controller_Bind_Result",
+    "fuchsia.device/ControllerRebindRequest",
+    "fuchsia.device/Controller_Rebind_Response",
+    "fuchsia.device/Controller_Rebind_Result",
+    "fuchsia.device/Controller_UnbindChildren_Response",
+    "fuchsia.device/Controller_UnbindChildren_Result",
+    "fuchsia.device/Controller_ScheduleUnbind_Response",
+    "fuchsia.device/Controller_ScheduleUnbind_Result",
+    "fuchsia.device/MAX_DEVICE_PATH_LEN",
+    "fuchsia.device/Controller_GetTopologicalPath_Response",
+    "fuchsia.device/Controller_GetTopologicalPath_Result",
+    "fuchsia.device/Controller",
+    "fuchsia.device/DEFAULT_DEVICE_NAME",
+    "fuchsia.device/DEVICE_NAME_MAX",
+    "fuchsia.device/DeviceSignal",
+    "fuchsia.device/MAX_DEVICE_NAME_LEN",
+    "fuchsia.device/MAX_DRIVER_NAME_LEN",
+    "fuchsia.device/NameProvider_GetDeviceName_Response",
+    "fuchsia.device/NameProvider_GetDeviceName_Result",
+    "fuchsia.device/NameProvider"
+  ],
+  "declarations": {
+    "fuchsia.device/DeviceSignal": "bits",
+    "fuchsia.device/DEFAULT_DEVICE_NAME": "const",
+    "fuchsia.device/DEVICE_NAME_MAX": "const",
+    "fuchsia.device/MAX_DEVICE_NAME_LEN": "const",
+    "fuchsia.device/MAX_DEVICE_PATH_LEN": "const",
+    "fuchsia.device/MAX_DRIVER_NAME_LEN": "const",
+    "fuchsia.device/MAX_DRIVER_PATH_LEN": "const",
+    "fuchsia.device/Controller": "protocol",
+    "fuchsia.device/NameProvider": "protocol",
+    "fuchsia.device/ControllerBindRequest": "struct",
+    "fuchsia.device/ControllerConnectToControllerRequest": "struct",
+    "fuchsia.device/ControllerConnectToDeviceFidlRequest": "struct",
+    "fuchsia.device/ControllerRebindRequest": "struct",
+    "fuchsia.device/Controller_Bind_Response": "struct",
+    "fuchsia.device/Controller_GetTopologicalPath_Response": "struct",
+    "fuchsia.device/Controller_Rebind_Response": "struct",
+    "fuchsia.device/Controller_ScheduleUnbind_Response": "struct",
+    "fuchsia.device/Controller_UnbindChildren_Response": "struct",
+    "fuchsia.device/NameProvider_GetDeviceName_Response": "struct",
+    "fuchsia.device/Controller_Bind_Result": "union",
+    "fuchsia.device/Controller_GetTopologicalPath_Result": "union",
+    "fuchsia.device/Controller_Rebind_Result": "union",
+    "fuchsia.device/Controller_ScheduleUnbind_Result": "union",
+    "fuchsia.device/Controller_UnbindChildren_Result": "union",
+    "fuchsia.device/NameProvider_GetDeviceName_Result": "union"
+  }
+}

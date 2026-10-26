@@ -1,0 +1,8 @@
+host_x64/obj/third_party/rust_crates/serde_derive-v1_0_229.actual/libserde_derive-6e5702ca913dc32e.so
+host_x64/obj/third_party/rust_crates/serde_derive-v1_0_229.actual/libserde_derive-6e5702ca913dc32e.rmeta
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/target.json
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/lib/libcompiler_builtins.rlib
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/lib/libprofiler_builtins.rlib
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/lib/libcore.rlib
+kernel_arm64.lk_debug_level_2/obj/third_party/rust_crates/serde_core-v1_0_229.actual/libserde_core-fa0896c771ca5b37.rlib
+kernel_arm64.lk_debug_level_2/obj/third_party/rust_crates/serde_core-v1_0_229.actual/libserde_core-fa0896c771ca5b37.rmeta

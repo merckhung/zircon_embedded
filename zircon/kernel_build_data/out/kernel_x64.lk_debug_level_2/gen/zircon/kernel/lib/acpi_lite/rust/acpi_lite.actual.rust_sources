@@ -1,0 +1,16 @@
+../../zircon/kernel/lib/acpi_lite/rust/src/acpi_lite.rs
+../../zircon/kernel/lib/acpi_lite/rust/src/apic.rs
+../../zircon/kernel/lib/acpi_lite/rust/src/binary_reader.rs
+../../zircon/kernel/lib/acpi_lite/rust/src/debug_port.rs
+../../zircon/kernel/lib/acpi_lite/rust/src/fuzzers.rs
+../../zircon/kernel/lib/acpi_lite/rust/src/lib.rs
+../../zircon/kernel/lib/acpi_lite/rust/src/numa.rs
+../../zircon/kernel/lib/acpi_lite/rust/src/structures.rs
+../../zircon/kernel/lib/acpi_lite/rust/src/test_data.rs
+../../zircon/kernel/lib/acpi_lite/rust/src/test_util.rs
+../../zircon/kernel/lib/acpi_lite/rust/src/tests.rs
+../../zircon/kernel/lib/acpi_lite/rust/src/tests/acpi_lite_tests.rs
+../../zircon/kernel/lib/acpi_lite/rust/src/tests/apic_tests.rs
+../../zircon/kernel/lib/acpi_lite/rust/src/tests/binary_reader_tests.rs
+../../zircon/kernel/lib/acpi_lite/rust/src/tests/debug_port_tests.rs
+../../zircon/kernel/lib/acpi_lite/rust/src/tests/numa_tests.rs

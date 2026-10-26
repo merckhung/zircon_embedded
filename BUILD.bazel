@@ -1,0 +1,33 @@
+package(default_visibility = ["//visibility:public"])
+
+alias(
+    name = "shim",
+    actual = "//src/shim:zircon_linux_init",
+)
+
+alias(
+    name = "minimal_zbi",
+    actual = "//minimal_rootfs:minimal_system",
+)
+
+alias(
+    name = "xfce4_zbi",
+    actual = "//rootfs:xfce4_system",
+)
+
+alias(
+    name = "kernel",
+    actual = "//zircon:kernel_build",
+)
+
+alias(
+    name = "minimal_verify",
+    actual = "//minimal_rootfs:verify",
+)
+
+alias(
+    name = "xfce4_verify",
+    actual = "//rootfs:verify",
+)
+
+exports_files(["rustfmt.toml"])

@@ -1,0 +1,5 @@
+../../zircon/system/ulib/concurrent/rust/src/common.rs
+../../zircon/system/ulib/concurrent/rust/src/copy.rs
+../../zircon/system/ulib/concurrent/rust/src/lib.rs
+../../zircon/system/ulib/concurrent/rust/src/seqlock.rs
+../../zircon/system/ulib/concurrent/rust/src/seqlock_payload.rs

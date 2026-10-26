@@ -1,0 +1,72 @@
+load("//bazel:zircon_rules.bzl", "zircon_cc_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+zircon_cc_binary(
+    name = "zircon_linux_init",
+    srcs = [
+        "elf_loader.cc",
+        "fs_poll.cc",
+        "fs_syscalls.cc",
+        "futex.cc",
+        "hardware_fb_input.cc",
+        "main.cc",
+        "mem_space.cc",
+        "net_inet.cc",
+        "restricted_exec.cc",
+        "signals.cc",
+        "syscalls_fs.cc",
+        "syscalls_ipc.cc",
+        "syscalls_mem.cc",
+        "syscalls_proc.cc",
+        "time.cc",
+        "tty.cc",
+        "vfs.cc",
+    ],
+    hdrs = [
+        "arm64_syscall_map.h",
+        "fd_ops.h",
+        "fs_internal.h",
+        "mem_space.h",
+        "net_inet.h",
+        "shim_common.h",
+        "signals.h",
+        "tty.h",
+        "vfs.h",
+    ],
+)
+
+zircon_cc_binary(
+    name = "zircon_linux_init_arm64",
+    arch = "arm64",
+    srcs = [
+        "elf_loader.cc",
+        "fs_poll.cc",
+        "fs_syscalls.cc",
+        "futex.cc",
+        "hardware_fb_input.cc",
+        "main.cc",
+        "mem_space.cc",
+        "net_inet.cc",
+        "restricted_exec.cc",
+        "signals.cc",
+        "syscalls_fs.cc",
+        "syscalls_ipc.cc",
+        "syscalls_mem.cc",
+        "syscalls_proc.cc",
+        "time.cc",
+        "tty.cc",
+        "vfs.cc",
+    ],
+    hdrs = [
+        "arm64_syscall_map.h",
+        "fd_ops.h",
+        "fs_internal.h",
+        "mem_space.h",
+        "net_inet.h",
+        "shim_common.h",
+        "signals.h",
+        "tty.h",
+        "vfs.h",
+    ],
+)

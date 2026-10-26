@@ -1,0 +1,180 @@
+load("@zircon_toolchains//:paths.bzl", "FUCHSIA_QEMU_AARCH64", "FUCHSIA_QEMU_X64")
+load("//bazel:zircon_rules.bzl", "zircon_qemu_runner", "zircon_zbi_image")
+
+package(default_visibility = ["//visibility:public"])
+
+CHROMIUM_BINS = [
+    "chrome",
+    "chrome_crashpad_handler",
+    "libvk_swiftshader.so",
+    "libvulkan.so.1",
+]
+
+CHROMIUM_FILES = [
+    "LICENSE",
+    "PROJECT_LICENSE.txt",
+    "THIRD_PARTY_NOTICES.html",
+    "RUNTIME_LICENSES.txt",
+    "runtime-manifest.json",
+    "build-manifest.json",
+    "vk_swiftshader_icd.json",
+    "icudtl.dat",
+    "v8_context_snapshot.bin",
+    "resources.pak",
+    "chrome_100_percent.pak",
+    "chrome_200_percent.pak",
+    "locales/en-US.pak",
+]
+
+CHROMIUM_COMMON_LIBS = [
+    "libX11.so.6",
+    "libXau.so.6",
+    "libXcomposite.so.1",
+    "libXcursor.so.1",
+    "libXdamage.so.1",
+    "libXdmcp.so.6",
+    "libXext.so.6",
+    "libXfixes.so.3",
+    "libXrandr.so.2",
+    "libXrender.so.1",
+    "libc.so.6",
+    "libdl.so.2",
+    "libdrm.so.2",
+    "libexpat.so.1",
+    "libgbm.so.1",
+    "libgcc_s.so.1",
+    "libm.so.6",
+    "libnss_dns.so.2",
+    "libnss_files.so.2",
+    "libpthread.so.0",
+    "libresolv.so.2",
+    "librt.so.1",
+    "libxcb.so.1",
+]
+
+CHROMIUM_LIBS = [
+    "ld-linux-x86-64.so.2",
+    "libbsd.so.0",
+    "libffi.so.7",
+    "libmd.so.0",
+    "libwayland-server.so.0",
+] + CHROMIUM_COMMON_LIBS
+CHROMIUM_LIBS_ARM64 = [
+    "ld-linux-aarch64.so.1",
+    "libbsd.so.0",
+    "libffi.so.7",
+    "libmd.so.0",
+    "libwayland-server.so.0",
+] + CHROMIUM_COMMON_LIBS
+
+genrule(
+    name = "rootfs_tar",
+    srcs = [
+        "init_xfce4_chromium.sh",
+        "//rootfs:build_rootfs_tar.py",
+        "//userland:zx_test",
+        "//userland:x11_fb_bridge",
+        "//userland:x11_probe",
+        "//userland:chromium_page_probe",
+        "@alpine_x86_64//:xfce4_apks",
+    ] + [
+        "//chromium:prebuilt/" + f
+        for f in CHROMIUM_BINS + CHROMIUM_FILES
+    ] + [
+        "//chromium:prebuilt/lib/" + f
+        for f in CHROMIUM_LIBS
+    ],
+    outs = ["xfce4_chromium_rootfs.tar"],
+    cmd = """
+        python3 $(location //rootfs:build_rootfs_tar.py) \
+            --output $@ \
+            --init $(location init_xfce4_chromium.sh) \
+            --xfce4-config \
+            --extra-bin bin/zx_test=$(location //userland:zx_test) \
+            --extra-bin bin/x11_fb_bridge=$(location //userland:x11_fb_bridge) \
+            --extra-bin bin/x11_probe=$(location //userland:x11_probe) \
+            --extra-bin bin/chromium_page_probe=$(location //userland:chromium_page_probe) \
+            --extra-bin lib64/ld-linux-x86-64.so.2=$(location //chromium:prebuilt/lib/ld-linux-x86-64.so.2) \
+            """ + " \\\n            ".join([
+        "--extra-bin opt/chromium/{f}=$(location //chromium:prebuilt/{f})".format(f = f)
+        for f in CHROMIUM_BINS
+    ] + [
+        "--extra-file opt/chromium/{f}=$(location //chromium:prebuilt/{f})".format(f = f)
+        for f in CHROMIUM_FILES
+    ] + [
+        "--extra-bin opt/chromium/lib/{f}=$(location //chromium:prebuilt/lib/{f})".format(f = f)
+        for f in CHROMIUM_LIBS
+    ]) + """ \
+            $(locations @alpine_x86_64//:xfce4_apks)
+    """,
+)
+
+zircon_zbi_image(
+    name = "xfce4_chromium_system",
+    init_bin = "//src/shim:zircon_linux_init",
+    rootfs_tar = ":rootfs_tar",
+)
+
+zircon_qemu_runner(
+    name = "verify",
+    qemu_bin = FUCHSIA_QEMU_X64,
+    script = "verify_chromium.py",
+    zbi_image = ":xfce4_chromium_system",
+)
+
+genrule(
+    name = "rootfs_tar_arm64",
+    srcs = [
+        "init_xfce4_chromium.sh",
+        "//rootfs:build_rootfs_tar.py",
+        "//userland:zx_test_arm64",
+        "//userland:x11_fb_bridge_arm64",
+        "//userland:x11_probe_arm64",
+        "//userland:chromium_page_probe_arm64",
+        "@alpine_aarch64//:xfce4_apks",
+    ] + [
+        "//chromium:prebuilt_arm64/" + f
+        for f in CHROMIUM_BINS + CHROMIUM_FILES
+    ] + [
+        "//chromium:prebuilt_arm64/lib/" + f
+        for f in CHROMIUM_LIBS_ARM64
+    ],
+    outs = ["xfce4_chromium_rootfs_arm64.tar"],
+    cmd = """
+        python3 $(location //rootfs:build_rootfs_tar.py) \
+            --output $@ \
+            --init $(location init_xfce4_chromium.sh) \
+            --xfce4-config \
+            --extra-bin bin/zx_test=$(location //userland:zx_test_arm64) \
+            --extra-bin bin/x11_fb_bridge=$(location //userland:x11_fb_bridge_arm64) \
+            --extra-bin bin/x11_probe=$(location //userland:x11_probe_arm64) \
+            --extra-bin bin/chromium_page_probe=$(location //userland:chromium_page_probe_arm64) \
+            --extra-bin lib/ld-linux-aarch64.so.1=$(location //chromium:prebuilt_arm64/lib/ld-linux-aarch64.so.1) \
+            """ + " \\\n            ".join([
+        "--extra-bin opt/chromium/{f}=$(location //chromium:prebuilt_arm64/{f})".format(f = f)
+        for f in CHROMIUM_BINS
+    ] + [
+        "--extra-file opt/chromium/{f}=$(location //chromium:prebuilt_arm64/{f})".format(f = f)
+        for f in CHROMIUM_FILES
+    ] + [
+        "--extra-bin opt/chromium/lib/{f}=$(location //chromium:prebuilt_arm64/lib/{f})".format(f = f)
+        for f in CHROMIUM_LIBS_ARM64
+    ]) + """ \
+            $(locations @alpine_aarch64//:xfce4_apks)
+    """,
+)
+
+zircon_zbi_image(
+    name = "xfce4_chromium_system_arm64",
+    arch = "arm64",
+    init_bin = "//src/shim:zircon_linux_init_arm64",
+    rootfs_tar = ":rootfs_tar_arm64",
+)
+
+zircon_qemu_runner(
+    name = "verify_arm64",
+    arch = "arm64",
+    qemu_bin = FUCHSIA_QEMU_AARCH64,
+    script = "verify_chromium.py",
+    zbi_image = ":xfce4_chromium_system_arm64",
+)

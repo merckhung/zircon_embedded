@@ -1,0 +1,14 @@
+../../src/lib/regio/src/arm64/mod.rs
+../../src/lib/regio/src/arm64/spec.rs
+../../src/lib/regio/src/lib.rs
+../../src/lib/regio/src/mmio.rs
+../../src/lib/regio/src/riscv64/encoding.rs
+../../src/lib/regio/src/riscv64/mod.rs
+../../src/lib/regio/src/testing/mod.rs
+../../src/lib/regio/src/testing/x86.rs
+../../src/lib/regio/src/traits.rs
+../../src/lib/regio/src/x86/cpuid.rs
+../../src/lib/regio/src/x86/cr.rs
+../../src/lib/regio/src/x86/mod.rs
+../../src/lib/regio/src/x86/msr.rs
+../../src/lib/regio/src/x86/pio.rs

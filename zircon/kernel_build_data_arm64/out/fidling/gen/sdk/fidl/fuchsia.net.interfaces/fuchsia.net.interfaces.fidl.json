@@ -1,0 +1,4305 @@
+{
+  "name": "fuchsia.net.interfaces",
+  "platform": "fuchsia",
+  "available": {
+    "fuchsia": [
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "NEXT",
+      "HEAD"
+    ]
+  },
+  "maybe_attributes": [
+    {
+      "name": "available",
+      "arguments": [
+        {
+          "name": "added",
+          "type": "uint32",
+          "value": {
+            "kind": "literal",
+            "value": "7",
+            "expression": "7",
+            "literal": {
+              "kind": "numeric",
+              "value": "7",
+              "expression": "7"
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 4,
+            "column": 12,
+            "length": 7
+          }
+        }
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+        "line": 4,
+        "column": 1,
+        "length": 19
+      }
+    }
+  ],
+  "experiments": [],
+  "library_dependencies": [
+    {
+      "name": "fuchsia.hardware.network",
+      "declarations": {
+        "fuchsia.hardware.network/EthernetFeatures": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/RxFlags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/SessionFlags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 2,
+            "alignment": 2,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/StatusFlags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/TxFlags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/TxReturnFlags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/FRAME_FEATURES_RAW": {
+          "kind": "const"
+        },
+        "fuchsia.hardware.network/MAX_DATA_VMOS": {
+          "kind": "const"
+        },
+        "fuchsia.hardware.network/MAX_DESCRIPTOR_CHAIN": {
+          "kind": "const"
+        },
+        "fuchsia.hardware.network/MAX_FRAME_TYPES": {
+          "kind": "const"
+        },
+        "fuchsia.hardware.network/MAX_PORTS": {
+          "kind": "const"
+        },
+        "fuchsia.hardware.network/MAX_SESSION_NAME": {
+          "kind": "const"
+        },
+        "fuchsia.hardware.network/MAX_STATUS_BUFFER": {
+          "kind": "const"
+        },
+        "fuchsia.hardware.network/FrameType": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/MacFilterMode": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/PortClass": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 2,
+            "alignment": 2,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/Device": {
+          "kind": "protocol"
+        },
+        "fuchsia.hardware.network/Diagnostics": {
+          "kind": "protocol"
+        },
+        "fuchsia.hardware.network/MacAddressing": {
+          "kind": "protocol"
+        },
+        "fuchsia.hardware.network/Port": {
+          "kind": "protocol"
+        },
+        "fuchsia.hardware.network/PortWatcher": {
+          "kind": "protocol"
+        },
+        "fuchsia.hardware.network/Session": {
+          "kind": "protocol"
+        },
+        "fuchsia.hardware.network/StatusWatcher": {
+          "kind": "protocol"
+        },
+        "fuchsia.hardware.network/Service": {
+          "kind": "service"
+        },
+        "fuchsia.hardware.network/DeviceCloneRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/DeviceGetInfoResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 4,
+            "max_handles": 0,
+            "max_out_of_line": 136,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.hardware.network/DeviceGetPortRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/DeviceGetPortWatcherRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/DeviceOpenSessionRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 32,
+            "alignment": 8,
+            "depth": 5,
+            "max_handles": 33,
+            "max_out_of_line": 1408,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.hardware.network/Device_OpenSession_Response": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 12,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 3,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/Empty": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/Fifos": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 2,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/FrameTypeSupport": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 12,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/MacAddressingAddMulticastAddressRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 6,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/MacAddressingAddMulticastAddressResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/MacAddressingGetUnicastAddressResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 6,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/MacAddressingRemoveMulticastAddressRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 6,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/MacAddressingRemoveMulticastAddressResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/MacAddressingSetModeRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/MacAddressingSetModeResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/PortCloneRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/PortGetDeviceRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/PortGetDiagnosticsRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/PortGetIdentityResponse": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/PortGetInfoResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 5,
+            "max_handles": 0,
+            "max_out_of_line": 144,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.hardware.network/PortGetMacRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/PortGetStatusResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 16,
+            "has_padding": false,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.hardware.network/PortGetStatusWatcherRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/PortId": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 2,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/PortWatcherWatchResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/SessionAttachRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/SessionDetachRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 2,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/SessionRegisterForTxRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 32,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/SessionRegisterForTxResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/SessionUnregisterForTxRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 32,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/SessionUnregisterForTxResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/SessionWatchDelegatedRxLeaseResponse": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 3,
+            "max_handles": 1,
+            "max_out_of_line": 40,
+            "has_padding": false,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.hardware.network/Session_Attach_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/Session_Detach_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/StatusWatcherWatchStatusResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 16,
+            "has_padding": false,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.hardware.network/DataVmo": {
+          "kind": "table",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 1,
+            "max_out_of_line": 24,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.hardware.network/DelegatedRxLease": {
+          "kind": "table",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 3,
+            "max_handles": 1,
+            "max_out_of_line": 40,
+            "has_padding": false,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.hardware.network/DeviceBaseInfo": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 96,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.hardware.network/DeviceInfo": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 4,
+            "max_handles": 0,
+            "max_out_of_line": 136,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.hardware.network/PortBaseInfo": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 3,
+            "max_handles": 0,
+            "max_out_of_line": 112,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.hardware.network/PortGetCountersResponse": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 64,
+            "has_padding": false,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.hardware.network/PortInfo": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 5,
+            "max_handles": 0,
+            "max_out_of_line": 144,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.hardware.network/PortStatus": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 16,
+            "has_padding": false,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.hardware.network/SessionInfo": {
+          "kind": "table",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 5,
+            "max_handles": 33,
+            "max_out_of_line": 1344,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.hardware.network/DelegatedRxLeaseHandle": {
+          "kind": "union",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.hardware.network/DevicePortEvent": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/Device_OpenSession_Result": {
+          "kind": "union",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 3,
+            "max_out_of_line": 16,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/Session_Attach_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/Session_Detach_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.hardware.network/BasePortId": {
+          "kind": "alias"
+        },
+        "fuchsia.hardware.network/VmoId": {
+          "kind": "alias"
+        }
+      }
+    },
+    {
+      "name": "fuchsia.net",
+      "declarations": {
+        "fuchsia.net/MARK_DOMAIN_SOCKET_UID": {
+          "kind": "const"
+        },
+        "fuchsia.net/MARK_DOMAIN_SO_MARK": {
+          "kind": "const"
+        },
+        "fuchsia.net/MAX_HOSTNAME_SIZE": {
+          "kind": "const"
+        },
+        "fuchsia.net/IpVersion": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/MarkDomain": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Ipv4Address": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Ipv4AddressWithPrefix": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 5,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Ipv4SocketAddress": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 6,
+            "alignment": 2,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Ipv6Address": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Ipv6AddressWithPrefix": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 17,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Ipv6SocketAddress": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 32,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/MacAddress": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 6,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Subnet": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 16,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Marks": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 16,
+            "has_padding": false,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.net/IpAddress": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 16,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/SocketAddress": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 32,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Hostname": {
+          "kind": "alias"
+        },
+        "fuchsia.net/InterfaceId": {
+          "kind": "alias"
+        },
+        "fuchsia.net/Mark": {
+          "kind": "alias"
+        },
+        "fuchsia.net/RouteMetric": {
+          "kind": "alias"
+        }
+      }
+    },
+    {
+      "name": "zx",
+      "declarations": {
+        "zx/Rights": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "zx/CHANNEL_MAX_MSG_BYTES": {
+          "kind": "const"
+        },
+        "zx/CHANNEL_MAX_MSG_HANDLES": {
+          "kind": "const"
+        },
+        "zx/DEFAULT_CHANNEL_RIGHTS": {
+          "kind": "const"
+        },
+        "zx/DEFAULT_EVENT_RIGHTS": {
+          "kind": "const"
+        },
+        "zx/IOB_MAX_REGIONS": {
+          "kind": "const"
+        },
+        "zx/MAX_CPUS": {
+          "kind": "const"
+        },
+        "zx/MAX_NAME_LEN": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_BASIC": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_IO": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_POLICY": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_PROPERTY": {
+          "kind": "const"
+        },
+        "zx/ObjType": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "zx/Handle": {
+          "kind": "experimental_resource"
+        },
+        "zx/Duration": {
+          "kind": "alias"
+        },
+        "zx/DurationBoot": {
+          "kind": "alias"
+        },
+        "zx/DurationMono": {
+          "kind": "alias"
+        },
+        "zx/InstantBoot": {
+          "kind": "alias"
+        },
+        "zx/InstantBootTicks": {
+          "kind": "alias"
+        },
+        "zx/InstantMono": {
+          "kind": "alias"
+        },
+        "zx/InstantMonoTicks": {
+          "kind": "alias"
+        },
+        "zx/Koid": {
+          "kind": "alias"
+        },
+        "zx/Off": {
+          "kind": "alias"
+        },
+        "zx/Result": {
+          "kind": "alias"
+        },
+        "zx/Signals": {
+          "kind": "alias"
+        },
+        "zx/Status": {
+          "kind": "alias"
+        },
+        "zx/Ticks": {
+          "kind": "alias"
+        },
+        "zx/Time": {
+          "kind": "alias"
+        }
+      }
+    }
+  ],
+  "bits_declarations": [
+    {
+      "name": "fuchsia.net.interfaces/AddressPropertiesInterest",
+      "naming_context": [
+        "State",
+        "GetWatcher",
+        "Request",
+        "options",
+        "address_properties_interest"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+        "line": 181,
+        "column": 44,
+        "length": 122
+      },
+      "deprecated": false,
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "mask": "3",
+      "members": [
+        {
+          "name": "VALID_UNTIL",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 182,
+            "column": 17,
+            "length": 11
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "1",
+            "expression": "0x01",
+            "literal": {
+              "kind": "numeric",
+              "value": "1",
+              "expression": "0x01"
+            }
+          }
+        },
+        {
+          "name": "PREFERRED_LIFETIME_INFO",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 183,
+            "column": 17,
+            "length": 23
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "2",
+            "expression": "0x02",
+            "literal": {
+              "kind": "numeric",
+              "value": "2",
+              "expression": "0x02"
+            }
+          }
+        }
+      ],
+      "strict": false
+    }
+  ],
+  "const_declarations": [
+    {
+      "name": "fuchsia.net.interfaces/INTERFACE_NAME_LENGTH",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+        "line": 14,
+        "column": 7,
+        "length": 21
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " The maximum length of an interface name.\n",
+                "expression": "/// The maximum length of an interface name.",
+                "literal": {
+                  "kind": "string",
+                  "value": " The maximum length of an interface name.\n",
+                  "expression": "/// The maximum length of an interface name."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 11,
+                "column": 1,
+                "length": 44
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 11,
+            "column": 1,
+            "length": 44
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint8",
+        "type_shape_v2": {
+          "inline_size": 1,
+          "alignment": 1,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "15",
+        "expression": "15",
+        "literal": {
+          "kind": "numeric",
+          "value": "15",
+          "expression": "15"
+        }
+      }
+    }
+  ],
+  "enum_declarations": [
+    {
+      "name": "fuchsia.net.interfaces/AddressAssignmentState",
+      "naming_context": [
+        "AddressAssignmentState"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+        "line": 62,
+        "column": 6,
+        "length": 22
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Assignment state of an IP address.\n",
+                "expression": "/// Assignment state of an IP address.",
+                "literal": {
+                  "kind": "string",
+                  "value": " Assignment state of an IP address.\n",
+                  "expression": "/// Assignment state of an IP address."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 60,
+                "column": 1,
+                "length": 38
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 60,
+            "column": 1,
+            "length": 38
+          }
+        },
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "identifier",
+                "value": "4292870144",
+                "expression": "HEAD",
+                "identifier": "fidl/HEAD"
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 61,
+                "column": 12,
+                "length": 10
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 61,
+            "column": 1,
+            "length": 22
+          }
+        }
+      ],
+      "type": "uint32",
+      "members": [
+        {
+          "name": "TENTATIVE",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 76,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "1",
+            "expression": "1",
+            "literal": {
+              "kind": "numeric",
+              "value": "1",
+              "expression": "1"
+            }
+          },
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Address assignment is in progress, e.g. Duplicate Address Detection\n is being performed. The address cannot be used when in this state\n (cannot bind to it yet or receive packets destined to it).\n\n The Duplicate Address Detection mechanism is described in\n [RFC 4862, section 5.4](https://tools.ietf.org/html/rfc4862#section-5.4)\n",
+                    "expression": "/// Address assignment is in progress, e.g. Duplicate Address Detection\n    /// is being performed. The address cannot be used when in this state\n    /// (cannot bind to it yet or receive packets destined to it).\n    ///\n    /// The Duplicate Address Detection mechanism is described in\n    /// [RFC 4862, section 5.4](https://tools.ietf.org/html/rfc4862#section-5.4)",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Address assignment is in progress, e.g. Duplicate Address Detection\n is being performed. The address cannot be used when in this state\n (cannot bind to it yet or receive packets destined to it).\n\n The Duplicate Address Detection mechanism is described in\n [RFC 4862, section 5.4](https://tools.ietf.org/html/rfc4862#section-5.4)\n",
+                      "expression": "/// Address assignment is in progress, e.g. Duplicate Address Detection\n    /// is being performed. The address cannot be used when in this state\n    /// (cannot bind to it yet or receive packets destined to it).\n    ///\n    /// The Duplicate Address Detection mechanism is described in\n    /// [RFC 4862, section 5.4](https://tools.ietf.org/html/rfc4862#section-5.4)"
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 70,
+                    "column": 5,
+                    "length": 367
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 70,
+                "column": 5,
+                "length": 367
+              }
+            }
+          ]
+        },
+        {
+          "name": "ASSIGNED",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 79,
+            "column": 5,
+            "length": 8
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "2",
+            "expression": "2",
+            "literal": {
+              "kind": "numeric",
+              "value": "2",
+              "expression": "2"
+            }
+          },
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The address is assigned to an interface.\n",
+                    "expression": "/// The address is assigned to an interface.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The address is assigned to an interface.\n",
+                      "expression": "/// The address is assigned to an interface."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 78,
+                    "column": 5,
+                    "length": 44
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 78,
+                "column": 5,
+                "length": 44
+              }
+            }
+          ]
+        },
+        {
+          "name": "UNAVAILABLE",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 83,
+            "column": 5,
+            "length": 11
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "3",
+            "expression": "3",
+            "literal": {
+              "kind": "numeric",
+              "value": "3",
+              "expression": "3"
+            }
+          },
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The address is unavailable, e.g. if the interface holding the address\n is offline.\n",
+                    "expression": "/// The address is unavailable, e.g. if the interface holding the address\n    /// is offline.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The address is unavailable, e.g. if the interface holding the address\n is offline.\n",
+                      "expression": "/// The address is unavailable, e.g. if the interface holding the address\n    /// is offline."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 81,
+                    "column": 5,
+                    "length": 93
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 81,
+                "column": 5,
+                "length": 93
+              }
+            }
+          ]
+        }
+      ],
+      "strict": true
+    }
+  ],
+  "experimental_resource_declarations": [],
+  "protocol_declarations": [
+    {
+      "name": "fuchsia.net.interfaces/State",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+        "line": 164,
+        "column": 17,
+        "length": 5
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Network interface state inspection and observation.\n",
+                "expression": "/// Network interface state inspection and observation.",
+                "literal": {
+                  "kind": "string",
+                  "value": " Network interface state inspection and observation.\n",
+                  "expression": "/// Network interface state inspection and observation."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 162,
+                "column": 1,
+                "length": 55
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 162,
+            "column": 1,
+            "length": 55
+          }
+        },
+        {
+          "name": "discoverable",
+          "arguments": [],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 163,
+            "column": 1,
+            "length": 13
+          }
+        }
+      ],
+      "openness": "closed",
+      "composed_protocols": [],
+      "methods": [
+        {
+          "kind": "oneway",
+          "ordinal": 5756202622262852323,
+          "name": "GetWatcher",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 174,
+            "column": 12,
+            "length": 10
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Initialize a watcher for interface state.\n\n The server enqueues interface addition, deletion and property changes as\n they occur, which can then be retrieved via the pipelined protocol.\n\n + request `options` specifies the behavior of the [`Watcher`].\n + request `watcher` grants access to a [`Watcher`]. Closed if the queue\n     cannot be allocated or if the queue is full when the server attempts\n     to enqueue an event.\n",
+                    "expression": "/// Initialize a watcher for interface state.\n    ///\n    /// The server enqueues interface addition, deletion and property changes as\n    /// they occur, which can then be retrieved via the pipelined protocol.\n    ///\n    /// + request `options` specifies the behavior of the [`Watcher`].\n    /// + request `watcher` grants access to a [`Watcher`]. Closed if the queue\n    ///     cannot be allocated or if the queue is full when the server attempts\n    ///     to enqueue an event.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Initialize a watcher for interface state.\n\n The server enqueues interface addition, deletion and property changes as\n they occur, which can then be retrieved via the pipelined protocol.\n\n + request `options` specifies the behavior of the [`Watcher`].\n + request `watcher` grants access to a [`Watcher`]. Closed if the queue\n     cannot be allocated or if the queue is full when the server attempts\n     to enqueue an event.\n",
+                      "expression": "/// Initialize a watcher for interface state.\n    ///\n    /// The server enqueues interface addition, deletion and property changes as\n    /// they occur, which can then be retrieved via the pipelined protocol.\n    ///\n    /// + request `options` specifies the behavior of the [`Watcher`].\n    /// + request `watcher` grants access to a [`Watcher`]. Closed if the queue\n    ///     cannot be allocated or if the queue is full when the server attempts\n    ///     to enqueue an event."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 165,
+                    "column": 5,
+                    "length": 483
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 165,
+                "column": 5,
+                "length": 483
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.interfaces/StateGetWatcherRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 24,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 1,
+              "max_out_of_line": 40,
+              "has_padding": true,
+              "has_flexible_envelope": true
+            }
+          },
+          "has_response": false,
+          "is_composed": false,
+          "has_error": false
+        }
+      ]
+    },
+    {
+      "name": "fuchsia.net.interfaces/Watcher",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+        "line": 208,
+        "column": 17,
+        "length": 7
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Observer protocol for changes to network interfaces (addition, deletion, and\n interface property changes).\n",
+                "expression": "/// Observer protocol for changes to network interfaces (addition, deletion, and\n/// interface property changes).",
+                "literal": {
+                  "kind": "string",
+                  "value": " Observer protocol for changes to network interfaces (addition, deletion, and\n interface property changes).\n",
+                  "expression": "/// Observer protocol for changes to network interfaces (addition, deletion, and\n/// interface property changes)."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 206,
+                "column": 1,
+                "length": 113
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 206,
+            "column": 1,
+            "length": 113
+          }
+        }
+      ],
+      "openness": "closed",
+      "composed_protocols": [],
+      "methods": [
+        {
+          "kind": "twoway",
+          "ordinal": 6126979800581992179,
+          "name": "Watch",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 228,
+            "column": 12,
+            "length": 5
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Hanging get for an interface addition/deletion change.\n\n Clients should only have one call of this method at a time; a second\n call to this method while a call is already pending will cause the\n server end of the protocol to be closed.\n\n If there are N interfaces present at the time the server end of the\n protocol is initialized, then the first N invocations of this method\n will return [`Event.existing`] followed by a single [`Event.idle`]\n indicating that all existing interfaces have been sent. Subsequent calls\n will immediately return if there is a change to be reported, or block\n until a change occurs.\n\n The server may choose to coalesce property change events, e.g. when\n multiple independent property changes occur. As a result, clients cannot\n assume that the order in which they observe the interface changes is the\n order in which the changes occurred.\n\n - response `event` the interface change event.\n",
+                    "expression": "/// Hanging get for an interface addition/deletion change.\n    ///\n    /// Clients should only have one call of this method at a time; a second\n    /// call to this method while a call is already pending will cause the\n    /// server end of the protocol to be closed.\n    ///\n    /// If there are N interfaces present at the time the server end of the\n    /// protocol is initialized, then the first N invocations of this method\n    /// will return [`Event.existing`] followed by a single [`Event.idle`]\n    /// indicating that all existing interfaces have been sent. Subsequent calls\n    /// will immediately return if there is a change to be reported, or block\n    /// until a change occurs.\n    ///\n    /// The server may choose to coalesce property change events, e.g. when\n    /// multiple independent property changes occur. As a result, clients cannot\n    /// assume that the order in which they observe the interface changes is the\n    /// order in which the changes occurred.\n    ///\n    /// - response `event` the interface change event.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Hanging get for an interface addition/deletion change.\n\n Clients should only have one call of this method at a time; a second\n call to this method while a call is already pending will cause the\n server end of the protocol to be closed.\n\n If there are N interfaces present at the time the server end of the\n protocol is initialized, then the first N invocations of this method\n will return [`Event.existing`] followed by a single [`Event.idle`]\n indicating that all existing interfaces have been sent. Subsequent calls\n will immediately return if there is a change to be reported, or block\n until a change occurs.\n\n The server may choose to coalesce property change events, e.g. when\n multiple independent property changes occur. As a result, clients cannot\n assume that the order in which they observe the interface changes is the\n order in which the changes occurred.\n\n - response `event` the interface change event.\n",
+                      "expression": "/// Hanging get for an interface addition/deletion change.\n    ///\n    /// Clients should only have one call of this method at a time; a second\n    /// call to this method while a call is already pending will cause the\n    /// server end of the protocol to be closed.\n    ///\n    /// If there are N interfaces present at the time the server end of the\n    /// protocol is initialized, then the first N invocations of this method\n    /// will return [`Event.existing`] followed by a single [`Event.idle`]\n    /// indicating that all existing interfaces have been sent. Subsequent calls\n    /// will immediately return if there is a change to be reported, or block\n    /// until a change occurs.\n    ///\n    /// The server may choose to coalesce property change events, e.g. when\n    /// multiple independent property changes occur. As a result, clients cannot\n    /// assume that the order in which they observe the interface changes is the\n    /// order in which the changes occurred.\n    ///\n    /// - response `event` the interface change event."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 209,
+                    "column": 5,
+                    "length": 1047
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 209,
+                "column": 5,
+                "length": 1047
+              }
+            }
+          ],
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.interfaces/WatcherWatchResponse",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 7,
+              "max_handles": 0,
+              "max_out_of_line": 4294967295,
+              "has_padding": true,
+              "has_flexible_envelope": true
+            }
+          },
+          "is_composed": false,
+          "has_error": false
+        }
+      ]
+    }
+  ],
+  "service_declarations": [],
+  "struct_declarations": [
+    {
+      "name": "fuchsia.net.interfaces/Empty",
+      "naming_context": [
+        "Empty"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+        "line": 20,
+        "column": 6,
+        "length": 5
+      },
+      "deprecated": false,
+      "members": [],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 1,
+        "alignment": 1,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.net.interfaces/StateGetWatcherRequest",
+      "naming_context": [
+        "State",
+        "GetWatcher",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+        "line": 174,
+        "column": 23,
+        "length": 1438
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.interfaces/WatcherOptions",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 0,
+              "max_out_of_line": 40,
+              "has_padding": true,
+              "has_flexible_envelope": true
+            }
+          },
+          "name": "options",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 176,
+            "column": 9,
+            "length": 7
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Options for configuring the interface state watcher.\n",
+                    "expression": "/// Options for configuring the interface state watcher.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Options for configuring the interface state watcher.\n",
+                      "expression": "/// Options for configuring the interface state watcher."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 175,
+                    "column": 9,
+                    "length": 56
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 175,
+                "column": 9,
+                "length": 56
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "endpoint",
+            "role": "server",
+            "protocol": "fuchsia.net.interfaces/Watcher",
+            "nullable": false,
+            "protocol_transport": "Channel",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "watcher",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 202,
+            "column": 9,
+            "length": 7
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 16,
+            "padding": 4
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 24,
+        "alignment": 8,
+        "depth": 2,
+        "max_handles": 1,
+        "max_out_of_line": 40,
+        "has_padding": true,
+        "has_flexible_envelope": true
+      }
+    },
+    {
+      "name": "fuchsia.net.interfaces/WatcherWatchResponse",
+      "naming_context": [
+        "Watcher",
+        "Watch",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+        "line": 228,
+        "column": 24,
+        "length": 1042
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.interfaces/Event",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 7,
+              "max_handles": 0,
+              "max_out_of_line": 4294967295,
+              "has_padding": true,
+              "has_flexible_envelope": true
+            }
+          },
+          "name": "event",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 229,
+            "column": 9,
+            "length": 5
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 7,
+        "max_handles": 0,
+        "max_out_of_line": 4294967295,
+        "has_padding": true,
+        "has_flexible_envelope": true
+      }
+    }
+  ],
+  "external_struct_declarations": [],
+  "table_declarations": [
+    {
+      "name": "fuchsia.net.interfaces/Address",
+      "naming_context": [
+        "Properties",
+        "addresses"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+        "line": 98,
+        "column": 52,
+        "length": 1161
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "generated_name",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "Address",
+                "expression": "\"Address\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "Address",
+                  "expression": "\"Address\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 98,
+                "column": 41,
+                "length": 9
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 98,
+            "column": 25,
+            "length": 26
+          }
+        }
+      ],
+      "members": [
+        {
+          "ordinal": 1,
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net/Subnet",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 24,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 16,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "addr",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 102,
+            "column": 12,
+            "length": 4
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The address and prefix length.\n\n Required.\n",
+                    "expression": "/// The address and prefix length.\n        ///\n        /// Required.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The address and prefix length.\n\n Required.\n",
+                      "expression": "/// The address and prefix length.\n        ///\n        /// Required."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 99,
+                    "column": 9,
+                    "length": 68
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 99,
+                "column": 9,
+                "length": 68
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 2,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int64",
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Time",
+            "args": [],
+            "nullable": false
+          },
+          "name": "valid_until",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 115,
+            "column": 12,
+            "length": 11
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The time after which the address will no longer be valid.\n\n Its value must be greater than 0. A value of `ZX_TIME_INFINITE`\n indicates that the address will always be valid. The value is\n derived from the monotonic clock.\n\n As a `zx.Time`, the value has\n [monotonic clock semantics](https://fuchsia.dev/fuchsia-src/concepts/time/monotonic),\n which implies that it has no meaning outside of the host on which it\n was generated and no meaning across host restarts.\n\n Optional; may be omitted due to disinterest.\n",
+                    "expression": "/// The time after which the address will no longer be valid.\n        ///\n        /// Its value must be greater than 0. A value of `ZX_TIME_INFINITE`\n        /// indicates that the address will always be valid. The value is\n        /// derived from the monotonic clock.\n        ///\n        /// As a `zx.Time`, the value has\n        /// [monotonic clock semantics](https://fuchsia.dev/fuchsia-src/concepts/time/monotonic),\n        /// which implies that it has no meaning outside of the host on which it\n        /// was generated and no meaning across host restarts.\n        ///\n        /// Optional; may be omitted due to disinterest.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The time after which the address will no longer be valid.\n\n Its value must be greater than 0. A value of `ZX_TIME_INFINITE`\n indicates that the address will always be valid. The value is\n derived from the monotonic clock.\n\n As a `zx.Time`, the value has\n [monotonic clock semantics](https://fuchsia.dev/fuchsia-src/concepts/time/monotonic),\n which implies that it has no meaning outside of the host on which it\n was generated and no meaning across host restarts.\n\n Optional; may be omitted due to disinterest.\n",
+                      "expression": "/// The time after which the address will no longer be valid.\n        ///\n        /// Its value must be greater than 0. A value of `ZX_TIME_INFINITE`\n        /// indicates that the address will always be valid. The value is\n        /// derived from the monotonic clock.\n        ///\n        /// As a `zx.Time`, the value has\n        /// [monotonic clock semantics](https://fuchsia.dev/fuchsia-src/concepts/time/monotonic),\n        /// which implies that it has no meaning outside of the host on which it\n        /// was generated and no meaning across host restarts.\n        ///\n        /// Optional; may be omitted due to disinterest."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 103,
+                    "column": 9,
+                    "length": 634
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 103,
+                "column": 9,
+                "length": 634
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 3,
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.interfaces/PreferredLifetimeInfo",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 8,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "preferred_lifetime_info",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 120,
+            "column": 12,
+            "length": 23
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Preferred lifetime information.\n\n Optional; may be omitted due to disinterest.\n",
+                    "expression": "/// Preferred lifetime information.\n        ///\n        /// Optional; may be omitted due to disinterest.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Preferred lifetime information.\n\n Optional; may be omitted due to disinterest.\n",
+                      "expression": "/// Preferred lifetime information.\n        ///\n        /// Optional; may be omitted due to disinterest."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 116,
+                    "column": 9,
+                    "length": 104
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 116,
+                "column": 9,
+                "length": 104
+              }
+            },
+            {
+              "name": "available",
+              "arguments": [
+                {
+                  "name": "added",
+                  "type": "uint32",
+                  "value": {
+                    "kind": "literal",
+                    "value": "9",
+                    "expression": "9",
+                    "literal": {
+                      "kind": "numeric",
+                      "value": "9",
+                      "expression": "9"
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 119,
+                    "column": 20,
+                    "length": 7
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 119,
+                "column": 9,
+                "length": 19
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 4,
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.interfaces/AddressAssignmentState",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "assignment_state",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 125,
+            "column": 12,
+            "length": 16
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The address's assignment state.\n\n Required.\n",
+                    "expression": "/// The address's assignment state.\n        ///\n        /// Required.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The address's assignment state.\n\n Required.\n",
+                      "expression": "/// The address's assignment state.\n        ///\n        /// Required."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 121,
+                    "column": 9,
+                    "length": 69
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 121,
+                "column": 9,
+                "length": 69
+              }
+            },
+            {
+              "name": "available",
+              "arguments": [
+                {
+                  "name": "added",
+                  "type": "uint32",
+                  "value": {
+                    "kind": "identifier",
+                    "value": "4292870144",
+                    "expression": "HEAD",
+                    "identifier": "fidl/HEAD"
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 124,
+                    "column": 20,
+                    "length": 10
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 124,
+                "column": 9,
+                "length": 22
+              }
+            }
+          ]
+        }
+      ],
+      "strict": false,
+      "resource": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 3,
+        "max_handles": 0,
+        "max_out_of_line": 104,
+        "has_padding": true,
+        "has_flexible_envelope": true
+      }
+    },
+    {
+      "name": "fuchsia.net.interfaces/Properties",
+      "naming_context": [
+        "Properties"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+        "line": 87,
+        "column": 6,
+        "length": 10
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Properties of a network interface.\n",
+                "expression": "/// Properties of a network interface.",
+                "literal": {
+                  "kind": "string",
+                  "value": " Properties of a network interface.\n",
+                  "expression": "/// Properties of a network interface."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 86,
+                "column": 1,
+                "length": 38
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 86,
+            "column": 1,
+            "length": 38
+          }
+        }
+      ],
+      "members": [
+        {
+          "ordinal": 1,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint64",
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "fuchsia.net/InterfaceId",
+            "args": [],
+            "nullable": false
+          },
+          "name": "id",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 90,
+            "column": 8,
+            "length": 2
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " An opaque identifier for the interface. Its value will not be reused\n even if the device is removed and subsequently re-added. Immutable.\n",
+                    "expression": "/// An opaque identifier for the interface. Its value will not be reused\n    /// even if the device is removed and subsequently re-added. Immutable.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " An opaque identifier for the interface. Its value will not be reused\n even if the device is removed and subsequently re-added. Immutable.\n",
+                      "expression": "/// An opaque identifier for the interface. Its value will not be reused\n    /// even if the device is removed and subsequently re-added. Immutable."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 88,
+                    "column": 5,
+                    "length": 148
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 88,
+                "column": 5,
+                "length": 148
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 2,
+          "type": {
+            "kind_v2": "vector",
+            "element_type": {
+              "kind_v2": "identifier",
+              "identifier": "fuchsia.net.interfaces/Address",
+              "nullable": false,
+              "type_shape_v2": {
+                "inline_size": 16,
+                "alignment": 8,
+                "depth": 3,
+                "max_handles": 0,
+                "max_out_of_line": 104,
+                "has_padding": true,
+                "has_flexible_envelope": true
+              }
+            },
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 4,
+              "max_handles": 0,
+              "max_out_of_line": 4294967295,
+              "has_padding": true,
+              "has_flexible_envelope": true
+            }
+          },
+          "name": "addresses",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 98,
+            "column": 8,
+            "length": 9
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The addresses currently installed on the interface.\n\n Addresses are sorted on [`Address.addr`], and no two addresses can have\n the same `Address.addr` value.\n\n Only assigned addresses are included unless the watcher was created with\n [`WatcherOptions.include_non_assigned_addresses`] set to `true`.\n",
+                    "expression": "/// The addresses currently installed on the interface.\n    ///\n    /// Addresses are sorted on [`Address.addr`], and no two addresses can have\n    /// the same `Address.addr` value.\n    ///\n    /// Only assigned addresses are included unless the watcher was created with\n    /// [`WatcherOptions.include_non_assigned_addresses`] set to `true`.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The addresses currently installed on the interface.\n\n Addresses are sorted on [`Address.addr`], and no two addresses can have\n the same `Address.addr` value.\n\n Only assigned addresses are included unless the watcher was created with\n [`WatcherOptions.include_non_assigned_addresses`] set to `true`.\n",
+                      "expression": "/// The addresses currently installed on the interface.\n    ///\n    /// Addresses are sorted on [`Address.addr`], and no two addresses can have\n    /// the same `Address.addr` value.\n    ///\n    /// Only assigned addresses are included unless the watcher was created with\n    /// [`WatcherOptions.include_non_assigned_addresses`] set to `true`."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 91,
+                    "column": 5,
+                    "length": 344
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 91,
+                "column": 5,
+                "length": 344
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 3,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "bool",
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "online",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 128,
+            "column": 8,
+            "length": 6
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The device is enabled and its physical state is online.\n",
+                    "expression": "/// The device is enabled and its physical state is online.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The device is enabled and its physical state is online.\n",
+                      "expression": "/// The device is enabled and its physical state is online."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 127,
+                    "column": 5,
+                    "length": 59
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 127,
+                "column": 5,
+                "length": 59
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 5,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "bool",
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "has_default_ipv4_route",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 130,
+            "column": 8,
+            "length": 22
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Whether there is a default IPv4 route through this interface.\n",
+                    "expression": "/// Whether there is a default IPv4 route through this interface.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Whether there is a default IPv4 route through this interface.\n",
+                      "expression": "/// Whether there is a default IPv4 route through this interface."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 129,
+                    "column": 5,
+                    "length": 65
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 129,
+                "column": 5,
+                "length": 65
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 6,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "bool",
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "has_default_ipv6_route",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 132,
+            "column": 8,
+            "length": 22
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Whether there is a default IPv6 route through this interface.\n",
+                    "expression": "/// Whether there is a default IPv6 route through this interface.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Whether there is a default IPv6 route through this interface.\n",
+                      "expression": "/// Whether there is a default IPv6 route through this interface."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 131,
+                    "column": 5,
+                    "length": 65
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 131,
+                "column": 5,
+                "length": 65
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 7,
+          "type": {
+            "kind_v2": "string",
+            "maybe_element_count": 15,
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 16,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "fuchsia.net.interfaces/Name",
+            "args": [],
+            "nullable": false
+          },
+          "name": "name",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 134,
+            "column": 8,
+            "length": 4
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The name of the interface. Immutable.\n",
+                    "expression": "/// The name of the interface. Immutable.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The name of the interface. Immutable.\n",
+                      "expression": "/// The name of the interface. Immutable."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 133,
+                    "column": 5,
+                    "length": 41
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 133,
+                "column": 5,
+                "length": 41
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 8,
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.interfaces/PortClass",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": true,
+              "has_flexible_envelope": true
+            }
+          },
+          "name": "port_class",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 137,
+            "column": 8,
+            "length": 10
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The port class of the interface. Immutable.\n",
+                    "expression": "/// The port class of the interface. Immutable.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The port class of the interface. Immutable.\n",
+                      "expression": "/// The port class of the interface. Immutable."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 135,
+                    "column": 5,
+                    "length": 47
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 135,
+                "column": 5,
+                "length": 47
+              }
+            },
+            {
+              "name": "available",
+              "arguments": [
+                {
+                  "name": "added",
+                  "type": "uint32",
+                  "value": {
+                    "kind": "literal",
+                    "value": "22",
+                    "expression": "22",
+                    "literal": {
+                      "kind": "numeric",
+                      "value": "22",
+                      "expression": "22"
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 136,
+                    "column": 16,
+                    "length": 8
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 136,
+                "column": 5,
+                "length": 20
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 9,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint64",
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Koid",
+            "args": [],
+            "nullable": false
+          },
+          "name": "port_identity_koid",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 147,
+            "column": 8,
+            "length": 18
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The KOID of the identity event vended out by the interface's backing\n [`fuchsia.hardware.network/Port`].\n\n Callers may use this identifier to correlate port instances to installed\n interfaces.\n\n Immutable. Present for interfaces backed by a\n [`fuchsia.hardware.network/Port`], absent otherwise.\n",
+                    "expression": "/// The KOID of the identity event vended out by the interface's backing\n    /// [`fuchsia.hardware.network/Port`].\n    ///\n    /// Callers may use this identifier to correlate port instances to installed\n    /// interfaces.\n    ///\n    /// Immutable. Present for interfaces backed by a\n    /// [`fuchsia.hardware.network/Port`], absent otherwise.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The KOID of the identity event vended out by the interface's backing\n [`fuchsia.hardware.network/Port`].\n\n Callers may use this identifier to correlate port instances to installed\n interfaces.\n\n Immutable. Present for interfaces backed by a\n [`fuchsia.hardware.network/Port`], absent otherwise.\n",
+                      "expression": "/// The KOID of the identity event vended out by the interface's backing\n    /// [`fuchsia.hardware.network/Port`].\n    ///\n    /// Callers may use this identifier to correlate port instances to installed\n    /// interfaces.\n    ///\n    /// Immutable. Present for interfaces backed by a\n    /// [`fuchsia.hardware.network/Port`], absent otherwise."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 138,
+                    "column": 5,
+                    "length": 347
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 138,
+                "column": 5,
+                "length": 347
+              }
+            },
+            {
+              "name": "available",
+              "arguments": [
+                {
+                  "name": "added",
+                  "type": "uint32",
+                  "value": {
+                    "kind": "identifier",
+                    "value": "4292870144",
+                    "expression": "HEAD",
+                    "identifier": "fidl/HEAD"
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 146,
+                    "column": 16,
+                    "length": 10
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 146,
+                "column": 5,
+                "length": 22
+              }
+            }
+          ]
+        }
+      ],
+      "strict": false,
+      "resource": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 6,
+        "max_handles": 0,
+        "max_out_of_line": 4294967295,
+        "has_padding": true,
+        "has_flexible_envelope": true
+      }
+    },
+    {
+      "name": "fuchsia.net.interfaces/WatcherOptions",
+      "naming_context": [
+        "State",
+        "GetWatcher",
+        "Request",
+        "options"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+        "line": 176,
+        "column": 51,
+        "length": 1262
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "generated_name",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "WatcherOptions",
+                "expression": "\"WatcherOptions\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "WatcherOptions",
+                  "expression": "\"WatcherOptions\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 176,
+                "column": 33,
+                "length": 16
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 176,
+            "column": 17,
+            "length": 33
+          }
+        }
+      ],
+      "members": [
+        {
+          "ordinal": 1,
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.interfaces/AddressPropertiesInterest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "address_properties_interest",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 181,
+            "column": 16,
+            "length": 27
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Bitfield for registering interest in address properties.\n\n Optional; interpreted as all bits set to 0 if not present.\n",
+                    "expression": "/// Bitfield for registering interest in address properties.\n            ///\n            /// Optional; interpreted as all bits set to 0 if not present.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Bitfield for registering interest in address properties.\n\n Optional; interpreted as all bits set to 0 if not present.\n",
+                      "expression": "/// Bitfield for registering interest in address properties.\n            ///\n            /// Optional; interpreted as all bits set to 0 if not present."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 177,
+                    "column": 13,
+                    "length": 151
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 177,
+                "column": 13,
+                "length": 151
+              }
+            },
+            {
+              "name": "available",
+              "arguments": [
+                {
+                  "name": "added",
+                  "type": "uint32",
+                  "value": {
+                    "kind": "identifier",
+                    "value": "4292870144",
+                    "expression": "HEAD",
+                    "identifier": "fidl/HEAD"
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 180,
+                    "column": 24,
+                    "length": 10
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 180,
+                "column": 13,
+                "length": 22
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 2,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "bool",
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "include_non_assigned_addresses",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 191,
+            "column": 16,
+            "length": 30
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Flag to determine if only assigned addresses are returned (where\n the assignment state is [`AddressAssignmentState::Assigned`]) or\n all addresses are returned.\n\n Optional; interpreted as false if not present.\n",
+                    "expression": "/// Flag to determine if only assigned addresses are returned (where\n            /// the assignment state is [`AddressAssignmentState::Assigned`]) or\n            /// all addresses are returned.\n            ///\n            /// Optional; interpreted as false if not present.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Flag to determine if only assigned addresses are returned (where\n the assignment state is [`AddressAssignmentState::Assigned`]) or\n all addresses are returned.\n\n Optional; interpreted as false if not present.\n",
+                      "expression": "/// Flag to determine if only assigned addresses are returned (where\n            /// the assignment state is [`AddressAssignmentState::Assigned`]) or\n            /// all addresses are returned.\n            ///\n            /// Optional; interpreted as false if not present."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 185,
+                    "column": 13,
+                    "length": 272
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 185,
+                "column": 13,
+                "length": 272
+              }
+            },
+            {
+              "name": "available",
+              "arguments": [
+                {
+                  "name": "added",
+                  "type": "uint32",
+                  "value": {
+                    "kind": "identifier",
+                    "value": "4292870144",
+                    "expression": "HEAD",
+                    "identifier": "fidl/HEAD"
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 190,
+                    "column": 24,
+                    "length": 10
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 190,
+                "column": 13,
+                "length": 22
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 3,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint64",
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Koid",
+            "args": [],
+            "nullable": false
+          },
+          "name": "port_identity_koid_filter",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 198,
+            "column": 16,
+            "length": 25
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " If specified, only events pertaining the interface whose port\n identity event matches the provided `port_identity_koid_filter`\n are yielded.\n\n Optional; no port identity filtering is performed if absent.\n",
+                    "expression": "/// If specified, only events pertaining the interface whose port\n            /// identity event matches the provided `port_identity_koid_filter`\n            /// are yielded.\n            ///\n            /// Optional; no port identity filtering is performed if absent.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " If specified, only events pertaining the interface whose port\n identity event matches the provided `port_identity_koid_filter`\n are yielded.\n\n Optional; no port identity filtering is performed if absent.\n",
+                      "expression": "/// If specified, only events pertaining the interface whose port\n            /// identity event matches the provided `port_identity_koid_filter`\n            /// are yielded.\n            ///\n            /// Optional; no port identity filtering is performed if absent."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 192,
+                    "column": 13,
+                    "length": 267
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 192,
+                "column": 13,
+                "length": 267
+              }
+            },
+            {
+              "name": "available",
+              "arguments": [
+                {
+                  "name": "added",
+                  "type": "uint32",
+                  "value": {
+                    "kind": "identifier",
+                    "value": "4292870144",
+                    "expression": "HEAD",
+                    "identifier": "fidl/HEAD"
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 197,
+                    "column": 24,
+                    "length": 10
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 197,
+                "column": 13,
+                "length": 22
+              }
+            }
+          ]
+        }
+      ],
+      "strict": false,
+      "resource": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 2,
+        "max_handles": 0,
+        "max_out_of_line": 40,
+        "has_padding": true,
+        "has_flexible_envelope": true
+      }
+    }
+  ],
+  "union_declarations": [
+    {
+      "name": "fuchsia.net.interfaces/Event",
+      "naming_context": [
+        "Watcher",
+        "Watch",
+        "Response",
+        "event"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+        "line": 231,
+        "column": 17,
+        "length": 907
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "strict_audit",
+          "arguments": [
+            {
+              "name": "bug",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "https://fxbug.dev/467128725",
+                "expression": "\"https://fxbug.dev/467128725\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "https://fxbug.dev/467128725",
+                  "expression": "\"https://fxbug.dev/467128725\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 230,
+                "column": 31,
+                "length": 33
+              }
+            },
+            {
+              "name": "state",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "PENDING_REVIEW",
+                "expression": "\"PENDING_REVIEW\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "PENDING_REVIEW",
+                  "expression": "\"PENDING_REVIEW\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 230,
+                "column": 66,
+                "length": 22
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 230,
+            "column": 17,
+            "length": 72
+          }
+        }
+      ],
+      "members": [
+        {
+          "ordinal": 1,
+          "name": "existing",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.interfaces/Properties",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 6,
+              "max_handles": 0,
+              "max_out_of_line": 4294967295,
+              "has_padding": true,
+              "has_flexible_envelope": true
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 235,
+            "column": 16,
+            "length": 8
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Properties of an interface that existed when watching started.\n\n All interested fields and [`Properties.id`] are set.\n",
+                    "expression": "/// Properties of an interface that existed when watching started.\n            ///\n            /// All interested fields and [`Properties.id`] are set.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Properties of an interface that existed when watching started.\n\n All interested fields and [`Properties.id`] are set.\n",
+                      "expression": "/// Properties of an interface that existed when watching started.\n            ///\n            /// All interested fields and [`Properties.id`] are set."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 232,
+                    "column": 13,
+                    "length": 151
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 232,
+                "column": 13,
+                "length": 151
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 2,
+          "name": "added",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.interfaces/Properties",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 6,
+              "max_handles": 0,
+              "max_out_of_line": 4294967295,
+              "has_padding": true,
+              "has_flexible_envelope": true
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 239,
+            "column": 16,
+            "length": 5
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Properties of an interface that was added while watching.\n\n All interested fields and [`Properties.id`] are set.\n",
+                    "expression": "/// Properties of an interface that was added while watching.\n            ///\n            /// All interested fields and [`Properties.id`] are set.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Properties of an interface that was added while watching.\n\n All interested fields and [`Properties.id`] are set.\n",
+                      "expression": "/// Properties of an interface that was added while watching.\n            ///\n            /// All interested fields and [`Properties.id`] are set."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 236,
+                    "column": 13,
+                    "length": 146
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 236,
+                "column": 13,
+                "length": 146
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 3,
+          "name": "removed",
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint64",
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "fuchsia.net/InterfaceId",
+            "args": [],
+            "nullable": false
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 241,
+            "column": 16,
+            "length": 7
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " ID of an interface that was removed while watching.\n",
+                    "expression": "/// ID of an interface that was removed while watching.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " ID of an interface that was removed while watching.\n",
+                      "expression": "/// ID of an interface that was removed while watching."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 240,
+                    "column": 13,
+                    "length": 55
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 240,
+                "column": 13,
+                "length": 55
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 4,
+          "name": "changed",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.interfaces/Properties",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 6,
+              "max_handles": 0,
+              "max_out_of_line": 4294967295,
+              "has_padding": true,
+              "has_flexible_envelope": true
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 246,
+            "column": 16,
+            "length": 7
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Properties of an interface that changed while watching.\n\n Only [`Properties.id`] and interested fields which have changed\n are set with the new values.\n",
+                    "expression": "/// Properties of an interface that changed while watching.\n            ///\n            /// Only [`Properties.id`] and interested fields which have changed\n            /// are set with the new values.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Properties of an interface that changed while watching.\n\n Only [`Properties.id`] and interested fields which have changed\n are set with the new values.\n",
+                      "expression": "/// Properties of an interface that changed while watching.\n            ///\n            /// Only [`Properties.id`] and interested fields which have changed\n            /// are set with the new values."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 242,
+                    "column": 13,
+                    "length": 200
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 242,
+                "column": 13,
+                "length": 200
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 5,
+          "name": "idle",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.interfaces/Empty",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 249,
+            "column": 16,
+            "length": 4
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Sentinel value indicating no more [`existing`] events will be\n sent.\n",
+                    "expression": "/// Sentinel value indicating no more [`existing`] events will be\n            /// sent.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Sentinel value indicating no more [`existing`] events will be\n sent.\n",
+                      "expression": "/// Sentinel value indicating no more [`existing`] events will be\n            /// sent."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 247,
+                    "column": 13,
+                    "length": 87
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 247,
+                "column": 13,
+                "length": 87
+              }
+            }
+          ]
+        }
+      ],
+      "strict": true,
+      "resource": false,
+      "is_result": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 7,
+        "max_handles": 0,
+        "max_out_of_line": 4294967295,
+        "has_padding": true,
+        "has_flexible_envelope": true
+      }
+    },
+    {
+      "name": "fuchsia.net.interfaces/PortClass",
+      "naming_context": [
+        "PortClass"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+        "line": 152,
+        "column": 6,
+        "length": 9
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " The port class of an interface.\n",
+                "expression": "/// The port class of an interface.",
+                "literal": {
+                  "kind": "string",
+                  "value": " The port class of an interface.\n",
+                  "expression": "/// The port class of an interface."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 150,
+                "column": 1,
+                "length": 35
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 150,
+            "column": 1,
+            "length": 35
+          }
+        },
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "literal",
+                "value": "22",
+                "expression": "22",
+                "literal": {
+                  "kind": "numeric",
+                  "value": "22",
+                  "expression": "22"
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 151,
+                "column": 12,
+                "length": 8
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 151,
+            "column": 1,
+            "length": 20
+          }
+        }
+      ],
+      "members": [
+        {
+          "ordinal": 1,
+          "name": "loopback",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.interfaces/Empty",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 154,
+            "column": 8,
+            "length": 8
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The interface is loopback.\n",
+                    "expression": "/// The interface is loopback.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The interface is loopback.\n",
+                      "expression": "/// The interface is loopback."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 153,
+                    "column": 5,
+                    "length": 30
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 153,
+                "column": 5,
+                "length": 30
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 2,
+          "name": "device",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.hardware.network/PortClass",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 2,
+              "alignment": 2,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 156,
+            "column": 8,
+            "length": 6
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The interface's network device port class.\n",
+                    "expression": "/// The interface's network device port class.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The interface's network device port class.\n",
+                      "expression": "/// The interface's network device port class."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 155,
+                    "column": 5,
+                    "length": 46
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 155,
+                "column": 5,
+                "length": 46
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 3,
+          "name": "blackhole",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.interfaces/Empty",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 159,
+            "column": 8,
+            "length": 9
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The interface is a blackhole interface.\n",
+                    "expression": "/// The interface is a blackhole interface.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The interface is a blackhole interface.\n",
+                      "expression": "/// The interface is a blackhole interface."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 157,
+                    "column": 5,
+                    "length": 43
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 157,
+                "column": 5,
+                "length": 43
+              }
+            },
+            {
+              "name": "available",
+              "arguments": [
+                {
+                  "name": "added",
+                  "type": "uint32",
+                  "value": {
+                    "kind": "identifier",
+                    "value": "4292870144",
+                    "expression": "HEAD",
+                    "identifier": "fidl/HEAD"
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 158,
+                    "column": 16,
+                    "length": 10
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 158,
+                "column": 5,
+                "length": 22
+              }
+            }
+          ]
+        }
+      ],
+      "strict": false,
+      "resource": false,
+      "is_result": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": true,
+        "has_flexible_envelope": true
+      }
+    },
+    {
+      "name": "fuchsia.net.interfaces/PreferredLifetimeInfo",
+      "naming_context": [
+        "PreferredLifetimeInfo"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+        "line": 26,
+        "column": 6,
+        "length": 21
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Information about the preferred lifetime of an IP address or delegated\n prefix.\n",
+                "expression": "/// Information about the preferred lifetime of an IP address or delegated\n/// prefix.",
+                "literal": {
+                  "kind": "string",
+                  "value": " Information about the preferred lifetime of an IP address or delegated\n prefix.\n",
+                  "expression": "/// Information about the preferred lifetime of an IP address or delegated\n/// prefix."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 22,
+                "column": 1,
+                "length": 86
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 22,
+            "column": 1,
+            "length": 86
+          }
+        },
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "literal",
+                "value": "9",
+                "expression": "9",
+                "literal": {
+                  "kind": "numeric",
+                  "value": "9",
+                  "expression": "9"
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 24,
+                "column": 12,
+                "length": 7
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 24,
+            "column": 1,
+            "length": 19
+          }
+        },
+        {
+          "name": "strict_audit",
+          "arguments": [
+            {
+              "name": "bug",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "https://fxbug.dev/467128725",
+                "expression": "\"https://fxbug.dev/467128725\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "https://fxbug.dev/467128725",
+                  "expression": "\"https://fxbug.dev/467128725\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 25,
+                "column": 15,
+                "length": 33
+              }
+            },
+            {
+              "name": "state",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "PENDING_REVIEW",
+                "expression": "\"PENDING_REVIEW\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "PENDING_REVIEW",
+                  "expression": "\"PENDING_REVIEW\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 25,
+                "column": 50,
+                "length": 22
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 25,
+            "column": 1,
+            "length": 72
+          }
+        }
+      ],
+      "members": [
+        {
+          "ordinal": 1,
+          "name": "preferred_until",
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int64",
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Time",
+            "args": [],
+            "nullable": false
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 42,
+            "column": 8,
+            "length": 15
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The end of the preferred lifetime.\n\n The address/prefix should *not* be considered deprecated if `zx.Time`\n is in the past. `preferred_until` is exchanged as a means to inform\n the deadline where deprecation is expected to happen.\n\n The preferred lifetime of addresses is defined in\n [RFC 4862, section 2](https://tools.ietf.org/html/rfc4862#section-2).\n\n Addresses configured using a delegated prefix must have a preferred\n lifetime no longer than that of the prefix according to\n [RFC 8415, section 6.3](https://datatracker.ietf.org/doc/html/rfc8415#section-6.3).\n\n Must be greater than 0. If `zx.Time.INFINITE`, the preferred lifetime\n does not expire.\n",
+                    "expression": "/// The end of the preferred lifetime.\n    ///\n    /// The address/prefix should *not* be considered deprecated if `zx.Time`\n    /// is in the past. `preferred_until` is exchanged as a means to inform\n    /// the deadline where deprecation is expected to happen.\n    ///\n    /// The preferred lifetime of addresses is defined in\n    /// [RFC 4862, section 2](https://tools.ietf.org/html/rfc4862#section-2).\n    ///\n    /// Addresses configured using a delegated prefix must have a preferred\n    /// lifetime no longer than that of the prefix according to\n    /// [RFC 8415, section 6.3](https://datatracker.ietf.org/doc/html/rfc8415#section-6.3).\n    ///\n    /// Must be greater than 0. If `zx.Time.INFINITE`, the preferred lifetime\n    /// does not expire.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The end of the preferred lifetime.\n\n The address/prefix should *not* be considered deprecated if `zx.Time`\n is in the past. `preferred_until` is exchanged as a means to inform\n the deadline where deprecation is expected to happen.\n\n The preferred lifetime of addresses is defined in\n [RFC 4862, section 2](https://tools.ietf.org/html/rfc4862#section-2).\n\n Addresses configured using a delegated prefix must have a preferred\n lifetime no longer than that of the prefix according to\n [RFC 8415, section 6.3](https://datatracker.ietf.org/doc/html/rfc8415#section-6.3).\n\n Must be greater than 0. If `zx.Time.INFINITE`, the preferred lifetime\n does not expire.\n",
+                      "expression": "/// The end of the preferred lifetime.\n    ///\n    /// The address/prefix should *not* be considered deprecated if `zx.Time`\n    /// is in the past. `preferred_until` is exchanged as a means to inform\n    /// the deadline where deprecation is expected to happen.\n    ///\n    /// The preferred lifetime of addresses is defined in\n    /// [RFC 4862, section 2](https://tools.ietf.org/html/rfc4862#section-2).\n    ///\n    /// Addresses configured using a delegated prefix must have a preferred\n    /// lifetime no longer than that of the prefix according to\n    /// [RFC 8415, section 6.3](https://datatracker.ietf.org/doc/html/rfc8415#section-6.3).\n    ///\n    /// Must be greater than 0. If `zx.Time.INFINITE`, the preferred lifetime\n    /// does not expire."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 27,
+                    "column": 5,
+                    "length": 757
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 27,
+                "column": 5,
+                "length": 757
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 2,
+          "name": "deprecated",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.interfaces/Empty",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 57,
+            "column": 8,
+            "length": 10
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The address/prefix is deprecated.\n\n Deprecated addresses should no longer be used for initiating\n new connections unless explicitly requested, or if no other\n non-deprecated addresses are assigned (as described in\n [RFC 4862, section 1](https://tools.ietf.org/html/rfc4862#section-1)).\n\n Addresses configured using a deprecated delegated prefix must also be\n deprecated according to\n [RFC 8415, section 6.3](https://datatracker.ietf.org/doc/html/rfc8415#section-6.3).\n\n An address/prefix can become undeprecated if its preferred lifetime is\n extended.\n",
+                    "expression": "/// The address/prefix is deprecated.\n    ///\n    /// Deprecated addresses should no longer be used for initiating\n    /// new connections unless explicitly requested, or if no other\n    /// non-deprecated addresses are assigned (as described in\n    /// [RFC 4862, section 1](https://tools.ietf.org/html/rfc4862#section-1)).\n    ///\n    /// Addresses configured using a deprecated delegated prefix must also be\n    /// deprecated according to\n    /// [RFC 8415, section 6.3](https://datatracker.ietf.org/doc/html/rfc8415#section-6.3).\n    ///\n    /// An address/prefix can become undeprecated if its preferred lifetime is\n    /// extended.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The address/prefix is deprecated.\n\n Deprecated addresses should no longer be used for initiating\n new connections unless explicitly requested, or if no other\n non-deprecated addresses are assigned (as described in\n [RFC 4862, section 1](https://tools.ietf.org/html/rfc4862#section-1)).\n\n Addresses configured using a deprecated delegated prefix must also be\n deprecated according to\n [RFC 8415, section 6.3](https://datatracker.ietf.org/doc/html/rfc8415#section-6.3).\n\n An address/prefix can become undeprecated if its preferred lifetime is\n extended.\n",
+                      "expression": "/// The address/prefix is deprecated.\n    ///\n    /// Deprecated addresses should no longer be used for initiating\n    /// new connections unless explicitly requested, or if no other\n    /// non-deprecated addresses are assigned (as described in\n    /// [RFC 4862, section 1](https://tools.ietf.org/html/rfc4862#section-1)).\n    ///\n    /// Addresses configured using a deprecated delegated prefix must also be\n    /// deprecated according to\n    /// [RFC 8415, section 6.3](https://datatracker.ietf.org/doc/html/rfc8415#section-6.3).\n    ///\n    /// An address/prefix can become undeprecated if its preferred lifetime is\n    /// extended."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                    "line": 44,
+                    "column": 5,
+                    "length": 639
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 44,
+                "column": 5,
+                "length": 639
+              }
+            }
+          ]
+        }
+      ],
+      "strict": true,
+      "resource": false,
+      "is_result": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 8,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    }
+  ],
+  "alias_declarations": [
+    {
+      "name": "fuchsia.net.interfaces/Name",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+        "line": 17,
+        "column": 7,
+        "length": 4
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " An interface name as a sequence of bytes.\n",
+                "expression": "/// An interface name as a sequence of bytes.",
+                "literal": {
+                  "kind": "string",
+                  "value": " An interface name as a sequence of bytes.\n",
+                  "expression": "/// An interface name as a sequence of bytes."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+                "line": 16,
+                "column": 1,
+                "length": 45
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.interfaces/interfaces.fidl",
+            "line": 16,
+            "column": 1,
+            "length": 45
+          }
+        }
+      ],
+      "partial_type_ctor": {
+        "name": "string",
+        "args": [],
+        "nullable": false,
+        "maybe_size": {
+          "kind": "identifier",
+          "value": "15",
+          "expression": "INTERFACE_NAME_LENGTH",
+          "identifier": "fuchsia.net.interfaces/INTERFACE_NAME_LENGTH"
+        }
+      },
+      "type": {
+        "kind_v2": "string",
+        "maybe_element_count": 15,
+        "nullable": false,
+        "type_shape_v2": {
+          "inline_size": 16,
+          "alignment": 8,
+          "depth": 1,
+          "max_handles": 0,
+          "max_out_of_line": 16,
+          "has_padding": true,
+          "has_flexible_envelope": false
+        }
+      }
+    }
+  ],
+  "new_type_declarations": [],
+  "declaration_order": [
+    "fuchsia.net.interfaces/Empty",
+    "fuchsia.net.interfaces/PreferredLifetimeInfo",
+    "fuchsia.net.interfaces/AddressAssignmentState",
+    "fuchsia.net.interfaces/Address",
+    "fuchsia.net.interfaces/AddressPropertiesInterest",
+    "fuchsia.net.interfaces/INTERFACE_NAME_LENGTH",
+    "fuchsia.net.interfaces/Name",
+    "fuchsia.net.interfaces/PortClass",
+    "fuchsia.net.interfaces/Properties",
+    "fuchsia.net.interfaces/Event",
+    "fuchsia.net.interfaces/WatcherOptions",
+    "fuchsia.net.interfaces/StateGetWatcherRequest",
+    "fuchsia.net.interfaces/State",
+    "fuchsia.net.interfaces/WatcherWatchResponse",
+    "fuchsia.net.interfaces/Watcher"
+  ],
+  "declarations": {
+    "fuchsia.net.interfaces/AddressPropertiesInterest": "bits",
+    "fuchsia.net.interfaces/INTERFACE_NAME_LENGTH": "const",
+    "fuchsia.net.interfaces/AddressAssignmentState": "enum",
+    "fuchsia.net.interfaces/State": "protocol",
+    "fuchsia.net.interfaces/Watcher": "protocol",
+    "fuchsia.net.interfaces/Empty": "struct",
+    "fuchsia.net.interfaces/StateGetWatcherRequest": "struct",
+    "fuchsia.net.interfaces/WatcherWatchResponse": "struct",
+    "fuchsia.net.interfaces/Address": "table",
+    "fuchsia.net.interfaces/Properties": "table",
+    "fuchsia.net.interfaces/WatcherOptions": "table",
+    "fuchsia.net.interfaces/Event": "union",
+    "fuchsia.net.interfaces/PortClass": "union",
+    "fuchsia.net.interfaces/PreferredLifetimeInfo": "union",
+    "fuchsia.net.interfaces/Name": "alias"
+  }
+}

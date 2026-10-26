@@ -1,0 +1,13 @@
+[
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/c/lib/zbi-format/driver-config.h",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/c/lib/zbi-format/memory.h",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/c/lib/zbi-format/reboot.h",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/c/lib/zbi-format/secure-entropy.h",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/c/lib/zbi-format/cpu.h",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/c/lib/zbi-format/graphics.h",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/c/lib/zbi-format/kernel.h",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/c/lib/zbi-format/partition.h",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/c/lib/zbi-format/zbi.h",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/c/lib/zbi-format/board.h",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/c/README.md"
+]

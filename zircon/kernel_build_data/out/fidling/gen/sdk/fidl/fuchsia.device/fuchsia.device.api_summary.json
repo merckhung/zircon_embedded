@@ -1,0 +1,219 @@
+[
+    {
+        "kind": "protocol/member",
+        "name": "fuchsia.device/Controller.Bind",
+        "strictness": "strict",
+        "ordinal": "3713483046889334633",
+        "direction": "two_way",
+        "request": "fuchsia.device/ControllerBindRequest",
+        "response": "fuchsia.device/Controller_Bind_Response",
+        "error": "int32"
+    },
+    {
+        "kind": "protocol/member",
+        "name": "fuchsia.device/Controller.ConnectToController",
+        "strictness": "strict",
+        "ordinal": "7383455793070710992",
+        "direction": "one_way",
+        "request": "fuchsia.device/ControllerConnectToControllerRequest"
+    },
+    {
+        "kind": "protocol/member",
+        "name": "fuchsia.device/Controller.ConnectToDeviceFidl",
+        "strictness": "strict",
+        "ordinal": "8735954460215418637",
+        "direction": "one_way",
+        "request": "fuchsia.device/ControllerConnectToDeviceFidlRequest"
+    },
+    {
+        "kind": "protocol/member",
+        "name": "fuchsia.device/Controller.GetTopologicalPath",
+        "strictness": "strict",
+        "ordinal": "2776947966313760648",
+        "direction": "two_way",
+        "response": "fuchsia.device/Controller_GetTopologicalPath_Response",
+        "error": "int32"
+    },
+    {
+        "kind": "protocol/member",
+        "name": "fuchsia.device/Controller.Rebind",
+        "strictness": "strict",
+        "ordinal": "4057664154119930594",
+        "direction": "two_way",
+        "request": "fuchsia.device/ControllerRebindRequest",
+        "response": "fuchsia.device/Controller_Rebind_Response",
+        "error": "int32"
+    },
+    {
+        "kind": "protocol/member",
+        "name": "fuchsia.device/Controller.ScheduleUnbind",
+        "strictness": "strict",
+        "ordinal": "437565675388207004",
+        "direction": "two_way",
+        "response": "fuchsia.device/Controller_ScheduleUnbind_Response",
+        "error": "int32"
+    },
+    {
+        "kind": "protocol/member",
+        "name": "fuchsia.device/Controller.UnbindChildren",
+        "strictness": "strict",
+        "ordinal": "3601446863455626278",
+        "direction": "two_way",
+        "response": "fuchsia.device/Controller_UnbindChildren_Response",
+        "error": "int32"
+    },
+    {
+        "kind": "protocol",
+        "name": "fuchsia.device/Controller",
+        "openness": "closed",
+        "transport": "channel"
+    },
+    {
+        "kind": "struct/member",
+        "name": "fuchsia.device/ControllerBindRequest.driver",
+        "ordinal": "1",
+        "type": "string:1024"
+    },
+    {
+        "kind": "struct",
+        "name": "fuchsia.device/ControllerBindRequest"
+    },
+    {
+        "kind": "struct/member",
+        "name": "fuchsia.device/ControllerConnectToControllerRequest.server",
+        "ordinal": "1",
+        "type": "server_end:fuchsia.device/Controller"
+    },
+    {
+        "kind": "struct",
+        "name": "fuchsia.device/ControllerConnectToControllerRequest",
+        "resourceness": "resource"
+    },
+    {
+        "kind": "struct/member",
+        "name": "fuchsia.device/ControllerConnectToDeviceFidlRequest.server",
+        "ordinal": "1",
+        "type": "zx/Handle:CHANNEL"
+    },
+    {
+        "kind": "struct",
+        "name": "fuchsia.device/ControllerConnectToDeviceFidlRequest",
+        "resourceness": "resource"
+    },
+    {
+        "kind": "struct/member",
+        "name": "fuchsia.device/ControllerRebindRequest.driver",
+        "ordinal": "1",
+        "type": "string:1024"
+    },
+    {
+        "kind": "struct",
+        "name": "fuchsia.device/ControllerRebindRequest"
+    },
+    {
+        "kind": "struct/member",
+        "name": "fuchsia.device/Controller_GetTopologicalPath_Response.path",
+        "ordinal": "1",
+        "type": "string:1024"
+    },
+    {
+        "kind": "struct",
+        "name": "fuchsia.device/Controller_GetTopologicalPath_Response"
+    },
+    {
+        "kind": "const",
+        "name": "fuchsia.device/DEFAULT_DEVICE_NAME",
+        "type": "string",
+        "value": "fuchsia"
+    },
+    {
+        "kind": "const",
+        "name": "fuchsia.device/DEVICE_NAME_MAX",
+        "type": "uint32",
+        "value": "255"
+    },
+    {
+        "kind": "bits/member",
+        "name": "fuchsia.device/DeviceSignal.ERROR",
+        "value": "134217728"
+    },
+    {
+        "kind": "bits/member",
+        "name": "fuchsia.device/DeviceSignal.HANGUP",
+        "value": "268435456"
+    },
+    {
+        "kind": "bits/member",
+        "name": "fuchsia.device/DeviceSignal.OOB",
+        "value": "33554432"
+    },
+    {
+        "kind": "bits/member",
+        "name": "fuchsia.device/DeviceSignal.READABLE",
+        "value": "16777216"
+    },
+    {
+        "kind": "bits/member",
+        "name": "fuchsia.device/DeviceSignal.WRITABLE",
+        "value": "67108864"
+    },
+    {
+        "kind": "bits",
+        "name": "fuchsia.device/DeviceSignal",
+        "strictness": "strict",
+        "type": "uint32"
+    },
+    {
+        "kind": "const",
+        "name": "fuchsia.device/MAX_DEVICE_NAME_LEN",
+        "type": "uint64",
+        "value": "32"
+    },
+    {
+        "kind": "const",
+        "name": "fuchsia.device/MAX_DEVICE_PATH_LEN",
+        "type": "uint64",
+        "value": "1024"
+    },
+    {
+        "kind": "const",
+        "name": "fuchsia.device/MAX_DRIVER_NAME_LEN",
+        "type": "uint64",
+        "value": "32"
+    },
+    {
+        "kind": "const",
+        "name": "fuchsia.device/MAX_DRIVER_PATH_LEN",
+        "type": "uint64",
+        "value": "1024"
+    },
+    {
+        "kind": "protocol/member",
+        "name": "fuchsia.device/NameProvider.GetDeviceName",
+        "strictness": "strict",
+        "ordinal": "6931284524237238990",
+        "direction": "two_way",
+        "response": "fuchsia.device/NameProvider_GetDeviceName_Response",
+        "error": "int32"
+    },
+    {
+        "kind": "protocol",
+        "name": "fuchsia.device/NameProvider",
+        "openness": "closed",
+        "transport": "channel"
+    },
+    {
+        "kind": "struct/member",
+        "name": "fuchsia.device/NameProvider_GetDeviceName_Response.name",
+        "ordinal": "1",
+        "type": "string:255"
+    },
+    {
+        "kind": "struct",
+        "name": "fuchsia.device/NameProvider_GetDeviceName_Response"
+    },
+    {
+        "kind": "library",
+        "name": "fuchsia.device"
+    }
+]

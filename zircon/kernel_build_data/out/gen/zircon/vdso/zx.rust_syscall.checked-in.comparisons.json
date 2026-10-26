@@ -1,0 +1,7 @@
+[
+  {
+    "candidate": "fidling/gen/zircon/vdso/zx/zither/rust_syscall/zx/src/definitions.rs",
+    "formatted_golden": "gen/zircon/vdso/formatted-goldens/sdk/rust/zx-sys/src/definitions.rs",
+    "golden": "sdk/rust/zx-sys/src/definitions.rs"
+  }
+]

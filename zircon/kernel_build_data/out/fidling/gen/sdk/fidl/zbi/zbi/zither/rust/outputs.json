@@ -1,0 +1,13 @@
+[
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/rust/zbi/src/reboot.rs",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/rust/zbi/src/secure_entropy.rs",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/rust/zbi/src/board.rs",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/rust/zbi/src/driver_config.rs",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/rust/zbi/src/memory.rs",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/rust/zbi/src/partition.rs",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/rust/zbi/src/zbi.rs",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/rust/zbi/src/cpu.rs",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/rust/zbi/src/graphics.rs",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/rust/zbi/src/kernel.rs",
+	"fidling/gen/sdk/fidl/zbi/zbi/zither/rust/zbi/src/lib.rs"
+]

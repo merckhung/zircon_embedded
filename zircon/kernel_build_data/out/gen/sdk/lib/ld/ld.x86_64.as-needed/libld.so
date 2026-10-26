@@ -1,0 +1,7 @@
+/* //sdk/lib/ld:ld.as-needed
+ * uses this to link in the shared library only if referenced.
+ * This file is used for a deps path that reaches that
+ * without an intervening ifs_shared_library_libs() target.
+ * See ifs_shared_library_libs() documentation for details.
+ */
+INPUT(AS_NEEDED(../ld.x86_64/libld.so))

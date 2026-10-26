@@ -1,0 +1,12 @@
+host_x64/obj/third_party/rust_crates/zerocopy-derive-v0_8_48.actual/libzerocopy_derive-4a1dfc7e9e1ba93b.so
+host_x64/obj/third_party/rust_crates/zerocopy-derive-v0_8_48.actual/libzerocopy_derive-4a1dfc7e9e1ba93b.rmeta
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/target.json
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/lib/libcompiler_builtins.rlib
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/lib/libprofiler_builtins.rlib
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/lib/libcore.rlib
+kernel_arm64.lk_debug_level_2/obj/third_party/rust_crates/zerocopy-v0_8_48.actual/libzerocopy-2b12925d406dcbcb.rlib
+kernel_arm64.lk_debug_level_2/obj/third_party/rust_crates/zerocopy-v0_8_48.actual/libzerocopy-2b12925d406dcbcb.rmeta
+host_x64/obj/src/lib/bitrs/bitrs-macro.actual/libbitrs_macro.so
+host_x64/obj/src/lib/bitrs/bitrs-macro.actual/libbitrs_macro.rmeta
+kernel_arm64.lk_debug_level_2/obj/src/lib/bitrs/bitrs.actual/libbitrs.rlib
+kernel_arm64.lk_debug_level_2/obj/src/lib/bitrs/bitrs.actual/libbitrs.rmeta

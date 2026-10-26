@@ -1,0 +1,3 @@
+../../zircon/kernel/lib/debug/src/dprintf.rs
+../../zircon/kernel/lib/debug/src/lib.rs
+../../zircon/kernel/lib/debug/src/ltrace.rs

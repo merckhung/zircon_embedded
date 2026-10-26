@@ -1,0 +1,12 @@
+[
+  {
+    "label": "//zircon/kernel/lib/libc/string/arch/x86:memset_stosb(//zircon/kernel/switch/set/lk_debug_level_2:kernel_x64.lk_debug_level_2)",
+    "name": "memset_stosb",
+    "path": "kernel_x64.lk_debug_level_2/obj/zircon/kernel/lib/libc/string/arch/x86/memset_stosb.bin"
+  },
+  {
+    "label": "//zircon/kernel/lib/libc/string/arch/x86:memset_stosq(//zircon/kernel/switch/set/lk_debug_level_2:kernel_x64.lk_debug_level_2)",
+    "name": "memset_stosq",
+    "path": "kernel_x64.lk_debug_level_2/obj/zircon/kernel/lib/libc/string/arch/x86/memset_stosq.bin"
+  }
+]

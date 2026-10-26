@@ -1,0 +1,12 @@
+[
+  {
+    "candidate": "fidling/gen/zircon/vdso/zx/zither/rust/zx/src/rights.rs",
+    "formatted_golden": "gen/zircon/vdso/formatted-goldens/sdk/rust/fidl-data-zx/src/rights.rs",
+    "golden": "sdk/rust/fidl-data-zx/src/rights.rs"
+  },
+  {
+    "candidate": "fidling/gen/zircon/vdso/zx/zither/rust/zx/src/zx_common.rs",
+    "formatted_golden": "gen/zircon/vdso/formatted-goldens/sdk/rust/fidl-data-zx/src/zx_common.rs",
+    "golden": "sdk/rust/fidl-data-zx/src/zx_common.rs"
+  }
+]

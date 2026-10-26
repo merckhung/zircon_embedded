@@ -1,0 +1,5 @@
+../../src/lib/fuchsia-sync/src/completion.rs
+../../src/lib/fuchsia-sync/src/condvar.rs
+../../src/lib/fuchsia-sync/src/lib.rs
+../../src/lib/fuchsia-sync/src/mutex.rs
+../../src/lib/fuchsia-sync/src/rwlock.rs

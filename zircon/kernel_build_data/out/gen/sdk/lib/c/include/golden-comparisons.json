@@ -1,0 +1,58 @@
+[
+  {
+    "candidate": "gen/third_party/llvm-libc/src/include/dlfcn.h",
+    "golden": "sdk/lib/c/include/gen/dlfcn.h"
+  },
+  {
+    "candidate": "gen/third_party/llvm-libc/src/include/fenv.h",
+    "golden": "sdk/lib/c/include/gen/fenv.h"
+  },
+  {
+    "candidate": "gen/third_party/llvm-libc/src/include/malloc.h",
+    "golden": "sdk/lib/c/include/gen/malloc.h"
+  },
+  {
+    "candidate": "gen/sdk/lib/c/include/gen/llvm-libc-types/Dl_info.h",
+    "golden": "sdk/lib/c/include/gen/llvm-libc-types/Dl_info.h"
+  },
+  {
+    "candidate": "gen/sdk/lib/c/include/gen/llvm-libc-macros/fenv-macros.h",
+    "golden": "sdk/lib/c/include/gen/llvm-libc-macros/fenv-macros.h"
+  },
+  {
+    "candidate": "gen/sdk/lib/c/include/gen/llvm-libc-types/fenv_t.h",
+    "golden": "sdk/lib/c/include/gen/llvm-libc-types/fenv_t.h"
+  },
+  {
+    "candidate": "gen/sdk/lib/c/include/gen/llvm-libc-types/fexcept_t.h",
+    "golden": "sdk/lib/c/include/gen/llvm-libc-types/fexcept_t.h"
+  },
+  {
+    "candidate": "gen/sdk/lib/c/include/gen/__llvm-libc-common.h",
+    "golden": "sdk/lib/c/include/gen/__llvm-libc-common.h"
+  },
+  {
+    "candidate": "gen/sdk/lib/c/include/gen/llvm-libc-macros/malloc-macros.h",
+    "golden": "sdk/lib/c/include/gen/llvm-libc-macros/malloc-macros.h"
+  },
+  {
+    "candidate": "gen/sdk/lib/c/include/gen/llvm-libc-types/size_t.h",
+    "golden": "sdk/lib/c/include/gen/llvm-libc-types/size_t.h"
+  },
+  {
+    "candidate": "gen/sdk/lib/c/include/zircon/process.h",
+    "golden": "sdk/lib/c/include/gen/zircon/process.h"
+  },
+  {
+    "candidate": "gen/sdk/lib/c/include/gen/llvm-libc-macros/ZX_HANDLE_ACQUIRE.h",
+    "golden": "sdk/lib/c/include/gen/llvm-libc-macros/ZX_HANDLE_ACQUIRE.h"
+  },
+  {
+    "candidate": "gen/sdk/lib/c/include/gen/llvm-libc-macros/ZX_HANDLE_ACQUIRE_UNOWNED.h",
+    "golden": "sdk/lib/c/include/gen/llvm-libc-macros/ZX_HANDLE_ACQUIRE_UNOWNED.h"
+  },
+  {
+    "candidate": "gen/sdk/lib/c/include/gen/llvm-libc-types/zx_handle_t.h",
+    "golden": "sdk/lib/c/include/gen/llvm-libc-types/zx_handle_t.h"
+  }
+]

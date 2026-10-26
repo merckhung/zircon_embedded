@@ -1,0 +1,14 @@
+{
+  "unchanged_file_contents": 102104,
+  "modified_file_contents": [
+    "gcc-10.2.0/libgo/go/internal/trace/testdata/http_1_11_good",
+    "gcc-10.2.0/libgo/go/internal/trace/testdata/stress_1_11_good",
+    "gcc-10.2.0/libgo/go/internal/trace/testdata/stress_start_stop_1_11_good",
+    "gcc-10.2.0/libgo/go/internal/trace/testdata/user_task_span_1_11_good"
+  ],
+  "added_files": [
+    "gcc-10.2.0/PUBLICATION-SANITIZATION.txt"
+  ],
+  "removed_files": [],
+  "compiler_and_runtime_source_contents": "unchanged"
+}

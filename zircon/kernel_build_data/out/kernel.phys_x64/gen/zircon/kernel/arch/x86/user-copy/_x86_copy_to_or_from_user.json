@@ -1,0 +1,22 @@
+[
+  {
+    "label": "//zircon/kernel/arch/x86/user-copy:_x86_copy_to_or_from_user_movsb(//zircon/kernel/phys:kernel.phys_x64)",
+    "name": "_x86_copy_to_or_from_user_movsb",
+    "path": "kernel.phys_x64/obj/zircon/kernel/arch/x86/user-copy/_x86_copy_to_or_from_user_movsb.bin"
+  },
+  {
+    "label": "//zircon/kernel/arch/x86/user-copy:_x86_copy_to_or_from_user_movsb_smap(//zircon/kernel/phys:kernel.phys_x64)",
+    "name": "_x86_copy_to_or_from_user_movsb_smap",
+    "path": "kernel.phys_x64/obj/zircon/kernel/arch/x86/user-copy/_x86_copy_to_or_from_user_movsb_smap.bin"
+  },
+  {
+    "label": "//zircon/kernel/arch/x86/user-copy:_x86_copy_to_or_from_user_movsq(//zircon/kernel/phys:kernel.phys_x64)",
+    "name": "_x86_copy_to_or_from_user_movsq",
+    "path": "kernel.phys_x64/obj/zircon/kernel/arch/x86/user-copy/_x86_copy_to_or_from_user_movsq.bin"
+  },
+  {
+    "label": "//zircon/kernel/arch/x86/user-copy:_x86_copy_to_or_from_user_movsq_smap(//zircon/kernel/phys:kernel.phys_x64)",
+    "name": "_x86_copy_to_or_from_user_movsq_smap",
+    "path": "kernel.phys_x64/obj/zircon/kernel/arch/x86/user-copy/_x86_copy_to_or_from_user_movsq_smap.bin"
+  }
+]

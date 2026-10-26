@@ -1,0 +1,2987 @@
+{
+  "name": "fuchsia.posix",
+  "platform": "fuchsia",
+  "available": {
+    "fuchsia": [
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "NEXT",
+      "HEAD"
+    ]
+  },
+  "maybe_attributes": [
+    {
+      "name": "available",
+      "arguments": [
+        {
+          "name": "added",
+          "type": "uint32",
+          "value": {
+            "kind": "literal",
+            "value": "11",
+            "expression": "11",
+            "literal": {
+              "kind": "numeric",
+              "value": "11",
+              "expression": "11"
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 4,
+            "column": 12,
+            "length": 8
+          }
+        }
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+        "line": 4,
+        "column": 1,
+        "length": 20
+      }
+    }
+  ],
+  "experiments": [],
+  "library_dependencies": [],
+  "bits_declarations": [],
+  "const_declarations": [
+    {
+      "name": "fuchsia.posix/EDEADLOCK",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+        "line": 151,
+        "column": 7,
+        "length": 9
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " `EDEADLOCK` is aliased to `EDEADLK`.\n",
+                "expression": "/// `EDEADLOCK` is aliased to `EDEADLK`.",
+                "literal": {
+                  "kind": "string",
+                  "value": " `EDEADLOCK` is aliased to `EDEADLK`.\n",
+                  "expression": "/// `EDEADLOCK` is aliased to `EDEADLK`."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+                "line": 150,
+                "column": 1,
+                "length": 40
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 150,
+            "column": 1,
+            "length": 40
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "identifier",
+        "identifier": "fuchsia.posix/Errno",
+        "nullable": false,
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "identifier",
+        "value": "35",
+        "expression": "Errno.EDEADLK",
+        "identifier": "fuchsia.posix/Errno.EDEADLK"
+      }
+    },
+    {
+      "name": "fuchsia.posix/ENOTSUP",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+        "line": 153,
+        "column": 7,
+        "length": 7
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " `ENOTSUP` is aliased to `EOPNOTSUPP`.\n",
+                "expression": "/// `ENOTSUP` is aliased to `EOPNOTSUPP`.",
+                "literal": {
+                  "kind": "string",
+                  "value": " `ENOTSUP` is aliased to `EOPNOTSUPP`.\n",
+                  "expression": "/// `ENOTSUP` is aliased to `EOPNOTSUPP`."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+                "line": 152,
+                "column": 1,
+                "length": 41
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 152,
+            "column": 1,
+            "length": 41
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "identifier",
+        "identifier": "fuchsia.posix/Errno",
+        "nullable": false,
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "identifier",
+        "value": "95",
+        "expression": "Errno.EOPNOTSUPP",
+        "identifier": "fuchsia.posix/Errno.EOPNOTSUPP"
+      }
+    },
+    {
+      "name": "fuchsia.posix/EWOULDBLOCK",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+        "line": 149,
+        "column": 7,
+        "length": 11
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " `EWOULDBLOCK` is aliased to `EAGAIN`.\n",
+                "expression": "/// `EWOULDBLOCK` is aliased to `EAGAIN`.",
+                "literal": {
+                  "kind": "string",
+                  "value": " `EWOULDBLOCK` is aliased to `EAGAIN`.\n",
+                  "expression": "/// `EWOULDBLOCK` is aliased to `EAGAIN`."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+                "line": 148,
+                "column": 1,
+                "length": 41
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 148,
+            "column": 1,
+            "length": 41
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "identifier",
+        "identifier": "fuchsia.posix/Errno",
+        "nullable": false,
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "identifier",
+        "value": "11",
+        "expression": "Errno.EAGAIN",
+        "identifier": "fuchsia.posix/Errno.EAGAIN"
+      }
+    }
+  ],
+  "enum_declarations": [
+    {
+      "name": "fuchsia.posix/Errno",
+      "naming_context": [
+        "Errno"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+        "line": 11,
+        "column": 6,
+        "length": 5
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " POSIX style errnos.\n\n See https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/errno.h.html for more information.\n",
+                "expression": "/// POSIX style errnos.\n///\n/// See https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/errno.h.html for more information.",
+                "literal": {
+                  "kind": "string",
+                  "value": " POSIX style errnos.\n\n See https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/errno.h.html for more information.\n",
+                  "expression": "/// POSIX style errnos.\n///\n/// See https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/errno.h.html for more information."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+                "line": 7,
+                "column": 1,
+                "length": 128
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 7,
+            "column": 1,
+            "length": 128
+          }
+        },
+        {
+          "name": "strict_audit",
+          "arguments": [
+            {
+              "name": "bug",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "https://fxbug.dev/467128885",
+                "expression": "\"https://fxbug.dev/467128885\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "https://fxbug.dev/467128885",
+                  "expression": "\"https://fxbug.dev/467128885\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+                "line": 10,
+                "column": 15,
+                "length": 33
+              }
+            },
+            {
+              "name": "state",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "PENDING_REVIEW",
+                "expression": "\"PENDING_REVIEW\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "PENDING_REVIEW",
+                  "expression": "\"PENDING_REVIEW\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+                "line": 10,
+                "column": 50,
+                "length": 22
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 10,
+            "column": 1,
+            "length": 72
+          }
+        }
+      ],
+      "type": "int32",
+      "members": [
+        {
+          "name": "EPERM",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 12,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "1",
+            "expression": "1",
+            "literal": {
+              "kind": "numeric",
+              "value": "1",
+              "expression": "1"
+            }
+          }
+        },
+        {
+          "name": "ENOENT",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 13,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "2",
+            "expression": "2",
+            "literal": {
+              "kind": "numeric",
+              "value": "2",
+              "expression": "2"
+            }
+          }
+        },
+        {
+          "name": "ESRCH",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 14,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "3",
+            "expression": "3",
+            "literal": {
+              "kind": "numeric",
+              "value": "3",
+              "expression": "3"
+            }
+          }
+        },
+        {
+          "name": "EINTR",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 15,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "4",
+            "expression": "4",
+            "literal": {
+              "kind": "numeric",
+              "value": "4",
+              "expression": "4"
+            }
+          }
+        },
+        {
+          "name": "EIO",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 16,
+            "column": 5,
+            "length": 3
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "5",
+            "expression": "5",
+            "literal": {
+              "kind": "numeric",
+              "value": "5",
+              "expression": "5"
+            }
+          }
+        },
+        {
+          "name": "ENXIO",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 17,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "6",
+            "expression": "6",
+            "literal": {
+              "kind": "numeric",
+              "value": "6",
+              "expression": "6"
+            }
+          }
+        },
+        {
+          "name": "E2BIG",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 18,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "7",
+            "expression": "7",
+            "literal": {
+              "kind": "numeric",
+              "value": "7",
+              "expression": "7"
+            }
+          }
+        },
+        {
+          "name": "ENOEXEC",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 19,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "8",
+            "expression": "8",
+            "literal": {
+              "kind": "numeric",
+              "value": "8",
+              "expression": "8"
+            }
+          }
+        },
+        {
+          "name": "EBADF",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 20,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "9",
+            "expression": "9",
+            "literal": {
+              "kind": "numeric",
+              "value": "9",
+              "expression": "9"
+            }
+          }
+        },
+        {
+          "name": "ECHILD",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 21,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "10",
+            "expression": "10",
+            "literal": {
+              "kind": "numeric",
+              "value": "10",
+              "expression": "10"
+            }
+          }
+        },
+        {
+          "name": "EAGAIN",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 22,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "11",
+            "expression": "11",
+            "literal": {
+              "kind": "numeric",
+              "value": "11",
+              "expression": "11"
+            }
+          }
+        },
+        {
+          "name": "ENOMEM",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 23,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "12",
+            "expression": "12",
+            "literal": {
+              "kind": "numeric",
+              "value": "12",
+              "expression": "12"
+            }
+          }
+        },
+        {
+          "name": "EACCES",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 24,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "13",
+            "expression": "13",
+            "literal": {
+              "kind": "numeric",
+              "value": "13",
+              "expression": "13"
+            }
+          }
+        },
+        {
+          "name": "EFAULT",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 25,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "14",
+            "expression": "14",
+            "literal": {
+              "kind": "numeric",
+              "value": "14",
+              "expression": "14"
+            }
+          }
+        },
+        {
+          "name": "ENOTBLK",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 26,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "15",
+            "expression": "15",
+            "literal": {
+              "kind": "numeric",
+              "value": "15",
+              "expression": "15"
+            }
+          }
+        },
+        {
+          "name": "EBUSY",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 27,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "16",
+            "expression": "16",
+            "literal": {
+              "kind": "numeric",
+              "value": "16",
+              "expression": "16"
+            }
+          }
+        },
+        {
+          "name": "EEXIST",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 28,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "17",
+            "expression": "17",
+            "literal": {
+              "kind": "numeric",
+              "value": "17",
+              "expression": "17"
+            }
+          }
+        },
+        {
+          "name": "EXDEV",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 29,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "18",
+            "expression": "18",
+            "literal": {
+              "kind": "numeric",
+              "value": "18",
+              "expression": "18"
+            }
+          }
+        },
+        {
+          "name": "ENODEV",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 30,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "19",
+            "expression": "19",
+            "literal": {
+              "kind": "numeric",
+              "value": "19",
+              "expression": "19"
+            }
+          }
+        },
+        {
+          "name": "ENOTDIR",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 31,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "20",
+            "expression": "20",
+            "literal": {
+              "kind": "numeric",
+              "value": "20",
+              "expression": "20"
+            }
+          }
+        },
+        {
+          "name": "EISDIR",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 32,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "21",
+            "expression": "21",
+            "literal": {
+              "kind": "numeric",
+              "value": "21",
+              "expression": "21"
+            }
+          }
+        },
+        {
+          "name": "EINVAL",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 33,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "22",
+            "expression": "22",
+            "literal": {
+              "kind": "numeric",
+              "value": "22",
+              "expression": "22"
+            }
+          }
+        },
+        {
+          "name": "ENFILE",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 34,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "23",
+            "expression": "23",
+            "literal": {
+              "kind": "numeric",
+              "value": "23",
+              "expression": "23"
+            }
+          }
+        },
+        {
+          "name": "EMFILE",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 35,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "24",
+            "expression": "24",
+            "literal": {
+              "kind": "numeric",
+              "value": "24",
+              "expression": "24"
+            }
+          }
+        },
+        {
+          "name": "ENOTTY",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 36,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "25",
+            "expression": "25",
+            "literal": {
+              "kind": "numeric",
+              "value": "25",
+              "expression": "25"
+            }
+          }
+        },
+        {
+          "name": "ETXTBSY",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 37,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "26",
+            "expression": "26",
+            "literal": {
+              "kind": "numeric",
+              "value": "26",
+              "expression": "26"
+            }
+          }
+        },
+        {
+          "name": "EFBIG",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 38,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "27",
+            "expression": "27",
+            "literal": {
+              "kind": "numeric",
+              "value": "27",
+              "expression": "27"
+            }
+          }
+        },
+        {
+          "name": "ENOSPC",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 39,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "28",
+            "expression": "28",
+            "literal": {
+              "kind": "numeric",
+              "value": "28",
+              "expression": "28"
+            }
+          }
+        },
+        {
+          "name": "ESPIPE",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 40,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "29",
+            "expression": "29",
+            "literal": {
+              "kind": "numeric",
+              "value": "29",
+              "expression": "29"
+            }
+          }
+        },
+        {
+          "name": "EROFS",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 41,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "30",
+            "expression": "30",
+            "literal": {
+              "kind": "numeric",
+              "value": "30",
+              "expression": "30"
+            }
+          }
+        },
+        {
+          "name": "EMLINK",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 42,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "31",
+            "expression": "31",
+            "literal": {
+              "kind": "numeric",
+              "value": "31",
+              "expression": "31"
+            }
+          }
+        },
+        {
+          "name": "EPIPE",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 43,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "32",
+            "expression": "32",
+            "literal": {
+              "kind": "numeric",
+              "value": "32",
+              "expression": "32"
+            }
+          }
+        },
+        {
+          "name": "EDOM",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 44,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "33",
+            "expression": "33",
+            "literal": {
+              "kind": "numeric",
+              "value": "33",
+              "expression": "33"
+            }
+          }
+        },
+        {
+          "name": "ERANGE",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 45,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "34",
+            "expression": "34",
+            "literal": {
+              "kind": "numeric",
+              "value": "34",
+              "expression": "34"
+            }
+          }
+        },
+        {
+          "name": "EDEADLK",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 46,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "35",
+            "expression": "35",
+            "literal": {
+              "kind": "numeric",
+              "value": "35",
+              "expression": "35"
+            }
+          }
+        },
+        {
+          "name": "ENAMETOOLONG",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 47,
+            "column": 5,
+            "length": 12
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "36",
+            "expression": "36",
+            "literal": {
+              "kind": "numeric",
+              "value": "36",
+              "expression": "36"
+            }
+          }
+        },
+        {
+          "name": "ENOLCK",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 48,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "37",
+            "expression": "37",
+            "literal": {
+              "kind": "numeric",
+              "value": "37",
+              "expression": "37"
+            }
+          }
+        },
+        {
+          "name": "ENOSYS",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 49,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "38",
+            "expression": "38",
+            "literal": {
+              "kind": "numeric",
+              "value": "38",
+              "expression": "38"
+            }
+          }
+        },
+        {
+          "name": "ENOTEMPTY",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 50,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "39",
+            "expression": "39",
+            "literal": {
+              "kind": "numeric",
+              "value": "39",
+              "expression": "39"
+            }
+          }
+        },
+        {
+          "name": "ELOOP",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 51,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "40",
+            "expression": "40",
+            "literal": {
+              "kind": "numeric",
+              "value": "40",
+              "expression": "40"
+            }
+          }
+        },
+        {
+          "name": "ENOMSG",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 53,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "42",
+            "expression": "42",
+            "literal": {
+              "kind": "numeric",
+              "value": "42",
+              "expression": "42"
+            }
+          }
+        },
+        {
+          "name": "EIDRM",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 54,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "43",
+            "expression": "43",
+            "literal": {
+              "kind": "numeric",
+              "value": "43",
+              "expression": "43"
+            }
+          }
+        },
+        {
+          "name": "ECHRNG",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 55,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "44",
+            "expression": "44",
+            "literal": {
+              "kind": "numeric",
+              "value": "44",
+              "expression": "44"
+            }
+          }
+        },
+        {
+          "name": "EL2NSYNC",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 56,
+            "column": 5,
+            "length": 8
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "45",
+            "expression": "45",
+            "literal": {
+              "kind": "numeric",
+              "value": "45",
+              "expression": "45"
+            }
+          }
+        },
+        {
+          "name": "EL3HLT",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 57,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "46",
+            "expression": "46",
+            "literal": {
+              "kind": "numeric",
+              "value": "46",
+              "expression": "46"
+            }
+          }
+        },
+        {
+          "name": "EL3RST",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 58,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "47",
+            "expression": "47",
+            "literal": {
+              "kind": "numeric",
+              "value": "47",
+              "expression": "47"
+            }
+          }
+        },
+        {
+          "name": "ELNRNG",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 59,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "48",
+            "expression": "48",
+            "literal": {
+              "kind": "numeric",
+              "value": "48",
+              "expression": "48"
+            }
+          }
+        },
+        {
+          "name": "EUNATCH",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 60,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "49",
+            "expression": "49",
+            "literal": {
+              "kind": "numeric",
+              "value": "49",
+              "expression": "49"
+            }
+          }
+        },
+        {
+          "name": "ENOCSI",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 61,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "50",
+            "expression": "50",
+            "literal": {
+              "kind": "numeric",
+              "value": "50",
+              "expression": "50"
+            }
+          }
+        },
+        {
+          "name": "EL2HLT",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 62,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "51",
+            "expression": "51",
+            "literal": {
+              "kind": "numeric",
+              "value": "51",
+              "expression": "51"
+            }
+          }
+        },
+        {
+          "name": "EBADE",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 63,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "52",
+            "expression": "52",
+            "literal": {
+              "kind": "numeric",
+              "value": "52",
+              "expression": "52"
+            }
+          }
+        },
+        {
+          "name": "EBADR",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 64,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "53",
+            "expression": "53",
+            "literal": {
+              "kind": "numeric",
+              "value": "53",
+              "expression": "53"
+            }
+          }
+        },
+        {
+          "name": "EXFULL",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 65,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "54",
+            "expression": "54",
+            "literal": {
+              "kind": "numeric",
+              "value": "54",
+              "expression": "54"
+            }
+          }
+        },
+        {
+          "name": "ENOANO",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 66,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "55",
+            "expression": "55",
+            "literal": {
+              "kind": "numeric",
+              "value": "55",
+              "expression": "55"
+            }
+          }
+        },
+        {
+          "name": "EBADRQC",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 67,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "56",
+            "expression": "56",
+            "literal": {
+              "kind": "numeric",
+              "value": "56",
+              "expression": "56"
+            }
+          }
+        },
+        {
+          "name": "EBADSLT",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 68,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "57",
+            "expression": "57",
+            "literal": {
+              "kind": "numeric",
+              "value": "57",
+              "expression": "57"
+            }
+          }
+        },
+        {
+          "name": "EBFONT",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 70,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "59",
+            "expression": "59",
+            "literal": {
+              "kind": "numeric",
+              "value": "59",
+              "expression": "59"
+            }
+          }
+        },
+        {
+          "name": "ENOSTR",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 71,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "60",
+            "expression": "60",
+            "literal": {
+              "kind": "numeric",
+              "value": "60",
+              "expression": "60"
+            }
+          }
+        },
+        {
+          "name": "ENODATA",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 72,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "61",
+            "expression": "61",
+            "literal": {
+              "kind": "numeric",
+              "value": "61",
+              "expression": "61"
+            }
+          }
+        },
+        {
+          "name": "ETIME",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 73,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "62",
+            "expression": "62",
+            "literal": {
+              "kind": "numeric",
+              "value": "62",
+              "expression": "62"
+            }
+          }
+        },
+        {
+          "name": "ENOSR",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 74,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "63",
+            "expression": "63",
+            "literal": {
+              "kind": "numeric",
+              "value": "63",
+              "expression": "63"
+            }
+          }
+        },
+        {
+          "name": "ENONET",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 75,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "64",
+            "expression": "64",
+            "literal": {
+              "kind": "numeric",
+              "value": "64",
+              "expression": "64"
+            }
+          }
+        },
+        {
+          "name": "ENOPKG",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 76,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "65",
+            "expression": "65",
+            "literal": {
+              "kind": "numeric",
+              "value": "65",
+              "expression": "65"
+            }
+          }
+        },
+        {
+          "name": "EREMOTE",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 77,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "66",
+            "expression": "66",
+            "literal": {
+              "kind": "numeric",
+              "value": "66",
+              "expression": "66"
+            }
+          }
+        },
+        {
+          "name": "ENOLINK",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 78,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "67",
+            "expression": "67",
+            "literal": {
+              "kind": "numeric",
+              "value": "67",
+              "expression": "67"
+            }
+          }
+        },
+        {
+          "name": "EADV",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 79,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "68",
+            "expression": "68",
+            "literal": {
+              "kind": "numeric",
+              "value": "68",
+              "expression": "68"
+            }
+          }
+        },
+        {
+          "name": "ESRMNT",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 80,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "69",
+            "expression": "69",
+            "literal": {
+              "kind": "numeric",
+              "value": "69",
+              "expression": "69"
+            }
+          }
+        },
+        {
+          "name": "ECOMM",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 81,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "70",
+            "expression": "70",
+            "literal": {
+              "kind": "numeric",
+              "value": "70",
+              "expression": "70"
+            }
+          }
+        },
+        {
+          "name": "EPROTO",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 82,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "71",
+            "expression": "71",
+            "literal": {
+              "kind": "numeric",
+              "value": "71",
+              "expression": "71"
+            }
+          }
+        },
+        {
+          "name": "EMULTIHOP",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 83,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "72",
+            "expression": "72",
+            "literal": {
+              "kind": "numeric",
+              "value": "72",
+              "expression": "72"
+            }
+          }
+        },
+        {
+          "name": "EDOTDOT",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 84,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "73",
+            "expression": "73",
+            "literal": {
+              "kind": "numeric",
+              "value": "73",
+              "expression": "73"
+            }
+          }
+        },
+        {
+          "name": "EBADMSG",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 85,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "74",
+            "expression": "74",
+            "literal": {
+              "kind": "numeric",
+              "value": "74",
+              "expression": "74"
+            }
+          }
+        },
+        {
+          "name": "EOVERFLOW",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 86,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "75",
+            "expression": "75",
+            "literal": {
+              "kind": "numeric",
+              "value": "75",
+              "expression": "75"
+            }
+          }
+        },
+        {
+          "name": "ENOTUNIQ",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 87,
+            "column": 5,
+            "length": 8
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "76",
+            "expression": "76",
+            "literal": {
+              "kind": "numeric",
+              "value": "76",
+              "expression": "76"
+            }
+          }
+        },
+        {
+          "name": "EBADFD",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 88,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "77",
+            "expression": "77",
+            "literal": {
+              "kind": "numeric",
+              "value": "77",
+              "expression": "77"
+            }
+          }
+        },
+        {
+          "name": "EREMCHG",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 89,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "78",
+            "expression": "78",
+            "literal": {
+              "kind": "numeric",
+              "value": "78",
+              "expression": "78"
+            }
+          }
+        },
+        {
+          "name": "ELIBACC",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 90,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "79",
+            "expression": "79",
+            "literal": {
+              "kind": "numeric",
+              "value": "79",
+              "expression": "79"
+            }
+          }
+        },
+        {
+          "name": "ELIBBAD",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 91,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "80",
+            "expression": "80",
+            "literal": {
+              "kind": "numeric",
+              "value": "80",
+              "expression": "80"
+            }
+          }
+        },
+        {
+          "name": "ELIBSCN",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 92,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "81",
+            "expression": "81",
+            "literal": {
+              "kind": "numeric",
+              "value": "81",
+              "expression": "81"
+            }
+          }
+        },
+        {
+          "name": "ELIBMAX",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 93,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "82",
+            "expression": "82",
+            "literal": {
+              "kind": "numeric",
+              "value": "82",
+              "expression": "82"
+            }
+          }
+        },
+        {
+          "name": "ELIBEXEC",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 94,
+            "column": 5,
+            "length": 8
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "83",
+            "expression": "83",
+            "literal": {
+              "kind": "numeric",
+              "value": "83",
+              "expression": "83"
+            }
+          }
+        },
+        {
+          "name": "EILSEQ",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 95,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "84",
+            "expression": "84",
+            "literal": {
+              "kind": "numeric",
+              "value": "84",
+              "expression": "84"
+            }
+          }
+        },
+        {
+          "name": "ERESTART",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 96,
+            "column": 5,
+            "length": 8
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "85",
+            "expression": "85",
+            "literal": {
+              "kind": "numeric",
+              "value": "85",
+              "expression": "85"
+            }
+          }
+        },
+        {
+          "name": "ESTRPIPE",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 97,
+            "column": 5,
+            "length": 8
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "86",
+            "expression": "86",
+            "literal": {
+              "kind": "numeric",
+              "value": "86",
+              "expression": "86"
+            }
+          }
+        },
+        {
+          "name": "EUSERS",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 98,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "87",
+            "expression": "87",
+            "literal": {
+              "kind": "numeric",
+              "value": "87",
+              "expression": "87"
+            }
+          }
+        },
+        {
+          "name": "ENOTSOCK",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 99,
+            "column": 5,
+            "length": 8
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "88",
+            "expression": "88",
+            "literal": {
+              "kind": "numeric",
+              "value": "88",
+              "expression": "88"
+            }
+          }
+        },
+        {
+          "name": "EDESTADDRREQ",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 100,
+            "column": 5,
+            "length": 12
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "89",
+            "expression": "89",
+            "literal": {
+              "kind": "numeric",
+              "value": "89",
+              "expression": "89"
+            }
+          }
+        },
+        {
+          "name": "EMSGSIZE",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 101,
+            "column": 5,
+            "length": 8
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "90",
+            "expression": "90",
+            "literal": {
+              "kind": "numeric",
+              "value": "90",
+              "expression": "90"
+            }
+          }
+        },
+        {
+          "name": "EPROTOTYPE",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 102,
+            "column": 5,
+            "length": 10
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "91",
+            "expression": "91",
+            "literal": {
+              "kind": "numeric",
+              "value": "91",
+              "expression": "91"
+            }
+          }
+        },
+        {
+          "name": "ENOPROTOOPT",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 103,
+            "column": 5,
+            "length": 11
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "92",
+            "expression": "92",
+            "literal": {
+              "kind": "numeric",
+              "value": "92",
+              "expression": "92"
+            }
+          }
+        },
+        {
+          "name": "EPROTONOSUPPORT",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 104,
+            "column": 5,
+            "length": 15
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "93",
+            "expression": "93",
+            "literal": {
+              "kind": "numeric",
+              "value": "93",
+              "expression": "93"
+            }
+          }
+        },
+        {
+          "name": "ESOCKTNOSUPPORT",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 105,
+            "column": 5,
+            "length": 15
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "94",
+            "expression": "94",
+            "literal": {
+              "kind": "numeric",
+              "value": "94",
+              "expression": "94"
+            }
+          }
+        },
+        {
+          "name": "EOPNOTSUPP",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 106,
+            "column": 5,
+            "length": 10
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "95",
+            "expression": "95",
+            "literal": {
+              "kind": "numeric",
+              "value": "95",
+              "expression": "95"
+            }
+          }
+        },
+        {
+          "name": "EPFNOSUPPORT",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 108,
+            "column": 5,
+            "length": 12
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "96",
+            "expression": "96",
+            "literal": {
+              "kind": "numeric",
+              "value": "96",
+              "expression": "96"
+            }
+          }
+        },
+        {
+          "name": "EAFNOSUPPORT",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 109,
+            "column": 5,
+            "length": 12
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "97",
+            "expression": "97",
+            "literal": {
+              "kind": "numeric",
+              "value": "97",
+              "expression": "97"
+            }
+          }
+        },
+        {
+          "name": "EADDRINUSE",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 110,
+            "column": 5,
+            "length": 10
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "98",
+            "expression": "98",
+            "literal": {
+              "kind": "numeric",
+              "value": "98",
+              "expression": "98"
+            }
+          }
+        },
+        {
+          "name": "EADDRNOTAVAIL",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 111,
+            "column": 5,
+            "length": 13
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "99",
+            "expression": "99",
+            "literal": {
+              "kind": "numeric",
+              "value": "99",
+              "expression": "99"
+            }
+          }
+        },
+        {
+          "name": "ENETDOWN",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 112,
+            "column": 5,
+            "length": 8
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "100",
+            "expression": "100",
+            "literal": {
+              "kind": "numeric",
+              "value": "100",
+              "expression": "100"
+            }
+          }
+        },
+        {
+          "name": "ENETUNREACH",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 113,
+            "column": 5,
+            "length": 11
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "101",
+            "expression": "101",
+            "literal": {
+              "kind": "numeric",
+              "value": "101",
+              "expression": "101"
+            }
+          }
+        },
+        {
+          "name": "ENETRESET",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 114,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "102",
+            "expression": "102",
+            "literal": {
+              "kind": "numeric",
+              "value": "102",
+              "expression": "102"
+            }
+          }
+        },
+        {
+          "name": "ECONNABORTED",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 115,
+            "column": 5,
+            "length": 12
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "103",
+            "expression": "103",
+            "literal": {
+              "kind": "numeric",
+              "value": "103",
+              "expression": "103"
+            }
+          }
+        },
+        {
+          "name": "ECONNRESET",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 116,
+            "column": 5,
+            "length": 10
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "104",
+            "expression": "104",
+            "literal": {
+              "kind": "numeric",
+              "value": "104",
+              "expression": "104"
+            }
+          }
+        },
+        {
+          "name": "ENOBUFS",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 117,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "105",
+            "expression": "105",
+            "literal": {
+              "kind": "numeric",
+              "value": "105",
+              "expression": "105"
+            }
+          }
+        },
+        {
+          "name": "EISCONN",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 118,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "106",
+            "expression": "106",
+            "literal": {
+              "kind": "numeric",
+              "value": "106",
+              "expression": "106"
+            }
+          }
+        },
+        {
+          "name": "ENOTCONN",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 119,
+            "column": 5,
+            "length": 8
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "107",
+            "expression": "107",
+            "literal": {
+              "kind": "numeric",
+              "value": "107",
+              "expression": "107"
+            }
+          }
+        },
+        {
+          "name": "ESHUTDOWN",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 120,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "108",
+            "expression": "108",
+            "literal": {
+              "kind": "numeric",
+              "value": "108",
+              "expression": "108"
+            }
+          }
+        },
+        {
+          "name": "ETOOMANYREFS",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 121,
+            "column": 5,
+            "length": 12
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "109",
+            "expression": "109",
+            "literal": {
+              "kind": "numeric",
+              "value": "109",
+              "expression": "109"
+            }
+          }
+        },
+        {
+          "name": "ETIMEDOUT",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 122,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "110",
+            "expression": "110",
+            "literal": {
+              "kind": "numeric",
+              "value": "110",
+              "expression": "110"
+            }
+          }
+        },
+        {
+          "name": "ECONNREFUSED",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 123,
+            "column": 5,
+            "length": 12
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "111",
+            "expression": "111",
+            "literal": {
+              "kind": "numeric",
+              "value": "111",
+              "expression": "111"
+            }
+          }
+        },
+        {
+          "name": "EHOSTDOWN",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 124,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "112",
+            "expression": "112",
+            "literal": {
+              "kind": "numeric",
+              "value": "112",
+              "expression": "112"
+            }
+          }
+        },
+        {
+          "name": "EHOSTUNREACH",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 125,
+            "column": 5,
+            "length": 12
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "113",
+            "expression": "113",
+            "literal": {
+              "kind": "numeric",
+              "value": "113",
+              "expression": "113"
+            }
+          }
+        },
+        {
+          "name": "EALREADY",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 126,
+            "column": 5,
+            "length": 8
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "114",
+            "expression": "114",
+            "literal": {
+              "kind": "numeric",
+              "value": "114",
+              "expression": "114"
+            }
+          }
+        },
+        {
+          "name": "EINPROGRESS",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 127,
+            "column": 5,
+            "length": 11
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "115",
+            "expression": "115",
+            "literal": {
+              "kind": "numeric",
+              "value": "115",
+              "expression": "115"
+            }
+          }
+        },
+        {
+          "name": "ESTALE",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 128,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "116",
+            "expression": "116",
+            "literal": {
+              "kind": "numeric",
+              "value": "116",
+              "expression": "116"
+            }
+          }
+        },
+        {
+          "name": "EUCLEAN",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 129,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "117",
+            "expression": "117",
+            "literal": {
+              "kind": "numeric",
+              "value": "117",
+              "expression": "117"
+            }
+          }
+        },
+        {
+          "name": "ENOTNAM",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 130,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "118",
+            "expression": "118",
+            "literal": {
+              "kind": "numeric",
+              "value": "118",
+              "expression": "118"
+            }
+          }
+        },
+        {
+          "name": "ENAVAIL",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 131,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "119",
+            "expression": "119",
+            "literal": {
+              "kind": "numeric",
+              "value": "119",
+              "expression": "119"
+            }
+          }
+        },
+        {
+          "name": "EISNAM",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 132,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "120",
+            "expression": "120",
+            "literal": {
+              "kind": "numeric",
+              "value": "120",
+              "expression": "120"
+            }
+          }
+        },
+        {
+          "name": "EREMOTEIO",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 133,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "121",
+            "expression": "121",
+            "literal": {
+              "kind": "numeric",
+              "value": "121",
+              "expression": "121"
+            }
+          }
+        },
+        {
+          "name": "EDQUOT",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 134,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "122",
+            "expression": "122",
+            "literal": {
+              "kind": "numeric",
+              "value": "122",
+              "expression": "122"
+            }
+          }
+        },
+        {
+          "name": "ENOMEDIUM",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 135,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "123",
+            "expression": "123",
+            "literal": {
+              "kind": "numeric",
+              "value": "123",
+              "expression": "123"
+            }
+          }
+        },
+        {
+          "name": "EMEDIUMTYPE",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 136,
+            "column": 5,
+            "length": 11
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "124",
+            "expression": "124",
+            "literal": {
+              "kind": "numeric",
+              "value": "124",
+              "expression": "124"
+            }
+          }
+        },
+        {
+          "name": "ECANCELED",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 137,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "125",
+            "expression": "125",
+            "literal": {
+              "kind": "numeric",
+              "value": "125",
+              "expression": "125"
+            }
+          }
+        },
+        {
+          "name": "ENOKEY",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 138,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "126",
+            "expression": "126",
+            "literal": {
+              "kind": "numeric",
+              "value": "126",
+              "expression": "126"
+            }
+          }
+        },
+        {
+          "name": "EKEYEXPIRED",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 139,
+            "column": 5,
+            "length": 11
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "127",
+            "expression": "127",
+            "literal": {
+              "kind": "numeric",
+              "value": "127",
+              "expression": "127"
+            }
+          }
+        },
+        {
+          "name": "EKEYREVOKED",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 140,
+            "column": 5,
+            "length": 11
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "128",
+            "expression": "128",
+            "literal": {
+              "kind": "numeric",
+              "value": "128",
+              "expression": "128"
+            }
+          }
+        },
+        {
+          "name": "EKEYREJECTED",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 141,
+            "column": 5,
+            "length": 12
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "129",
+            "expression": "129",
+            "literal": {
+              "kind": "numeric",
+              "value": "129",
+              "expression": "129"
+            }
+          }
+        },
+        {
+          "name": "EOWNERDEAD",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 142,
+            "column": 5,
+            "length": 10
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "130",
+            "expression": "130",
+            "literal": {
+              "kind": "numeric",
+              "value": "130",
+              "expression": "130"
+            }
+          }
+        },
+        {
+          "name": "ENOTRECOVERABLE",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 143,
+            "column": 5,
+            "length": 15
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "131",
+            "expression": "131",
+            "literal": {
+              "kind": "numeric",
+              "value": "131",
+              "expression": "131"
+            }
+          }
+        },
+        {
+          "name": "ERFKILL",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 144,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "132",
+            "expression": "132",
+            "literal": {
+              "kind": "numeric",
+              "value": "132",
+              "expression": "132"
+            }
+          }
+        },
+        {
+          "name": "EHWPOISON",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.posix/error.fidl",
+            "line": 145,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "133",
+            "expression": "133",
+            "literal": {
+              "kind": "numeric",
+              "value": "133",
+              "expression": "133"
+            }
+          }
+        }
+      ],
+      "strict": true
+    }
+  ],
+  "experimental_resource_declarations": [],
+  "protocol_declarations": [],
+  "service_declarations": [],
+  "struct_declarations": [],
+  "external_struct_declarations": [],
+  "table_declarations": [],
+  "union_declarations": [],
+  "alias_declarations": [],
+  "new_type_declarations": [],
+  "declaration_order": [
+    "fuchsia.posix/Errno",
+    "fuchsia.posix/EDEADLOCK",
+    "fuchsia.posix/ENOTSUP",
+    "fuchsia.posix/EWOULDBLOCK"
+  ],
+  "declarations": {
+    "fuchsia.posix/EDEADLOCK": "const",
+    "fuchsia.posix/ENOTSUP": "const",
+    "fuchsia.posix/EWOULDBLOCK": "const",
+    "fuchsia.posix/Errno": "enum"
+  }
+}

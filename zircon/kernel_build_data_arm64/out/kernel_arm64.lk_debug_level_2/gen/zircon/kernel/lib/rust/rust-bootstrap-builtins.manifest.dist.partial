@@ -1,0 +1,12 @@
+[
+  {
+    "destination": "libcompiler_builtins.rlib",
+    "label": "//zircon/kernel/lib/rust:compiler_builtins(//zircon/kernel/switch/set/lk_debug_level_2:kernel_arm64.lk_debug_level_2)",
+    "source": "kernel_arm64.lk_debug_level_2/obj/zircon/kernel/lib/rust/libcompiler_builtins.rlib"
+  },
+  {
+    "destination": "libprofiler_builtins.rlib",
+    "label": "//zircon/kernel/lib/rust:profiler_builtins(//zircon/kernel/switch/set/lk_debug_level_2:kernel_arm64.lk_debug_level_2)",
+    "source": "kernel_arm64.lk_debug_level_2/obj/zircon/kernel/lib/rust/libprofiler_builtins.rlib"
+  }
+]

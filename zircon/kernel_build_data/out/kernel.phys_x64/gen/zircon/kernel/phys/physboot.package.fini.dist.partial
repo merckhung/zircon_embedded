@@ -1,0 +1,7 @@
+[
+  {
+    "destination": "physboot",
+    "label": "//zircon/kernel/phys:physboot.module(//zircon/kernel/phys:kernel.phys_x64)",
+    "source": "kernel.phys_x64/obj/zircon/kernel/phys/physboot.module.bin"
+  }
+]

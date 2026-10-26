@@ -1,0 +1,5 @@
+[
+	"fidling/gen/zircon/vdso/zx/zither/legacy_syscall_cdecl/zircon/syscalls/gen/cdecls.inc",
+	"fidling/gen/zircon/vdso/zx/zither/legacy_syscall_cdecl/zircon/syscalls/gen/testonly-cdecls.inc",
+	"fidling/gen/zircon/vdso/zx/zither/legacy_syscall_cdecl/zircon/syscalls/gen/cdecls-next.inc"
+]

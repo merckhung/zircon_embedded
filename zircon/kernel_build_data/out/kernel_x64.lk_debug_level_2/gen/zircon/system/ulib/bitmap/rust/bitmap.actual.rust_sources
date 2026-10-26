@@ -1,0 +1,8 @@
+../../zircon/system/ulib/bitmap/rust/src/bitmap.rs
+../../zircon/system/ulib/bitmap/rust/src/lib.rs
+../../zircon/system/ulib/bitmap/rust/src/raw_bitmap.rs
+../../zircon/system/ulib/bitmap/rust/src/rle_bitmap.rs
+../../zircon/system/ulib/bitmap/rust/src/storage.rs
+../../zircon/system/ulib/bitmap/rust/src/tests/mod.rs
+../../zircon/system/ulib/bitmap/rust/src/tests/raw_bitmap.rs
+../../zircon/system/ulib/bitmap/rust/src/tests/rle_bitmap.rs

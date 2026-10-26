@@ -1,0 +1,171 @@
+[
+  {
+    "package": "libc6",
+    "version": "2.31-13+deb11u5",
+    "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/glibc/libc6_2.31-13+deb11u5_amd64.deb",
+    "package_sha256": "adf6994e4c000ff5b882db411a23925a5860a10146e27fa08fc08cb4d08e6d85",
+    "license_file": "docs/licenses/runtime/libc6/copyright-2.31-13+deb11u5",
+    "license_sha256": "40c7e1f2118531f038ca22999bd976901254e1bc5cd1b0f0211bdd064c599987"
+  },
+  {
+    "package": "libx11-6",
+    "version": "2:1.7.2-1+deb11u2",
+    "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libx11/libx11-6_1.7.2-1+deb11u2_amd64.deb",
+    "package_sha256": "2b3b959cb10c07be065eb638a8577fe20f282045aaef76425dbd7310d1244b8c",
+    "license_file": "docs/licenses/runtime/libx11-6/copyright-2_1.7.2-1+deb11u2",
+    "license_sha256": "0b380a7fd5b2228f26e9585e56f14812efd3350f3df307507d2bc055dfd8de3e"
+  },
+  {
+    "package": "libxau6",
+    "version": "1:1.0.9-1",
+    "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxau/libxau6_1.0.9-1_amd64.deb",
+    "package_sha256": "679db1c4579ec7c61079adeaae8528adeb2e4bf5465baa6c56233b995d714750",
+    "license_file": "docs/licenses/runtime/libxau6/copyright-1_1.0.9-1",
+    "license_sha256": "118dd263a7b91c8f21c489f949bf13281dff9e766deea92b829dac4dce66601a"
+  },
+  {
+    "package": "libxcomposite1",
+    "version": "1:0.4.5-1",
+    "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxcomposite/libxcomposite1_0.4.5-1_amd64.deb",
+    "package_sha256": "4c26ebf519d2ebc22fc1416dee45e12c4c4ef68aa9b2ed890356830df42b652a",
+    "license_file": "docs/licenses/runtime/libxcomposite1/copyright-1_0.4.5-1",
+    "license_sha256": "e37c7a7e4026343c3e5c13990a6d9a8879194ae3ab26bfe420b34f6f206bf35f"
+  },
+  {
+    "package": "libxdamage1",
+    "version": "1:1.1.5-2",
+    "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxdamage/libxdamage1_1.1.5-2_amd64.deb",
+    "package_sha256": "1acf6d6117929a7df346d355caeb579798d75feb7e3b3aae58a2d1af735b444f",
+    "license_file": "docs/licenses/runtime/libxdamage1/copyright-1_1.1.5-2",
+    "license_sha256": "09182bc7805ff77a41251e450cebd0d33c48a74ba8ec4b734855a22c86f50417"
+  },
+  {
+    "package": "libxdmcp6",
+    "version": "1:1.1.2-3",
+    "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxdmcp/libxdmcp6_1.1.2-3_amd64.deb",
+    "package_sha256": "ecb8536f5fb34543b55bb9dc5f5b14c9dbb4150a7bddb3f2287b7cab6e9d25ef",
+    "license_file": "docs/licenses/runtime/libxdmcp6/copyright-1_1.1.2-3",
+    "license_sha256": "1bcbb50f8603fe8b86d330bfa460b772ea04fbd3c70e4499f0768b5340b9fd6e"
+  },
+  {
+    "package": "libxext6",
+    "version": "2:1.3.3-1.1",
+    "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxext/libxext6_1.3.3-1.1_amd64.deb",
+    "package_sha256": "dc1ff8a2b60c7dd3c8917ffb9aa65ee6cda52648d9150608683c47319d1c0c8c",
+    "license_file": "docs/licenses/runtime/libxext6/copyright-2_1.3.3-1.1",
+    "license_sha256": "bc57e445ca1d9fe082c8d54189dd411ff26caa8552c9c63d44ea06a982f32124"
+  },
+  {
+    "package": "libxfixes3",
+    "version": "1:5.0.3-2",
+    "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxfixes/libxfixes3_5.0.3-2_amd64.deb",
+    "package_sha256": "58622d0d65c3535bd724c4da62ae7acb71e0e8f527bcbd65daf8c97e6f0ef843",
+    "license_file": "docs/licenses/runtime/libxfixes3/copyright-1_5.0.3-2",
+    "license_sha256": "051ffe073ab38244c504bb379903b4ecda6081fb3d97d0d3dce44bc11712eef2"
+  },
+  {
+    "package": "libxrandr2",
+    "version": "2:1.5.1-1",
+    "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxrandr/libxrandr2_1.5.1-1_amd64.deb",
+    "package_sha256": "8fdd8ba4a8ad819731d6bbd903b52851a2ec2f9ef4139d880e9be421ea61338c",
+    "license_file": "docs/licenses/runtime/libxrandr2/copyright-2_1.5.1-1",
+    "license_sha256": "6d8e6239cfe9dd25bbeef06dcf0610d802ebbdc8968db87cf5adf00ff98927d4"
+  },
+  {
+    "package": "libxrender1",
+    "version": "1:0.9.10-1",
+    "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxrender/libxrender1_0.9.10-1_amd64.deb",
+    "package_sha256": "3ea17d07b5aa89012130e2acd92f0fc0ea67314e2f5eab6e33930ef688f48294",
+    "license_file": "docs/licenses/runtime/libxrender1/copyright-1_0.9.10-1",
+    "license_sha256": "ed2a78123a5076b4f11da38cb1ffb85b5cb9fdc26b5746c517b1d7e7a9029704"
+  },
+  {
+    "package": "libexpat1",
+    "version": "2.2.10-2+deb11u5",
+    "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/e/expat/libexpat1_2.2.10-2+deb11u5_amd64.deb",
+    "package_sha256": "5744040c4735bcdd51238aebfa3e402b857244897f1007f61154982ebe5abbd7",
+    "license_file": "docs/licenses/runtime/libexpat1/copyright-2.2.10-2+deb11u5",
+    "license_sha256": "60919fe1a156395ff14511bb6ff79756c50ade2fff59ac60c9bae1d8a7fe6292"
+  },
+  {
+    "package": "libdrm2",
+    "version": "2.4.104-1",
+    "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libd/libdrm/libdrm2_2.4.104-1_amd64.deb",
+    "package_sha256": "113396b3a33000f7f3347cd711ad9bcfe9945927331cc6cee63c751a889a967b",
+    "license_file": "docs/licenses/runtime/libdrm2/copyright-2.4.104-1",
+    "license_sha256": "512c9a57fd8b449aa157351da9df07bf8e19f767e496a72205a4020268ddb2e0"
+  },
+  {
+    "package": "libgbm1",
+    "version": "20.3.5-1",
+    "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/m/mesa/libgbm1_20.3.5-1_amd64.deb",
+    "package_sha256": "2d9b07282e46e3c9398613b6d4fe86c3259e4326b158be7e1f4f58cab541156c",
+    "license_file": "docs/licenses/runtime/libgbm1/copyright-20.3.5-1",
+    "license_sha256": "30c36421275bf40e318d5d3e8662db6e332f97f047fa963bdb44e28ef9112232"
+  },
+  {
+    "package": "libxcb1",
+    "version": "1.14-3",
+    "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxcb/libxcb1_1.14-3_amd64.deb",
+    "package_sha256": "d5e0f047ed766f45eb7473947b70f9e8fddbe45ef22ecfd92ab712c0671a93ac",
+    "license_file": "docs/licenses/runtime/libxcb1/copyright-1.14-3",
+    "license_sha256": "4f7cb9db6bf6542f5417e3d674c780d3a5fd12291a54d63054fb576ee0cfae80"
+  },
+  {
+    "package": "libbsd0",
+    "version": "0.11.3-1+deb11u1",
+    "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libb/libbsd/libbsd0_0.11.3-1+deb11u1_arm64.deb",
+    "package_sha256": "614d36d41b670955a75526865bd321703f2accb6e0c07ee4c283fbba12e494df",
+    "license_file": "docs/licenses/runtime/libbsd0/copyright-0.11.3-1+deb11u1",
+    "license_sha256": "ff2fdeeb0fe8bcb9045fe91d69e8312a5b477c54db48dffe34dd1c0d730c5864"
+  },
+  {
+    "package": "libffi7",
+    "version": "3.3-6",
+    "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libf/libffi/libffi7_3.3-6_arm64.deb",
+    "package_sha256": "eb748e33ae4ed46f5a4c14b7a2a09792569f2029ede319d0979c373829ba1532",
+    "license_file": "docs/licenses/runtime/libffi7/copyright-3.3-6",
+    "license_sha256": "7258c8acc378030d8dbe1fcdf394e915769fa31dcbaf3d2991d9a79891f3bcdc"
+  },
+  {
+    "package": "libmd0",
+    "version": "1.0.3-3",
+    "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libm/libmd/libmd0_1.0.3-3_arm64.deb",
+    "package_sha256": "3c490cdcce9d25e702e6587b6166cd8e7303fce8343642d9d5d99695282a9e5c",
+    "license_file": "docs/licenses/runtime/libmd0/copyright-1.0.3-3",
+    "license_sha256": "4365ef6255ad553fce69dd4bc0e093472c5d0e41b8ea493a545cc926ce171aa6"
+  },
+  {
+    "package": "libwayland-server0",
+    "version": "1.18.0-2~exp1.1",
+    "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/w/wayland/libwayland-server0_1.18.0-2~exp1.1_arm64.deb",
+    "package_sha256": "3bbcb9e41159b6268b40ce16b1512e5bcf38e63b8bcf2426eaa54b19c6988257",
+    "license_file": "docs/licenses/runtime/libwayland-server0/copyright-1.18.0-2~exp1.1",
+    "license_sha256": "3a943debedeac62002ce65da7a9b647875612c3d45840f0b001ae27fb76522a6"
+  },
+  {
+    "package": "libgcc-s1",
+    "version": "10.2.1-6",
+    "license_package": "gcc-10-base",
+    "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/gcc-10/gcc-10-base_10.2.1-6_amd64.deb",
+    "package_sha256": "be65535e94f95fbf04b104e8ab36790476f063374430f7dfc6c516cbe2d2cd1e",
+    "license_file": "docs/licenses/runtime/libgcc-s1/copyright-10.2.1-6",
+    "license_sha256": "719dd73912334e65a64c63fb1f7ccdacf70c27258570de0fb123b33d490eddf5"
+  },
+  {
+    "package": "libxcursor1",
+    "version": "1:1.2.0-2",
+    "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxcursor/libxcursor1_1.2.0-2_arm64.deb",
+    "package_sha256": "2e309833ccf7e6b62560240cd84e325cafcb2ce70b1fb297469957360cee4478",
+    "license_file": "docs/licenses/runtime/libxcursor1/copyright-1_1.2.0-2",
+    "license_sha256": "817abc0ccc9e2591057be256b0f6d80edb134221ced29dd545a9eafaf40b423c"
+  },
+  {
+    "package": "libxcursor1",
+    "version": "1:1.2.0-2",
+    "package_url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxcursor/libxcursor1_1.2.0-2_amd64.deb",
+    "package_sha256": "d9fee761e4c50572c3ce3c3965b70fcfecd277d0d7d598e102134d12757a3d11",
+    "license_file": "docs/licenses/runtime/libxcursor1/copyright-1_1.2.0-2",
+    "license_sha256": "817abc0ccc9e2591057be256b0f6d80edb134221ced29dd545a9eafaf40b423c"
+  }
+]

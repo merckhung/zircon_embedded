@@ -1,0 +1,290 @@
+[
+    {
+        "kind": "table/member",
+        "name": "fuchsia.net.interfaces/Address.addr",
+        "ordinal": "1",
+        "type": "fuchsia.net/Subnet"
+    },
+    {
+        "kind": "table/member",
+        "name": "fuchsia.net.interfaces/Address.assignment_state",
+        "ordinal": "4",
+        "type": "fuchsia.net.interfaces/AddressAssignmentState"
+    },
+    {
+        "kind": "table/member",
+        "name": "fuchsia.net.interfaces/Address.preferred_lifetime_info",
+        "ordinal": "3",
+        "type": "fuchsia.net.interfaces/PreferredLifetimeInfo"
+    },
+    {
+        "kind": "table/member",
+        "name": "fuchsia.net.interfaces/Address.valid_until",
+        "ordinal": "2",
+        "type": "int64"
+    },
+    {
+        "kind": "table",
+        "name": "fuchsia.net.interfaces/Address"
+    },
+    {
+        "kind": "enum/member",
+        "name": "fuchsia.net.interfaces/AddressAssignmentState.ASSIGNED",
+        "value": "2"
+    },
+    {
+        "kind": "enum/member",
+        "name": "fuchsia.net.interfaces/AddressAssignmentState.TENTATIVE",
+        "value": "1"
+    },
+    {
+        "kind": "enum/member",
+        "name": "fuchsia.net.interfaces/AddressAssignmentState.UNAVAILABLE",
+        "value": "3"
+    },
+    {
+        "kind": "enum",
+        "name": "fuchsia.net.interfaces/AddressAssignmentState",
+        "strictness": "strict",
+        "type": "uint32"
+    },
+    {
+        "kind": "bits/member",
+        "name": "fuchsia.net.interfaces/AddressPropertiesInterest.PREFERRED_LIFETIME_INFO",
+        "value": "2"
+    },
+    {
+        "kind": "bits/member",
+        "name": "fuchsia.net.interfaces/AddressPropertiesInterest.VALID_UNTIL",
+        "value": "1"
+    },
+    {
+        "kind": "bits",
+        "name": "fuchsia.net.interfaces/AddressPropertiesInterest",
+        "strictness": "flexible",
+        "type": "uint64"
+    },
+    {
+        "kind": "struct",
+        "name": "fuchsia.net.interfaces/Empty"
+    },
+    {
+        "kind": "union/member",
+        "name": "fuchsia.net.interfaces/Event.added",
+        "ordinal": "2",
+        "type": "fuchsia.net.interfaces/Properties"
+    },
+    {
+        "kind": "union/member",
+        "name": "fuchsia.net.interfaces/Event.changed",
+        "ordinal": "4",
+        "type": "fuchsia.net.interfaces/Properties"
+    },
+    {
+        "kind": "union/member",
+        "name": "fuchsia.net.interfaces/Event.existing",
+        "ordinal": "1",
+        "type": "fuchsia.net.interfaces/Properties"
+    },
+    {
+        "kind": "union/member",
+        "name": "fuchsia.net.interfaces/Event.idle",
+        "ordinal": "5",
+        "type": "fuchsia.net.interfaces/Empty"
+    },
+    {
+        "kind": "union/member",
+        "name": "fuchsia.net.interfaces/Event.removed",
+        "ordinal": "3",
+        "type": "uint64"
+    },
+    {
+        "kind": "union",
+        "name": "fuchsia.net.interfaces/Event",
+        "strictness": "strict"
+    },
+    {
+        "kind": "const",
+        "name": "fuchsia.net.interfaces/INTERFACE_NAME_LENGTH",
+        "type": "uint8",
+        "value": "15"
+    },
+    {
+        "kind": "alias",
+        "name": "fuchsia.net.interfaces/Name",
+        "type": "string:15"
+    },
+    {
+        "kind": "union/member",
+        "name": "fuchsia.net.interfaces/PortClass.blackhole",
+        "ordinal": "3",
+        "type": "fuchsia.net.interfaces/Empty"
+    },
+    {
+        "kind": "union/member",
+        "name": "fuchsia.net.interfaces/PortClass.device",
+        "ordinal": "2",
+        "type": "fuchsia.hardware.network/PortClass"
+    },
+    {
+        "kind": "union/member",
+        "name": "fuchsia.net.interfaces/PortClass.loopback",
+        "ordinal": "1",
+        "type": "fuchsia.net.interfaces/Empty"
+    },
+    {
+        "kind": "union",
+        "name": "fuchsia.net.interfaces/PortClass",
+        "strictness": "flexible"
+    },
+    {
+        "kind": "union/member",
+        "name": "fuchsia.net.interfaces/PreferredLifetimeInfo.deprecated",
+        "ordinal": "2",
+        "type": "fuchsia.net.interfaces/Empty"
+    },
+    {
+        "kind": "union/member",
+        "name": "fuchsia.net.interfaces/PreferredLifetimeInfo.preferred_until",
+        "ordinal": "1",
+        "type": "int64"
+    },
+    {
+        "kind": "union",
+        "name": "fuchsia.net.interfaces/PreferredLifetimeInfo",
+        "strictness": "strict"
+    },
+    {
+        "kind": "table/member",
+        "name": "fuchsia.net.interfaces/Properties.addresses",
+        "ordinal": "2",
+        "type": "vector<fuchsia.net.interfaces/Address>"
+    },
+    {
+        "kind": "table/member",
+        "name": "fuchsia.net.interfaces/Properties.has_default_ipv4_route",
+        "ordinal": "5",
+        "type": "bool"
+    },
+    {
+        "kind": "table/member",
+        "name": "fuchsia.net.interfaces/Properties.has_default_ipv6_route",
+        "ordinal": "6",
+        "type": "bool"
+    },
+    {
+        "kind": "table/member",
+        "name": "fuchsia.net.interfaces/Properties.id",
+        "ordinal": "1",
+        "type": "uint64"
+    },
+    {
+        "kind": "table/member",
+        "name": "fuchsia.net.interfaces/Properties.name",
+        "ordinal": "7",
+        "type": "string:15"
+    },
+    {
+        "kind": "table/member",
+        "name": "fuchsia.net.interfaces/Properties.online",
+        "ordinal": "3",
+        "type": "bool"
+    },
+    {
+        "kind": "table/member",
+        "name": "fuchsia.net.interfaces/Properties.port_class",
+        "ordinal": "8",
+        "type": "fuchsia.net.interfaces/PortClass"
+    },
+    {
+        "kind": "table/member",
+        "name": "fuchsia.net.interfaces/Properties.port_identity_koid",
+        "ordinal": "9",
+        "type": "uint64"
+    },
+    {
+        "kind": "table",
+        "name": "fuchsia.net.interfaces/Properties"
+    },
+    {
+        "kind": "protocol/member",
+        "name": "fuchsia.net.interfaces/State.GetWatcher",
+        "strictness": "strict",
+        "ordinal": "5756202622262852323",
+        "direction": "one_way",
+        "request": "fuchsia.net.interfaces/StateGetWatcherRequest"
+    },
+    {
+        "kind": "protocol",
+        "name": "fuchsia.net.interfaces/State",
+        "openness": "closed",
+        "transport": "channel"
+    },
+    {
+        "kind": "struct/member",
+        "name": "fuchsia.net.interfaces/StateGetWatcherRequest.options",
+        "ordinal": "1",
+        "type": "fuchsia.net.interfaces/WatcherOptions"
+    },
+    {
+        "kind": "struct/member",
+        "name": "fuchsia.net.interfaces/StateGetWatcherRequest.watcher",
+        "ordinal": "2",
+        "type": "server_end:fuchsia.net.interfaces/Watcher"
+    },
+    {
+        "kind": "struct",
+        "name": "fuchsia.net.interfaces/StateGetWatcherRequest",
+        "resourceness": "resource"
+    },
+    {
+        "kind": "protocol/member",
+        "name": "fuchsia.net.interfaces/Watcher.Watch",
+        "strictness": "strict",
+        "ordinal": "6126979800581992179",
+        "direction": "two_way",
+        "response": "fuchsia.net.interfaces/WatcherWatchResponse"
+    },
+    {
+        "kind": "protocol",
+        "name": "fuchsia.net.interfaces/Watcher",
+        "openness": "closed",
+        "transport": "channel"
+    },
+    {
+        "kind": "table/member",
+        "name": "fuchsia.net.interfaces/WatcherOptions.address_properties_interest",
+        "ordinal": "1",
+        "type": "fuchsia.net.interfaces/AddressPropertiesInterest"
+    },
+    {
+        "kind": "table/member",
+        "name": "fuchsia.net.interfaces/WatcherOptions.include_non_assigned_addresses",
+        "ordinal": "2",
+        "type": "bool"
+    },
+    {
+        "kind": "table/member",
+        "name": "fuchsia.net.interfaces/WatcherOptions.port_identity_koid_filter",
+        "ordinal": "3",
+        "type": "uint64"
+    },
+    {
+        "kind": "table",
+        "name": "fuchsia.net.interfaces/WatcherOptions"
+    },
+    {
+        "kind": "struct/member",
+        "name": "fuchsia.net.interfaces/WatcherWatchResponse.event",
+        "ordinal": "1",
+        "type": "fuchsia.net.interfaces/Event"
+    },
+    {
+        "kind": "struct",
+        "name": "fuchsia.net.interfaces/WatcherWatchResponse"
+    },
+    {
+        "kind": "library",
+        "name": "fuchsia.net.interfaces"
+    }
+]

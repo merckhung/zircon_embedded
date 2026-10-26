@@ -1,0 +1,7 @@
+[
+  {
+    "file": "third_party/llvm-libc/src/include/llvm-libc-macros/malloc-macros.h",
+    "url": "https://llvm.googlesource.com/llvm-project/libc/+/f8e576de66a6f3764b0054154dff0aaecb501c4c/include/llvm-libc-macros/malloc-macros.h",
+    "sha256": "b1bd31fe58ce56156688378f51ca0ea05fd3c681babf259ef8868b1237e1524a"
+  }
+]

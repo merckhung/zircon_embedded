@@ -1,0 +1,142 @@
+[
+    {
+        "kind": "bits/member",
+        "name": "fuchsia.device.fs/ConnectionType.CONTROLLER",
+        "value": "2"
+    },
+    {
+        "kind": "bits/member",
+        "name": "fuchsia.device.fs/ConnectionType.DEVICE",
+        "value": "4"
+    },
+    {
+        "kind": "bits/member",
+        "name": "fuchsia.device.fs/ConnectionType.NODE",
+        "value": "1"
+    },
+    {
+        "kind": "bits",
+        "name": "fuchsia.device.fs/ConnectionType",
+        "strictness": "flexible",
+        "type": "uint8"
+    },
+    {
+        "kind": "protocol/member",
+        "name": "fuchsia.device.fs/Connector.Connect",
+        "strictness": "strict",
+        "ordinal": "3169778387179902201",
+        "direction": "one_way",
+        "request": "fuchsia.device.fs/ConnectorConnectRequest"
+    },
+    {
+        "kind": "protocol",
+        "name": "fuchsia.device.fs/Connector",
+        "openness": "closed",
+        "transport": "channel"
+    },
+    {
+        "kind": "struct/member",
+        "name": "fuchsia.device.fs/ConnectorConnectRequest.server",
+        "ordinal": "1",
+        "type": "zx/Handle:CHANNEL"
+    },
+    {
+        "kind": "struct",
+        "name": "fuchsia.device.fs/ConnectorConnectRequest",
+        "resourceness": "resource"
+    },
+    {
+        "kind": "const",
+        "name": "fuchsia.device.fs/DEVICE_CONTROLLER_NAME",
+        "type": "string",
+        "value": "device_controller"
+    },
+    {
+        "kind": "const",
+        "name": "fuchsia.device.fs/DEVICE_PROTOCOL_NAME",
+        "type": "string",
+        "value": "device_protocol"
+    },
+    {
+        "kind": "const",
+        "name": "fuchsia.device.fs/DEVICE_TOPOLOGY_NAME",
+        "type": "string",
+        "value": "device_topology"
+    },
+    {
+        "kind": "table/member",
+        "name": "fuchsia.device.fs/DevfsAddArgs.class_name",
+        "ordinal": "2",
+        "type": "string:255"
+    },
+    {
+        "kind": "table/member",
+        "name": "fuchsia.device.fs/DevfsAddArgs.connector",
+        "ordinal": "1",
+        "type": "client_end:fuchsia.device.fs/Connector"
+    },
+    {
+        "kind": "table/member",
+        "name": "fuchsia.device.fs/DevfsAddArgs.connector_supports",
+        "ordinal": "4",
+        "type": "fuchsia.device.fs/ConnectionType"
+    },
+    {
+        "kind": "table/member",
+        "name": "fuchsia.device.fs/DevfsAddArgs.controller_connector",
+        "ordinal": "5",
+        "type": "client_end:fuchsia.device.fs/Connector"
+    },
+    {
+        "kind": "table/member",
+        "name": "fuchsia.device.fs/DevfsAddArgs.inspect",
+        "ordinal": "3",
+        "type": "zx/Handle:VMO"
+    },
+    {
+        "kind": "table",
+        "name": "fuchsia.device.fs/DevfsAddArgs",
+        "resourceness": "resource"
+    },
+    {
+        "kind": "const",
+        "name": "fuchsia.device.fs/MAX_DEVICE_PATH_LEN",
+        "type": "uint64",
+        "value": "1024"
+    },
+    {
+        "kind": "const",
+        "name": "fuchsia.device.fs/MAX_DRIVER_PATH_LEN",
+        "type": "uint64",
+        "value": "1024"
+    },
+    {
+        "kind": "protocol/member",
+        "name": "fuchsia.device.fs/TopologicalPath.GetTopologicalPath",
+        "strictness": "strict",
+        "ordinal": "6266213890697819096",
+        "direction": "two_way",
+        "response": "fuchsia.device.fs/TopologicalPath_GetTopologicalPath_Response",
+        "error": "int32"
+    },
+    {
+        "kind": "protocol",
+        "name": "fuchsia.device.fs/TopologicalPath",
+        "openness": "closed",
+        "transport": "channel"
+    },
+    {
+        "kind": "struct/member",
+        "name": "fuchsia.device.fs/TopologicalPath_GetTopologicalPath_Response.path",
+        "ordinal": "1",
+        "type": "string:1024"
+    },
+    {
+        "kind": "struct",
+        "name": "fuchsia.device.fs/TopologicalPath_GetTopologicalPath_Response"
+    },
+    {
+        "kind": "library",
+        "name": "fuchsia.device.fs"
+    }
+]

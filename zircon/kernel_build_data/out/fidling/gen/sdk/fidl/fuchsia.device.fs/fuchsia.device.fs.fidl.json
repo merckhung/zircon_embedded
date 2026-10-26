@@ -1,0 +1,3494 @@
+{
+  "name": "fuchsia.device.fs",
+  "platform": "fuchsia",
+  "available": {
+    "fuchsia": [
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "NEXT",
+      "HEAD"
+    ]
+  },
+  "maybe_attributes": [
+    {
+      "name": "available",
+      "arguments": [
+        {
+          "name": "added",
+          "type": "uint32",
+          "value": {
+            "kind": "literal",
+            "value": "12",
+            "expression": "12",
+            "literal": {
+              "kind": "numeric",
+              "value": "12",
+              "expression": "12"
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+            "line": 4,
+            "column": 12,
+            "length": 8
+          }
+        }
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+        "line": 4,
+        "column": 1,
+        "length": 20
+      }
+    }
+  ],
+  "experiments": [],
+  "library_dependencies": [
+    {
+      "name": "fuchsia.io",
+      "declarations": {
+        "fuchsia.io/AllocateMode": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileSignal": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Flags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FscryptPolicyFlags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/ModeType": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeAttributeFlags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeAttributesQuery": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeProtocolKinds": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/OpenFlags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Operations": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/UnlinkFlags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/VmoFlags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/WatchMask": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DIRECTORY_PROTOCOL_NAME": {
+          "kind": "const"
+        },
+        "fuchsia.io/FILE_PROTOCOL_NAME": {
+          "kind": "const"
+        },
+        "fuchsia.io/FLAG_TEMPORARY_AS_NOT_LINKABLE": {
+          "kind": "const"
+        },
+        "fuchsia.io/INHERITED_WRITE_PERMISSIONS": {
+          "kind": "const"
+        },
+        "fuchsia.io/INO_UNKNOWN": {
+          "kind": "const"
+        },
+        "fuchsia.io/MASK_KNOWN_PERMISSIONS": {
+          "kind": "const"
+        },
+        "fuchsia.io/MASK_KNOWN_PROTOCOLS": {
+          "kind": "const"
+        },
+        "fuchsia.io/MASK_PERMISSION_FLAGS": {
+          "kind": "const"
+        },
+        "fuchsia.io/MASK_POSIX_FLAGS": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_ATTRIBUTE_NAME": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_BUF": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_FILENAME": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_FS_NAME_BUFFER": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_INLINE_ATTRIBUTE_VALUE": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_LIST_ATTRIBUTES_CHUNK": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_NAME_LENGTH": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_PATH_LENGTH": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_SELINUX_CONTEXT_ATTRIBUTE_LEN": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_TRANSFER_SIZE": {
+          "kind": "const"
+        },
+        "fuchsia.io/NODE_PROTOCOL_NAME": {
+          "kind": "const"
+        },
+        "fuchsia.io/OPEN_FLAGS_ALLOWED_WITH_NODE_REFERENCE": {
+          "kind": "const"
+        },
+        "fuchsia.io/OPEN_RIGHTS": {
+          "kind": "const"
+        },
+        "fuchsia.io/PERM_EXECUTABLE": {
+          "kind": "const"
+        },
+        "fuchsia.io/PERM_READABLE": {
+          "kind": "const"
+        },
+        "fuchsia.io/PERM_WRITABLE": {
+          "kind": "const"
+        },
+        "fuchsia.io/RW_STAR_DIR": {
+          "kind": "const"
+        },
+        "fuchsia.io/RX_STAR_DIR": {
+          "kind": "const"
+        },
+        "fuchsia.io/R_STAR_DIR": {
+          "kind": "const"
+        },
+        "fuchsia.io/SELINUX_CONTEXT_NAME": {
+          "kind": "const"
+        },
+        "fuchsia.io/SYMLINK_PROTOCOL_NAME": {
+          "kind": "const"
+        },
+        "fuchsia.io/W_STAR_DIR": {
+          "kind": "const"
+        },
+        "fuchsia.io/X_STAR_DIR": {
+          "kind": "const"
+        },
+        "fuchsia.io/AdvisoryLockType": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirentType": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/HashAlgorithm": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/SeekOrigin": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/SetExtendedAttributeMode": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/WatchEvent": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/AdvisoryLocking": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/Directory": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/DirectoryWatcher": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/ExtendedAttributeIterator": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/File": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/Linkable": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/Node": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/Openable": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/Readable": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/Symlink": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/Writable": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/AdvisoryLockRange": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/AdvisoryLockingAdvisoryLockRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 48,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/AdvisoryLocking_AdvisoryLock_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryCreateSymlinkRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 40,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 1,
+            "max_out_of_line": 4352,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryDeprecatedOpenRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 32,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 1,
+            "max_out_of_line": 4096,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryGetTokenResponse": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryLinkRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 40,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 1,
+            "max_out_of_line": 512,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryLinkResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryObject": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryReadDirentsRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryReadDirentsResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8192,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryRenameRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 40,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 1,
+            "max_out_of_line": 512,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryRewindResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryUnlinkRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 32,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 272,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/DirectoryWatchRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 12,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryWatchResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Directory_CreateSymlink_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Directory_Rename_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Directory_Unlink_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/EmptyStruct": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/ExtendedAttributeIterator_GetNext_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 34816,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileAllocateRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileEnableVerityRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 3,
+            "max_handles": 0,
+            "max_out_of_line": 64,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/FileGetBackingMemoryRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileObject": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 2,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileReadAtRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileResizeRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileSeekRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileWriteAtRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8192,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_Allocate_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_EnableVerity_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_GetBackingMemory_Response": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_ReadAt_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8192,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_Resize_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_Seek_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_WriteAt_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FilesystemInfo": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 96,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FscryptPolicy": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 17,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/LinkableLinkIntoRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 1,
+            "max_out_of_line": 256,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Linkable_LinkInto_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeAttributes": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 56,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeAttributes2": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 32,
+            "alignment": 8,
+            "depth": 5,
+            "max_handles": 0,
+            "max_out_of_line": 720,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/NodeDeprecatedCloneRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeDeprecatedGetAttrResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 64,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeDeprecatedGetFlagsResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeDeprecatedSetAttrRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 64,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeDeprecatedSetAttrResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeDeprecatedSetFlagsRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeDeprecatedSetFlagsResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeGetAttributesRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeGetExtendedAttributeRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 256,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeListExtendedAttributesRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeOnOpenRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 2,
+            "max_out_of_line": 4112,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeQueryFilesystemResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 96,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeRemoveExtendedAttributeRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 256,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeSetExtendedAttributeRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 40,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 1,
+            "max_out_of_line": 33040,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/NodeSetFlagsRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_GetFlags_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_RemoveExtendedAttribute_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_SetExtendedAttribute_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_SetFlags_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_Sync_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_UpdateAttributes_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/OpenableOpenRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 48,
+            "alignment": 8,
+            "depth": 6,
+            "max_handles": 1,
+            "max_out_of_line": 4560,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/ReadableReadRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Readable_Read_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8192,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Service": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/SymlinkObject": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 4096,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/WritableWriteRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8192,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Writable_Write_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/AdvisoryLockRequest": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 48,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/ConnectionInfo": {
+          "kind": "table",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 16,
+            "has_padding": false,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/DirectoryInfo": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 7,
+            "max_handles": 0,
+            "max_out_of_line": 760,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/FileInfo": {
+          "kind": "table",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 7,
+            "max_handles": 2,
+            "max_out_of_line": 784,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/ImmutableNodeAttributes": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 5,
+            "max_handles": 0,
+            "max_out_of_line": 296,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/MutableNodeAttributes": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 4,
+            "max_handles": 0,
+            "max_out_of_line": 424,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/NodeInfo": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 7,
+            "max_handles": 0,
+            "max_out_of_line": 760,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/Options": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 6,
+            "max_handles": 0,
+            "max_out_of_line": 464,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/SymlinkInfo": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 7,
+            "max_handles": 0,
+            "max_out_of_line": 4880,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/UnlinkOptions": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 16,
+            "has_padding": false,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/VerificationOptions": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 3,
+            "max_handles": 0,
+            "max_out_of_line": 64,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/AdvisoryLocking_AdvisoryLock_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Directory_CreateSymlink_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Directory_Rename_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Directory_Unlink_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/ExtendedAttributeIterator_GetNext_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 3,
+            "max_handles": 0,
+            "max_out_of_line": 34840,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/ExtendedAttributeValue": {
+          "kind": "union",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 1,
+            "max_out_of_line": 32784,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/File_Allocate_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_EnableVerity_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_GetBackingMemory_Result": {
+          "kind": "union",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_ReadAt_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 8208,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_Resize_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_Seek_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_WriteAt_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Linkable_LinkInto_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeInfoDeprecated": {
+          "kind": "union",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 2,
+            "max_out_of_line": 4112,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_GetAttributes_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 6,
+            "max_handles": 0,
+            "max_out_of_line": 752,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/Node_GetExtendedAttribute_Result": {
+          "kind": "union",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 3,
+            "max_handles": 1,
+            "max_out_of_line": 32800,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/Node_GetFlags_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_RemoveExtendedAttribute_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_SetExtendedAttribute_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_SetFlags_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_Sync_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_UpdateAttributes_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Readable_Read_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 8208,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Representation": {
+          "kind": "union",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 8,
+            "max_handles": 2,
+            "max_out_of_line": 4896,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/SelinuxContext": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 272,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/Symlink_Describe_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 8,
+            "max_handles": 0,
+            "max_out_of_line": 4896,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/Writable_Write_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Abilities": {
+          "kind": "alias"
+        },
+        "fuchsia.io/ExtendedAttributeName": {
+          "kind": "alias"
+        },
+        "fuchsia.io/Id": {
+          "kind": "alias"
+        },
+        "fuchsia.io/Name": {
+          "kind": "alias"
+        },
+        "fuchsia.io/Path": {
+          "kind": "alias"
+        },
+        "fuchsia.io/Rights": {
+          "kind": "alias"
+        },
+        "fuchsia.io/SymlinkTarget": {
+          "kind": "alias"
+        },
+        "fuchsia.io/Token": {
+          "kind": "alias"
+        },
+        "fuchsia.io/Transfer": {
+          "kind": "alias"
+        }
+      }
+    },
+    {
+      "name": "zx",
+      "declarations": {
+        "zx/Rights": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "zx/CHANNEL_MAX_MSG_BYTES": {
+          "kind": "const"
+        },
+        "zx/CHANNEL_MAX_MSG_HANDLES": {
+          "kind": "const"
+        },
+        "zx/DEFAULT_CHANNEL_RIGHTS": {
+          "kind": "const"
+        },
+        "zx/DEFAULT_EVENT_RIGHTS": {
+          "kind": "const"
+        },
+        "zx/IOB_MAX_REGIONS": {
+          "kind": "const"
+        },
+        "zx/MAX_CPUS": {
+          "kind": "const"
+        },
+        "zx/MAX_NAME_LEN": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_BASIC": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_IO": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_POLICY": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_PROPERTY": {
+          "kind": "const"
+        },
+        "zx/ObjType": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "zx/Handle": {
+          "kind": "experimental_resource"
+        },
+        "zx/Duration": {
+          "kind": "alias"
+        },
+        "zx/DurationBoot": {
+          "kind": "alias"
+        },
+        "zx/DurationMono": {
+          "kind": "alias"
+        },
+        "zx/InstantBoot": {
+          "kind": "alias"
+        },
+        "zx/InstantBootTicks": {
+          "kind": "alias"
+        },
+        "zx/InstantMono": {
+          "kind": "alias"
+        },
+        "zx/InstantMonoTicks": {
+          "kind": "alias"
+        },
+        "zx/Koid": {
+          "kind": "alias"
+        },
+        "zx/Off": {
+          "kind": "alias"
+        },
+        "zx/Result": {
+          "kind": "alias"
+        },
+        "zx/Signals": {
+          "kind": "alias"
+        },
+        "zx/Status": {
+          "kind": "alias"
+        },
+        "zx/Ticks": {
+          "kind": "alias"
+        },
+        "zx/Time": {
+          "kind": "alias"
+        }
+      }
+    }
+  ],
+  "bits_declarations": [
+    {
+      "name": "fuchsia.device.fs/ConnectionType",
+      "naming_context": [
+        "ConnectionType"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+        "line": 11,
+        "column": 6,
+        "length": 14
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "literal",
+                "value": "16",
+                "expression": "16",
+                "literal": {
+                  "kind": "numeric",
+                  "value": "16",
+                  "expression": "16"
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                "line": 10,
+                "column": 12,
+                "length": 8
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+            "line": 10,
+            "column": 1,
+            "length": 20
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint8",
+        "type_shape_v2": {
+          "inline_size": 1,
+          "alignment": 1,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "mask": "7",
+      "members": [
+        {
+          "name": "NODE",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+            "line": 13,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "1",
+            "expression": "0b001",
+            "literal": {
+              "kind": "numeric",
+              "value": "1",
+              "expression": "0b001"
+            }
+          },
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Represents the fuchsia.io/Node protocol.\n",
+                    "expression": "/// Represents the fuchsia.io/Node protocol.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Represents the fuchsia.io/Node protocol.\n",
+                      "expression": "/// Represents the fuchsia.io/Node protocol."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                    "line": 12,
+                    "column": 5,
+                    "length": 44
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                "line": 12,
+                "column": 5,
+                "length": 44
+              }
+            }
+          ]
+        },
+        {
+          "name": "CONTROLLER",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+            "line": 15,
+            "column": 5,
+            "length": 10
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "2",
+            "expression": "0b010",
+            "literal": {
+              "kind": "numeric",
+              "value": "2",
+              "expression": "0b010"
+            }
+          },
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Represents the fuchsia.device/Controller protocol.\n",
+                    "expression": "/// Represents the fuchsia.device/Controller protocol.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Represents the fuchsia.device/Controller protocol.\n",
+                      "expression": "/// Represents the fuchsia.device/Controller protocol."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                    "line": 14,
+                    "column": 5,
+                    "length": 54
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                "line": 14,
+                "column": 5,
+                "length": 54
+              }
+            }
+          ]
+        },
+        {
+          "name": "DEVICE",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+            "line": 17,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "4",
+            "expression": "0b100",
+            "literal": {
+              "kind": "numeric",
+              "value": "4",
+              "expression": "0b100"
+            }
+          },
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Represents the device specific FIDL.\n",
+                    "expression": "/// Represents the device specific FIDL.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Represents the device specific FIDL.\n",
+                      "expression": "/// Represents the device specific FIDL."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                    "line": 16,
+                    "column": 5,
+                    "length": 40
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                "line": 16,
+                "column": 5,
+                "length": 40
+              }
+            }
+          ]
+        }
+      ],
+      "strict": false
+    }
+  ],
+  "const_declarations": [
+    {
+      "name": "fuchsia.device.fs/DEVICE_CONTROLLER_NAME",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device.fs/names.fidl",
+        "line": 12,
+        "column": 7,
+        "length": 22
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " This name is reserved for accessing the fuchsia.device/Controller protocol\n within /dev/. No devices can be created with this name.\n",
+                "expression": "/// This name is reserved for accessing the fuchsia.device/Controller protocol\n/// within /dev/. No devices can be created with this name.",
+                "literal": {
+                  "kind": "string",
+                  "value": " This name is reserved for accessing the fuchsia.device/Controller protocol\n within /dev/. No devices can be created with this name.\n",
+                  "expression": "/// This name is reserved for accessing the fuchsia.device/Controller protocol\n/// within /dev/. No devices can be created with this name."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/names.fidl",
+                "line": 10,
+                "column": 1,
+                "length": 138
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/names.fidl",
+            "line": 10,
+            "column": 1,
+            "length": 138
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "string",
+        "nullable": false,
+        "type_shape_v2": {
+          "inline_size": 16,
+          "alignment": 8,
+          "depth": 1,
+          "max_handles": 0,
+          "max_out_of_line": 4294967295,
+          "has_padding": true,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "device_controller",
+        "expression": "\"device_controller\"",
+        "literal": {
+          "kind": "string",
+          "value": "device_controller",
+          "expression": "\"device_controller\""
+        }
+      }
+    },
+    {
+      "name": "fuchsia.device.fs/DEVICE_PROTOCOL_NAME",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device.fs/names.fidl",
+        "line": 8,
+        "column": 7,
+        "length": 20
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " This name is reserved for accessing the device specific protocol\n within /dev/. No devices can be created with this name.\n",
+                "expression": "/// This name is reserved for accessing the device specific protocol\n/// within /dev/. No devices can be created with this name.",
+                "literal": {
+                  "kind": "string",
+                  "value": " This name is reserved for accessing the device specific protocol\n within /dev/. No devices can be created with this name.\n",
+                  "expression": "/// This name is reserved for accessing the device specific protocol\n/// within /dev/. No devices can be created with this name."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/names.fidl",
+                "line": 6,
+                "column": 1,
+                "length": 128
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/names.fidl",
+            "line": 6,
+            "column": 1,
+            "length": 128
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "string",
+        "nullable": false,
+        "type_shape_v2": {
+          "inline_size": 16,
+          "alignment": 8,
+          "depth": 1,
+          "max_handles": 0,
+          "max_out_of_line": 4294967295,
+          "has_padding": true,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "device_protocol",
+        "expression": "\"device_protocol\"",
+        "literal": {
+          "kind": "string",
+          "value": "device_protocol",
+          "expression": "\"device_protocol\""
+        }
+      }
+    },
+    {
+      "name": "fuchsia.device.fs/DEVICE_TOPOLOGY_NAME",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device.fs/names.fidl",
+        "line": 17,
+        "column": 7,
+        "length": 20
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " This name is reserved for accessing the fuchsia.device.fs/TopologicalPath protocol\n within /dev/. No devices can be created with this name.\n",
+                "expression": "/// This name is reserved for accessing the fuchsia.device.fs/TopologicalPath protocol\n/// within /dev/. No devices can be created with this name.",
+                "literal": {
+                  "kind": "string",
+                  "value": " This name is reserved for accessing the fuchsia.device.fs/TopologicalPath protocol\n within /dev/. No devices can be created with this name.\n",
+                  "expression": "/// This name is reserved for accessing the fuchsia.device.fs/TopologicalPath protocol\n/// within /dev/. No devices can be created with this name."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/names.fidl",
+                "line": 14,
+                "column": 1,
+                "length": 146
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/names.fidl",
+            "line": 14,
+            "column": 1,
+            "length": 146
+          }
+        },
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "identifier",
+                "value": "4292870144",
+                "expression": "HEAD",
+                "identifier": "fidl/HEAD"
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/names.fidl",
+                "line": 16,
+                "column": 12,
+                "length": 10
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/names.fidl",
+            "line": 16,
+            "column": 1,
+            "length": 22
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "string",
+        "nullable": false,
+        "type_shape_v2": {
+          "inline_size": 16,
+          "alignment": 8,
+          "depth": 1,
+          "max_handles": 0,
+          "max_out_of_line": 4294967295,
+          "has_padding": true,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "device_topology",
+        "expression": "\"device_topology\"",
+        "literal": {
+          "kind": "string",
+          "value": "device_topology",
+          "expression": "\"device_topology\""
+        }
+      }
+    },
+    {
+      "name": "fuchsia.device.fs/MAX_DEVICE_PATH_LEN",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device.fs/controller.fidl",
+        "line": 10,
+        "column": 7,
+        "length": 19
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Maximum length of a device path\n",
+                "expression": "/// Maximum length of a device path",
+                "literal": {
+                  "kind": "string",
+                  "value": " Maximum length of a device path\n",
+                  "expression": "/// Maximum length of a device path"
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/controller.fidl",
+                "line": 8,
+                "column": 1,
+                "length": 35
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/controller.fidl",
+            "line": 8,
+            "column": 1,
+            "length": 35
+          }
+        },
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "identifier",
+                "value": "4292870144",
+                "expression": "HEAD",
+                "identifier": "fidl/HEAD"
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/controller.fidl",
+                "line": 9,
+                "column": 12,
+                "length": 10
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/controller.fidl",
+            "line": 9,
+            "column": 1,
+            "length": 22
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "1024",
+        "expression": "1024",
+        "literal": {
+          "kind": "numeric",
+          "value": "1024",
+          "expression": "1024"
+        }
+      }
+    },
+    {
+      "name": "fuchsia.device.fs/MAX_DRIVER_PATH_LEN",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device.fs/controller.fidl",
+        "line": 13,
+        "column": 7,
+        "length": 19
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Maximum length for a driver path\n",
+                "expression": "/// Maximum length for a driver path",
+                "literal": {
+                  "kind": "string",
+                  "value": " Maximum length for a driver path\n",
+                  "expression": "/// Maximum length for a driver path"
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/controller.fidl",
+                "line": 11,
+                "column": 1,
+                "length": 36
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/controller.fidl",
+            "line": 11,
+            "column": 1,
+            "length": 36
+          }
+        },
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "identifier",
+                "value": "4292870144",
+                "expression": "HEAD",
+                "identifier": "fidl/HEAD"
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/controller.fidl",
+                "line": 12,
+                "column": 12,
+                "length": 10
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/controller.fidl",
+            "line": 12,
+            "column": 1,
+            "length": 22
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint64",
+        "type_shape_v2": {
+          "inline_size": 8,
+          "alignment": 8,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "1024",
+        "expression": "1024",
+        "literal": {
+          "kind": "numeric",
+          "value": "1024",
+          "expression": "1024"
+        }
+      }
+    }
+  ],
+  "enum_declarations": [],
+  "experimental_resource_declarations": [],
+  "protocol_declarations": [
+    {
+      "name": "fuchsia.device.fs/Connector",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+        "line": 21,
+        "column": 17,
+        "length": 9
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " A connector lets a client forward the server end of a protocol.\n",
+                "expression": "/// A connector lets a client forward the server end of a protocol.",
+                "literal": {
+                  "kind": "string",
+                  "value": " A connector lets a client forward the server end of a protocol.\n",
+                  "expression": "/// A connector lets a client forward the server end of a protocol."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                "line": 20,
+                "column": 1,
+                "length": 67
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+            "line": 20,
+            "column": 1,
+            "length": 67
+          }
+        }
+      ],
+      "openness": "closed",
+      "composed_protocols": [],
+      "methods": [
+        {
+          "kind": "oneway",
+          "ordinal": 3169778387179902201,
+          "name": "Connect",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+            "line": 27,
+            "column": 12,
+            "length": 7
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Forward a server end of a protocol so that it can be connected.\n + request `server` the server end of the protocol to be served. The FIDL protocol that\n     this speaks is determined out-of-band.\n - response This function has no response. The function is one-way to match the pipelining\n     behaviors of other virtual filesystems.\n",
+                    "expression": "/// Forward a server end of a protocol so that it can be connected.\n    /// + request `server` the server end of the protocol to be served. The FIDL protocol that\n    ///     this speaks is determined out-of-band.\n    /// - response This function has no response. The function is one-way to match the pipelining\n    ///     behaviors of other virtual filesystems.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Forward a server end of a protocol so that it can be connected.\n + request `server` the server end of the protocol to be served. The FIDL protocol that\n     this speaks is determined out-of-band.\n - response This function has no response. The function is one-way to match the pipelining\n     behaviors of other virtual filesystems.\n",
+                      "expression": "/// Forward a server end of a protocol so that it can be connected.\n    /// + request `server` the server end of the protocol to be served. The FIDL protocol that\n    ///     this speaks is determined out-of-band.\n    /// - response This function has no response. The function is one-way to match the pipelining\n    ///     behaviors of other virtual filesystems."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                    "line": 22,
+                    "column": 5,
+                    "length": 363
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                "line": 22,
+                "column": 5,
+                "length": 363
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device.fs/ConnectorConnectRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": false,
+          "is_composed": false,
+          "has_error": false
+        }
+      ]
+    },
+    {
+      "name": "fuchsia.device.fs/TopologicalPath",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device.fs/controller.fidl",
+        "line": 18,
+        "column": 17,
+        "length": 15
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "identifier",
+                "value": "4292870144",
+                "expression": "HEAD",
+                "identifier": "fidl/HEAD"
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/controller.fidl",
+                "line": 17,
+                "column": 12,
+                "length": 10
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/controller.fidl",
+            "line": 17,
+            "column": 1,
+            "length": 22
+          }
+        }
+      ],
+      "openness": "closed",
+      "composed_protocols": [],
+      "methods": [
+        {
+          "kind": "twoway",
+          "ordinal": 6266213890697819096,
+          "name": "GetTopologicalPath",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/controller.fidl",
+            "line": 20,
+            "column": 12,
+            "length": 18
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Return the topological path for this device\n",
+                    "expression": "/// Return the topological path for this device",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Return the topological path for this device\n",
+                      "expression": "/// Return the topological path for this device"
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device.fs/controller.fidl",
+                    "line": 19,
+                    "column": 5,
+                    "length": 47
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/controller.fidl",
+                "line": 19,
+                "column": 5,
+                "length": 47
+              }
+            }
+          ],
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device.fs/TopologicalPath_GetTopologicalPath_Result",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 0,
+              "max_out_of_line": 1040,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": true,
+          "maybe_response_success_type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device.fs/TopologicalPath_GetTopologicalPath_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 1024,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "maybe_response_err_type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "service_declarations": [],
+  "struct_declarations": [
+    {
+      "name": "fuchsia.device.fs/ConnectorConnectRequest",
+      "naming_context": [
+        "Connector",
+        "Connect",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+        "line": 27,
+        "column": 20,
+        "length": 57
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "handle",
+            "obj_type": 4,
+            "subtype": "channel",
+            "rights": 2147483648,
+            "nullable": false,
+            "resource_identifier": "zx/Handle",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "server",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+            "line": 28,
+            "column": 9,
+            "length": 6
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 4,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 1,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.device.fs/TopologicalPath_GetTopologicalPath_Response",
+      "naming_context": [
+        "TopologicalPath",
+        "GetTopologicalPath",
+        "Response",
+        "response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device.fs/controller.fidl",
+        "line": 20,
+        "column": 37,
+        "length": 55
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "string",
+            "maybe_element_count": 1024,
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 1024,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "path",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/controller.fidl",
+            "line": 21,
+            "column": 9,
+            "length": 4
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 1024,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    }
+  ],
+  "external_struct_declarations": [],
+  "table_declarations": [
+    {
+      "name": "fuchsia.device.fs/DevfsAddArgs",
+      "naming_context": [
+        "DevfsAddArgs"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+        "line": 34,
+        "column": 6,
+        "length": 12
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "identifier",
+                "value": "4292870144",
+                "expression": "HEAD",
+                "identifier": "fidl/HEAD"
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                "line": 33,
+                "column": 12,
+                "length": 10
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+            "line": 33,
+            "column": 1,
+            "length": 22
+          }
+        }
+      ],
+      "members": [
+        {
+          "ordinal": 1,
+          "type": {
+            "kind_v2": "endpoint",
+            "role": "client",
+            "protocol": "fuchsia.device.fs/Connector",
+            "nullable": false,
+            "protocol_transport": "Channel",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "connector",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+            "line": 38,
+            "column": 8,
+            "length": 9
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " This is the connector to be installed in devfs.\n `Connect()` will be called when a client connects to this node in the filesystem.\n Optional: If this is not provided then an empty node will appear in devfs.\n",
+                    "expression": "/// This is the connector to be installed in devfs.\n    /// `Connect()` will be called when a client connects to this node in the filesystem.\n    /// Optional: If this is not provided then an empty node will appear in devfs.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " This is the connector to be installed in devfs.\n `Connect()` will be called when a client connects to this node in the filesystem.\n Optional: If this is not provided then an empty node will appear in devfs.\n",
+                      "expression": "/// This is the connector to be installed in devfs.\n    /// `Connect()` will be called when a client connects to this node in the filesystem.\n    /// Optional: If this is not provided then an empty node will appear in devfs."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                    "line": 35,
+                    "column": 5,
+                    "length": 224
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                "line": 35,
+                "column": 5,
+                "length": 224
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 2,
+          "type": {
+            "kind_v2": "string",
+            "maybe_element_count": 255,
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 256,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "class_name",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+            "line": 44,
+            "column": 8,
+            "length": 10
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " This is the class name for installing this node in devfs.\n The node will be placed within /dev/class/{class_name}.\n If `class_name` does not exist under /dev/class/ it will be created.\n Optional: If this is not provided then the node will only be added via topological path.\n",
+                    "expression": "/// This is the class name for installing this node in devfs.\n    /// The node will be placed within /dev/class/{class_name}.\n    /// If `class_name` does not exist under /dev/class/ it will be created.\n    /// Optional: If this is not provided then the node will only be added via topological path.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " This is the class name for installing this node in devfs.\n The node will be placed within /dev/class/{class_name}.\n If `class_name` does not exist under /dev/class/ it will be created.\n Optional: If this is not provided then the node will only be added via topological path.\n",
+                      "expression": "/// This is the class name for installing this node in devfs.\n    /// The node will be placed within /dev/class/{class_name}.\n    /// If `class_name` does not exist under /dev/class/ it will be created.\n    /// Optional: If this is not provided then the node will only be added via topological path."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                    "line": 40,
+                    "column": 5,
+                    "length": 299
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                "line": 40,
+                "column": 5,
+                "length": 299
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 3,
+          "type": {
+            "kind_v2": "handle",
+            "obj_type": 3,
+            "subtype": "vmo",
+            "rights": 2147483648,
+            "nullable": false,
+            "resource_identifier": "zx/Handle",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "inspect",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+            "line": 48,
+            "column": 8,
+            "length": 7
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " This is a vmo of inspect data that will be installed in devfs.\n Optional: If this is not provided then the devfs's inspect data will be empty.\n",
+                    "expression": "/// This is a vmo of inspect data that will be installed in devfs.\n    /// Optional: If this is not provided then the devfs's inspect data will be empty.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " This is a vmo of inspect data that will be installed in devfs.\n Optional: If this is not provided then the devfs's inspect data will be empty.\n",
+                      "expression": "/// This is a vmo of inspect data that will be installed in devfs.\n    /// Optional: If this is not provided then the devfs's inspect data will be empty."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                    "line": 46,
+                    "column": 5,
+                    "length": 153
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                "line": 46,
+                "column": 5,
+                "length": 153
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 4,
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device.fs/ConnectionType",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "connector_supports",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+            "line": 55,
+            "column": 8,
+            "length": 18
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The connection types that are supported by the |connector| given.\n The driver framework should handle connection types that are not supported by the\n connector.\n If not provided, only the device type is assumed as supported by the connector.\n",
+                    "expression": "/// The connection types that are supported by the |connector| given.\n    /// The driver framework should handle connection types that are not supported by the\n    /// connector.\n    /// If not provided, only the device type is assumed as supported by the connector.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The connection types that are supported by the |connector| given.\n The driver framework should handle connection types that are not supported by the\n connector.\n If not provided, only the device type is assumed as supported by the connector.\n",
+                      "expression": "/// The connection types that are supported by the |connector| given.\n    /// The driver framework should handle connection types that are not supported by the\n    /// connector.\n    /// If not provided, only the device type is assumed as supported by the connector."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                    "line": 50,
+                    "column": 5,
+                    "length": 266
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                "line": 50,
+                "column": 5,
+                "length": 266
+              }
+            },
+            {
+              "name": "available",
+              "arguments": [
+                {
+                  "name": "added",
+                  "type": "uint32",
+                  "value": {
+                    "kind": "identifier",
+                    "value": "4292870144",
+                    "expression": "HEAD",
+                    "identifier": "fidl/HEAD"
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                    "line": 54,
+                    "column": 16,
+                    "length": 10
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                "line": 54,
+                "column": 5,
+                "length": 22
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 5,
+          "type": {
+            "kind_v2": "endpoint",
+            "role": "client",
+            "protocol": "fuchsia.device.fs/Connector",
+            "nullable": false,
+            "protocol_transport": "Channel",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "controller_connector",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+            "line": 63,
+            "column": 8,
+            "length": 20
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " This is the controller connector to be installed in devfs.\n `Connect()` will be called when a client connects to the device_controller connection\n for this node in the filesystem.\n Optional: If this is not provided then the Node will handle the connection natively.\n This option should only be used by the compat shim or in tests\n",
+                    "expression": "/// This is the controller connector to be installed in devfs.\n    /// `Connect()` will be called when a client connects to the device_controller connection\n    /// for this node in the filesystem.\n    /// Optional: If this is not provided then the Node will handle the connection natively.\n    /// This option should only be used by the compat shim or in tests",
+                    "literal": {
+                      "kind": "string",
+                      "value": " This is the controller connector to be installed in devfs.\n `Connect()` will be called when a client connects to the device_controller connection\n for this node in the filesystem.\n Optional: If this is not provided then the Node will handle the connection natively.\n This option should only be used by the compat shim or in tests\n",
+                      "expression": "/// This is the controller connector to be installed in devfs.\n    /// `Connect()` will be called when a client connects to the device_controller connection\n    /// for this node in the filesystem.\n    /// Optional: If this is not provided then the Node will handle the connection natively.\n    /// This option should only be used by the compat shim or in tests"
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                    "line": 57,
+                    "column": 5,
+                    "length": 361
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                "line": 57,
+                "column": 5,
+                "length": 361
+              }
+            },
+            {
+              "name": "available",
+              "arguments": [
+                {
+                  "name": "added",
+                  "type": "uint32",
+                  "value": {
+                    "kind": "identifier",
+                    "value": "4292870144",
+                    "expression": "HEAD",
+                    "identifier": "fidl/HEAD"
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                    "line": 62,
+                    "column": 16,
+                    "length": 10
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.device.fs/connector.fidl",
+                "line": 62,
+                "column": 5,
+                "length": 22
+              }
+            }
+          ]
+        }
+      ],
+      "strict": false,
+      "resource": true,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 3,
+        "max_handles": 3,
+        "max_out_of_line": 312,
+        "has_padding": true,
+        "has_flexible_envelope": true
+      }
+    }
+  ],
+  "union_declarations": [
+    {
+      "name": "fuchsia.device.fs/TopologicalPath_GetTopologicalPath_Result",
+      "naming_context": [
+        "TopologicalPath",
+        "GetTopologicalPath",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.device.fs/controller.fidl",
+        "line": 20,
+        "column": 36,
+        "length": 57
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "ordinal": 1,
+          "name": "response",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.device.fs/TopologicalPath_GetTopologicalPath_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 1024,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "location": {
+            "filename": "generated",
+            "line": 1428,
+            "column": 1,
+            "length": 8
+          },
+          "deprecated": false
+        },
+        {
+          "ordinal": 2,
+          "name": "err",
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Status",
+            "args": [],
+            "nullable": false
+          },
+          "location": {
+            "filename": "generated",
+            "line": 1429,
+            "column": 1,
+            "length": 3
+          },
+          "deprecated": false
+        }
+      ],
+      "strict": true,
+      "resource": false,
+      "is_result": true,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 2,
+        "max_handles": 0,
+        "max_out_of_line": 1040,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    }
+  ],
+  "alias_declarations": [],
+  "new_type_declarations": [],
+  "declaration_order": [
+    "fuchsia.device.fs/ConnectionType",
+    "fuchsia.device.fs/ConnectorConnectRequest",
+    "fuchsia.device.fs/Connector",
+    "fuchsia.device.fs/DEVICE_CONTROLLER_NAME",
+    "fuchsia.device.fs/DEVICE_PROTOCOL_NAME",
+    "fuchsia.device.fs/DEVICE_TOPOLOGY_NAME",
+    "fuchsia.device.fs/DevfsAddArgs",
+    "fuchsia.device.fs/MAX_DEVICE_PATH_LEN",
+    "fuchsia.device.fs/MAX_DRIVER_PATH_LEN",
+    "fuchsia.device.fs/TopologicalPath_GetTopologicalPath_Response",
+    "fuchsia.device.fs/TopologicalPath_GetTopologicalPath_Result",
+    "fuchsia.device.fs/TopologicalPath"
+  ],
+  "declarations": {
+    "fuchsia.device.fs/ConnectionType": "bits",
+    "fuchsia.device.fs/DEVICE_CONTROLLER_NAME": "const",
+    "fuchsia.device.fs/DEVICE_PROTOCOL_NAME": "const",
+    "fuchsia.device.fs/DEVICE_TOPOLOGY_NAME": "const",
+    "fuchsia.device.fs/MAX_DEVICE_PATH_LEN": "const",
+    "fuchsia.device.fs/MAX_DRIVER_PATH_LEN": "const",
+    "fuchsia.device.fs/Connector": "protocol",
+    "fuchsia.device.fs/TopologicalPath": "protocol",
+    "fuchsia.device.fs/ConnectorConnectRequest": "struct",
+    "fuchsia.device.fs/TopologicalPath_GetTopologicalPath_Response": "struct",
+    "fuchsia.device.fs/DevfsAddArgs": "table",
+    "fuchsia.device.fs/TopologicalPath_GetTopologicalPath_Result": "union"
+  }
+}

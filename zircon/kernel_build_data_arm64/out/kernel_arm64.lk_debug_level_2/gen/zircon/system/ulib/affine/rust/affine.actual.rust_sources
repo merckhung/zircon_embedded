@@ -1,0 +1,4 @@
+../../zircon/system/ulib/affine/rust/src/lib.rs
+../../zircon/system/ulib/affine/rust/src/ratio.rs
+../../zircon/system/ulib/affine/rust/src/transform.rs
+../../zircon/system/ulib/affine/rust/src/utils.rs

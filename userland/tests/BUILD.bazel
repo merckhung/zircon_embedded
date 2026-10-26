@@ -1,0 +1,43 @@
+load("//bazel:zircon_rules.bzl", "linux_static_cc_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+# Linux memory-syscall conformance test for the Zircon shim. Prints one
+# "MMTEST PASS|FAIL <check>" line per check and a final
+# "[MM_TEST: PASS n/n]" or "[MM_TEST: FAIL k/n] <failed checks>" line;
+# exits nonzero if any check failed. Needs /tmp (writable) and /bin/true.
+linux_static_cc_binary(
+    name = "mm_test",
+    srcs = ["mm_test.cc"],
+)
+
+linux_static_cc_binary(
+    name = "mm_test_arm64",
+    arch = "arm64",
+    srcs = ["mm_test.cc"],
+)
+
+# Linux signal/process/futex/time conformance test for the Zircon shim. Prints
+# one "[proc_test] ok|FAIL <check>" line per check and a final
+# "[PROC_TEST: PASS n/n]" or "[PROC_TEST: FAIL k/n] <failed checks>" line;
+# exits nonzero if any check failed. It deliberately triggers SIGSEGV, SIGFPE
+# and SIGILL (caught by handlers, plus one unhandled SIGSEGV in a child), so
+# the shim logs "[restricted] ... exception ... -> signal N" lines.
+linux_static_cc_binary(
+    name = "proc_test",
+    srcs = ["proc_test.cc"],
+    linkopts = [
+        "-lpthread",
+        "-lrt",
+    ],
+)
+
+linux_static_cc_binary(
+    name = "proc_test_arm64",
+    arch = "arm64",
+    srcs = ["proc_test.cc"],
+    linkopts = [
+        "-lpthread",
+        "-lrt",
+    ],
+)

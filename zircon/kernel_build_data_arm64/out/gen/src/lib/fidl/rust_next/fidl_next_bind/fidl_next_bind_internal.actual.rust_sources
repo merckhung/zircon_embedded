@@ -1,0 +1,14 @@
+../../src/lib/fidl/rust_next/fidl_next_bind/src/client.rs
+../../src/lib/fidl/rust_next/fidl_next_bind/src/decoded.rs
+../../src/lib/fidl/rust_next/fidl_next_bind/src/endpoint.rs
+../../src/lib/fidl/rust_next/fidl_next_bind/src/error.rs
+../../src/lib/fidl/rust_next/fidl_next_bind/src/executor.rs
+../../src/lib/fidl/rust_next/fidl_next_bind/src/fuchsia_async.rs
+../../src/lib/fidl/rust_next/fidl_next_bind/src/future/mod.rs
+../../src/lib/fidl/rust_next/fidl_next_bind/src/future/send.rs
+../../src/lib/fidl/rust_next/fidl_next_bind/src/future/two_way.rs
+../../src/lib/fidl/rust_next/fidl_next_bind/src/lib.rs
+../../src/lib/fidl/rust_next/fidl_next_bind/src/protocol.rs
+../../src/lib/fidl/rust_next/fidl_next_bind/src/server.rs
+../../src/lib/fidl/rust_next/fidl_next_bind/src/service.rs
+../../src/lib/fidl/rust_next/fidl_next_bind/src/fuchsia.rs

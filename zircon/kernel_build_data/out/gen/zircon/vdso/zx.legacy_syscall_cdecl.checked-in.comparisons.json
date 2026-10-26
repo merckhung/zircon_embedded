@@ -1,0 +1,14 @@
+[
+  {
+    "candidate": "fidling/gen/zircon/vdso/zx/zither/legacy_syscall_cdecl/zircon/syscalls/gen/cdecls-next.inc",
+    "golden": "zircon/system/public/zircon/syscalls/gen/cdecls-next.inc"
+  },
+  {
+    "candidate": "fidling/gen/zircon/vdso/zx/zither/legacy_syscall_cdecl/zircon/syscalls/gen/cdecls.inc",
+    "golden": "zircon/system/public/zircon/syscalls/gen/cdecls.inc"
+  },
+  {
+    "candidate": "fidling/gen/zircon/vdso/zx/zither/legacy_syscall_cdecl/zircon/syscalls/gen/testonly-cdecls.inc",
+    "golden": "zircon/system/public/zircon/syscalls/gen/testonly-cdecls.inc"
+  }
+]

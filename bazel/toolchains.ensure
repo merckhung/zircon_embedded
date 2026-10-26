@@ -1,0 +1,16 @@
+# Toolchains for Fuchsia source revision adb2125e89f5080f5d52b17453f3aeb5d834ca7d
+$ParanoidMode CheckPresence
+@Subdir prebuilt/third_party/clang/linux-x64
+fuchsia/third_party/clang/linux-amd64 git_revision:3493720eca95cf844a8d7e58fdd12e0e5644e7d0
+@Subdir prebuilt/third_party/rust/linux-x64
+fuchsia/third_party/rust/host/linux-amd64 git_revisions:c26ce708de5d14682647895d2f3caf38f70b5aa6,3493720eca95cf844a8d7e58fdd12e0e5644e7d0
+@Subdir prebuilt/third_party/rust/linux-x64
+fuchsia/third_party/rust/target/fuchsia git_revisions:c26ce708de5d14682647895d2f3caf38f70b5aa6,3493720eca95cf844a8d7e58fdd12e0e5644e7d0
+@Subdir prebuilt/third_party/rust/linux-x64
+fuchsia/third_party/rust/target/x86_64-unknown-linux-gnu git_revisions:c26ce708de5d14682647895d2f3caf38f70b5aa6,3493720eca95cf844a8d7e58fdd12e0e5644e7d0
+@Subdir prebuilt/third_party/rust_bindgen/linux-x64
+fuchsia/third_party/rust_bindgen/linux-amd64 git_revisions:6bbde80a916cd0591f452b1a061ed8f12281f277,5e63f2ce42db2c42f1d0012a3b5fa9c6113f750a-patch
+@Subdir prebuilt/third_party/sysroot/linux
+fuchsia/third_party/sysroot/linux git_revision:1d35e3be9be587ed0de81ea4208be7cc01a7748c
+@Subdir prebuilt/third_party/qemu/linux-x64
+fuchsia/third_party/qemu/linux-amd64 git_revision:e545d8bb9d63e9dd61542b88463183314cff9482

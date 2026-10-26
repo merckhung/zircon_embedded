@@ -1,0 +1,1771 @@
+{
+  "name": "fuchsia.net.tcp",
+  "platform": "fuchsia",
+  "available": {
+    "fuchsia": [
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "NEXT",
+      "HEAD"
+    ]
+  },
+  "maybe_attributes": [
+    {
+      "name": "doc",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "string",
+          "value": {
+            "kind": "literal",
+            "value": " TCP types used across multiple FIDL endpoints.\n",
+            "expression": "/// TCP types used across multiple FIDL endpoints.",
+            "literal": {
+              "kind": "string",
+              "value": " TCP types used across multiple FIDL endpoints.\n",
+              "expression": "/// TCP types used across multiple FIDL endpoints."
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 5,
+            "column": 1,
+            "length": 50
+          }
+        }
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+        "line": 5,
+        "column": 1,
+        "length": 50
+      }
+    },
+    {
+      "name": "available",
+      "arguments": [
+        {
+          "name": "added",
+          "type": "uint32",
+          "value": {
+            "kind": "literal",
+            "value": "29",
+            "expression": "29",
+            "literal": {
+              "kind": "numeric",
+              "value": "29",
+              "expression": "29"
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 6,
+            "column": 12,
+            "length": 8
+          }
+        }
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+        "line": 6,
+        "column": 1,
+        "length": 20
+      }
+    }
+  ],
+  "experiments": [],
+  "library_dependencies": [],
+  "bits_declarations": [],
+  "const_declarations": [],
+  "enum_declarations": [
+    {
+      "name": "fuchsia.net.tcp/CongestionControlState",
+      "naming_context": [
+        "CongestionControlState"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+        "line": 11,
+        "column": 6,
+        "length": 22
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " TCP congestion control state machine state.\n",
+                "expression": "/// TCP congestion control state machine state.",
+                "literal": {
+                  "kind": "string",
+                  "value": " TCP congestion control state machine state.\n",
+                  "expression": "/// TCP congestion control state machine state."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 9,
+                "column": 1,
+                "length": 47
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 9,
+            "column": 1,
+            "length": 47
+          }
+        },
+        {
+          "name": "strict_audit",
+          "arguments": [
+            {
+              "name": "bug",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "https://fxbug.dev/467128725",
+                "expression": "\"https://fxbug.dev/467128725\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "https://fxbug.dev/467128725",
+                  "expression": "\"https://fxbug.dev/467128725\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 10,
+                "column": 15,
+                "length": 33
+              }
+            },
+            {
+              "name": "state",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "PENDING_REVIEW",
+                "expression": "\"PENDING_REVIEW\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "PENDING_REVIEW",
+                  "expression": "\"PENDING_REVIEW\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 10,
+                "column": 50,
+                "length": 22
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 10,
+            "column": 1,
+            "length": 72
+          }
+        }
+      ],
+      "type": "uint32",
+      "members": [
+        {
+          "name": "OPEN",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 13,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "0",
+            "expression": "0",
+            "literal": {
+              "kind": "numeric",
+              "value": "0",
+              "expression": "0"
+            }
+          },
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " No indication of duplicate ACKs or loss. Everything is fine.\n",
+                    "expression": "/// No indication of duplicate ACKs or loss. Everything is fine.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " No indication of duplicate ACKs or loss. Everything is fine.\n",
+                      "expression": "/// No indication of duplicate ACKs or loss. Everything is fine."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 12,
+                    "column": 5,
+                    "length": 64
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 12,
+                "column": 5,
+                "length": 64
+              }
+            }
+          ]
+        },
+        {
+          "name": "DISORDER",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 16,
+            "column": 5,
+            "length": 8
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "1",
+            "expression": "1",
+            "literal": {
+              "kind": "numeric",
+              "value": "1",
+              "expression": "1"
+            }
+          },
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Received SACK blocks duplicate ACKs, assumed to be due to packet loss\n or reordering.\n",
+                    "expression": "/// Received SACK blocks duplicate ACKs, assumed to be due to packet loss\n    /// or reordering.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Received SACK blocks duplicate ACKs, assumed to be due to packet loss\n or reordering.\n",
+                      "expression": "/// Received SACK blocks duplicate ACKs, assumed to be due to packet loss\n    /// or reordering."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 14,
+                    "column": 5,
+                    "length": 96
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 14,
+                "column": 5,
+                "length": 96
+              }
+            }
+          ]
+        },
+        {
+          "name": "CONGESTION_WINDOW_REDUCED",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 19,
+            "column": 5,
+            "length": 25
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "2",
+            "expression": "2",
+            "literal": {
+              "kind": "numeric",
+              "value": "2",
+              "expression": "2"
+            }
+          },
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Sending rate reduced due to congestion signal. This is either an ECN or\n local queue overrun.\n",
+                    "expression": "/// Sending rate reduced due to congestion signal. This is either an ECN or\n    /// local queue overrun.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Sending rate reduced due to congestion signal. This is either an ECN or\n local queue overrun.\n",
+                      "expression": "/// Sending rate reduced due to congestion signal. This is either an ECN or\n    /// local queue overrun."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 17,
+                    "column": 5,
+                    "length": 104
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 17,
+                "column": 5,
+                "length": 104
+              }
+            }
+          ]
+        },
+        {
+          "name": "RECOVERY",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 22,
+            "column": 5,
+            "length": 8
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "3",
+            "expression": "3",
+            "literal": {
+              "kind": "numeric",
+              "value": "3",
+              "expression": "3"
+            }
+          },
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Sender has entered either fast recovery (after seeing enough duplicate\n ACKs) or SACK-based recovery\n",
+                    "expression": "/// Sender has entered either fast recovery (after seeing enough duplicate\n    /// ACKs) or SACK-based recovery",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Sender has entered either fast recovery (after seeing enough duplicate\n ACKs) or SACK-based recovery\n",
+                      "expression": "/// Sender has entered either fast recovery (after seeing enough duplicate\n    /// ACKs) or SACK-based recovery"
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 20,
+                    "column": 5,
+                    "length": 111
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 20,
+                "column": 5,
+                "length": 111
+              }
+            }
+          ]
+        },
+        {
+          "name": "LOSS",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 25,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "4",
+            "expression": "4",
+            "literal": {
+              "kind": "numeric",
+              "value": "4",
+              "expression": "4"
+            }
+          },
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Sender hit RTO and entered slow start. Exits when all retransmitted\n packets have been ACKed.\n",
+                    "expression": "/// Sender hit RTO and entered slow start. Exits when all retransmitted\n    /// packets have been ACKed.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Sender hit RTO and entered slow start. Exits when all retransmitted\n packets have been ACKed.\n",
+                      "expression": "/// Sender hit RTO and entered slow start. Exits when all retransmitted\n    /// packets have been ACKed."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 23,
+                    "column": 5,
+                    "length": 104
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 23,
+                "column": 5,
+                "length": 104
+              }
+            }
+          ]
+        }
+      ],
+      "strict": true
+    },
+    {
+      "name": "fuchsia.net.tcp/State",
+      "naming_context": [
+        "State"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+        "line": 30,
+        "column": 6,
+        "length": 5
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " TCP state machine state.\n",
+                "expression": "/// TCP state machine state.",
+                "literal": {
+                  "kind": "string",
+                  "value": " TCP state machine state.\n",
+                  "expression": "/// TCP state machine state."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 28,
+                "column": 1,
+                "length": 28
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 28,
+            "column": 1,
+            "length": 28
+          }
+        },
+        {
+          "name": "strict_audit",
+          "arguments": [
+            {
+              "name": "bug",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "https://fxbug.dev/467128725",
+                "expression": "\"https://fxbug.dev/467128725\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "https://fxbug.dev/467128725",
+                  "expression": "\"https://fxbug.dev/467128725\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 29,
+                "column": 15,
+                "length": 33
+              }
+            },
+            {
+              "name": "state",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "PENDING_REVIEW",
+                "expression": "\"PENDING_REVIEW\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "PENDING_REVIEW",
+                  "expression": "\"PENDING_REVIEW\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 29,
+                "column": 50,
+                "length": 22
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 29,
+            "column": 1,
+            "length": 72
+          }
+        }
+      ],
+      "type": "uint32",
+      "members": [
+        {
+          "name": "ESTABLISHED",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 31,
+            "column": 5,
+            "length": 11
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "1",
+            "expression": "1",
+            "literal": {
+              "kind": "numeric",
+              "value": "1",
+              "expression": "1"
+            }
+          }
+        },
+        {
+          "name": "SYN_SENT",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 32,
+            "column": 5,
+            "length": 8
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "2",
+            "expression": "2",
+            "literal": {
+              "kind": "numeric",
+              "value": "2",
+              "expression": "2"
+            }
+          }
+        },
+        {
+          "name": "SYN_RECV",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 33,
+            "column": 5,
+            "length": 8
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "3",
+            "expression": "3",
+            "literal": {
+              "kind": "numeric",
+              "value": "3",
+              "expression": "3"
+            }
+          }
+        },
+        {
+          "name": "FIN_WAIT1",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 34,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "4",
+            "expression": "4",
+            "literal": {
+              "kind": "numeric",
+              "value": "4",
+              "expression": "4"
+            }
+          }
+        },
+        {
+          "name": "FIN_WAIT2",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 35,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "5",
+            "expression": "5",
+            "literal": {
+              "kind": "numeric",
+              "value": "5",
+              "expression": "5"
+            }
+          }
+        },
+        {
+          "name": "TIME_WAIT",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 36,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "6",
+            "expression": "6",
+            "literal": {
+              "kind": "numeric",
+              "value": "6",
+              "expression": "6"
+            }
+          }
+        },
+        {
+          "name": "CLOSE",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 37,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "7",
+            "expression": "7",
+            "literal": {
+              "kind": "numeric",
+              "value": "7",
+              "expression": "7"
+            }
+          }
+        },
+        {
+          "name": "CLOSE_WAIT",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 38,
+            "column": 5,
+            "length": 10
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "8",
+            "expression": "8",
+            "literal": {
+              "kind": "numeric",
+              "value": "8",
+              "expression": "8"
+            }
+          }
+        },
+        {
+          "name": "LAST_ACK",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 39,
+            "column": 5,
+            "length": 8
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "9",
+            "expression": "9",
+            "literal": {
+              "kind": "numeric",
+              "value": "9",
+              "expression": "9"
+            }
+          }
+        },
+        {
+          "name": "LISTEN",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 40,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "10",
+            "expression": "10",
+            "literal": {
+              "kind": "numeric",
+              "value": "10",
+              "expression": "10"
+            }
+          }
+        },
+        {
+          "name": "CLOSING",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 41,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "11",
+            "expression": "11",
+            "literal": {
+              "kind": "numeric",
+              "value": "11",
+              "expression": "11"
+            }
+          }
+        }
+      ],
+      "strict": true
+    }
+  ],
+  "experimental_resource_declarations": [],
+  "protocol_declarations": [],
+  "service_declarations": [],
+  "struct_declarations": [],
+  "external_struct_declarations": [],
+  "table_declarations": [
+    {
+      "name": "fuchsia.net.tcp/Info",
+      "naming_context": [
+        "Info"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+        "line": 45,
+        "column": 6,
+        "length": 4
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " TCP protocol state.\n",
+                "expression": "/// TCP protocol state.",
+                "literal": {
+                  "kind": "string",
+                  "value": " TCP protocol state.\n",
+                  "expression": "/// TCP protocol state."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 44,
+                "column": 1,
+                "length": 23
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 44,
+            "column": 1,
+            "length": 23
+          }
+        }
+      ],
+      "members": [
+        {
+          "ordinal": 1,
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.tcp/State",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "state",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 47,
+            "column": 8,
+            "length": 5
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The current state of the TCP state machine.\n",
+                    "expression": "/// The current state of the TCP state machine.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The current state of the TCP state machine.\n",
+                      "expression": "/// The current state of the TCP state machine."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 46,
+                    "column": 5,
+                    "length": 47
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 46,
+                "column": 5,
+                "length": 47
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 2,
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.tcp/CongestionControlState",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "ca_state",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 49,
+            "column": 8,
+            "length": 8
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The current state of the TCP congention avoidance state machine.\n",
+                    "expression": "/// The current state of the TCP congention avoidance state machine.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The current state of the TCP congention avoidance state machine.\n",
+                      "expression": "/// The current state of the TCP congention avoidance state machine."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 48,
+                    "column": 5,
+                    "length": 68
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 48,
+                "column": 5,
+                "length": 68
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 11,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "rto_usec",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 59,
+            "column": 9,
+            "length": 8
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The current RTO value in microseconds.\n",
+                    "expression": "/// The current RTO value in microseconds.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The current RTO value in microseconds.\n",
+                      "expression": "/// The current RTO value in microseconds."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 58,
+                    "column": 5,
+                    "length": 42
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 58,
+                "column": 5,
+                "length": 42
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 13,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "tcpi_snd_mss",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 63,
+            "column": 9,
+            "length": 12
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The maximum segment size (MSS) this endpoint can send.\n",
+                    "expression": "/// The maximum segment size (MSS) this endpoint can send.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The maximum segment size (MSS) this endpoint can send.\n",
+                      "expression": "/// The maximum segment size (MSS) this endpoint can send."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 61,
+                    "column": 5,
+                    "length": 58
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 61,
+                "column": 5,
+                "length": 58
+              }
+            },
+            {
+              "name": "available",
+              "arguments": [
+                {
+                  "name": "added",
+                  "type": "uint32",
+                  "value": {
+                    "kind": "literal",
+                    "value": "32",
+                    "expression": "32",
+                    "literal": {
+                      "kind": "numeric",
+                      "value": "32",
+                      "expression": "32"
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 62,
+                    "column": 16,
+                    "length": 8
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 62,
+                "column": 5,
+                "length": 20
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 14,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "tcpi_rcv_mss",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 66,
+            "column": 9,
+            "length": 12
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The maximum segment size (MSS) this endpoint can receive.\n",
+                    "expression": "/// The maximum segment size (MSS) this endpoint can receive.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The maximum segment size (MSS) this endpoint can receive.\n",
+                      "expression": "/// The maximum segment size (MSS) this endpoint can receive."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 64,
+                    "column": 5,
+                    "length": 61
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 64,
+                "column": 5,
+                "length": 61
+              }
+            },
+            {
+              "name": "available",
+              "arguments": [
+                {
+                  "name": "added",
+                  "type": "uint32",
+                  "value": {
+                    "kind": "literal",
+                    "value": "32",
+                    "expression": "32",
+                    "literal": {
+                      "kind": "numeric",
+                      "value": "32",
+                      "expression": "32"
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 65,
+                    "column": 16,
+                    "length": 8
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 65,
+                "column": 5,
+                "length": 20
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 20,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "tcpi_last_data_sent_msec",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 73,
+            "column": 9,
+            "length": 24
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Time since data was last sent on the connection in milliseconds.\n",
+                    "expression": "/// Time since data was last sent on the connection in milliseconds.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Time since data was last sent on the connection in milliseconds.\n",
+                      "expression": "/// Time since data was last sent on the connection in milliseconds."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 72,
+                    "column": 5,
+                    "length": 68
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 72,
+                "column": 5,
+                "length": 68
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 23,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "tcpi_last_ack_recv_msec",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 77,
+            "column": 9,
+            "length": 23
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Time since the most recent ACK was received in milliseconds.\n",
+                    "expression": "/// Time since the most recent ACK was received in milliseconds.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Time since the most recent ACK was received in milliseconds.\n",
+                      "expression": "/// Time since the most recent ACK was received in milliseconds."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 76,
+                    "column": 5,
+                    "length": 64
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 76,
+                "column": 5,
+                "length": 64
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 26,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "rtt_usec",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 81,
+            "column": 9,
+            "length": 8
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The estimated smoothed roundtrip time in microseconds.\n",
+                    "expression": "/// The estimated smoothed roundtrip time in microseconds.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The estimated smoothed roundtrip time in microseconds.\n",
+                      "expression": "/// The estimated smoothed roundtrip time in microseconds."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 80,
+                    "column": 5,
+                    "length": 58
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 80,
+                "column": 5,
+                "length": 58
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 27,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "rtt_var_usec",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 83,
+            "column": 9,
+            "length": 12
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The smoothed mean deviation of the roundtrip time in microseconds.\n",
+                    "expression": "/// The smoothed mean deviation of the roundtrip time in microseconds.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The smoothed mean deviation of the roundtrip time in microseconds.\n",
+                      "expression": "/// The smoothed mean deviation of the roundtrip time in microseconds."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 82,
+                    "column": 5,
+                    "length": 70
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 82,
+                "column": 5,
+                "length": 70
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 28,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "snd_ssthresh",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 85,
+            "column": 9,
+            "length": 12
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The sending slow start threshold in segments.\n",
+                    "expression": "/// The sending slow start threshold in segments.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The sending slow start threshold in segments.\n",
+                      "expression": "/// The sending slow start threshold in segments."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 84,
+                    "column": 5,
+                    "length": 49
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 84,
+                "column": 5,
+                "length": 49
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 29,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "snd_cwnd",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 87,
+            "column": 9,
+            "length": 8
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The current sending congestion window in segments.\n",
+                    "expression": "/// The current sending congestion window in segments.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The current sending congestion window in segments.\n",
+                      "expression": "/// The current sending congestion window in segments."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 86,
+                    "column": 5,
+                    "length": 54
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 86,
+                "column": 5,
+                "length": 54
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 34,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "tcpi_total_retrans",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 93,
+            "column": 9,
+            "length": 18
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The total number of retransmission events.\n",
+                    "expression": "/// The total number of retransmission events.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The total number of retransmission events.\n",
+                      "expression": "/// The total number of retransmission events."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 92,
+                    "column": 5,
+                    "length": 46
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 92,
+                "column": 5,
+                "length": 46
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 39,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint64",
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "tcpi_segs_out",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 99,
+            "column": 9,
+            "length": 13
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The total number of segments transmitted.\n",
+                    "expression": "/// The total number of segments transmitted.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The total number of segments transmitted.\n",
+                      "expression": "/// The total number of segments transmitted."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 98,
+                    "column": 5,
+                    "length": 45
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 98,
+                "column": 5,
+                "length": 45
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 40,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint64",
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "tcpi_segs_in",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 101,
+            "column": 9,
+            "length": 12
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The total number of segments received.\n",
+                    "expression": "/// The total number of segments received.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The total number of segments received.\n",
+                      "expression": "/// The total number of segments received."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 100,
+                    "column": 5,
+                    "length": 42
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 100,
+                "column": 5,
+                "length": 42
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 54,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "bool",
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "reorder_seen",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+            "line": 118,
+            "column": 9,
+            "length": 12
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Whether the connection thinks it has ever seen reordering.\n",
+                    "expression": "/// Whether the connection thinks it has ever seen reordering.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Whether the connection thinks it has ever seen reordering.\n",
+                      "expression": "/// Whether the connection thinks it has ever seen reordering."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                    "line": 115,
+                    "column": 5,
+                    "length": 62
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.tcp/tcp.fidl",
+                "line": 115,
+                "column": 5,
+                "length": 62
+              }
+            }
+          ]
+        }
+      ],
+      "strict": false,
+      "resource": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 2,
+        "max_handles": 0,
+        "max_out_of_line": 448,
+        "has_padding": true,
+        "has_flexible_envelope": true
+      }
+    }
+  ],
+  "union_declarations": [],
+  "alias_declarations": [],
+  "new_type_declarations": [],
+  "declaration_order": [
+    "fuchsia.net.tcp/CongestionControlState",
+    "fuchsia.net.tcp/State",
+    "fuchsia.net.tcp/Info"
+  ],
+  "declarations": {
+    "fuchsia.net.tcp/CongestionControlState": "enum",
+    "fuchsia.net.tcp/State": "enum",
+    "fuchsia.net.tcp/Info": "table"
+  }
+}

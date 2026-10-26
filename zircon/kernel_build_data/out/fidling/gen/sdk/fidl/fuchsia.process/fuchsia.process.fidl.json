@@ -1,0 +1,4911 @@
+{
+  "name": "fuchsia.process",
+  "platform": "fuchsia",
+  "available": {
+    "fuchsia": [
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "NEXT",
+      "HEAD"
+    ]
+  },
+  "maybe_attributes": [
+    {
+      "name": "available",
+      "arguments": [
+        {
+          "name": "added",
+          "type": "uint32",
+          "value": {
+            "kind": "literal",
+            "value": "7",
+            "expression": "7",
+            "literal": {
+              "kind": "numeric",
+              "value": "7",
+              "expression": "7"
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/overview.fidl",
+            "line": 4,
+            "column": 12,
+            "length": 7
+          }
+        }
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.process/overview.fidl",
+        "line": 4,
+        "column": 1,
+        "length": 19
+      }
+    }
+  ],
+  "experiments": [],
+  "library_dependencies": [
+    {
+      "name": "fuchsia.io",
+      "declarations": {
+        "fuchsia.io/AllocateMode": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileSignal": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Flags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FscryptPolicyFlags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/ModeType": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeAttributeFlags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeAttributesQuery": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeProtocolKinds": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/OpenFlags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Operations": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/UnlinkFlags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/VmoFlags": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/WatchMask": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DIRECTORY_PROTOCOL_NAME": {
+          "kind": "const"
+        },
+        "fuchsia.io/FILE_PROTOCOL_NAME": {
+          "kind": "const"
+        },
+        "fuchsia.io/FLAG_TEMPORARY_AS_NOT_LINKABLE": {
+          "kind": "const"
+        },
+        "fuchsia.io/INHERITED_WRITE_PERMISSIONS": {
+          "kind": "const"
+        },
+        "fuchsia.io/INO_UNKNOWN": {
+          "kind": "const"
+        },
+        "fuchsia.io/MASK_KNOWN_PERMISSIONS": {
+          "kind": "const"
+        },
+        "fuchsia.io/MASK_KNOWN_PROTOCOLS": {
+          "kind": "const"
+        },
+        "fuchsia.io/MASK_PERMISSION_FLAGS": {
+          "kind": "const"
+        },
+        "fuchsia.io/MASK_POSIX_FLAGS": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_ATTRIBUTE_NAME": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_BUF": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_FILENAME": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_FS_NAME_BUFFER": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_INLINE_ATTRIBUTE_VALUE": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_LIST_ATTRIBUTES_CHUNK": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_NAME_LENGTH": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_PATH_LENGTH": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_SELINUX_CONTEXT_ATTRIBUTE_LEN": {
+          "kind": "const"
+        },
+        "fuchsia.io/MAX_TRANSFER_SIZE": {
+          "kind": "const"
+        },
+        "fuchsia.io/NODE_PROTOCOL_NAME": {
+          "kind": "const"
+        },
+        "fuchsia.io/OPEN_FLAGS_ALLOWED_WITH_NODE_REFERENCE": {
+          "kind": "const"
+        },
+        "fuchsia.io/OPEN_RIGHTS": {
+          "kind": "const"
+        },
+        "fuchsia.io/PERM_EXECUTABLE": {
+          "kind": "const"
+        },
+        "fuchsia.io/PERM_READABLE": {
+          "kind": "const"
+        },
+        "fuchsia.io/PERM_WRITABLE": {
+          "kind": "const"
+        },
+        "fuchsia.io/RW_STAR_DIR": {
+          "kind": "const"
+        },
+        "fuchsia.io/RX_STAR_DIR": {
+          "kind": "const"
+        },
+        "fuchsia.io/R_STAR_DIR": {
+          "kind": "const"
+        },
+        "fuchsia.io/SELINUX_CONTEXT_NAME": {
+          "kind": "const"
+        },
+        "fuchsia.io/SYMLINK_PROTOCOL_NAME": {
+          "kind": "const"
+        },
+        "fuchsia.io/W_STAR_DIR": {
+          "kind": "const"
+        },
+        "fuchsia.io/X_STAR_DIR": {
+          "kind": "const"
+        },
+        "fuchsia.io/AdvisoryLockType": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirentType": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/HashAlgorithm": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/SeekOrigin": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/SetExtendedAttributeMode": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/WatchEvent": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/AdvisoryLocking": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/Directory": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/DirectoryWatcher": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/ExtendedAttributeIterator": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/File": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/Linkable": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/Node": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/Openable": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/Readable": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/Symlink": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/Writable": {
+          "kind": "protocol"
+        },
+        "fuchsia.io/AdvisoryLockRange": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/AdvisoryLockingAdvisoryLockRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 48,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/AdvisoryLocking_AdvisoryLock_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryCreateSymlinkRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 40,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 1,
+            "max_out_of_line": 4352,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryDeprecatedOpenRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 32,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 1,
+            "max_out_of_line": 4096,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryGetTokenResponse": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryLinkRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 40,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 1,
+            "max_out_of_line": 512,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryLinkResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryObject": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryReadDirentsRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryReadDirentsResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8192,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryRenameRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 40,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 1,
+            "max_out_of_line": 512,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryRewindResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryUnlinkRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 32,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 272,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/DirectoryWatchRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 12,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/DirectoryWatchResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Directory_CreateSymlink_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Directory_Rename_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Directory_Unlink_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/EmptyStruct": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/ExtendedAttributeIterator_GetNext_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 34816,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileAllocateRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileEnableVerityRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 3,
+            "max_handles": 0,
+            "max_out_of_line": 64,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/FileGetBackingMemoryRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileObject": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 2,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileReadAtRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileResizeRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileSeekRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FileWriteAtRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8192,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_Allocate_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_EnableVerity_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_GetBackingMemory_Response": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_ReadAt_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8192,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_Resize_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_Seek_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_WriteAt_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FilesystemInfo": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 96,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/FscryptPolicy": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 17,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/LinkableLinkIntoRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 1,
+            "max_out_of_line": 256,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Linkable_LinkInto_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeAttributes": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 56,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeAttributes2": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 32,
+            "alignment": 8,
+            "depth": 5,
+            "max_handles": 0,
+            "max_out_of_line": 720,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/NodeDeprecatedCloneRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeDeprecatedGetAttrResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 64,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeDeprecatedGetFlagsResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeDeprecatedSetAttrRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 64,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeDeprecatedSetAttrResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeDeprecatedSetFlagsRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeDeprecatedSetFlagsResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeGetAttributesRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeGetExtendedAttributeRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 256,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeListExtendedAttributesRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeOnOpenRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 2,
+            "max_out_of_line": 4112,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeQueryFilesystemResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 96,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeRemoveExtendedAttributeRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 256,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeSetExtendedAttributeRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 40,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 1,
+            "max_out_of_line": 33040,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/NodeSetFlagsRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_GetFlags_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_RemoveExtendedAttribute_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_SetExtendedAttribute_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_SetFlags_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_Sync_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_UpdateAttributes_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/OpenableOpenRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 48,
+            "alignment": 8,
+            "depth": 6,
+            "max_handles": 1,
+            "max_out_of_line": 4560,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/ReadableReadRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Readable_Read_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8192,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Service": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/SymlinkObject": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 4096,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/WritableWriteRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8192,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Writable_Write_Response": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/AdvisoryLockRequest": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 48,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/ConnectionInfo": {
+          "kind": "table",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 16,
+            "has_padding": false,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/DirectoryInfo": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 7,
+            "max_handles": 0,
+            "max_out_of_line": 760,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/FileInfo": {
+          "kind": "table",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 7,
+            "max_handles": 2,
+            "max_out_of_line": 784,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/ImmutableNodeAttributes": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 5,
+            "max_handles": 0,
+            "max_out_of_line": 296,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/MutableNodeAttributes": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 4,
+            "max_handles": 0,
+            "max_out_of_line": 424,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/NodeInfo": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 7,
+            "max_handles": 0,
+            "max_out_of_line": 760,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/Options": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 6,
+            "max_handles": 0,
+            "max_out_of_line": 464,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/SymlinkInfo": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 7,
+            "max_handles": 0,
+            "max_out_of_line": 4880,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/UnlinkOptions": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 16,
+            "has_padding": false,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/VerificationOptions": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 3,
+            "max_handles": 0,
+            "max_out_of_line": 64,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/AdvisoryLocking_AdvisoryLock_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Directory_CreateSymlink_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Directory_Rename_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Directory_Unlink_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/ExtendedAttributeIterator_GetNext_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 3,
+            "max_handles": 0,
+            "max_out_of_line": 34840,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/ExtendedAttributeValue": {
+          "kind": "union",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 1,
+            "max_out_of_line": 32784,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/File_Allocate_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_EnableVerity_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_GetBackingMemory_Result": {
+          "kind": "union",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_ReadAt_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 8208,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_Resize_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_Seek_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/File_WriteAt_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Linkable_LinkInto_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/NodeInfoDeprecated": {
+          "kind": "union",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 2,
+            "max_out_of_line": 4112,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_GetAttributes_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 6,
+            "max_handles": 0,
+            "max_out_of_line": 752,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/Node_GetExtendedAttribute_Result": {
+          "kind": "union",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 3,
+            "max_handles": 1,
+            "max_out_of_line": 32800,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/Node_GetFlags_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_RemoveExtendedAttribute_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_SetExtendedAttribute_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_SetFlags_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_Sync_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Node_UpdateAttributes_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Readable_Read_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 8208,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Representation": {
+          "kind": "union",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 8,
+            "max_handles": 2,
+            "max_out_of_line": 4896,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/SelinuxContext": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 272,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/Symlink_Describe_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 8,
+            "max_handles": 0,
+            "max_out_of_line": 4896,
+            "has_padding": true,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.io/Writable_Write_Result": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 8,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.io/Abilities": {
+          "kind": "alias"
+        },
+        "fuchsia.io/ExtendedAttributeName": {
+          "kind": "alias"
+        },
+        "fuchsia.io/Id": {
+          "kind": "alias"
+        },
+        "fuchsia.io/Name": {
+          "kind": "alias"
+        },
+        "fuchsia.io/Path": {
+          "kind": "alias"
+        },
+        "fuchsia.io/Rights": {
+          "kind": "alias"
+        },
+        "fuchsia.io/SymlinkTarget": {
+          "kind": "alias"
+        },
+        "fuchsia.io/Token": {
+          "kind": "alias"
+        },
+        "fuchsia.io/Transfer": {
+          "kind": "alias"
+        }
+      }
+    },
+    {
+      "name": "fuchsia.ldsvc",
+      "declarations": {
+        "fuchsia.ldsvc/Loader": {
+          "kind": "protocol"
+        },
+        "fuchsia.ldsvc/LoaderCloneRequest": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.ldsvc/LoaderCloneResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.ldsvc/LoaderConfigRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 1024,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.ldsvc/LoaderConfigResponse": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.ldsvc/LoaderLoadObjectRequest": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 1024,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.ldsvc/LoaderLoadObjectResponse": {
+          "kind": "struct",
+          "resource": true,
+          "type_shape_v2": {
+            "inline_size": 8,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 1,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        }
+      }
+    },
+    {
+      "name": "zx",
+      "declarations": {
+        "zx/Rights": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "zx/CHANNEL_MAX_MSG_BYTES": {
+          "kind": "const"
+        },
+        "zx/CHANNEL_MAX_MSG_HANDLES": {
+          "kind": "const"
+        },
+        "zx/DEFAULT_CHANNEL_RIGHTS": {
+          "kind": "const"
+        },
+        "zx/DEFAULT_EVENT_RIGHTS": {
+          "kind": "const"
+        },
+        "zx/IOB_MAX_REGIONS": {
+          "kind": "const"
+        },
+        "zx/MAX_CPUS": {
+          "kind": "const"
+        },
+        "zx/MAX_NAME_LEN": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_BASIC": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_IO": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_POLICY": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_PROPERTY": {
+          "kind": "const"
+        },
+        "zx/ObjType": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "zx/Handle": {
+          "kind": "experimental_resource"
+        },
+        "zx/Duration": {
+          "kind": "alias"
+        },
+        "zx/DurationBoot": {
+          "kind": "alias"
+        },
+        "zx/DurationMono": {
+          "kind": "alias"
+        },
+        "zx/InstantBoot": {
+          "kind": "alias"
+        },
+        "zx/InstantBootTicks": {
+          "kind": "alias"
+        },
+        "zx/InstantMono": {
+          "kind": "alias"
+        },
+        "zx/InstantMonoTicks": {
+          "kind": "alias"
+        },
+        "zx/Koid": {
+          "kind": "alias"
+        },
+        "zx/Off": {
+          "kind": "alias"
+        },
+        "zx/Result": {
+          "kind": "alias"
+        },
+        "zx/Signals": {
+          "kind": "alias"
+        },
+        "zx/Status": {
+          "kind": "alias"
+        },
+        "zx/Ticks": {
+          "kind": "alias"
+        },
+        "zx/Time": {
+          "kind": "alias"
+        }
+      }
+    }
+  ],
+  "bits_declarations": [],
+  "const_declarations": [
+    {
+      "name": "fuchsia.process/MAX_RESOLVE_NAME_SIZE",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.process/resolver.fidl",
+        "line": 10,
+        "column": 7,
+        "length": 21
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " The maximum size for a name used by `Resolver`.\n",
+                "expression": "/// The maximum size for a name used by `Resolver`.",
+                "literal": {
+                  "kind": "string",
+                  "value": " The maximum size for a name used by `Resolver`.\n",
+                  "expression": "/// The maximum size for a name used by `Resolver`."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/resolver.fidl",
+                "line": 9,
+                "column": 1,
+                "length": 51
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/resolver.fidl",
+            "line": 9,
+            "column": 1,
+            "length": 51
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint32",
+        "type_shape_v2": {
+          "inline_size": 4,
+          "alignment": 4,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "2048",
+        "expression": "2048",
+        "literal": {
+          "kind": "numeric",
+          "value": "2048",
+          "expression": "2048"
+        }
+      }
+    }
+  ],
+  "enum_declarations": [],
+  "experimental_resource_declarations": [],
+  "protocol_declarations": [
+    {
+      "name": "fuchsia.process/Launcher",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+        "line": 113,
+        "column": 17,
+        "length": 8
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " A low-level interface for launching processes.\n\n This interface is used for manually assembling a process. The caller supplies\n all the capabilities for the newly created process.\n\n That create processes typically use `fdio_spawn` or `fdio_spawn_etc` rather\n than using this interface directly. The `fdio_spawn` and `fdio_spawn_etc`\n functions are implemented using this interface.\n\n Debuggers and other clients that need to create processes in a suspended\n state often use this interface directly. These clients use the\n `CreateWithoutStarting` method to create the process without actually\n starting it.\n",
+                "expression": "/// A low-level interface for launching processes.\n///\n/// This interface is used for manually assembling a process. The caller supplies\n/// all the capabilities for the newly created process.\n///\n/// That create processes typically use `fdio_spawn` or `fdio_spawn_etc` rather\n/// than using this interface directly. The `fdio_spawn` and `fdio_spawn_etc`\n/// functions are implemented using this interface.\n///\n/// Debuggers and other clients that need to create processes in a suspended\n/// state often use this interface directly. These clients use the\n/// `CreateWithoutStarting` method to create the process without actually\n/// starting it.",
+                "literal": {
+                  "kind": "string",
+                  "value": " A low-level interface for launching processes.\n\n This interface is used for manually assembling a process. The caller supplies\n all the capabilities for the newly created process.\n\n That create processes typically use `fdio_spawn` or `fdio_spawn_etc` rather\n than using this interface directly. The `fdio_spawn` and `fdio_spawn_etc`\n functions are implemented using this interface.\n\n Debuggers and other clients that need to create processes in a suspended\n state often use this interface directly. These clients use the\n `CreateWithoutStarting` method to create the process without actually\n starting it.\n",
+                  "expression": "/// A low-level interface for launching processes.\n///\n/// This interface is used for manually assembling a process. The caller supplies\n/// all the capabilities for the newly created process.\n///\n/// That create processes typically use `fdio_spawn` or `fdio_spawn_etc` rather\n/// than using this interface directly. The `fdio_spawn` and `fdio_spawn_etc`\n/// functions are implemented using this interface.\n///\n/// Debuggers and other clients that need to create processes in a suspended\n/// state often use this interface directly. These clients use the\n/// `CreateWithoutStarting` method to create the process without actually\n/// starting it."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 99,
+                "column": 1,
+                "length": 645
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 99,
+            "column": 1,
+            "length": 645
+          }
+        },
+        {
+          "name": "discoverable",
+          "arguments": [],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 112,
+            "column": 1,
+            "length": 13
+          }
+        }
+      ],
+      "openness": "closed",
+      "composed_protocols": [],
+      "methods": [
+        {
+          "kind": "twoway",
+          "ordinal": 1239433936316120996,
+          "name": "Launch",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 120,
+            "column": 12,
+            "length": 6
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Creates and starts the process described by `info`.\n\n After processing this message, the `Launcher` is reset to its initial\n state and is ready to launch another process.\n\n `process` is present if, and only if, `status` is `ZX_OK`.\n",
+                    "expression": "/// Creates and starts the process described by `info`.\n    ///\n    /// After processing this message, the `Launcher` is reset to its initial\n    /// state and is ready to launch another process.\n    ///\n    /// `process` is present if, and only if, `status` is `ZX_OK`.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Creates and starts the process described by `info`.\n\n After processing this message, the `Launcher` is reset to its initial\n state and is ready to launch another process.\n\n `process` is present if, and only if, `status` is `ZX_OK`.\n",
+                      "expression": "/// Creates and starts the process described by `info`.\n    ///\n    /// After processing this message, the `Launcher` is reset to its initial\n    /// state and is ready to launch another process.\n    ///\n    /// `process` is present if, and only if, `status` is `ZX_OK`."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 114,
+                    "column": 5,
+                    "length": 270
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 114,
+                "column": 5,
+                "length": 270
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.process/LauncherLaunchRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 24,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 2,
+              "max_out_of_line": 32,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.process/LauncherLaunchResponse",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": false
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 8457621991205227361,
+          "name": "CreateWithoutStarting",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 136,
+            "column": 12,
+            "length": 21
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Creates the process described by `info` but does not start it.\n\n After processing this message, the `Launcher` is reset to its initial\n state and is ready to launch another process.\n\n The caller is responsible for calling `zx_process_start` using the data\n in `ProcessStartData` to actually start the process.\n\n `data` is present if, and only if, `status` is `ZX_OK`.\n",
+                    "expression": "/// Creates the process described by `info` but does not start it.\n    ///\n    /// After processing this message, the `Launcher` is reset to its initial\n    /// state and is ready to launch another process.\n    ///\n    /// The caller is responsible for calling `zx_process_start` using the data\n    /// in `ProcessStartData` to actually start the process.\n    ///\n    /// `data` is present if, and only if, `status` is `ZX_OK`.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Creates the process described by `info` but does not start it.\n\n After processing this message, the `Launcher` is reset to its initial\n state and is ready to launch another process.\n\n The caller is responsible for calling `zx_process_start` using the data\n in `ProcessStartData` to actually start the process.\n\n `data` is present if, and only if, `status` is `ZX_OK`.\n",
+                      "expression": "/// Creates the process described by `info` but does not start it.\n    ///\n    /// After processing this message, the `Launcher` is reset to its initial\n    /// state and is ready to launch another process.\n    ///\n    /// The caller is responsible for calling `zx_process_start` using the data\n    /// in `ProcessStartData` to actually start the process.\n    ///\n    /// `data` is present if, and only if, `status` is `ZX_OK`."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 127,
+                    "column": 5,
+                    "length": 427
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 127,
+                "column": 5,
+                "length": 427
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.process/LauncherCreateWithoutStartingRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 24,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 2,
+              "max_out_of_line": 32,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.process/LauncherCreateWithoutStartingResponse",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 4,
+              "max_out_of_line": 56,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": false
+        },
+        {
+          "kind": "oneway",
+          "ordinal": 4315651119310005522,
+          "name": "AddArgs",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 146,
+            "column": 12,
+            "length": 7
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Adds the given arguments to the command-line for the process.\n\n Calling this method multiple times concatenates the arguments.\n",
+                    "expression": "/// Adds the given arguments to the command-line for the process.\n    ///\n    /// Calling this method multiple times concatenates the arguments.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Adds the given arguments to the command-line for the process.\n\n Calling this method multiple times concatenates the arguments.\n",
+                      "expression": "/// Adds the given arguments to the command-line for the process.\n    ///\n    /// Calling this method multiple times concatenates the arguments."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 143,
+                    "column": 5,
+                    "length": 144
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 143,
+                "column": 5,
+                "length": 144
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.process/LauncherAddArgsRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 0,
+              "max_out_of_line": 4294967295,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": false,
+          "is_composed": false,
+          "has_error": false
+        },
+        {
+          "kind": "oneway",
+          "ordinal": 8332725285682026361,
+          "name": "AddEnvirons",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 153,
+            "column": 12,
+            "length": 11
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Adds the given variables to the environment variables for the process.\n\n Calling this method multiple times concatenates the variables.\n",
+                    "expression": "/// Adds the given variables to the environment variables for the process.\n    ///\n    /// Calling this method multiple times concatenates the variables.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Adds the given variables to the environment variables for the process.\n\n Calling this method multiple times concatenates the variables.\n",
+                      "expression": "/// Adds the given variables to the environment variables for the process.\n    ///\n    /// Calling this method multiple times concatenates the variables."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 150,
+                    "column": 5,
+                    "length": 153
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 150,
+                "column": 5,
+                "length": 153
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.process/LauncherAddEnvironsRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 0,
+              "max_out_of_line": 4294967295,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": false,
+          "is_composed": false,
+          "has_error": false
+        },
+        {
+          "kind": "oneway",
+          "ordinal": 2700451326409737826,
+          "name": "AddNames",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 163,
+            "column": 12,
+            "length": 8
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Adds the given names to the namespace for the process.\n\n The paths in the namespace must be non-overlapping. See\n <https://fuchsia.dev/fuchsia-src/concepts/process/namespaces> for details.\n\n Calling this method multiple times concatenates the names.\n",
+                    "expression": "/// Adds the given names to the namespace for the process.\n    ///\n    /// The paths in the namespace must be non-overlapping. See\n    /// <https://fuchsia.dev/fuchsia-src/concepts/process/namespaces> for details.\n    ///\n    /// Calling this method multiple times concatenates the names.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Adds the given names to the namespace for the process.\n\n The paths in the namespace must be non-overlapping. See\n <https://fuchsia.dev/fuchsia-src/concepts/process/namespaces> for details.\n\n Calling this method multiple times concatenates the names.\n",
+                      "expression": "/// Adds the given names to the namespace for the process.\n    ///\n    /// The paths in the namespace must be non-overlapping. See\n    /// <https://fuchsia.dev/fuchsia-src/concepts/process/namespaces> for details.\n    ///\n    /// Calling this method multiple times concatenates the names."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 157,
+                    "column": 5,
+                    "length": 288
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 157,
+                "column": 5,
+                "length": 288
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.process/LauncherAddNamesRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 4294967295,
+              "max_out_of_line": 4294967295,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": false,
+          "is_composed": false,
+          "has_error": false
+        },
+        {
+          "kind": "oneway",
+          "ordinal": 5837318672132580885,
+          "name": "AddHandles",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 170,
+            "column": 12,
+            "length": 10
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Adds the given handles to the startup handles for the process.\n\n Calling this method multiple times concatenates the handles.\n",
+                    "expression": "/// Adds the given handles to the startup handles for the process.\n    ///\n    /// Calling this method multiple times concatenates the handles.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Adds the given handles to the startup handles for the process.\n\n Calling this method multiple times concatenates the handles.\n",
+                      "expression": "/// Adds the given handles to the startup handles for the process.\n    ///\n    /// Calling this method multiple times concatenates the handles."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 167,
+                    "column": 5,
+                    "length": 143
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 167,
+                "column": 5,
+                "length": 143
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.process/LauncherAddHandlesRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 4294967295,
+              "max_out_of_line": 4294967295,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": false,
+          "is_composed": false,
+          "has_error": false
+        },
+        {
+          "kind": "oneway",
+          "ordinal": 6598432479381290375,
+          "name": "SetOptions",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 178,
+            "column": 12,
+            "length": 10
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Sets the options with which the process is created.\n\n Calling this method multiple times will overwrite the current options.\n",
+                    "expression": "/// Sets the options with which the process is created.\n    ///\n    /// Calling this method multiple times will overwrite the current options.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Sets the options with which the process is created.\n\n Calling this method multiple times will overwrite the current options.\n",
+                      "expression": "/// Sets the options with which the process is created.\n    ///\n    /// Calling this method multiple times will overwrite the current options."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 174,
+                    "column": 5,
+                    "length": 142
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 174,
+                "column": 5,
+                "length": 142
+              }
+            },
+            {
+              "name": "available",
+              "arguments": [
+                {
+                  "name": "added",
+                  "type": "uint32",
+                  "value": {
+                    "kind": "literal",
+                    "value": "9",
+                    "expression": "9",
+                    "literal": {
+                      "kind": "numeric",
+                      "value": "9",
+                      "expression": "9"
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 177,
+                    "column": 16,
+                    "length": 7
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 177,
+                "column": 5,
+                "length": 19
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.process/LauncherSetOptionsRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": false,
+          "is_composed": false,
+          "has_error": false
+        }
+      ]
+    },
+    {
+      "name": "fuchsia.process/Resolver",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.process/resolver.fidl",
+        "line": 31,
+        "column": 17,
+        "length": 8
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " An interface for resolving names to executables and library loaders.\n\n An executable itself is often not sufficient to create a working process\n because many executables also load shared libraries. On Fuchsia, there is no\n global pool of shared libraries. Instead, every process has an associated\n `fuchsia.ldsvc.Loader`, which provides access to a private pool of shared\n libraries appropriate for that process.\n\n This interface provides a protocol for resolving a name into both the\n `zx.Handle:VMO` for the executable and the `fuchsia.ldsvc.Loader` for its\n associated shared libraries.\n\n This interface is rarely used directly. Instead, `fdio_spawn` and\n `fdio_spawn_etc` use this interface internally when they try to run a file\n with a `#!resolve` directive.\n",
+                "expression": "/// An interface for resolving names to executables and library loaders.\n///\n/// An executable itself is often not sufficient to create a working process\n/// because many executables also load shared libraries. On Fuchsia, there is no\n/// global pool of shared libraries. Instead, every process has an associated\n/// `fuchsia.ldsvc.Loader`, which provides access to a private pool of shared\n/// libraries appropriate for that process.\n///\n/// This interface provides a protocol for resolving a name into both the\n/// `zx.Handle:VMO` for the executable and the `fuchsia.ldsvc.Loader` for its\n/// associated shared libraries.\n///\n/// This interface is rarely used directly. Instead, `fdio_spawn` and\n/// `fdio_spawn_etc` use this interface internally when they try to run a file\n/// with a `#!resolve` directive.\n///",
+                "literal": {
+                  "kind": "string",
+                  "value": " An interface for resolving names to executables and library loaders.\n\n An executable itself is often not sufficient to create a working process\n because many executables also load shared libraries. On Fuchsia, there is no\n global pool of shared libraries. Instead, every process has an associated\n `fuchsia.ldsvc.Loader`, which provides access to a private pool of shared\n libraries appropriate for that process.\n\n This interface provides a protocol for resolving a name into both the\n `zx.Handle:VMO` for the executable and the `fuchsia.ldsvc.Loader` for its\n associated shared libraries.\n\n This interface is rarely used directly. Instead, `fdio_spawn` and\n `fdio_spawn_etc` use this interface internally when they try to run a file\n with a `#!resolve` directive.\n",
+                  "expression": "/// An interface for resolving names to executables and library loaders.\n///\n/// An executable itself is often not sufficient to create a working process\n/// because many executables also load shared libraries. On Fuchsia, there is no\n/// global pool of shared libraries. Instead, every process has an associated\n/// `fuchsia.ldsvc.Loader`, which provides access to a private pool of shared\n/// libraries appropriate for that process.\n///\n/// This interface provides a protocol for resolving a name into both the\n/// `zx.Handle:VMO` for the executable and the `fuchsia.ldsvc.Loader` for its\n/// associated shared libraries.\n///\n/// This interface is rarely used directly. Instead, `fdio_spawn` and\n/// `fdio_spawn_etc` use this interface internally when they try to run a file\n/// with a `#!resolve` directive.\n///"
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/resolver.fidl",
+                "line": 12,
+                "column": 1,
+                "length": 814
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/resolver.fidl",
+            "line": 12,
+            "column": 1,
+            "length": 814
+          }
+        },
+        {
+          "name": "deprecated",
+          "arguments": [],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/resolver.fidl",
+            "line": 29,
+            "column": 1,
+            "length": 11
+          }
+        },
+        {
+          "name": "discoverable",
+          "arguments": [],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/resolver.fidl",
+            "line": 30,
+            "column": 1,
+            "length": 13
+          }
+        }
+      ],
+      "openness": "closed",
+      "composed_protocols": [],
+      "methods": [
+        {
+          "kind": "twoway",
+          "ordinal": 4329530577128037520,
+          "name": "Resolve",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/resolver.fidl",
+            "line": 43,
+            "column": 12,
+            "length": 7
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Resolves the given `name` to an `executable` and an shared library\n loader.\n\n If present, the `executable` is suitable for use as the `executable`\n property of `LaunchInfo` -- in particular, it will have `ZX_RIGHT_EXECUTE`.\n If present, the `ldsvc` is suitable for use as the `PA_LDSVC_LOADER`\n handle when launching the process.\n\n For example, the resolver might locate the given `name` inside a package\n and return the executable binary from the package as well as a shared\n library loader scoped to that package.\n",
+                    "expression": "/// Resolves the given `name` to an `executable` and an shared library\n    /// loader.\n    ///\n    /// If present, the `executable` is suitable for use as the `executable`\n    /// property of `LaunchInfo` -- in particular, it will have `ZX_RIGHT_EXECUTE`.\n    /// If present, the `ldsvc` is suitable for use as the `PA_LDSVC_LOADER`\n    /// handle when launching the process.\n    ///\n    /// For example, the resolver might locate the given `name` inside a package\n    /// and return the executable binary from the package as well as a shared\n    /// library loader scoped to that package.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Resolves the given `name` to an `executable` and an shared library\n loader.\n\n If present, the `executable` is suitable for use as the `executable`\n property of `LaunchInfo` -- in particular, it will have `ZX_RIGHT_EXECUTE`.\n If present, the `ldsvc` is suitable for use as the `PA_LDSVC_LOADER`\n handle when launching the process.\n\n For example, the resolver might locate the given `name` inside a package\n and return the executable binary from the package as well as a shared\n library loader scoped to that package.\n",
+                      "expression": "/// Resolves the given `name` to an `executable` and an shared library\n    /// loader.\n    ///\n    /// If present, the `executable` is suitable for use as the `executable`\n    /// property of `LaunchInfo` -- in particular, it will have `ZX_RIGHT_EXECUTE`.\n    /// If present, the `ldsvc` is suitable for use as the `PA_LDSVC_LOADER`\n    /// handle when launching the process.\n    ///\n    /// For example, the resolver might locate the given `name` inside a package\n    /// and return the executable binary from the package as well as a shared\n    /// library loader scoped to that package."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/resolver.fidl",
+                    "line": 32,
+                    "column": 5,
+                    "length": 589
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/resolver.fidl",
+                "line": 32,
+                "column": 5,
+                "length": 589
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.process/ResolverResolveRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 2048,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.process/ResolverResolveResponse",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 12,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 2,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": false
+        }
+      ]
+    }
+  ],
+  "service_declarations": [],
+  "struct_declarations": [
+    {
+      "name": "fuchsia.process/HandleInfo",
+      "naming_context": [
+        "HandleInfo"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+        "line": 16,
+        "column": 6,
+        "length": 10
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Information about a handle provided to a process at startup.\n\n Processes are given a set of initial handles as part of the bootstrapping\n sequence. Some of these handles are associated with process argument\n identifiers that designate their intended use by the new process.\n\n This structure represents one such handle and its associated identifier.\n",
+                "expression": "/// Information about a handle provided to a process at startup.\n///\n/// Processes are given a set of initial handles as part of the bootstrapping\n/// sequence. Some of these handles are associated with process argument\n/// identifiers that designate their intended use by the new process.\n///\n/// This structure represents one such handle and its associated identifier.",
+                "literal": {
+                  "kind": "string",
+                  "value": " Information about a handle provided to a process at startup.\n\n Processes are given a set of initial handles as part of the bootstrapping\n sequence. Some of these handles are associated with process argument\n identifiers that designate their intended use by the new process.\n\n This structure represents one such handle and its associated identifier.\n",
+                  "expression": "/// Information about a handle provided to a process at startup.\n///\n/// Processes are given a set of initial handles as part of the bootstrapping\n/// sequence. Some of these handles are associated with process argument\n/// identifiers that designate their intended use by the new process.\n///\n/// This structure represents one such handle and its associated identifier."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 9,
+                "column": 1,
+                "length": 370
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 9,
+            "column": 1,
+            "length": 370
+          }
+        }
+      ],
+      "members": [
+        {
+          "type": {
+            "kind_v2": "handle",
+            "obj_type": 0,
+            "subtype": "handle",
+            "rights": 2147483648,
+            "nullable": false,
+            "resource_identifier": "zx/Handle",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "handle",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 18,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The handle to use for this process argument.\n",
+                    "expression": "/// The handle to use for this process argument.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The handle to use for this process argument.\n",
+                      "expression": "/// The handle to use for this process argument."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 17,
+                    "column": 5,
+                    "length": 48
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 17,
+                "column": 5,
+                "length": 48
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "id",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 24,
+            "column": 5,
+            "length": 2
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Process argument identifier.\n\n See <zircon/processargs.h> for definitions of well-known process\n arguments.\n",
+                    "expression": "/// Process argument identifier.\n    ///\n    /// See <zircon/processargs.h> for definitions of well-known process\n    /// arguments.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Process argument identifier.\n\n See <zircon/processargs.h> for definitions of well-known process\n arguments.\n",
+                      "expression": "/// Process argument identifier.\n    ///\n    /// See <zircon/processargs.h> for definitions of well-known process\n    /// arguments."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 20,
+                    "column": 5,
+                    "length": 132
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 20,
+                "column": 5,
+                "length": 132
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 4,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 8,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 1,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.process/LaunchInfo",
+      "naming_context": [
+        "LaunchInfo"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+        "line": 45,
+        "column": 6,
+        "length": 10
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " The information needed to launch a process.\n",
+                "expression": "/// The information needed to launch a process.",
+                "literal": {
+                  "kind": "string",
+                  "value": " The information needed to launch a process.\n",
+                  "expression": "/// The information needed to launch a process."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 44,
+                "column": 1,
+                "length": 47
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 44,
+            "column": 1,
+            "length": 47
+          }
+        }
+      ],
+      "members": [
+        {
+          "type": {
+            "kind_v2": "handle",
+            "obj_type": 3,
+            "subtype": "vmo",
+            "rights": 2147483648,
+            "nullable": false,
+            "resource_identifier": "zx/Handle",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "executable",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 47,
+            "column": 5,
+            "length": 10
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The executable to run in the process.\n",
+                    "expression": "/// The executable to run in the process.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The executable to run in the process.\n",
+                      "expression": "/// The executable to run in the process."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 46,
+                    "column": 5,
+                    "length": 41
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 46,
+                "column": 5,
+                "length": 41
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "handle",
+            "obj_type": 17,
+            "subtype": "job",
+            "rights": 2147483648,
+            "nullable": false,
+            "resource_identifier": "zx/Handle",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "job",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 50,
+            "column": 5,
+            "length": 3
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The job in which to create the process.\n",
+                    "expression": "/// The job in which to create the process.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The job in which to create the process.\n",
+                      "expression": "/// The job in which to create the process."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 49,
+                    "column": 5,
+                    "length": 43
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 49,
+                "column": 5,
+                "length": 43
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 4,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "string",
+            "maybe_element_count": 32,
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 32,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "name",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 53,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The name to assign to the created process.\n",
+                    "expression": "/// The name to assign to the created process.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The name to assign to the created process.\n",
+                      "expression": "/// The name to assign to the created process."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 52,
+                    "column": 5,
+                    "length": 46
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 52,
+                "column": 5,
+                "length": 46
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 8,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 24,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 2,
+        "max_out_of_line": 32,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.process/LauncherAddArgsRequest",
+      "naming_context": [
+        "Launcher",
+        "AddArgs",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+        "line": 146,
+        "column": 20,
+        "length": 58
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "vector",
+            "element_type": {
+              "kind_v2": "vector",
+              "element_type": {
+                "kind_v2": "primitive",
+                "subtype": "uint8",
+                "type_shape_v2": {
+                  "inline_size": 1,
+                  "alignment": 1,
+                  "depth": 0,
+                  "max_handles": 0,
+                  "max_out_of_line": 0,
+                  "has_padding": false,
+                  "has_flexible_envelope": false
+                }
+              },
+              "nullable": false,
+              "type_shape_v2": {
+                "inline_size": 16,
+                "alignment": 8,
+                "depth": 1,
+                "max_handles": 0,
+                "max_out_of_line": 4294967295,
+                "has_padding": true,
+                "has_flexible_envelope": false
+              }
+            },
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 0,
+              "max_out_of_line": 4294967295,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "args",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 147,
+            "column": 9,
+            "length": 4
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 2,
+        "max_handles": 0,
+        "max_out_of_line": 4294967295,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.process/LauncherAddEnvironsRequest",
+      "naming_context": [
+        "Launcher",
+        "AddEnvirons",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+        "line": 153,
+        "column": 24,
+        "length": 61
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "vector",
+            "element_type": {
+              "kind_v2": "vector",
+              "element_type": {
+                "kind_v2": "primitive",
+                "subtype": "uint8",
+                "type_shape_v2": {
+                  "inline_size": 1,
+                  "alignment": 1,
+                  "depth": 0,
+                  "max_handles": 0,
+                  "max_out_of_line": 0,
+                  "has_padding": false,
+                  "has_flexible_envelope": false
+                }
+              },
+              "nullable": false,
+              "type_shape_v2": {
+                "inline_size": 16,
+                "alignment": 8,
+                "depth": 1,
+                "max_handles": 0,
+                "max_out_of_line": 4294967295,
+                "has_padding": true,
+                "has_flexible_envelope": false
+              }
+            },
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 0,
+              "max_out_of_line": 4294967295,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "environ",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 154,
+            "column": 9,
+            "length": 7
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 2,
+        "max_handles": 0,
+        "max_out_of_line": 4294967295,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.process/LauncherAddHandlesRequest",
+      "naming_context": [
+        "Launcher",
+        "AddHandles",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+        "line": 170,
+        "column": 23,
+        "length": 63
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "vector",
+            "element_type": {
+              "kind_v2": "identifier",
+              "identifier": "fuchsia.process/HandleInfo",
+              "nullable": false,
+              "type_shape_v2": {
+                "inline_size": 8,
+                "alignment": 4,
+                "depth": 0,
+                "max_handles": 1,
+                "max_out_of_line": 0,
+                "has_padding": false,
+                "has_flexible_envelope": false
+              }
+            },
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 4294967295,
+              "max_out_of_line": 4294967295,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "handles",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 171,
+            "column": 9,
+            "length": 7
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 4294967295,
+        "max_out_of_line": 4294967295,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.process/LauncherAddNamesRequest",
+      "naming_context": [
+        "Launcher",
+        "AddNames",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+        "line": 163,
+        "column": 21,
+        "length": 59
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "vector",
+            "element_type": {
+              "kind_v2": "identifier",
+              "identifier": "fuchsia.process/NameInfo",
+              "nullable": false,
+              "type_shape_v2": {
+                "inline_size": 24,
+                "alignment": 8,
+                "depth": 1,
+                "max_handles": 1,
+                "max_out_of_line": 4096,
+                "has_padding": true,
+                "has_flexible_envelope": false
+              }
+            },
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 4294967295,
+              "max_out_of_line": 4294967295,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "names",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 164,
+            "column": 9,
+            "length": 5
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 2,
+        "max_handles": 4294967295,
+        "max_out_of_line": 4294967295,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.process/LauncherCreateWithoutStartingRequest",
+      "naming_context": [
+        "Launcher",
+        "CreateWithoutStarting",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+        "line": 136,
+        "column": 34,
+        "length": 48
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.process/LaunchInfo",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 24,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 2,
+              "max_out_of_line": 32,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "info",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 137,
+            "column": 9,
+            "length": 4
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 24,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 2,
+        "max_out_of_line": 32,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.process/LauncherCreateWithoutStartingResponse",
+      "naming_context": [
+        "Launcher",
+        "CreateWithoutStarting",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+        "line": 138,
+        "column": 12,
+        "length": 85
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Result",
+            "args": [],
+            "nullable": false
+          },
+          "name": "status",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 139,
+            "column": 9,
+            "length": 6
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 4
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.process/ProcessStartData",
+            "nullable": true,
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 4,
+              "max_out_of_line": 56,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "data",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 140,
+            "column": 9,
+            "length": 4
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 8,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 4,
+        "max_out_of_line": 56,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.process/LauncherLaunchRequest",
+      "naming_context": [
+        "Launcher",
+        "Launch",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+        "line": 120,
+        "column": 19,
+        "length": 48
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.process/LaunchInfo",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 24,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 2,
+              "max_out_of_line": 32,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "info",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 121,
+            "column": 9,
+            "length": 4
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 24,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 2,
+        "max_out_of_line": 32,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.process/LauncherLaunchResponse",
+      "naming_context": [
+        "Launcher",
+        "Launch",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+        "line": 122,
+        "column": 12,
+        "length": 96
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Result",
+            "args": [],
+            "nullable": false
+          },
+          "name": "status",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 123,
+            "column": 9,
+            "length": 6
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "handle",
+            "obj_type": 1,
+            "subtype": "process",
+            "rights": 2147483648,
+            "nullable": true,
+            "resource_identifier": "zx/Handle",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "process",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 124,
+            "column": 9,
+            "length": 7
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 4,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 8,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 1,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.process/LauncherSetOptionsRequest",
+      "naming_context": [
+        "Launcher",
+        "SetOptions",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+        "line": 178,
+        "column": 23,
+        "length": 300
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "options",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 183,
+            "column": 9,
+            "length": 7
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " These options are expected to be valid process creation options. The options are checked\n on `Launch` or `CreateWithoutStarting`.\n\n See <https://fuchsia.dev/fuchsia-src/reference/syscalls/process_create> for details.\n",
+                    "expression": "/// These options are expected to be valid process creation options. The options are checked\n        /// on `Launch` or `CreateWithoutStarting`.\n        ///\n        /// See <https://fuchsia.dev/fuchsia-src/reference/syscalls/process_create> for details.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " These options are expected to be valid process creation options. The options are checked\n on `Launch` or `CreateWithoutStarting`.\n\n See <https://fuchsia.dev/fuchsia-src/reference/syscalls/process_create> for details.\n",
+                      "expression": "/// These options are expected to be valid process creation options. The options are checked\n        /// on `Launch` or `CreateWithoutStarting`.\n        ///\n        /// See <https://fuchsia.dev/fuchsia-src/reference/syscalls/process_create> for details."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 179,
+                    "column": 9,
+                    "length": 253
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 179,
+                "column": 9,
+                "length": 253
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 4,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.process/NameInfo",
+      "naming_context": [
+        "NameInfo"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+        "line": 34,
+        "column": 6,
+        "length": 8
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " A namespace entry provided to a process at startup.\n\n Processes are given a set of initial handles as part of the bootstrapping\n sequence. Some of these handles are associated with paths that designate\n their intended use by the new process as namespace entries.\n\n This structure represents one such handle and its associated namespace path.\n",
+                "expression": "/// A namespace entry provided to a process at startup.\n///\n/// Processes are given a set of initial handles as part of the bootstrapping\n/// sequence. Some of these handles are associated with paths that designate\n/// their intended use by the new process as namespace entries.\n///\n/// This structure represents one such handle and its associated namespace path.",
+                "literal": {
+                  "kind": "string",
+                  "value": " A namespace entry provided to a process at startup.\n\n Processes are given a set of initial handles as part of the bootstrapping\n sequence. Some of these handles are associated with paths that designate\n their intended use by the new process as namespace entries.\n\n This structure represents one such handle and its associated namespace path.\n",
+                  "expression": "/// A namespace entry provided to a process at startup.\n///\n/// Processes are given a set of initial handles as part of the bootstrapping\n/// sequence. Some of these handles are associated with paths that designate\n/// their intended use by the new process as namespace entries.\n///\n/// This structure represents one such handle and its associated namespace path."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 27,
+                "column": 1,
+                "length": 363
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 27,
+            "column": 1,
+            "length": 363
+          }
+        }
+      ],
+      "members": [
+        {
+          "type": {
+            "kind_v2": "string",
+            "maybe_element_count": 4095,
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 4096,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "fuchsia.io/Path",
+            "args": [],
+            "nullable": false
+          },
+          "name": "path",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 38,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Path at which to install the associated directory.\n\n Must be an absolute path (i.e., start with '/').\n",
+                    "expression": "/// Path at which to install the associated directory.\n    ///\n    /// Must be an absolute path (i.e., start with '/').",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Path at which to install the associated directory.\n\n Must be an absolute path (i.e., start with '/').\n",
+                      "expression": "/// Path at which to install the associated directory.\n    ///\n    /// Must be an absolute path (i.e., start with '/')."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 35,
+                    "column": 5,
+                    "length": 119
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 35,
+                "column": 5,
+                "length": 119
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "endpoint",
+            "role": "client",
+            "protocol": "fuchsia.io/Directory",
+            "nullable": false,
+            "protocol_transport": "Channel",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "directory",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 41,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The associated directory.\n",
+                    "expression": "/// The associated directory.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The associated directory.\n",
+                      "expression": "/// The associated directory."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 40,
+                    "column": 5,
+                    "length": 29
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 40,
+                "column": 5,
+                "length": 29
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 16,
+            "padding": 4
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 24,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 1,
+        "max_out_of_line": 4096,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.process/ProcessStartData",
+      "naming_context": [
+        "ProcessStartData"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+        "line": 59,
+        "column": 6,
+        "length": 16
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " The information required to start a process.\n\n To start the process, call `zx_process_start` with the arguments provided.\n",
+                "expression": "/// The information required to start a process.\n///\n/// To start the process, call `zx_process_start` with the arguments provided.",
+                "literal": {
+                  "kind": "string",
+                  "value": " The information required to start a process.\n\n To start the process, call `zx_process_start` with the arguments provided.\n",
+                  "expression": "/// The information required to start a process.\n///\n/// To start the process, call `zx_process_start` with the arguments provided."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 56,
+                "column": 1,
+                "length": 131
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 56,
+            "column": 1,
+            "length": 131
+          }
+        }
+      ],
+      "members": [
+        {
+          "type": {
+            "kind_v2": "handle",
+            "obj_type": 1,
+            "subtype": "process",
+            "rights": 2147483648,
+            "nullable": false,
+            "resource_identifier": "zx/Handle",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "process",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 61,
+            "column": 5,
+            "length": 7
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The process that was created.\n",
+                    "expression": "/// The process that was created.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The process that was created.\n",
+                      "expression": "/// The process that was created."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 60,
+                    "column": 5,
+                    "length": 33
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 60,
+                "column": 5,
+                "length": 33
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "handle",
+            "obj_type": 18,
+            "subtype": "vmar",
+            "rights": 2147483648,
+            "nullable": false,
+            "resource_identifier": "zx/Handle",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "root_vmar",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 66,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The vmar object that was created when the process was created.\n\n See <https://fuchsia.dev/fuchsia-src/reference/syscalls/process_create.md>.\n",
+                    "expression": "/// The vmar object that was created when the process was created.\n    ///\n    /// See <https://fuchsia.dev/fuchsia-src/reference/syscalls/process_create.md>.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The vmar object that was created when the process was created.\n\n See <https://fuchsia.dev/fuchsia-src/reference/syscalls/process_create.md>.\n",
+                      "expression": "/// The vmar object that was created when the process was created.\n    ///\n    /// See <https://fuchsia.dev/fuchsia-src/reference/syscalls/process_create.md>."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 63,
+                    "column": 5,
+                    "length": 158
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 63,
+                "column": 5,
+                "length": 158
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 4,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "handle",
+            "obj_type": 2,
+            "subtype": "thread",
+            "rights": 2147483648,
+            "nullable": false,
+            "resource_identifier": "zx/Handle",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "thread",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 71,
+            "column": 5,
+            "length": 6
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The initial thread for the process.\n\n Should be passed to `zx_process_start` when starting the process.\n",
+                    "expression": "/// The initial thread for the process.\n    ///\n    /// Should be passed to `zx_process_start` when starting the process.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The initial thread for the process.\n\n Should be passed to `zx_process_start` when starting the process.\n",
+                      "expression": "/// The initial thread for the process.\n    ///\n    /// Should be passed to `zx_process_start` when starting the process."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 68,
+                    "column": 5,
+                    "length": 121
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 68,
+                "column": 5,
+                "length": 121
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 8,
+            "padding": 4
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint64",
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "entry",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 76,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The address of the initial entry point in the process.\n\n Should be passed to `zx_process_start` when starting the process.\n",
+                    "expression": "/// The address of the initial entry point in the process.\n    ///\n    /// Should be passed to `zx_process_start` when starting the process.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The address of the initial entry point in the process.\n\n Should be passed to `zx_process_start` when starting the process.\n",
+                      "expression": "/// The address of the initial entry point in the process.\n    ///\n    /// Should be passed to `zx_process_start` when starting the process."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 73,
+                    "column": 5,
+                    "length": 140
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 73,
+                "column": 5,
+                "length": 140
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 16,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint64",
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "stack",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 81,
+            "column": 5,
+            "length": 5
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The stack pointer value for the initial thread of the process.\n\n Should be passed to `zx_process_start` when starting the process.\n",
+                    "expression": "/// The stack pointer value for the initial thread of the process.\n    ///\n    /// Should be passed to `zx_process_start` when starting the process.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The stack pointer value for the initial thread of the process.\n\n Should be passed to `zx_process_start` when starting the process.\n",
+                      "expression": "/// The stack pointer value for the initial thread of the process.\n    ///\n    /// Should be passed to `zx_process_start` when starting the process."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 78,
+                    "column": 5,
+                    "length": 148
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 78,
+                "column": 5,
+                "length": 148
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 24,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "handle",
+            "obj_type": 4,
+            "subtype": "channel",
+            "rights": 2147483648,
+            "nullable": false,
+            "resource_identifier": "zx/Handle",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "bootstrap",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 86,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The bootstrap channel to pass to the process on startup.\n\n Should be passed to `zx_process_start` when starting the process.\n",
+                    "expression": "/// The bootstrap channel to pass to the process on startup.\n    ///\n    /// Should be passed to `zx_process_start` when starting the process.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The bootstrap channel to pass to the process on startup.\n\n Should be passed to `zx_process_start` when starting the process.\n",
+                      "expression": "/// The bootstrap channel to pass to the process on startup.\n    ///\n    /// Should be passed to `zx_process_start` when starting the process."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 83,
+                    "column": 5,
+                    "length": 142
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 83,
+                "column": 5,
+                "length": 142
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 32,
+            "padding": 4
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint64",
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "vdso_base",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 91,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The base address of the vDSO to pass to the process on startup.\n\n Should be passed to `zx_process_start` when starting the process.\n",
+                    "expression": "/// The base address of the vDSO to pass to the process on startup.\n    ///\n    /// Should be passed to `zx_process_start` when starting the process.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The base address of the vDSO to pass to the process on startup.\n\n Should be passed to `zx_process_start` when starting the process.\n",
+                      "expression": "/// The base address of the vDSO to pass to the process on startup.\n    ///\n    /// Should be passed to `zx_process_start` when starting the process."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 88,
+                    "column": 5,
+                    "length": 149
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 88,
+                "column": 5,
+                "length": 149
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 40,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint64",
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "base",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+            "line": 96,
+            "column": 5,
+            "length": 4
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The base load address of the ELF file loaded.\n\n Most often used by debuggers or other tools that inspect the process.\n",
+                    "expression": "/// The base load address of the ELF file loaded.\n    ///\n    /// Most often used by debuggers or other tools that inspect the process.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The base load address of the ELF file loaded.\n\n Most often used by debuggers or other tools that inspect the process.\n",
+                      "expression": "/// The base load address of the ELF file loaded.\n    ///\n    /// Most often used by debuggers or other tools that inspect the process."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                    "line": 93,
+                    "column": 5,
+                    "length": 135
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.process/launcher.fidl",
+                "line": 93,
+                "column": 5,
+                "length": 135
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 48,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 56,
+        "alignment": 8,
+        "depth": 0,
+        "max_handles": 4,
+        "max_out_of_line": 0,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.process/ResolverResolveRequest",
+      "naming_context": [
+        "Resolver",
+        "Resolve",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.process/resolver.fidl",
+        "line": 43,
+        "column": 20,
+        "length": 57
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "string",
+            "maybe_element_count": 2048,
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 2048,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "name",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/resolver.fidl",
+            "line": 44,
+            "column": 9,
+            "length": 4
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 2048,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.process/ResolverResolveResponse",
+      "naming_context": [
+        "Resolver",
+        "Resolve",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.process/resolver.fidl",
+        "line": 45,
+        "column": 12,
+        "length": 154
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Result",
+            "args": [],
+            "nullable": false
+          },
+          "name": "status",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/resolver.fidl",
+            "line": 46,
+            "column": 9,
+            "length": 6
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "handle",
+            "obj_type": 3,
+            "subtype": "vmo",
+            "rights": 2147483648,
+            "nullable": true,
+            "resource_identifier": "zx/Handle",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "executable",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/resolver.fidl",
+            "line": 47,
+            "column": 9,
+            "length": 10
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 4,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "endpoint",
+            "role": "client",
+            "protocol": "fuchsia.ldsvc/Loader",
+            "nullable": true,
+            "protocol_transport": "Channel",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 1,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "ldsvc",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.process/resolver.fidl",
+            "line": 48,
+            "column": 9,
+            "length": 5
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 8,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": true,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 12,
+        "alignment": 4,
+        "depth": 0,
+        "max_handles": 2,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    }
+  ],
+  "external_struct_declarations": [],
+  "table_declarations": [],
+  "union_declarations": [],
+  "alias_declarations": [],
+  "new_type_declarations": [],
+  "declaration_order": [
+    "fuchsia.process/HandleInfo",
+    "fuchsia.process/LaunchInfo",
+    "fuchsia.process/LauncherLaunchRequest",
+    "fuchsia.process/LauncherLaunchResponse",
+    "fuchsia.process/LauncherCreateWithoutStartingRequest",
+    "fuchsia.process/LauncherCreateWithoutStartingResponse",
+    "fuchsia.process/LauncherAddArgsRequest",
+    "fuchsia.process/LauncherAddEnvironsRequest",
+    "fuchsia.process/LauncherAddHandlesRequest",
+    "fuchsia.process/LauncherSetOptionsRequest",
+    "fuchsia.process/NameInfo",
+    "fuchsia.process/LauncherAddNamesRequest",
+    "fuchsia.process/Launcher",
+    "fuchsia.process/MAX_RESOLVE_NAME_SIZE",
+    "fuchsia.process/ProcessStartData",
+    "fuchsia.process/ResolverResolveRequest",
+    "fuchsia.process/ResolverResolveResponse",
+    "fuchsia.process/Resolver"
+  ],
+  "declarations": {
+    "fuchsia.process/MAX_RESOLVE_NAME_SIZE": "const",
+    "fuchsia.process/Launcher": "protocol",
+    "fuchsia.process/Resolver": "protocol",
+    "fuchsia.process/HandleInfo": "struct",
+    "fuchsia.process/LaunchInfo": "struct",
+    "fuchsia.process/LauncherAddArgsRequest": "struct",
+    "fuchsia.process/LauncherAddEnvironsRequest": "struct",
+    "fuchsia.process/LauncherAddHandlesRequest": "struct",
+    "fuchsia.process/LauncherAddNamesRequest": "struct",
+    "fuchsia.process/LauncherCreateWithoutStartingRequest": "struct",
+    "fuchsia.process/LauncherCreateWithoutStartingResponse": "struct",
+    "fuchsia.process/LauncherLaunchRequest": "struct",
+    "fuchsia.process/LauncherLaunchResponse": "struct",
+    "fuchsia.process/LauncherSetOptionsRequest": "struct",
+    "fuchsia.process/NameInfo": "struct",
+    "fuchsia.process/ProcessStartData": "struct",
+    "fuchsia.process/ResolverResolveRequest": "struct",
+    "fuchsia.process/ResolverResolveResponse": "struct"
+  }
+}

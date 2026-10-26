@@ -1,0 +1,6 @@
+[
+  {
+    "candidate": "gen/sdk/lib/c/include/generated.json",
+    "golden": "sdk/lib/c/include/generated.json"
+  }
+]

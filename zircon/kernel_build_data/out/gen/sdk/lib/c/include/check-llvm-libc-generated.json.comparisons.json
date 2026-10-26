@@ -1,0 +1,6 @@
+[
+  {
+    "candidate": "gen/sdk/lib/c/include/llvm-libc-generated.json",
+    "golden": "sdk/lib/c/include/llvm-libc-generated.json"
+  }
+]

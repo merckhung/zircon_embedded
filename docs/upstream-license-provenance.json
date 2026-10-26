@@ -1,0 +1,678 @@
+[
+  {
+    "path": "docs/licenses/FUCHSIA-LICENSE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/LICENSE",
+    "sha256": "83c1763356e822adde0a2cae748d938a73fdc263849ccff6b27776dff213bd32"
+  },
+  {
+    "path": "PATENTS",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/PATENTS",
+    "sha256": "52beb3ac72a0e7f5060384d16e4e6f91573016448fbff363c0b01a66fe99f547"
+  },
+  {
+    "path": "zircon/kernel/LICENSE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/zircon/kernel/LICENSE",
+    "sha256": "094ad236d1edd41e9be5882ad482f90467759b03901aa7e1d73b4e90a3d67352"
+  },
+  {
+    "path": "zircon/system/LICENSE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/zircon/system/LICENSE",
+    "sha256": "de37cc3035390ccc213c6ab10232c4b8db931cd318d64f3d17a0e209b414c3eb"
+  },
+  {
+    "path": "zircon/scripts/LICENSE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/zircon/scripts/LICENSE",
+    "sha256": "debc6197a30463cdc066ce0b4eaeb319640ef1c425db2cdfa1708b1b59833a9e"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/lock_api-0.4.14/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/lock_api-0.4.14/LICENSE-APACHE",
+    "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/lock_api-0.4.14/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/lock_api-0.4.14/LICENSE-MIT",
+    "sha256": "c9a75f18b9ab2927829a208fc6aa2cf4e63b8420887ba29cdb265d6619ae82d5"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/slab-0.4.12/LICENSE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/slab-0.4.12/LICENSE",
+    "sha256": "8ce0830173fdac609dfb4ea603fdc002c2f4af0dc9b1a005653f5da9cf534b18"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/serde-1.0.229/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/serde-1.0.229/LICENSE-APACHE",
+    "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/serde-1.0.229/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/serde-1.0.229/LICENSE-MIT",
+    "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/serde_core-1.0.229/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/serde_core-1.0.229/LICENSE-APACHE",
+    "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/serde_core-1.0.229/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/serde_core-1.0.229/LICENSE-MIT",
+    "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/num-derive-0.5.1/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/num-derive-0.5.1/LICENSE-APACHE",
+    "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/num-derive-0.5.1/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/num-derive-0.5.1/LICENSE-MIT",
+    "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/serde_derive-1.0.229/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/serde_derive-1.0.229/LICENSE-APACHE",
+    "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/serde_derive-1.0.229/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/serde_derive-1.0.229/LICENSE-MIT",
+    "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/thiserror-2.0.20/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/thiserror-2.0.20/LICENSE-APACHE",
+    "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/thiserror-2.0.20/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/thiserror-2.0.20/LICENSE-MIT",
+    "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/crossbeam-deque-0.8.6/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/crossbeam-deque-0.8.6/LICENSE-APACHE",
+    "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/crossbeam-deque-0.8.6/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/crossbeam-deque-0.8.6/LICENSE-MIT",
+    "sha256": "5734ed989dfca1f625b40281ee9f4530f91b2411ec01cb748223e7eb87e201ab"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/crossbeam-channel-0.5.17/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/crossbeam-channel-0.5.17/LICENSE-APACHE",
+    "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/crossbeam-channel-0.5.17/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/crossbeam-channel-0.5.17/LICENSE-MIT",
+    "sha256": "5734ed989dfca1f625b40281ee9f4530f91b2411ec01cb748223e7eb87e201ab"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/crossbeam-channel-0.5.17/LICENSE-THIRD-PARTY",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/crossbeam-channel-0.5.17/LICENSE-THIRD-PARTY",
+    "sha256": "b16db96b93b1d7cf7bea533f572091ec6bca3234fbe0a83038be772ff391a44c"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/bstr-1.13.1/COPYING",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/bstr-1.13.1/COPYING",
+    "sha256": "68653aaa727a2bfa31b7a751e31701ce33c49d695c12dd291a07d1c54da4c14b"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/bstr-1.13.1/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/bstr-1.13.1/LICENSE-APACHE",
+    "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/bstr-1.13.1/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/bstr-1.13.1/LICENSE-MIT",
+    "sha256": "6b7374c39a57e57fc2c38eb529c4c88340152b10f51dd5ae2d819dfa67f61715"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/syn-2.0.119/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/syn-2.0.119/LICENSE-APACHE",
+    "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/syn-2.0.119/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/syn-2.0.119/LICENSE-MIT",
+    "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/anyhow-1.0.104/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/anyhow-1.0.104/LICENSE-APACHE",
+    "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/anyhow-1.0.104/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/anyhow-1.0.104/LICENSE-MIT",
+    "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/num-traits-0.2.19/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/num-traits-0.2.19/LICENSE-APACHE",
+    "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/num-traits-0.2.19/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/num-traits-0.2.19/LICENSE-MIT",
+    "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/pin-project-1.1.11/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/pin-project-1.1.11/LICENSE-APACHE",
+    "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/pin-project-1.1.11/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/pin-project-1.1.11/LICENSE-MIT",
+    "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/futures-0.3.34/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/futures-0.3.34/LICENSE-APACHE",
+    "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/futures-0.3.34/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/futures-0.3.34/LICENSE-MIT",
+    "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/unicode-ident-1.0.19/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/unicode-ident-1.0.19/LICENSE-APACHE",
+    "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/unicode-ident-1.0.19/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/unicode-ident-1.0.19/LICENSE-MIT",
+    "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/unicode-ident-1.0.19/LICENSE-UNICODE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/unicode-ident-1.0.19/LICENSE-UNICODE",
+    "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/rand-0.10.2/COPYRIGHT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/rand-0.10.2/COPYRIGHT",
+    "sha256": "90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/rand-0.10.2/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/rand-0.10.2/LICENSE-APACHE",
+    "sha256": "35242e7a83f69875e6edeff02291e688c97caafe2f8902e4e19b49d3e78b4cab"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/rand-0.10.2/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/rand-0.10.2/LICENSE-MIT",
+    "sha256": "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/zerocopy-0.8.48/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/zerocopy-0.8.48/LICENSE-APACHE",
+    "sha256": "9d185ac6703c4b0453974c0d85e9eee43e6941009296bb1f5eb0b54e2329e9f3"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/zerocopy-0.8.48/LICENSE-BSD",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/zerocopy-0.8.48/LICENSE-BSD",
+    "sha256": "83c1763356e822adde0a2cae748d938a73fdc263849ccff6b27776dff213bd32"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/zerocopy-0.8.48/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/zerocopy-0.8.48/LICENSE-MIT",
+    "sha256": "1a2f5c12ddc934d58956aa5dbdd3255fe55fd957633ab7d0d39e4f0daa73f7df"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/futures-core-0.3.34/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/futures-core-0.3.34/LICENSE-APACHE",
+    "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/futures-core-0.3.34/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/futures-core-0.3.34/LICENSE-MIT",
+    "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/thiserror-impl-2.0.20/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/thiserror-impl-2.0.20/LICENSE-APACHE",
+    "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/thiserror-impl-2.0.20/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/thiserror-impl-2.0.20/LICENSE-MIT",
+    "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/static_assertions-1.1.0/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/static_assertions-1.1.0/LICENSE-APACHE",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/static_assertions-1.1.0/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/static_assertions-1.1.0/LICENSE-MIT",
+    "sha256": "ea084a2373ebc1f0902c09266e7bf25a05ab3814c1805bb017ffa7308f90c061"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/cfg-if-1.0.4/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/cfg-if-1.0.4/LICENSE-APACHE",
+    "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/cfg-if-1.0.4/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/cfg-if-1.0.4/LICENSE-MIT",
+    "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/syn-3.0.6/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/syn-3.0.6/LICENSE-APACHE",
+    "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/syn-3.0.6/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/syn-3.0.6/LICENSE-MIT",
+    "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/futures-channel-0.3.34/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/futures-channel-0.3.34/LICENSE-APACHE",
+    "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/futures-channel-0.3.34/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/futures-channel-0.3.34/LICENSE-MIT",
+    "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/futures-io-0.3.34/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/futures-io-0.3.34/LICENSE-APACHE",
+    "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/futures-io-0.3.34/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/futures-io-0.3.34/LICENSE-MIT",
+    "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/munge_macro-0.4.7/LICENSE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/munge_macro-0.4.7/LICENSE",
+    "sha256": "b9c981ef9c76c0188c3ea22dca3c54744ad228071229cde4ff532543e1146a88"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/libm-0.2.16/LICENSE.txt",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/libm-0.2.16/LICENSE.txt",
+    "sha256": "3823dda7cf046602f4b4e77ec8e227863dc4736037cc85bb33d9f19febe16bb7"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/socket2-0.6.4/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/socket2-0.6.4/LICENSE-APACHE",
+    "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/socket2-0.6.4/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/socket2-0.6.4/LICENSE-MIT",
+    "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/futures-sink-0.3.34/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/futures-sink-0.3.34/LICENSE-APACHE",
+    "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/futures-sink-0.3.34/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/futures-sink-0.3.34/LICENSE-MIT",
+    "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/crossbeam-queue-0.3.12/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/crossbeam-queue-0.3.12/LICENSE-APACHE",
+    "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/crossbeam-queue-0.3.12/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/crossbeam-queue-0.3.12/LICENSE-MIT",
+    "sha256": "5734ed989dfca1f625b40281ee9f4530f91b2411ec01cb748223e7eb87e201ab"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/futures-util-0.3.34/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/futures-util-0.3.34/LICENSE-APACHE",
+    "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/futures-util-0.3.34/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/futures-util-0.3.34/LICENSE-MIT",
+    "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/crc32fast-1.5.0/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/crc32fast-1.5.0/LICENSE-APACHE",
+    "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/crc32fast-1.5.0/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/crc32fast-1.5.0/LICENSE-MIT",
+    "sha256": "61d383b05b87d78f94d2937e2580cce47226d17823c0430fbcad09596537efcf"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/crossbeam-0.8.5/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/crossbeam-0.8.5/LICENSE-APACHE",
+    "sha256": "6f712474a3e3be1386d2d0c29449850ea788da64d35cff0fc8799acf741e9ecd"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/crossbeam-0.8.5/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/crossbeam-0.8.5/LICENSE-MIT",
+    "sha256": "5734ed989dfca1f625b40281ee9f4530f91b2411ec01cb748223e7eb87e201ab"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/zstd-safe-7.2.4/LICENSE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/zstd-safe-7.2.4/LICENSE",
+    "sha256": "a77b7cfeaf911ed410ffbe76f0cb2b24ad8a4d94e7ead5727e914425c416cc63"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/zstd-safe-7.2.4/LICENSE.Apache-2.0",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/zstd-safe-7.2.4/LICENSE.Apache-2.0",
+    "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/zstd-safe-7.2.4/LICENSE.Mit",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/zstd-safe-7.2.4/LICENSE.Mit",
+    "sha256": "129e8edef29e9abcd2ebabe252f4ef1b1289cdca356bf0040284a2fbccfb96c8"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/rustc-hash-2.1.3/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/rustc-hash-2.1.3/LICENSE-APACHE",
+    "sha256": "95bd3988beee069fa2848f648dab43cc6e0b2add2ad6bcb17360caf749802bcc"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/rustc-hash-2.1.3/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/rustc-hash-2.1.3/LICENSE-MIT",
+    "sha256": "30fefc3a7d6a0041541858293bcbea2dde4caa4c0a5802f996a7f7e8c0085652"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/pin-project-lite-0.2.17/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/pin-project-lite-0.2.17/LICENSE-APACHE",
+    "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/pin-project-lite-0.2.17/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/pin-project-lite-0.2.17/LICENSE-MIT",
+    "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/futures-macro-0.3.34/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/futures-macro-0.3.34/LICENSE-APACHE",
+    "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/futures-macro-0.3.34/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/futures-macro-0.3.34/LICENSE-MIT",
+    "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/futures-task-0.3.34/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/futures-task-0.3.34/LICENSE-APACHE",
+    "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/futures-task-0.3.34/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/futures-task-0.3.34/LICENSE-MIT",
+    "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+  },
+  {
+    "path": "third_party/rust_crates/forks/pin-init/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/forks/pin-init/LICENSE-APACHE",
+    "sha256": "97345ce38907b2d685c97211a85e50b994725530af4540198f1ff4e45cfaedf7"
+  },
+  {
+    "path": "third_party/rust_crates/forks/pin-init/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/forks/pin-init/LICENSE-MIT",
+    "sha256": "4529d20faba0ff22adc91003d83f540d63dfebab7ecab8437d0758e8c35a1b56"
+  },
+  {
+    "path": "third_party/rust_crates/forks/libc-0.2.189/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/forks/libc-0.2.189/LICENSE-APACHE",
+    "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+  },
+  {
+    "path": "third_party/rust_crates/forks/libc-0.2.189/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/forks/libc-0.2.189/LICENSE-MIT",
+    "sha256": "123a331b5dbf04c30097fa43b8f858bc85df671fe776de498d01f3d6b7c1f69e"
+  },
+  {
+    "path": "third_party/rust_crates/compat/thiserror/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/compat/thiserror/LICENSE-APACHE",
+    "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+  },
+  {
+    "path": "third_party/rust_crates/compat/thiserror/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/compat/thiserror/LICENSE-MIT",
+    "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+  },
+  {
+    "path": "third_party/rust_crates/compat/serde/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/compat/serde/LICENSE-APACHE",
+    "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+  },
+  {
+    "path": "third_party/rust_crates/compat/serde/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/compat/serde/LICENSE-MIT",
+    "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+  },
+  {
+    "path": "third_party/rust_crates/ask2patch/memchr/COPYING",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/ask2patch/memchr/COPYING",
+    "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+  },
+  {
+    "path": "third_party/rust_crates/ask2patch/memchr/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/ask2patch/memchr/LICENSE-MIT",
+    "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+  },
+  {
+    "path": "third_party/rust_crates/ask2patch/byteorder/COPYING",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/ask2patch/byteorder/COPYING",
+    "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+  },
+  {
+    "path": "third_party/rust_crates/ask2patch/byteorder/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/ask2patch/byteorder/LICENSE-MIT",
+    "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+  },
+  {
+    "path": "third_party/boringssl/src/LICENSE",
+    "url": "https://boringssl.googlesource.com/boringssl/+/5d6989e1e2bfbc592876a5d88c4d1d7591a462ec/LICENSE",
+    "sha256": "827c8d8fc207c2392794eef9e00fe246f9f61fdcc132556c275be3dd8c3cd97f"
+  },
+  {
+    "path": "third_party/llvm-libc/src/LICENSE.TXT",
+    "url": "https://llvm.googlesource.com/llvm-project/libc/+/f8e576de66a6f3764b0054154dff0aaecb501c4c/LICENSE.TXT",
+    "sha256": "ebcd9bbf783a73d05c53ba4d586b8d5813dcdf3bbec50265860ccc885e606f47"
+  },
+  {
+    "path": "third_party/lz4/src/LICENSE",
+    "url": "https://fuchsia.googlesource.com/third_party/lz4/+/5ff839680134437dbf4678f3d0c7b371d84f4964/LICENSE",
+    "sha256": "2949fcf758d3c9bcb05f8393ca42cadfa15be04eb4ae4b3327c4ad7957511e1b"
+  },
+  {
+    "path": "third_party/rapidjson/LICENSE",
+    "url": "https://fuchsia.googlesource.com/third_party/rapidjson/+/a8bf9c8352dc5791585438a2909624489eaf981c/LICENSE",
+    "sha256": "4abdd1a1e73ec569d200b1476de3749ad36718d0321aa2c48d6a0ab11f93c773"
+  },
+  {
+    "path": "third_party/rapidjson/license.txt",
+    "url": "https://fuchsia.googlesource.com/third_party/rapidjson/+/a8bf9c8352dc5791585438a2909624489eaf981c/license.txt",
+    "sha256": "a140e5d46fe734a1c78f1a3c3ef207871dd75648be71fdda8e309b23ab8b1f32"
+  },
+  {
+    "path": "third_party/scudo/src/LICENSE.TXT",
+    "url": "https://llvm.googlesource.com/scudo/+/98b58403934c770e773d04336f13cde28be0e74a/LICENSE.TXT",
+    "sha256": "1a8f1058753f1ba890de984e48f0242a3a5c29a6a8f2ed9fd813f36985387e8d"
+  },
+  {
+    "path": "third_party/scudo/gwp_asan/LICENSE.TXT",
+    "url": "https://llvm.googlesource.com/gwp-asan/+/6c43902d64b311ae055144900a1909428ce47aeb/LICENSE.TXT",
+    "sha256": "1a8f1058753f1ba890de984e48f0242a3a5c29a6a8f2ed9fd813f36985387e8d"
+  },
+  {
+    "path": "third_party/zstd/src/COPYING",
+    "url": "https://fuchsia.googlesource.com/third_party/zstd/+/f8745da6ff1ad1e7bab384bd1f9d742439278e99/COPYING",
+    "sha256": "f9c375a1be4a41f7b70301dd83c91cb89e41567478859b77eef375a52d782505"
+  },
+  {
+    "path": "third_party/zstd/src/LICENSE",
+    "url": "https://fuchsia.googlesource.com/third_party/zstd/+/f8745da6ff1ad1e7bab384bd1f9d742439278e99/LICENSE",
+    "sha256": "7055266497633c9025b777c78eb7235af13922117480ed5c674677adc381c9d8"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/smallvec-1.15.2/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/smallvec-1.15.2/LICENSE-APACHE",
+    "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/smallvec-1.15.2/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/smallvec-1.15.2/LICENSE-MIT",
+    "sha256": "0b28172679e0009b655da42797c03fd163a3379d5cfa67ba1f1655e974a2a1a9"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/quote-1.0.47/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/quote-1.0.47/LICENSE-APACHE",
+    "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/quote-1.0.47/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/quote-1.0.47/LICENSE-MIT",
+    "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/munge-0.4.7/LICENSE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/munge-0.4.7/LICENSE",
+    "sha256": "b9c981ef9c76c0188c3ea22dca3c54744ad228071229cde4ff532543e1146a88"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/futures-executor-0.3.34/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/futures-executor-0.3.34/LICENSE-APACHE",
+    "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/futures-executor-0.3.34/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/futures-executor-0.3.34/LICENSE-MIT",
+    "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/proc-macro2-1.0.107/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/proc-macro2-1.0.107/LICENSE-APACHE",
+    "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/proc-macro2-1.0.107/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/proc-macro2-1.0.107/LICENSE-MIT",
+    "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/zerocopy-derive-0.8.48/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/zerocopy-derive-0.8.48/LICENSE-APACHE",
+    "sha256": "9d185ac6703c4b0453974c0d85e9eee43e6941009296bb1f5eb0b54e2329e9f3"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/zerocopy-derive-0.8.48/LICENSE-BSD",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/zerocopy-derive-0.8.48/LICENSE-BSD",
+    "sha256": "83c1763356e822adde0a2cae748d938a73fdc263849ccff6b27776dff213bd32"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/zerocopy-derive-0.8.48/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/zerocopy-derive-0.8.48/LICENSE-MIT",
+    "sha256": "1a2f5c12ddc934d58956aa5dbdd3255fe55fd957633ab7d0d39e4f0daa73f7df"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/crossbeam-epoch-0.9.18/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/crossbeam-epoch-0.9.18/LICENSE-APACHE",
+    "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/crossbeam-epoch-0.9.18/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/crossbeam-epoch-0.9.18/LICENSE-MIT",
+    "sha256": "5734ed989dfca1f625b40281ee9f4530f91b2411ec01cb748223e7eb87e201ab"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/crossbeam-utils-0.8.23/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/crossbeam-utils-0.8.23/LICENSE-APACHE",
+    "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/crossbeam-utils-0.8.23/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/crossbeam-utils-0.8.23/LICENSE-MIT",
+    "sha256": "5734ed989dfca1f625b40281ee9f4530f91b2411ec01cb748223e7eb87e201ab"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/rand_core-0.10.1/COPYRIGHT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/rand_core-0.10.1/COPYRIGHT",
+    "sha256": "92b81db30f7ab6d693e0af5661a40d273ca1947e891123ed823924192c10cbc7"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/rand_core-0.10.1/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/rand_core-0.10.1/LICENSE-APACHE",
+    "sha256": "6df43f6f4b5d4587f3d8d71e45532c688fd168afa5fe89d571cb32fa09c4ef51"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/rand_core-0.10.1/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/rand_core-0.10.1/LICENSE-MIT",
+    "sha256": "8b6e9feec03e7c9a5facb26855cecd31662bf989b636bcfe79521bdf8ac863f0"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/bitflags-2.13.0/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/bitflags-2.13.0/LICENSE-APACHE",
+    "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/bitflags-2.13.0/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/bitflags-2.13.0/LICENSE-MIT",
+    "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/scopeguard-1.2.0/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/scopeguard-1.2.0/LICENSE-APACHE",
+    "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/scopeguard-1.2.0/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/scopeguard-1.2.0/LICENSE-MIT",
+    "sha256": "fb77f0a9c53e473abe5103c8632ef9f0f2874d4fb3f17cb2d8c661aab9cee9d7"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/paste-1.0.15/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/paste-1.0.15/LICENSE-APACHE",
+    "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/paste-1.0.15/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/paste-1.0.15/LICENSE-MIT",
+    "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/pin-project-internal-1.1.11/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/pin-project-internal-1.1.11/LICENSE-APACHE",
+    "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+  },
+  {
+    "path": "third_party/rust_crates/vendor/pin-project-internal-1.1.11/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/vendor/pin-project-internal-1.1.11/LICENSE-MIT",
+    "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+  },
+  {
+    "path": "third_party/rust_crates/compat/serde_core/LICENSE-APACHE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/compat/serde_core/LICENSE-APACHE",
+    "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+  },
+  {
+    "path": "third_party/rust_crates/compat/serde_core/LICENSE-MIT",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/third_party/rust_crates/compat/serde_core/LICENSE-MIT",
+    "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+  },
+  {
+    "path": "third_party/rust_crates/forks/zstd-sys/LICENSE",
+    "url": "https://fuchsia.googlesource.com/fuchsia/+/adb2125e89f5080f5d52b17453f3aeb5d834ca7d/LICENSE",
+    "sha256": "83c1763356e822adde0a2cae748d938a73fdc263849ccff6b27776dff213bd32",
+    "note": "Fuchsia-authored bindings; Cargo.toml at the same source revision references the root BSD license."
+  }
+]

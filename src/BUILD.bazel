@@ -1,0 +1,6 @@
+package(default_visibility = ["//visibility:public"])
+
+filegroup(
+    name = "src_files",
+    srcs = glob(["**/*"], exclude = ["shim/**"]),
+)

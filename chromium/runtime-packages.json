@@ -1,0 +1,282 @@
+[
+  {
+    "architecture": "arm64",
+    "package": "libbsd0",
+    "version": "0.11.3-1+deb11u1",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libb/libbsd/libbsd0_0.11.3-1+deb11u1_arm64.deb",
+    "sha256": "614d36d41b670955a75526865bd321703f2accb6e0c07ee4c283fbba12e494df"
+  },
+  {
+    "architecture": "arm64",
+    "package": "libc6",
+    "version": "2.31-13+deb11u5",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/glibc/libc6_2.31-13+deb11u5_arm64.deb",
+    "sha256": "6f32b8a6bf691b2fa63ba9a4eddba9a29f34c209fd7a64df86585d2b58c567f8"
+  },
+  {
+    "architecture": "arm64",
+    "package": "libdrm2",
+    "version": "2.4.104-1",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libd/libdrm/libdrm2_2.4.104-1_arm64.deb",
+    "sha256": "1dc606aa361307a8c5277c2a5ddedea40a4125874e887c98e82b33dacaa853b0"
+  },
+  {
+    "architecture": "arm64",
+    "package": "libexpat1",
+    "version": "2.2.10-2+deb11u5",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/e/expat/libexpat1_2.2.10-2+deb11u5_arm64.deb",
+    "sha256": "8d20bfd061845bda0321d01accd6f8386ead5b1d7250a585d12b8d5fb1408ffa"
+  },
+  {
+    "architecture": "arm64",
+    "package": "libffi7",
+    "version": "3.3-6",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libf/libffi/libffi7_3.3-6_arm64.deb",
+    "sha256": "eb748e33ae4ed46f5a4c14b7a2a09792569f2029ede319d0979c373829ba1532"
+  },
+  {
+    "architecture": "arm64",
+    "package": "libgbm1",
+    "version": "20.3.5-1",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/m/mesa/libgbm1_20.3.5-1_arm64.deb",
+    "sha256": "991e5db7978e44ef745a1f7f18100927d304ddf1eaaab840167b5f07e3bdc7e8"
+  },
+  {
+    "architecture": "arm64",
+    "package": "libgcc-s1",
+    "version": "10.2.1-6",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/gcc-10/libgcc-s1_10.2.1-6_arm64.deb",
+    "sha256": "e2fcdb378d3c1ad1bcb64d4fb6b37aab44011152beca12a4944f435a2582df1f"
+  },
+  {
+    "architecture": "arm64",
+    "package": "libmd0",
+    "version": "1.0.3-3",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libm/libmd/libmd0_1.0.3-3_arm64.deb",
+    "sha256": "3c490cdcce9d25e702e6587b6166cd8e7303fce8343642d9d5d99695282a9e5c"
+  },
+  {
+    "architecture": "arm64",
+    "package": "libwayland-server0",
+    "version": "1.18.0-2~exp1.1",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/w/wayland/libwayland-server0_1.18.0-2~exp1.1_arm64.deb",
+    "sha256": "3bbcb9e41159b6268b40ce16b1512e5bcf38e63b8bcf2426eaa54b19c6988257"
+  },
+  {
+    "architecture": "arm64",
+    "package": "libx11-6",
+    "version": "2:1.7.2-1+deb11u2",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libx11/libx11-6_1.7.2-1+deb11u2_arm64.deb",
+    "sha256": "1ddb1a4d3dbdaeac8fd8d0009a27e6453b15d97362fdd1d3efb1d5f577364f30"
+  },
+  {
+    "architecture": "arm64",
+    "package": "libxau6",
+    "version": "1:1.0.9-1",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxau/libxau6_1.0.9-1_arm64.deb",
+    "sha256": "36c2bf400641a80521093771dc2562c903df4065f9eb03add50d90564337ea6c"
+  },
+  {
+    "architecture": "arm64",
+    "package": "libxcb1",
+    "version": "1.14-3",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxcb/libxcb1_1.14-3_arm64.deb",
+    "sha256": "48f82b65c93adb7af7757961fdd2730928316459f008d767b7104a56bc20a8f1"
+  },
+  {
+    "architecture": "arm64",
+    "package": "libxcomposite1",
+    "version": "1:0.4.5-1",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxcomposite/libxcomposite1_0.4.5-1_arm64.deb",
+    "sha256": "cfe39326fdb822e9d060ed5eb3f95b14459dd6b73793c5290000f9b27f8bad37"
+  },
+  {
+    "architecture": "arm64",
+    "package": "libxcursor1",
+    "version": "1:1.2.0-2",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxcursor/libxcursor1_1.2.0-2_arm64.deb",
+    "sha256": "2e309833ccf7e6b62560240cd84e325cafcb2ce70b1fb297469957360cee4478"
+  },
+  {
+    "architecture": "arm64",
+    "package": "libxdamage1",
+    "version": "1:1.1.5-2",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxdamage/libxdamage1_1.1.5-2_arm64.deb",
+    "sha256": "696cb56f414e7c0ea9a3bcbcb63b07f6ed8e980023c1b35006d5c1dc0d0213ed"
+  },
+  {
+    "architecture": "arm64",
+    "package": "libxdmcp6",
+    "version": "1:1.1.2-3",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxdmcp/libxdmcp6_1.1.2-3_arm64.deb",
+    "sha256": "e92569ac33247261aa09adfadc34ced3994ac301cf8b58de415a2d5dbf15ccfc"
+  },
+  {
+    "architecture": "arm64",
+    "package": "libxext6",
+    "version": "2:1.3.3-1.1",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxext/libxext6_1.3.3-1.1_arm64.deb",
+    "sha256": "57237ecf54662372e206b154c0ab6096e05955e048552575b45d3ad14a6ff6e5"
+  },
+  {
+    "architecture": "arm64",
+    "package": "libxfixes3",
+    "version": "1:5.0.3-2",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxfixes/libxfixes3_5.0.3-2_arm64.deb",
+    "sha256": "eb70f12af1d13e1632ee29ddf103617af00a078faf6c3a2531ab3d01b395606b"
+  },
+  {
+    "architecture": "arm64",
+    "package": "libxrandr2",
+    "version": "2:1.5.1-1",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxrandr/libxrandr2_1.5.1-1_arm64.deb",
+    "sha256": "04c9c59ba1e9648e0ec80d66fa34bab7bf039822f32eb31f706656968052e915"
+  },
+  {
+    "architecture": "arm64",
+    "package": "libxrender1",
+    "version": "1:0.9.10-1",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxrender/libxrender1_0.9.10-1_arm64.deb",
+    "sha256": "fcae69900b599e7b31b31eafa203a184e00376ade1d2f74f9b3d7b24991573a0"
+  },
+  {
+    "architecture": "x64",
+    "package": "libbsd0",
+    "version": "0.11.3-1+deb11u1",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libb/libbsd/libbsd0_0.11.3-1+deb11u1_amd64.deb",
+    "sha256": "6ec5a08a4bb32c0dc316617f4bbefa8654c472d1cd4412ab8995f3955491f4a8"
+  },
+  {
+    "architecture": "x64",
+    "package": "libc6",
+    "version": "2.31-13+deb11u5",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/glibc/libc6_2.31-13+deb11u5_amd64.deb",
+    "sha256": "adf6994e4c000ff5b882db411a23925a5860a10146e27fa08fc08cb4d08e6d85"
+  },
+  {
+    "architecture": "x64",
+    "package": "libdrm2",
+    "version": "2.4.104-1",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libd/libdrm/libdrm2_2.4.104-1_amd64.deb",
+    "sha256": "113396b3a33000f7f3347cd711ad9bcfe9945927331cc6cee63c751a889a967b"
+  },
+  {
+    "architecture": "x64",
+    "package": "libexpat1",
+    "version": "2.2.10-2+deb11u5",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/e/expat/libexpat1_2.2.10-2+deb11u5_amd64.deb",
+    "sha256": "5744040c4735bcdd51238aebfa3e402b857244897f1007f61154982ebe5abbd7"
+  },
+  {
+    "architecture": "x64",
+    "package": "libffi7",
+    "version": "3.3-6",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libf/libffi/libffi7_3.3-6_amd64.deb",
+    "sha256": "30ca89bfddae5fa6e0a2a044f22b6e50cd17c4bc6bc850c579819aeab7101f0f"
+  },
+  {
+    "architecture": "x64",
+    "package": "libgbm1",
+    "version": "20.3.5-1",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/m/mesa/libgbm1_20.3.5-1_amd64.deb",
+    "sha256": "2d9b07282e46e3c9398613b6d4fe86c3259e4326b158be7e1f4f58cab541156c"
+  },
+  {
+    "architecture": "x64",
+    "package": "libgcc-s1",
+    "version": "10.2.1-6",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/g/gcc-10/libgcc-s1_10.2.1-6_amd64.deb",
+    "sha256": "e478f2709d8474165bb664de42e16950c391f30eaa55bc9b3573281d83a29daf"
+  },
+  {
+    "architecture": "x64",
+    "package": "libmd0",
+    "version": "1.0.3-3",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libm/libmd/libmd0_1.0.3-3_amd64.deb",
+    "sha256": "9e425b3c128b69126d95e61998e1b5ef74e862dd1fc953d91eebcc315aea62ea"
+  },
+  {
+    "architecture": "x64",
+    "package": "libwayland-server0",
+    "version": "1.18.0-2~exp1.1",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/w/wayland/libwayland-server0_1.18.0-2~exp1.1_amd64.deb",
+    "sha256": "1df9a6e304bdaebdd53e1044c6eadcda95c914119e9426c2866eaa619a49c85b"
+  },
+  {
+    "architecture": "x64",
+    "package": "libx11-6",
+    "version": "2:1.7.2-1+deb11u2",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libx11/libx11-6_1.7.2-1+deb11u2_amd64.deb",
+    "sha256": "2b3b959cb10c07be065eb638a8577fe20f282045aaef76425dbd7310d1244b8c"
+  },
+  {
+    "architecture": "x64",
+    "package": "libxau6",
+    "version": "1:1.0.9-1",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxau/libxau6_1.0.9-1_amd64.deb",
+    "sha256": "679db1c4579ec7c61079adeaae8528adeb2e4bf5465baa6c56233b995d714750"
+  },
+  {
+    "architecture": "x64",
+    "package": "libxcb1",
+    "version": "1.14-3",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxcb/libxcb1_1.14-3_amd64.deb",
+    "sha256": "d5e0f047ed766f45eb7473947b70f9e8fddbe45ef22ecfd92ab712c0671a93ac"
+  },
+  {
+    "architecture": "x64",
+    "package": "libxcomposite1",
+    "version": "1:0.4.5-1",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxcomposite/libxcomposite1_0.4.5-1_amd64.deb",
+    "sha256": "4c26ebf519d2ebc22fc1416dee45e12c4c4ef68aa9b2ed890356830df42b652a"
+  },
+  {
+    "architecture": "x64",
+    "package": "libxcursor1",
+    "version": "1:1.2.0-2",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxcursor/libxcursor1_1.2.0-2_amd64.deb",
+    "sha256": "d9fee761e4c50572c3ce3c3965b70fcfecd277d0d7d598e102134d12757a3d11"
+  },
+  {
+    "architecture": "x64",
+    "package": "libxdamage1",
+    "version": "1:1.1.5-2",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxdamage/libxdamage1_1.1.5-2_amd64.deb",
+    "sha256": "1acf6d6117929a7df346d355caeb579798d75feb7e3b3aae58a2d1af735b444f"
+  },
+  {
+    "architecture": "x64",
+    "package": "libxdmcp6",
+    "version": "1:1.1.2-3",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxdmcp/libxdmcp6_1.1.2-3_amd64.deb",
+    "sha256": "ecb8536f5fb34543b55bb9dc5f5b14c9dbb4150a7bddb3f2287b7cab6e9d25ef"
+  },
+  {
+    "architecture": "x64",
+    "package": "libxext6",
+    "version": "2:1.3.3-1.1",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxext/libxext6_1.3.3-1.1_amd64.deb",
+    "sha256": "dc1ff8a2b60c7dd3c8917ffb9aa65ee6cda52648d9150608683c47319d1c0c8c"
+  },
+  {
+    "architecture": "x64",
+    "package": "libxfixes3",
+    "version": "1:5.0.3-2",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxfixes/libxfixes3_5.0.3-2_amd64.deb",
+    "sha256": "58622d0d65c3535bd724c4da62ae7acb71e0e8f527bcbd65daf8c97e6f0ef843"
+  },
+  {
+    "architecture": "x64",
+    "package": "libxrandr2",
+    "version": "2:1.5.1-1",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxrandr/libxrandr2_1.5.1-1_amd64.deb",
+    "sha256": "8fdd8ba4a8ad819731d6bbd903b52851a2ec2f9ef4139d880e9be421ea61338c"
+  },
+  {
+    "architecture": "x64",
+    "package": "libxrender1",
+    "version": "1:0.9.10-1",
+    "url": "https://snapshot.debian.org/archive/debian/20250129T203412Z/pool/main/libx/libxrender/libxrender1_0.9.10-1_amd64.deb",
+    "sha256": "3ea17d07b5aa89012130e2acd92f0fc0ea67314e2f5eab6e33930ef688f48294"
+  }
+]

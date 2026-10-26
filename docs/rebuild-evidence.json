@@ -1,0 +1,293 @@
+{
+  "status": "rebuild_and_qemu_verified",
+  "kernel_x86_64": {
+    "status": "built",
+    "graph_edges": 3793,
+    "depfiles_verified": 3551,
+    "forwarding_headers_materialized": 213,
+    "artifacts": [
+      {
+        "file": "linux-x86-boot-shim.bin",
+        "bytes": 342248,
+        "sha256": "873f981afef113af399e96c04f9ae0dae3f89f58289023f52daf31938437d819"
+      },
+      {
+        "file": "physload.zbi",
+        "bytes": 376712,
+        "sha256": "72eb721b4b144bee3b0c9080e3118aa5ba01a751dcc28c81aed44938a83ae5d9"
+      },
+      {
+        "file": "kernel.eng.zbi",
+        "bytes": 2643304,
+        "sha256": "53e4cf3c5e8362bf8899563b4723eefbcf7dcd1d51bd2c89eb4d3e3590845365"
+      },
+      {
+        "file": "libc.so",
+        "bytes": 910080,
+        "sha256": "3f62b798270cf1e5d9d3f305e39569c780765280fe2d1f86b3528ef92e0c746a"
+      },
+      {
+        "file": "libzircon.so",
+        "bytes": 57344,
+        "sha256": "3bd1e2035e4e9c40f914b6765e150b4a4ee8ae28fd7b1145efe11d7b491df25a"
+      },
+      {
+        "file": "zbi",
+        "bytes": 1077000,
+        "sha256": "c2b1d7e84f73d4121de38ac36e381b01812f01bada751ed966cad092a3988fd3"
+      }
+    ]
+  },
+  "kernel_arm64": {
+    "status": "built",
+    "graph_edges": 3512,
+    "depfiles_verified": 3310,
+    "forwarding_headers_materialized": 213,
+    "artifacts": [
+      {
+        "file": "linux-arm64-boot-shim.bin",
+        "bytes": 295904,
+        "sha256": "b831c205fb554b05ab875d8f3d8ff539c6b8e6f4a02df5166b3c33076b9a2af3"
+      },
+      {
+        "file": "physload_arm64.zbi",
+        "bytes": 311008,
+        "sha256": "b4afe71dfa33c954474b5bc74d838e8098885b661d2c5a16da49948a7fa216b9"
+      },
+      {
+        "file": "kernel.eng_arm64.zbi",
+        "bytes": 2328632,
+        "sha256": "28d53f6b497ddd1423e35ba116c319e3a620049634b80e5003424dcbadeaeed9"
+      },
+      {
+        "file": "libc_arm64.so",
+        "bytes": 873224,
+        "sha256": "4aa69780dec1054c62e5e277e7648890f7a6e2abb171edcec06ad6802663a975"
+      },
+      {
+        "file": "libzircon_arm64.so",
+        "bytes": 61440,
+        "sha256": "eec60b7b76f2243ce35c00999d8edc9cfa64e655e404983ed1562ce8eb792daf"
+      },
+      {
+        "file": "zbi_arm64",
+        "bytes": 1077000,
+        "sha256": "c2b1d7e84f73d4121de38ac36e381b01812f01bada751ed966cad092a3988fd3"
+      }
+    ]
+  },
+  "chromium_x64": {
+    "status": "built_packaged_and_qemu_verified",
+    "build_manifest": "chromium/prebuilt/build-manifest.json",
+    "build_manifest_sha256": "c6b68ea1233868055ebebdfb2c557441a82e87f96b18dd4006220000be98d803",
+    "staged_bundle_privacy_findings": 0,
+    "runtime_source": "unmodified Debian package payloads matching the pinned build-sysroot package versions",
+    "host_version_with_bundled_loader": "Chromium 158.0.8107.0",
+    "angle_linkage": "static; upstream infrastructure-only shared stubs excluded",
+    "host_version_with_bundled_loader_and_preloaded_xcursor": "Chromium 158.0.8107.0"
+  },
+  "chromium_arm64": {
+    "status": "built_packaged_and_qemu_verified",
+    "build_manifest": "chromium/prebuilt_arm64/build-manifest.json",
+    "build_manifest_sha256": "00fb64bafa9bf25875ae7250df0129f5c17d5c46dbc555b012a31caf91843521",
+    "staged_bundle_privacy_findings": 0,
+    "runtime_source": "unmodified Debian package payloads matching the pinned build-sysroot package versions",
+    "angle_linkage": "static; upstream infrastructure-only shared stubs excluded"
+  },
+  "qemu": {
+    "minimal_x64": {
+      "status": "pass",
+      "target": "//minimal_rootfs:verify",
+      "exit_code": 0,
+      "wall_seconds_including_build": 7.0,
+      "image": "minimal_rootfs/minimal_system.zbi",
+      "image_sha256": "ee32a3d11d2ddf14bb28a493b81aef09015330a102a6e69dd1baa68fa2f112b5",
+      "memory_checks": 49,
+      "process_checks": 41,
+      "interactive_shell": "computed arithmetic and pipeline markers observed"
+    },
+    "minimal_arm64": {
+      "status": "pass",
+      "target": "//minimal_rootfs:verify_arm64",
+      "exit_code": 0,
+      "wall_seconds_including_build": 8.4,
+      "image": "minimal_rootfs/minimal_system_arm64.zbi",
+      "image_sha256": "60ceffaf49e580ae3ac1cde7b5f2256d643d3cf72a480598434a90c2bafcb73b",
+      "memory_checks": 49,
+      "process_checks": 40,
+      "interactive_shell": "computed arithmetic and pipeline markers observed"
+    },
+    "desktop_x64": {
+      "status": "pass",
+      "target": "//rootfs:verify",
+      "exit_code": 0,
+      "wall_seconds_including_build": 27.6,
+      "image": "rootfs/xfce4_system.zbi",
+      "image_sha256": "66a72762cf9fa495305c5b5395cbf6e30c48d661a533bcb14b5c55e1f74f4c05",
+      "terminal": "XTEST to terminal to PTY shell round-trip observed",
+      "hardware_keyboard": "QMP PS/2 result observed"
+    },
+    "desktop_arm64": {
+      "status": "pass",
+      "target": "//rootfs:verify_arm64",
+      "exit_code": 0,
+      "wall_seconds_including_build": 156.2,
+      "image": "rootfs/xfce4_system_arm64.zbi",
+      "image_sha256": "8a1e353255f690ed6cb17ad254a91f2ee22966e4df88d1f12bb22d4fb4b9adb9",
+      "terminal": "XTEST to terminal to PTY shell round-trip observed",
+      "hardware_keyboard": "XTEST only; current ARM64 configuration has no hardware input device"
+    },
+    "chromium_x64": {
+      "status": "pass",
+      "target": "//chromium_rootfs:verify",
+      "exit_code": 0,
+      "guest_wall_seconds": 97.9,
+      "image": "chromium_rootfs/xfce4_chromium_system.zbi",
+      "image_sha256": "144403f1243ed0da98cb1758a25445116162a7af7607f3fcae3e403c226af42d",
+      "renderer_document": {
+        "href": "https://www.yahoo.com/",
+        "secure": true,
+        "ready": "complete",
+        "http_status": 200,
+        "visible_text_length": 3187
+      },
+      "fresh_host_challenge": {
+        "nonce": "d4e0aec2041eff0c0fa07459bcea0f99",
+        "answer": 336657953,
+        "result": "matched host-generated factors and fresh nonce"
+      },
+      "rtl8139": {
+        "rx_bytes": 13076091,
+        "rx_packets": 21274,
+        "tx_bytes": 4054480,
+        "tx_packets": 21003
+      },
+      "repairs": "Executable Debian runtime closure, including explicitly loaded glibc Xcursor; no shim behavior or browser assertions weakened"
+    },
+    "chromium_arm64": {
+      "status": "pass",
+      "target": "//chromium_rootfs:verify_arm64",
+      "prior_attempt": {
+        "result": "fail",
+        "reason": "fresh host renderer challenge timed out",
+        "guest_wall_seconds": 233.6,
+        "document": {
+          "http_status": 200,
+          "secure": true,
+          "ready": "complete",
+          "text_length": 1866
+        },
+        "failure_screenshot_inspected": true
+      },
+      "timing_adjustment": {
+        "socket_seconds": 30,
+        "host_challenge_seconds": 120,
+        "document_and_challenge_assertions_unchanged": true
+      },
+      "exit_code": 0,
+      "guest_wall_seconds": 193.3,
+      "image": "chromium_rootfs/xfce4_chromium_system_arm64.zbi",
+      "renderer_document": {
+        "href": "https://www.yahoo.com/",
+        "secure": true,
+        "ready": "complete",
+        "http_status": 200,
+        "visible_text_length": 1890
+      },
+      "fresh_host_challenge": {
+        "nonce": "68920dd35a6c4bb734e6f7455be73223",
+        "answer": 2097541120,
+        "result": "matched host-generated factors and fresh nonce"
+      },
+      "rtl8139": {
+        "rx_bytes": 3126042,
+        "rx_packets": 3021,
+        "tx_bytes": 301686,
+        "tx_packets": 2954
+      },
+      "image_sha256": "ea02a123d0e0ab02482c4b01162c53e63d52c10811d3959551b09d5464618bb5"
+    }
+  },
+  "screenshots": [
+    {
+      "file": "docs/screenshots/xfce4_desktop.png",
+      "sha256": "9cb0845bf61cda6c92ef3eb3d3bc3231b839427cb4a26086f54b9771246cee55",
+      "inspection": "fresh QMP capture inspected; no personal build identity visible"
+    },
+    {
+      "file": "docs/screenshots/xfce4_terminal.png",
+      "sha256": "3ccfc0efa22812e51e8106086d8452a638e81f08324a8707b1a026c6c02a5194",
+      "inspection": "fresh QMP capture inspected; no personal build identity visible"
+    },
+    {
+      "file": "docs/screenshots/xfce4_desktop_arm64.png",
+      "sha256": "33c8598e2456d274d3c42fa1a7feebaa622f84ab9f16362bbe46921c92423e1b",
+      "inspection": "fresh QMP capture inspected; no personal build identity visible"
+    },
+    {
+      "file": "docs/screenshots/xfce4_terminal_arm64.png",
+      "sha256": "84afabd351f7c2e555cd9a0c7889c3128e72df22fb9dc0c39acfa0ad9ada6361",
+      "inspection": "fresh QMP capture inspected; no personal build identity visible"
+    },
+    {
+      "file": "docs/screenshots/xfce4_chromium_yahoo.png",
+      "sha256": "a47b48fc2928283aea4e8fdd1c01c0df7931ee9df46eef63cd5333b7349dba2d",
+      "inspection": "fresh QMP capture inspected: real Yahoo document and browser window; no private build identity visible"
+    },
+    {
+      "file": "docs/screenshots/xfce4_chromium_yahoo_arm64.png",
+      "sha256": "9a22ffb3879edb51cc2be509f22f57f849a24ff2c18a2a99e3220e95fbe2f6a7",
+      "inspection": "fresh QMP capture inspected; real Yahoo content and no personal build identity visible"
+    }
+  ],
+  "source_archive_privacy": {
+    "report": "docs/source-archive-privacy.json",
+    "findings": 0
+  },
+  "renderer_evidence_gate_tests": {
+    "tests": 8,
+    "result": "pass",
+    "scope": "host-side evidence parser; not guest runtime verification"
+  },
+  "publication_audit_tests": {
+    "tests": 6,
+    "result": "pass",
+    "identity_patterns": "external private deny file, not published"
+  },
+  "chromium_source_checkout": {
+    "revision": "7cc9d0d833549df75d31f9049130b05e3d1c9f84",
+    "patch_sha256": "78de2d3f74d29a31831382d300610a5c37952b19df5f02457720519b51443adf",
+    "tracked_source_diff_matches_patch_byte_for_byte": true,
+    "scope": "source integrity; both architectures compiled, packaged and guest runtime verified, including final diagnostic-helper recheck"
+  },
+  "runtime_payload_validation": {
+    "executable_libraries_checked": 56,
+    "result": "pass",
+    "build_sysroot_interpreter_stubs_rejected": 2,
+    "dependency_closure": "28 libraries per architecture, including explicitly loaded Xcursor and glibc NSS libraries"
+  },
+  "publication_audit": {
+    "status": "pass",
+    "files_scanned": 12477,
+    "findings": 0,
+    "scope": "exact staged Git blob bytes and separately verified local LFS payloads; source archives bound by hashes to the recursive metadata/payload audit",
+    "lfs_payloads_verified": 6,
+    "lfs_payload_checks": "canonical pointer, exact size and SHA-256, payload privacy scan",
+    "temporary_services_removed": 4
+  },
+  "bundle_artifact_recheck": {
+    "result": "pass",
+    "artifacts_per_architecture": 44,
+    "checks": [
+      "all build-manifest artifact sizes and SHA-256 values",
+      "bundled project license equals root LICENSE",
+      "shared ANGLE infrastructure stubs absent",
+      "corresponding-source manifest SHA-256 values"
+    ]
+  },
+  "temporary_build_services": {
+    "status": "removed",
+    "count": 4,
+    "all_inactive_before_removal": true
+  }
+}

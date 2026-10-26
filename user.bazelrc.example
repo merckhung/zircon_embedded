@@ -1,0 +1,10 @@
+# Copy to user.bazelrc (git-ignored) and point at a Fuchsia checkout that
+# provides the toolchains (clang, rustc, bindgen, Linux host sysroot, QEMU).
+# No build outputs from that checkout are used; see bazel/zircon_repo.bzl.
+common --repo_env=FUCHSIA_DIR=/path/to/fuchsia
+# Or set each toolchain explicitly:
+# common --repo_env=FUCHSIA_CLANG_DIR=/path/to/clang
+# common --repo_env=FUCHSIA_RUST_DIR=/path/to/rust
+# common --repo_env=FUCHSIA_BINDGEN_DIR=/path/to/rust_bindgen
+# common --repo_env=FUCHSIA_HOST_SYSROOT_DIR=/path/to/sysroot/linux
+# common --repo_env=QEMU_DIR=/path/to/qemu

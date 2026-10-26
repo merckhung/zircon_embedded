@@ -1,0 +1,8 @@
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/target.json
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/lib/libcompiler_builtins.rlib
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/lib/libprofiler_builtins.rlib
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/lib/libcore.rlib
+kernel_arm64.lk_debug_level_2/obj/src/lib/zr/zr.actual/libzr.rlib
+kernel_arm64.lk_debug_level_2/obj/src/lib/zr/zr.actual/libzr.rmeta
+host_x64/obj/third_party/rust_crates/paste-v1_0_15.actual/libpaste-d06f06c5c22d78df.so
+host_x64/obj/third_party/rust_crates/paste-v1_0_15.actual/libpaste-d06f06c5c22d78df.rmeta

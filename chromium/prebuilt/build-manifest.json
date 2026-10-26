@@ -1,0 +1,232 @@
+{
+  "chromium_revision": "7cc9d0d833549df75d31f9049130b05e3d1c9f84",
+  "architecture": "x64",
+  "patch_sha256": "78de2d3f74d29a31831382d300610a5c37952b19df5f02457720519b51443adf",
+  "gn_args": "target_os = \"linux\"\ntarget_cpu = \"x64\"\nis_debug = false\nis_component_build = false\nis_official_build = false\ndcheck_always_on = false\nsymbol_level = 0\nblink_symbol_level = 0\nv8_symbol_level = 0\nuse_remoteexec = false\nuse_siso = false\nuse_aura = true\ntoolkit_views = true\nuse_ozone = true\nozone_auto_platforms = false\nozone_platform = \"x11\"\nozone_platform_x11 = true\nozone_platform_headless = true\nozone_platform_wayland = false\nuse_glib = false\nuse_gtk = false\nuse_qt5 = false\nuse_qt6 = false\nuse_gio = false\nuse_dbus = false\nuse_udev = false\nuse_cups = false\nuse_pulseaudio = false\nuse_alsa = false\nuse_kerberos = false\nuse_vaapi = false\nuse_v4l2_codec = false\nuse_libpci = false\nuse_nss_client_certs = false\nuse_nss_server_certs = false\nuse_nss_certs = false\nenable_vr = false\nenable_swiftshader = true\nangle_enable_vulkan = true\nangle_enable_swiftshader = true\nangle_enable_gl = false\nangle_enable_wgpu = false\nangle_enable_vulkan_validation_layers = false\nangle_use_x11 = true\nangle_use_wayland = false\nuse_dawn = false\nskia_use_dawn = false\nchrome_root_store_only = true\nenable_library_cdms = false\nrtc_use_pipewire = false\n",
+  "dependencies_sha256": "cf22471d7067bb1c5cf9a1e566344be612071004082da5005eb3ccbf266c569e",
+  "strip": "checkout llvm-strip --strip-all",
+  "angle_linkage": "static in chrome; upstream infrastructure-only shared stubs excluded",
+  "angle_buildflags_sha256": "7c8da29c0a9fada8396130a428c0e5654d81f6064f819062d18c3889c77909f5",
+  "artifacts": [
+    {
+      "file": "LICENSE",
+      "bytes": 1536,
+      "sha256": "368cca1106be99d39ecd32a38d8305585d802a475effb66380b91ffc9bcf709b"
+    },
+    {
+      "file": "PROJECT_LICENSE.txt",
+      "bytes": 1320,
+      "sha256": "0584f30b53820ff7ff50c42bda0ae5d646e91221b56af983b488de83fe2dca2e"
+    },
+    {
+      "file": "RUNTIME_LICENSES.txt",
+      "bytes": 247781,
+      "sha256": "fbb754b9b3b40e880d2c9a69e55de2289615d4281b8c552bb98ae8495c9b7cc9"
+    },
+    {
+      "file": "THIRD_PARTY_NOTICES.html",
+      "bytes": 2340030,
+      "sha256": "4f22988040e598f527e78e187011928b0400b96ef194f3bac4ee71a9e54181b5"
+    },
+    {
+      "file": "chrome",
+      "bytes": 345644824,
+      "sha256": "8972a4a8d8eb319fb448878198e17203c3af3d3392dabbb064bcf8b87f9d4db8"
+    },
+    {
+      "file": "chrome_100_percent.pak",
+      "bytes": 577100,
+      "sha256": "b07c7f1c0c2c58d02a04613b1f5bc651eb3aaa59d174a6009a096299f99e141b"
+    },
+    {
+      "file": "chrome_200_percent.pak",
+      "bytes": 934715,
+      "sha256": "2cb34e2f01fc520a9fd8d9faa0da0d89c0dfe6ffb7f48c83df0258d7ccf42ba1"
+    },
+    {
+      "file": "chrome_crashpad_handler",
+      "bytes": 2288024,
+      "sha256": "07d59d4a63fd4b98b0b6d19e579232343ff967204826ed78088d7ced3c9b6c22"
+    },
+    {
+      "file": "icudtl.dat",
+      "bytes": 10824432,
+      "sha256": "02a01b3188b6a41a756f7322fdb5e6b5ca6573b327b01dfc8ed662d571a6f769"
+    },
+    {
+      "file": "lib/ld-linux-x86-64.so.2",
+      "bytes": 177928,
+      "sha256": "4325e436d7b281490848dfb580f16844adcf31afedf3972e12a660abe5c057c2"
+    },
+    {
+      "file": "lib/libX11.so.6",
+      "bytes": 1318408,
+      "sha256": "4e0878fb35811457b2391c9c48d96f4bd01dbb33f2dcaec66a34d89f225db9b7"
+    },
+    {
+      "file": "lib/libXau.so.6",
+      "bytes": 14496,
+      "sha256": "833aa73cf8f645330907d5923fcbf380e0895ab2551d522b41b0308747a51e27"
+    },
+    {
+      "file": "lib/libXcomposite.so.1",
+      "bytes": 14344,
+      "sha256": "3237a4b4f9b728bc77f20b912017070dc98747dfbb1525440d0301cefd3ab21a"
+    },
+    {
+      "file": "lib/libXcursor.so.1",
+      "bytes": 47768,
+      "sha256": "3f41868f2e36f62ea5b9cc67e4e4ed7a08501af3b06a2034634c7ffdc8bb3576"
+    },
+    {
+      "file": "lib/libXdamage.so.1",
+      "bytes": 14368,
+      "sha256": "a932327d834f2a0cfd78312cca461a709b21f3645f543d50a68711e27ac1a761"
+    },
+    {
+      "file": "lib/libXdmcp.so.6",
+      "bytes": 22728,
+      "sha256": "911ecd1cf42f310e788652f2719803bb4632e077b6e292af31b876c836bba264"
+    },
+    {
+      "file": "lib/libXext.so.6",
+      "bytes": 81544,
+      "sha256": "6d16b60901863daf9be109785638cc7d93185c95479bbcddd7bafdc9370e23c4"
+    },
+    {
+      "file": "lib/libXfixes.so.3",
+      "bytes": 26688,
+      "sha256": "bda195efad0779989defbdb5e0a92bed49f06ea859878fe8f32526063a2b0762"
+    },
+    {
+      "file": "lib/libXrandr.so.2",
+      "bytes": 43384,
+      "sha256": "75d2028f017e2e393fa9d73edeab50d0db8b156a232d5806ae34aedd3f2c4bc6"
+    },
+    {
+      "file": "lib/libXrender.so.1",
+      "bytes": 39480,
+      "sha256": "4b08d800110c489204456a0746131178089abd2614fdd8ca602a3f6c2a2ccf4b"
+    },
+    {
+      "file": "lib/libbsd.so.0",
+      "bytes": 84064,
+      "sha256": "a0afc72213bf6e59d98e218abc721d4e9dea15487cc634e0a736531dc8643891"
+    },
+    {
+      "file": "lib/libc.so.6",
+      "bytes": 1905632,
+      "sha256": "263e55f639b540a00fc87e7fdc10078c1cbe89e148ea440ad1a9cef1cbd53c6f"
+    },
+    {
+      "file": "lib/libdl.so.2",
+      "bytes": 18688,
+      "sha256": "df5973c718b4ee540cdd4400e19e90182ab5f3bac2148c0c9f3bb92eb6af3121"
+    },
+    {
+      "file": "lib/libdrm.so.2",
+      "bytes": 76472,
+      "sha256": "99ad95844aa4bb947191eb7451e29d62f8bfda8b4d9f0494e96a2d8dfd0d89b6"
+    },
+    {
+      "file": "lib/libexpat.so.1",
+      "bytes": 186496,
+      "sha256": "1a3ace30e2c877e3dc13de57cd0ecc8327acf0f15e6d5ec3608f4b36873687b6"
+    },
+    {
+      "file": "lib/libffi.so.7",
+      "bytes": 43496,
+      "sha256": "d7ce7e96311388ad35a34835c0db7738c869c8e1c88c071e9af5971e6765d89e"
+    },
+    {
+      "file": "lib/libgbm.so.1",
+      "bytes": 60336,
+      "sha256": "716f484611d7c74f50b2703fe5d76cf0adcca08229904e79ec583a17f281a9b2"
+    },
+    {
+      "file": "lib/libgcc_s.so.1",
+      "bytes": 100736,
+      "sha256": "2d771c2e232fce107c7ec7f9a64b9a804e6d6737063088a2d8096b149a0af8cd"
+    },
+    {
+      "file": "lib/libm.so.6",
+      "bytes": 1321344,
+      "sha256": "5461e535328078fb72f25f7ca2bf36bc71c415bbf573ccdfa289a7b796ddfdd3"
+    },
+    {
+      "file": "lib/libmd.so.0",
+      "bytes": 47312,
+      "sha256": "3e8acc749b960c0ce4ecfeaa9427f190e4d2915c5a32c98b93ca3fb451bda642"
+    },
+    {
+      "file": "lib/libnss_dns.so.2",
+      "bytes": 26952,
+      "sha256": "2455e3dff4ad37655f4ab679ad84e29a2c661875450bc40ec4bb5182157443ea"
+    },
+    {
+      "file": "lib/libnss_files.so.2",
+      "bytes": 51696,
+      "sha256": "468be86a480e471fdc2cb800df8799d4ef7460decc4d2686d81106a980421cbb"
+    },
+    {
+      "file": "lib/libpthread.so.0",
+      "bytes": 149520,
+      "sha256": "9807a603f7e37097a442126303e0705a85f38ad4926db8eaf5db4befad118e11"
+    },
+    {
+      "file": "lib/libresolv.so.2",
+      "bytes": 93000,
+      "sha256": "86cd80f50c3001c44539588f8215f9037a6ed4ab9c4772f76519988dd087b2ad"
+    },
+    {
+      "file": "lib/librt.so.1",
+      "bytes": 35808,
+      "sha256": "a24ccd19ad1dc82d78d825553c4ad8332e25f879970fe602d230312d93b5ce23"
+    },
+    {
+      "file": "lib/libwayland-server.so.0",
+      "bytes": 89672,
+      "sha256": "1de9788b908e3069396d705e182688cb89a5e42358ed17717f08447cf275e54e"
+    },
+    {
+      "file": "lib/libxcb.so.1",
+      "bytes": 170936,
+      "sha256": "a80dca6d3bacb4f4ea9ab07f5545b05554eebb7f463799b84b04a07262118e8b"
+    },
+    {
+      "file": "libvk_swiftshader.so",
+      "bytes": 5014288,
+      "sha256": "efc65c1034b502bd9fdff23e02fbdbc1d0585e181bc790f2a04aa1122c04b87f"
+    },
+    {
+      "file": "libvulkan.so.1",
+      "bytes": 770344,
+      "sha256": "a03084b45358dbb3668994ba169a55d030936b511da4ea3f7354533204612d7a"
+    },
+    {
+      "file": "locales/en-US.pak",
+      "bytes": 597662,
+      "sha256": "8c502945ddcdf6489efa611b049bb720b7ead7bdfffbc0b9626f44e2ec443820"
+    },
+    {
+      "file": "resources.pak",
+      "bytes": 24696994,
+      "sha256": "9773d3d17c7ece28c7c4f8d6c7f8e8b296253d72c2b9a5870d6b47e571c08f2b"
+    },
+    {
+      "file": "runtime-manifest.json",
+      "bytes": 15059,
+      "sha256": "dcd500887cf21f5b40281b8789266511373be3c18b4a7d34cdac36e7c44f7159"
+    },
+    {
+      "file": "v8_context_snapshot.bin",
+      "bytes": 738800,
+      "sha256": "035e20ea7ffef53466adf8609bc6739c9b00f73b4559df4b6d6c81148cc1bba0"
+    },
+    {
+      "file": "vk_swiftshader_icd.json",
+      "bytes": 107,
+      "sha256": "c9eef28b6b984fec220ef0abfecc40b502d46946706e47bfe97707027cb818bd"
+    }
+  ]
+}

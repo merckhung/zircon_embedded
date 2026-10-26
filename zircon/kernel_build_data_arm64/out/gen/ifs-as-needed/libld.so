@@ -1,0 +1,4 @@
+/* //sdk/lib/ld:ld.as-needed
+ * links this in when //build/config:ifs-as-needed is used.
+ * See ifs_shared_library_libs() documentation for details.
+ */

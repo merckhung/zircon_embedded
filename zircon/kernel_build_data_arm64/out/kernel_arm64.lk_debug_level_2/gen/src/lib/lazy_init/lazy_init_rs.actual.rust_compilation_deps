@@ -1,0 +1,8 @@
+host_x64/obj/third_party/rust_crates/pin-init-internal-v0_3_0.actual/libpin_init_internal-449a5b2e2aeb03a2.so
+host_x64/obj/third_party/rust_crates/pin-init-internal-v0_3_0.actual/libpin_init_internal-449a5b2e2aeb03a2.rmeta
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/target.json
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/lib/libcompiler_builtins.rlib
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/lib/libprofiler_builtins.rlib
+kernel_arm64.lk_debug_level_2/gen/target/lib/rustlib/kernel_arm64.lk_debug_level_2/lib/libcore.rlib
+kernel_arm64.lk_debug_level_2/obj/third_party/rust_crates/pin-init-v0_3_0.actual/libpin_init-d03e4a33589ee11.rlib
+kernel_arm64.lk_debug_level_2/obj/third_party/rust_crates/pin-init-v0_3_0.actual/libpin_init-d03e4a33589ee11.rmeta

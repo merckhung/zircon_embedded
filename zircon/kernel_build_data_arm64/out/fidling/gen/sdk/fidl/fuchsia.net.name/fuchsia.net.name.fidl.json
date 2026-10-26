@@ -1,0 +1,3854 @@
+{
+  "name": "fuchsia.net.name",
+  "platform": "fuchsia",
+  "available": {
+    "fuchsia": [
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "NEXT",
+      "HEAD"
+    ]
+  },
+  "maybe_attributes": [
+    {
+      "name": "available",
+      "arguments": [
+        {
+          "name": "added",
+          "type": "uint32",
+          "value": {
+            "kind": "literal",
+            "value": "11",
+            "expression": "11",
+            "literal": {
+              "kind": "numeric",
+              "value": "11",
+              "expression": "11"
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup_admin.fidl",
+            "line": 4,
+            "column": 12,
+            "length": 8
+          }
+        }
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/lookup_admin.fidl",
+        "line": 4,
+        "column": 1,
+        "length": 20
+      }
+    }
+  ],
+  "experiments": [],
+  "library_dependencies": [
+    {
+      "name": "fuchsia.net",
+      "declarations": {
+        "fuchsia.net/MARK_DOMAIN_SOCKET_UID": {
+          "kind": "const"
+        },
+        "fuchsia.net/MARK_DOMAIN_SO_MARK": {
+          "kind": "const"
+        },
+        "fuchsia.net/MAX_HOSTNAME_SIZE": {
+          "kind": "const"
+        },
+        "fuchsia.net/IpVersion": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/MarkDomain": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 1,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Ipv4Address": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Ipv4AddressWithPrefix": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 5,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Ipv4SocketAddress": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 6,
+            "alignment": 2,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Ipv6Address": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Ipv6AddressWithPrefix": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 17,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Ipv6SocketAddress": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 32,
+            "alignment": 8,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/MacAddress": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 6,
+            "alignment": 1,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Subnet": {
+          "kind": "struct",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 24,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 16,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Marks": {
+          "kind": "table",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 2,
+            "max_handles": 0,
+            "max_out_of_line": 16,
+            "has_padding": false,
+            "has_flexible_envelope": true
+          }
+        },
+        "fuchsia.net/IpAddress": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 16,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/SocketAddress": {
+          "kind": "union",
+          "resource": false,
+          "type_shape_v2": {
+            "inline_size": 16,
+            "alignment": 8,
+            "depth": 1,
+            "max_handles": 0,
+            "max_out_of_line": 32,
+            "has_padding": true,
+            "has_flexible_envelope": false
+          }
+        },
+        "fuchsia.net/Hostname": {
+          "kind": "alias"
+        },
+        "fuchsia.net/InterfaceId": {
+          "kind": "alias"
+        },
+        "fuchsia.net/Mark": {
+          "kind": "alias"
+        },
+        "fuchsia.net/RouteMetric": {
+          "kind": "alias"
+        }
+      }
+    },
+    {
+      "name": "zx",
+      "declarations": {
+        "zx/Rights": {
+          "kind": "bits",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "zx/CHANNEL_MAX_MSG_BYTES": {
+          "kind": "const"
+        },
+        "zx/CHANNEL_MAX_MSG_HANDLES": {
+          "kind": "const"
+        },
+        "zx/DEFAULT_CHANNEL_RIGHTS": {
+          "kind": "const"
+        },
+        "zx/DEFAULT_EVENT_RIGHTS": {
+          "kind": "const"
+        },
+        "zx/IOB_MAX_REGIONS": {
+          "kind": "const"
+        },
+        "zx/MAX_CPUS": {
+          "kind": "const"
+        },
+        "zx/MAX_NAME_LEN": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_BASIC": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_IO": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_POLICY": {
+          "kind": "const"
+        },
+        "zx/RIGHTS_PROPERTY": {
+          "kind": "const"
+        },
+        "zx/ObjType": {
+          "kind": "enum",
+          "type_shape_v2": {
+            "inline_size": 4,
+            "alignment": 4,
+            "depth": 0,
+            "max_handles": 0,
+            "max_out_of_line": 0,
+            "has_padding": false,
+            "has_flexible_envelope": false
+          }
+        },
+        "zx/Handle": {
+          "kind": "experimental_resource"
+        },
+        "zx/Duration": {
+          "kind": "alias"
+        },
+        "zx/DurationBoot": {
+          "kind": "alias"
+        },
+        "zx/DurationMono": {
+          "kind": "alias"
+        },
+        "zx/InstantBoot": {
+          "kind": "alias"
+        },
+        "zx/InstantBootTicks": {
+          "kind": "alias"
+        },
+        "zx/InstantMono": {
+          "kind": "alias"
+        },
+        "zx/InstantMonoTicks": {
+          "kind": "alias"
+        },
+        "zx/Koid": {
+          "kind": "alias"
+        },
+        "zx/Off": {
+          "kind": "alias"
+        },
+        "zx/Result": {
+          "kind": "alias"
+        },
+        "zx/Signals": {
+          "kind": "alias"
+        },
+        "zx/Status": {
+          "kind": "alias"
+        },
+        "zx/Ticks": {
+          "kind": "alias"
+        },
+        "zx/Time": {
+          "kind": "alias"
+        }
+      }
+    }
+  ],
+  "bits_declarations": [],
+  "const_declarations": [
+    {
+      "name": "fuchsia.net.name/MAX_ADDRESSES",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+        "line": 28,
+        "column": 7,
+        "length": 13
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Maximum number of addresses that can be returned by a lookup.\n",
+                "expression": "/// Maximum number of addresses that can be returned by a lookup.",
+                "literal": {
+                  "kind": "string",
+                  "value": " Maximum number of addresses that can be returned by a lookup.\n",
+                  "expression": "/// Maximum number of addresses that can be returned by a lookup."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 23,
+                "column": 1,
+                "length": 65
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 23,
+            "column": 1,
+            "length": 65
+          }
+        }
+      ],
+      "type": {
+        "kind_v2": "primitive",
+        "subtype": "uint16",
+        "type_shape_v2": {
+          "inline_size": 2,
+          "alignment": 2,
+          "depth": 0,
+          "max_handles": 0,
+          "max_out_of_line": 0,
+          "has_padding": false,
+          "has_flexible_envelope": false
+        }
+      },
+      "value": {
+        "kind": "literal",
+        "value": "1024",
+        "expression": "1024",
+        "literal": {
+          "kind": "numeric",
+          "value": "1024",
+          "expression": "1024"
+        }
+      }
+    }
+  ],
+  "enum_declarations": [
+    {
+      "name": "fuchsia.net.name/LookupError",
+      "naming_context": [
+        "LookupError"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+        "line": 10,
+        "column": 6,
+        "length": 11
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Lookup operation errors.\n",
+                "expression": "/// Lookup operation errors.",
+                "literal": {
+                  "kind": "string",
+                  "value": " Lookup operation errors.\n",
+                  "expression": "/// Lookup operation errors."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 8,
+                "column": 1,
+                "length": 28
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 8,
+            "column": 1,
+            "length": 28
+          }
+        },
+        {
+          "name": "strict_audit",
+          "arguments": [
+            {
+              "name": "bug",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "https://fxbug.dev/467128725",
+                "expression": "\"https://fxbug.dev/467128725\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "https://fxbug.dev/467128725",
+                  "expression": "\"https://fxbug.dev/467128725\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 9,
+                "column": 15,
+                "length": 33
+              }
+            },
+            {
+              "name": "state",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "PENDING_REVIEW",
+                "expression": "\"PENDING_REVIEW\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "PENDING_REVIEW",
+                  "expression": "\"PENDING_REVIEW\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 9,
+                "column": 50,
+                "length": 22
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 9,
+            "column": 1,
+            "length": 72
+          }
+        }
+      ],
+      "type": "uint32",
+      "members": [
+        {
+          "name": "NOT_FOUND",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 12,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "1",
+            "expression": "1",
+            "literal": {
+              "kind": "numeric",
+              "value": "1",
+              "expression": "1"
+            }
+          },
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " No result was found for this query.\n",
+                    "expression": "/// No result was found for this query.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " No result was found for this query.\n",
+                      "expression": "/// No result was found for this query."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                    "line": 11,
+                    "column": 5,
+                    "length": 39
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 11,
+                "column": 5,
+                "length": 39
+              }
+            }
+          ]
+        },
+        {
+          "name": "TRANSIENT",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 15,
+            "column": 5,
+            "length": 9
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "2",
+            "expression": "2",
+            "literal": {
+              "kind": "numeric",
+              "value": "2",
+              "expression": "2"
+            }
+          },
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The lookup failed, but may succeed at a later time. For instance, the\n network or DNS server may be unreachable.\n",
+                    "expression": "/// The lookup failed, but may succeed at a later time. For instance, the\n    /// network or DNS server may be unreachable.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The lookup failed, but may succeed at a later time. For instance, the\n network or DNS server may be unreachable.\n",
+                      "expression": "/// The lookup failed, but may succeed at a later time. For instance, the\n    /// network or DNS server may be unreachable."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                    "line": 13,
+                    "column": 5,
+                    "length": 123
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 13,
+                "column": 5,
+                "length": 123
+              }
+            }
+          ]
+        },
+        {
+          "name": "INVALID_ARGS",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 18,
+            "column": 5,
+            "length": 12
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "3",
+            "expression": "3",
+            "literal": {
+              "kind": "numeric",
+              "value": "3",
+              "expression": "3"
+            }
+          },
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The lookup failed due to an invalid argument (for instance, the hostname\n was not encoded correctly, or was too long).\n",
+                    "expression": "/// The lookup failed due to an invalid argument (for instance, the hostname\n    /// was not encoded correctly, or was too long).",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The lookup failed due to an invalid argument (for instance, the hostname\n was not encoded correctly, or was too long).\n",
+                      "expression": "/// The lookup failed due to an invalid argument (for instance, the hostname\n    /// was not encoded correctly, or was too long)."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                    "line": 16,
+                    "column": 5,
+                    "length": 129
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 16,
+                "column": 5,
+                "length": 129
+              }
+            }
+          ]
+        },
+        {
+          "name": "INTERNAL_ERROR",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 20,
+            "column": 5,
+            "length": 14
+          },
+          "deprecated": false,
+          "value": {
+            "kind": "literal",
+            "value": "4",
+            "expression": "4",
+            "literal": {
+              "kind": "numeric",
+              "value": "4",
+              "expression": "4"
+            }
+          },
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The lookup failed due to an internal error.\n",
+                    "expression": "/// The lookup failed due to an internal error.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The lookup failed due to an internal error.\n",
+                      "expression": "/// The lookup failed due to an internal error."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                    "line": 19,
+                    "column": 5,
+                    "length": 47
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 19,
+                "column": 5,
+                "length": 47
+              }
+            }
+          ]
+        }
+      ],
+      "strict": true
+    }
+  ],
+  "experimental_resource_declarations": [],
+  "protocol_declarations": [
+    {
+      "name": "fuchsia.net.name/DnsServerWatcher",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/server_watcher.fidl",
+        "line": 9,
+        "column": 17,
+        "length": 16
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Provides a hanging get interface to watch for DNS servers configuration.\n",
+                "expression": "/// Provides a hanging get interface to watch for DNS servers configuration.",
+                "literal": {
+                  "kind": "string",
+                  "value": " Provides a hanging get interface to watch for DNS servers configuration.\n",
+                  "expression": "/// Provides a hanging get interface to watch for DNS servers configuration."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/server_watcher.fidl",
+                "line": 6,
+                "column": 1,
+                "length": 76
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/server_watcher.fidl",
+            "line": 6,
+            "column": 1,
+            "length": 76
+          }
+        },
+        {
+          "name": "discoverable",
+          "arguments": [],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/server_watcher.fidl",
+            "line": 7,
+            "column": 1,
+            "length": 13
+          }
+        },
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "identifier",
+                "value": "4292870144",
+                "expression": "HEAD",
+                "identifier": "fidl/HEAD"
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/server_watcher.fidl",
+                "line": 8,
+                "column": 12,
+                "length": 10
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/server_watcher.fidl",
+            "line": 8,
+            "column": 1,
+            "length": 22
+          }
+        }
+      ],
+      "openness": "closed",
+      "composed_protocols": [],
+      "methods": [
+        {
+          "kind": "twoway",
+          "ordinal": 6289435752595043890,
+          "name": "WatchServers",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/server_watcher.fidl",
+            "line": 23,
+            "column": 12,
+            "length": 12
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Returns a list of DNS servers.\n\n First call always returns a snapshot of the current list of servers or blocks if an empty\n list would be returned. Subsequent calls will block until the list of servers changes.\n\n The list of servers changes over time by configuration or network topology changes,\n expiration, etc. Callers must repeatedly call `WatchServers` and replace any previously\n returned `servers` with new ones to avoid using stale or expired entries.\n\n It is invalid to call this method while a previous call is pending. Doing so will cause the\n server end of the protocol to be closed.\n\n - response `servers` The list of servers to use for DNS resolution, in priority order.\n",
+                    "expression": "/// Returns a list of DNS servers.\n    ///\n    /// First call always returns a snapshot of the current list of servers or blocks if an empty\n    /// list would be returned. Subsequent calls will block until the list of servers changes.\n    ///\n    /// The list of servers changes over time by configuration or network topology changes,\n    /// expiration, etc. Callers must repeatedly call `WatchServers` and replace any previously\n    /// returned `servers` with new ones to avoid using stale or expired entries.\n    ///\n    /// It is invalid to call this method while a previous call is pending. Doing so will cause the\n    /// server end of the protocol to be closed.\n    ///\n    /// - response `servers` The list of servers to use for DNS resolution, in priority order.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Returns a list of DNS servers.\n\n First call always returns a snapshot of the current list of servers or blocks if an empty\n list would be returned. Subsequent calls will block until the list of servers changes.\n\n The list of servers changes over time by configuration or network topology changes,\n expiration, etc. Callers must repeatedly call `WatchServers` and replace any previously\n returned `servers` with new ones to avoid using stale or expired entries.\n\n It is invalid to call this method while a previous call is pending. Doing so will cause the\n server end of the protocol to be closed.\n\n - response `servers` The list of servers to use for DNS resolution, in priority order.\n",
+                      "expression": "/// Returns a list of DNS servers.\n    ///\n    /// First call always returns a snapshot of the current list of servers or blocks if an empty\n    /// list would be returned. Subsequent calls will block until the list of servers changes.\n    ///\n    /// The list of servers changes over time by configuration or network topology changes,\n    /// expiration, etc. Callers must repeatedly call `WatchServers` and replace any previously\n    /// returned `servers` with new ones to avoid using stale or expired entries.\n    ///\n    /// It is invalid to call this method while a previous call is pending. Doing so will cause the\n    /// server end of the protocol to be closed.\n    ///\n    /// - response `servers` The list of servers to use for DNS resolution, in priority order."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/server_watcher.fidl",
+                    "line": 10,
+                    "column": 5,
+                    "length": 773
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/server_watcher.fidl",
+                "line": 10,
+                "column": 5,
+                "length": 773
+              }
+            }
+          ],
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/DnsServerWatcherWatchServersResponse",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 6,
+              "max_handles": 0,
+              "max_out_of_line": 4294967295,
+              "has_padding": true,
+              "has_flexible_envelope": true
+            }
+          },
+          "is_composed": false,
+          "has_error": false
+        }
+      ]
+    },
+    {
+      "name": "fuchsia.net.name/Lookup",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+        "line": 32,
+        "column": 17,
+        "length": 6
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Provides name and address resolution.\n",
+                "expression": "/// Provides name and address resolution.",
+                "literal": {
+                  "kind": "string",
+                  "value": " Provides name and address resolution.\n",
+                  "expression": "/// Provides name and address resolution."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 30,
+                "column": 1,
+                "length": 41
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 30,
+            "column": 1,
+            "length": 41
+          }
+        },
+        {
+          "name": "discoverable",
+          "arguments": [],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 31,
+            "column": 1,
+            "length": 13
+          }
+        }
+      ],
+      "openness": "closed",
+      "composed_protocols": [],
+      "methods": [
+        {
+          "kind": "twoway",
+          "ordinal": 6423396061567566288,
+          "name": "LookupIp",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 34,
+            "column": 12,
+            "length": 8
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Lookup a list of IP addresses by hostname.\n",
+                    "expression": "/// Lookup a list of IP addresses by hostname.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Lookup a list of IP addresses by hostname.\n",
+                      "expression": "/// Lookup a list of IP addresses by hostname."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                    "line": 33,
+                    "column": 5,
+                    "length": 46
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 33,
+                "column": 5,
+                "length": 46
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/LookupLookupIpRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 32,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 0,
+              "max_out_of_line": 288,
+              "has_padding": true,
+              "has_flexible_envelope": true
+            }
+          },
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/Lookup_LookupIp_Result",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 5,
+              "max_handles": 0,
+              "max_out_of_line": 33088,
+              "has_padding": true,
+              "has_flexible_envelope": true
+            }
+          },
+          "is_composed": false,
+          "has_error": true,
+          "maybe_response_success_type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/Lookup_LookupIp_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 4,
+              "max_handles": 0,
+              "max_out_of_line": 33072,
+              "has_padding": true,
+              "has_flexible_envelope": true
+            }
+          },
+          "maybe_response_err_type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/LookupError",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          }
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 1965094522514342692,
+          "name": "LookupHostname",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 81,
+            "column": 12,
+            "length": 14
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Look up a hostname by IP address.\n",
+                    "expression": "/// Look up a hostname by IP address.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Look up a hostname by IP address.\n",
+                      "expression": "/// Look up a hostname by IP address."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                    "line": 80,
+                    "column": 5,
+                    "length": 37
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 80,
+                "column": 5,
+                "length": 37
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/LookupLookupHostnameRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 16,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/Lookup_LookupHostname_Result",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 0,
+              "max_out_of_line": 272,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": true,
+          "maybe_response_success_type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/Lookup_LookupHostname_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 256,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "maybe_response_err_type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/LookupError",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "fuchsia.net.name/LookupAdmin",
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/lookup_admin.fidl",
+        "line": 12,
+        "column": 17,
+        "length": 11
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " Provides administration controls over name resolution settings.\n",
+                "expression": "/// Provides administration controls over name resolution settings.",
+                "literal": {
+                  "kind": "string",
+                  "value": " Provides administration controls over name resolution settings.\n",
+                  "expression": "/// Provides administration controls over name resolution settings."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup_admin.fidl",
+                "line": 10,
+                "column": 1,
+                "length": 67
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup_admin.fidl",
+            "line": 10,
+            "column": 1,
+            "length": 67
+          }
+        },
+        {
+          "name": "discoverable",
+          "arguments": [],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup_admin.fidl",
+            "line": 11,
+            "column": 1,
+            "length": 13
+          }
+        }
+      ],
+      "openness": "closed",
+      "composed_protocols": [],
+      "methods": [
+        {
+          "kind": "twoway",
+          "ordinal": 6188713333289893526,
+          "name": "SetDnsServers",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup_admin.fidl",
+            "line": 21,
+            "column": 12,
+            "length": 13
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Sets the DNS servers to `servers`\n\n + request `servers` The list of servers to use for domain name resolution, in priority\n order. An empty list means no servers will be used and name resolution may fail. Each\n `SocketAddress` in `servers` must be a valid unicast socket address. The list of servers\n will be deduplicated.\n * error Returns `ZX_ERR_INVALID_ARGS` if any of the provided addresses does not meet the\n conditions above.\n",
+                    "expression": "/// Sets the DNS servers to `servers`\n    ///\n    /// + request `servers` The list of servers to use for domain name resolution, in priority\n    /// order. An empty list means no servers will be used and name resolution may fail. Each\n    /// `SocketAddress` in `servers` must be a valid unicast socket address. The list of servers\n    /// will be deduplicated.\n    /// * error Returns `ZX_ERR_INVALID_ARGS` if any of the provided addresses does not meet the\n    /// conditions above.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Sets the DNS servers to `servers`\n\n + request `servers` The list of servers to use for domain name resolution, in priority\n order. An empty list means no servers will be used and name resolution may fail. Each\n `SocketAddress` in `servers` must be a valid unicast socket address. The list of servers\n will be deduplicated.\n * error Returns `ZX_ERR_INVALID_ARGS` if any of the provided addresses does not meet the\n conditions above.\n",
+                      "expression": "/// Sets the DNS servers to `servers`\n    ///\n    /// + request `servers` The list of servers to use for domain name resolution, in priority\n    /// order. An empty list means no servers will be used and name resolution may fail. Each\n    /// `SocketAddress` in `servers` must be a valid unicast socket address. The list of servers\n    /// will be deduplicated.\n    /// * error Returns `ZX_ERR_INVALID_ARGS` if any of the provided addresses does not meet the\n    /// conditions above."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/lookup_admin.fidl",
+                    "line": 13,
+                    "column": 5,
+                    "length": 484
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup_admin.fidl",
+                "line": 13,
+                "column": 5,
+                "length": 484
+              }
+            }
+          ],
+          "maybe_request_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/LookupAdminSetDnsServersRequest",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 0,
+              "max_out_of_line": 4294967295,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/LookupAdmin_SetDnsServers_Result",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": true,
+          "maybe_response_success_type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/LookupAdmin_SetDnsServers_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "maybe_response_err_type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          }
+        },
+        {
+          "kind": "twoway",
+          "ordinal": 7008449565845288975,
+          "name": "GetDnsServers",
+          "strict": true,
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup_admin.fidl",
+            "line": 27,
+            "column": 12,
+            "length": 13
+          },
+          "deprecated": false,
+          "has_request": true,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Gets the DNS servers currently in use to resolve name lookups.\n - response `servers` The list of servers in use by `LookupAdmin`, in priority order.\n",
+                    "expression": "/// Gets the DNS servers currently in use to resolve name lookups.\n    /// - response `servers` The list of servers in use by `LookupAdmin`, in priority order.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Gets the DNS servers currently in use to resolve name lookups.\n - response `servers` The list of servers in use by `LookupAdmin`, in priority order.\n",
+                      "expression": "/// Gets the DNS servers currently in use to resolve name lookups.\n    /// - response `servers` The list of servers in use by `LookupAdmin`, in priority order."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/lookup_admin.fidl",
+                    "line": 25,
+                    "column": 5,
+                    "length": 159
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup_admin.fidl",
+                "line": 25,
+                "column": 5,
+                "length": 159
+              }
+            }
+          ],
+          "has_response": true,
+          "maybe_response_payload": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/LookupAdminGetDnsServersResponse",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 0,
+              "max_out_of_line": 4294967295,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "is_composed": false,
+          "has_error": false
+        }
+      ]
+    }
+  ],
+  "service_declarations": [],
+  "struct_declarations": [
+    {
+      "name": "fuchsia.net.name/DnsServerWatcherWatchServersResponse",
+      "naming_context": [
+        "DnsServerWatcher",
+        "WatchServers",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/server_watcher.fidl",
+        "line": 23,
+        "column": 31,
+        "length": 53
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "vector",
+            "element_type": {
+              "kind_v2": "identifier",
+              "identifier": "fuchsia.net.name/DnsServer",
+              "nullable": false,
+              "type_shape_v2": {
+                "inline_size": 16,
+                "alignment": 8,
+                "depth": 5,
+                "max_handles": 0,
+                "max_out_of_line": 112,
+                "has_padding": true,
+                "has_flexible_envelope": true
+              }
+            },
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 6,
+              "max_handles": 0,
+              "max_out_of_line": 4294967295,
+              "has_padding": true,
+              "has_flexible_envelope": true
+            }
+          },
+          "name": "servers",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/server_watcher.fidl",
+            "line": 24,
+            "column": 9,
+            "length": 7
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 6,
+        "max_handles": 0,
+        "max_out_of_line": 4294967295,
+        "has_padding": true,
+        "has_flexible_envelope": true
+      }
+    },
+    {
+      "name": "fuchsia.net.name/LookupAdminGetDnsServersResponse",
+      "naming_context": [
+        "LookupAdmin",
+        "GetDnsServers",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/lookup_admin.fidl",
+        "line": 27,
+        "column": 32,
+        "length": 69
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "vector",
+            "element_type": {
+              "kind_v2": "identifier",
+              "identifier": "fuchsia.net/SocketAddress",
+              "nullable": false,
+              "type_shape_v2": {
+                "inline_size": 16,
+                "alignment": 8,
+                "depth": 1,
+                "max_handles": 0,
+                "max_out_of_line": 32,
+                "has_padding": true,
+                "has_flexible_envelope": false
+              }
+            },
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 0,
+              "max_out_of_line": 4294967295,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "servers",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup_admin.fidl",
+            "line": 28,
+            "column": 9,
+            "length": 7
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 2,
+        "max_handles": 0,
+        "max_out_of_line": 4294967295,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.net.name/LookupAdminSetDnsServersRequest",
+      "naming_context": [
+        "LookupAdmin",
+        "SetDnsServers",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/lookup_admin.fidl",
+        "line": 21,
+        "column": 26,
+        "length": 69
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "vector",
+            "element_type": {
+              "kind_v2": "identifier",
+              "identifier": "fuchsia.net/SocketAddress",
+              "nullable": false,
+              "type_shape_v2": {
+                "inline_size": 16,
+                "alignment": 8,
+                "depth": 1,
+                "max_handles": 0,
+                "max_out_of_line": 32,
+                "has_padding": true,
+                "has_flexible_envelope": false
+              }
+            },
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 0,
+              "max_out_of_line": 4294967295,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "servers",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup_admin.fidl",
+            "line": 22,
+            "column": 9,
+            "length": 7
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 2,
+        "max_handles": 0,
+        "max_out_of_line": 4294967295,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.net.name/LookupAdmin_SetDnsServers_Response",
+      "naming_context": [
+        "LookupAdmin",
+        "SetDnsServers",
+        "Response",
+        "response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/lookup_admin.fidl",
+        "line": 23,
+        "column": 11,
+        "length": 2
+      },
+      "deprecated": false,
+      "members": [],
+      "resource": false,
+      "is_empty_success_struct": true,
+      "type_shape_v2": {
+        "inline_size": 1,
+        "alignment": 1,
+        "depth": 0,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.net.name/LookupLookupHostnameRequest",
+      "naming_context": [
+        "Lookup",
+        "LookupHostname",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+        "line": 81,
+        "column": 27,
+        "length": 50
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net/IpAddress",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 16,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "addr",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 82,
+            "column": 9,
+            "length": 4
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 16,
+        "has_padding": false,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.net.name/LookupLookupIpRequest",
+      "naming_context": [
+        "Lookup",
+        "LookupIp",
+        "Request"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+        "line": 34,
+        "column": 21,
+        "length": 1239
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "string",
+            "maybe_element_count": 255,
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 256,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "fuchsia.net/Hostname",
+            "args": [],
+            "nullable": false
+          },
+          "name": "hostname",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 42,
+            "column": 9,
+            "length": 8
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The hostname to look up.\n\n Must be a valid host domain name; i.e. may not be an IP address in\n dotted-decimal notation.\n\n If it is an Internationalized Domain Name, it must be encoded as per\n RFC 3490.\n",
+                    "expression": "/// The hostname to look up.\n        ///\n        /// Must be a valid host domain name; i.e. may not be an IP address in\n        /// dotted-decimal notation.\n        ///\n        /// If it is an Internationalized Domain Name, it must be encoded as per\n        /// RFC 3490.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The hostname to look up.\n\n Must be a valid host domain name; i.e. may not be an IP address in\n dotted-decimal notation.\n\n If it is an Internationalized Domain Name, it must be encoded as per\n RFC 3490.\n",
+                      "expression": "/// The hostname to look up.\n        ///\n        /// Must be a valid host domain name; i.e. may not be an IP address in\n        /// dotted-decimal notation.\n        ///\n        /// If it is an Internationalized Domain Name, it must be encoded as per\n        /// RFC 3490."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                    "line": 35,
+                    "column": 9,
+                    "length": 271
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 35,
+                "column": 9,
+                "length": 271
+              }
+            }
+          ],
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        },
+        {
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/LookupIpOptions",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 0,
+              "max_out_of_line": 32,
+              "has_padding": true,
+              "has_flexible_envelope": true
+            }
+          },
+          "name": "options",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 43,
+            "column": 9,
+            "length": 7
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 16,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 32,
+        "alignment": 8,
+        "depth": 2,
+        "max_handles": 0,
+        "max_out_of_line": 288,
+        "has_padding": true,
+        "has_flexible_envelope": true
+      }
+    },
+    {
+      "name": "fuchsia.net.name/Lookup_LookupHostname_Response",
+      "naming_context": [
+        "Lookup",
+        "LookupHostname",
+        "Response",
+        "response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+        "line": 83,
+        "column": 12,
+        "length": 53
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "string",
+            "maybe_element_count": 255,
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 256,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "fuchsia.net/Hostname",
+            "args": [],
+            "nullable": false
+          },
+          "name": "hostname",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 84,
+            "column": 9,
+            "length": 8
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 256,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.net.name/Lookup_LookupIp_Response",
+      "naming_context": [
+        "Lookup",
+        "LookupIp",
+        "Response",
+        "response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+        "line": 66,
+        "column": 12,
+        "length": 577
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/LookupResult",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 4,
+              "max_handles": 0,
+              "max_out_of_line": 33072,
+              "has_padding": true,
+              "has_flexible_envelope": true
+            }
+          },
+          "name": "result",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 67,
+            "column": 9,
+            "length": 6
+          },
+          "deprecated": false,
+          "field_shape_v2": {
+            "offset": 0,
+            "padding": 0
+          }
+        }
+      ],
+      "resource": false,
+      "is_empty_success_struct": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 4,
+        "max_handles": 0,
+        "max_out_of_line": 33072,
+        "has_padding": true,
+        "has_flexible_envelope": true
+      }
+    }
+  ],
+  "external_struct_declarations": [],
+  "table_declarations": [
+    {
+      "name": "fuchsia.net.name/DhcpDnsServerSource",
+      "naming_context": [
+        "DnsServer",
+        "source",
+        "dhcp"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+        "line": 20,
+        "column": 56,
+        "length": 132
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "generated_name",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "DhcpDnsServerSource",
+                "expression": "\"DhcpDnsServerSource\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "DhcpDnsServerSource",
+                  "expression": "\"DhcpDnsServerSource\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                "line": 20,
+                "column": 33,
+                "length": 21
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+            "line": 20,
+            "column": 17,
+            "length": 38
+          }
+        }
+      ],
+      "members": [
+        {
+          "ordinal": 1,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint64",
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "source_interface",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+            "line": 22,
+            "column": 16,
+            "length": 16
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The interface index over which this server was discovered.\n",
+                    "expression": "/// The interface index over which this server was discovered.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The interface index over which this server was discovered.\n",
+                      "expression": "/// The interface index over which this server was discovered."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                    "line": 21,
+                    "column": 13,
+                    "length": 62
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                "line": 21,
+                "column": 13,
+                "length": 62
+              }
+            }
+          ]
+        }
+      ],
+      "strict": false,
+      "resource": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 2,
+        "max_handles": 0,
+        "max_out_of_line": 16,
+        "has_padding": false,
+        "has_flexible_envelope": true
+      }
+    },
+    {
+      "name": "fuchsia.net.name/Dhcpv6DnsServerSource",
+      "naming_context": [
+        "DnsServer",
+        "source",
+        "dhcpv6"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+        "line": 30,
+        "column": 60,
+        "length": 132
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "generated_name",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "Dhcpv6DnsServerSource",
+                "expression": "\"Dhcpv6DnsServerSource\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "Dhcpv6DnsServerSource",
+                  "expression": "\"Dhcpv6DnsServerSource\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                "line": 30,
+                "column": 35,
+                "length": 23
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+            "line": 30,
+            "column": 19,
+            "length": 40
+          }
+        }
+      ],
+      "members": [
+        {
+          "ordinal": 1,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint64",
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "source_interface",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+            "line": 32,
+            "column": 16,
+            "length": 16
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The interface index over which this server was discovered.\n",
+                    "expression": "/// The interface index over which this server was discovered.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The interface index over which this server was discovered.\n",
+                      "expression": "/// The interface index over which this server was discovered."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                    "line": 31,
+                    "column": 13,
+                    "length": 62
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                "line": 31,
+                "column": 13,
+                "length": 62
+              }
+            }
+          ]
+        }
+      ],
+      "strict": false,
+      "resource": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 2,
+        "max_handles": 0,
+        "max_out_of_line": 16,
+        "has_padding": false,
+        "has_flexible_envelope": true
+      }
+    },
+    {
+      "name": "fuchsia.net.name/DnsServer",
+      "naming_context": [
+        "DnsServer"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+        "line": 10,
+        "column": 6,
+        "length": 9
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "doc",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": " A DNS server configuration.\n",
+                "expression": "/// A DNS server configuration.",
+                "literal": {
+                  "kind": "string",
+                  "value": " A DNS server configuration.\n",
+                  "expression": "/// A DNS server configuration."
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                "line": 8,
+                "column": 1,
+                "length": 31
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+            "line": 8,
+            "column": 1,
+            "length": 31
+          }
+        },
+        {
+          "name": "available",
+          "arguments": [
+            {
+              "name": "added",
+              "type": "uint32",
+              "value": {
+                "kind": "identifier",
+                "value": "4292870144",
+                "expression": "HEAD",
+                "identifier": "fidl/HEAD"
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                "line": 9,
+                "column": 12,
+                "length": 10
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+            "line": 9,
+            "column": 1,
+            "length": 22
+          }
+        }
+      ],
+      "members": [
+        {
+          "ordinal": 1,
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net/SocketAddress",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 32,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "address",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+            "line": 12,
+            "column": 8,
+            "length": 7
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The server's address, must be provided.\n",
+                    "expression": "/// The server's address, must be provided.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The server's address, must be provided.\n",
+                      "expression": "/// The server's address, must be provided."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                    "line": 11,
+                    "column": 5,
+                    "length": 43
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                "line": 11,
+                "column": 5,
+                "length": 43
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 2,
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/DnsServerSource",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 3,
+              "max_handles": 0,
+              "max_out_of_line": 32,
+              "has_padding": false,
+              "has_flexible_envelope": true
+            }
+          },
+          "name": "source",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+            "line": 15,
+            "column": 8,
+            "length": 6
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The configuration source for this server. Defaults to\n [`fuchsia.net.name/DnsServerSource.static_source`].\n",
+                    "expression": "/// The configuration source for this server. Defaults to\n    /// [`fuchsia.net.name/DnsServerSource.static_source`].",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The configuration source for this server. Defaults to\n [`fuchsia.net.name/DnsServerSource.static_source`].\n",
+                      "expression": "/// The configuration source for this server. Defaults to\n    /// [`fuchsia.net.name/DnsServerSource.static_source`]."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                    "line": 13,
+                    "column": 5,
+                    "length": 117
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                "line": 13,
+                "column": 5,
+                "length": 117
+              }
+            }
+          ]
+        }
+      ],
+      "strict": false,
+      "resource": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 5,
+        "max_handles": 0,
+        "max_out_of_line": 112,
+        "has_padding": true,
+        "has_flexible_envelope": true
+      }
+    },
+    {
+      "name": "fuchsia.net.name/LookupIpOptions",
+      "naming_context": [
+        "Lookup",
+        "LookupIp",
+        "Request",
+        "options"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+        "line": 43,
+        "column": 52,
+        "length": 853
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "generated_name",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "LookupIpOptions",
+                "expression": "\"LookupIpOptions\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "LookupIpOptions",
+                  "expression": "\"LookupIpOptions\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 43,
+                "column": 33,
+                "length": 17
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 43,
+            "column": 17,
+            "length": 34
+          }
+        }
+      ],
+      "members": [
+        {
+          "ordinal": 1,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "bool",
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "ipv4_lookup",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 47,
+            "column": 16,
+            "length": 11
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Include IPv4 results.\n\n If not set, interpreted as false.\n",
+                    "expression": "/// Include IPv4 results.\n            ///\n            /// If not set, interpreted as false.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Include IPv4 results.\n\n If not set, interpreted as false.\n",
+                      "expression": "/// Include IPv4 results.\n            ///\n            /// If not set, interpreted as false."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                    "line": 44,
+                    "column": 13,
+                    "length": 91
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 44,
+                "column": 13,
+                "length": 91
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 2,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "bool",
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "ipv6_lookup",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 51,
+            "column": 16,
+            "length": 11
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Include IPv6 results.\n\n If not set, interpreted as false.\n",
+                    "expression": "/// Include IPv6 results.\n            ///\n            /// If not set, interpreted as false.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Include IPv6 results.\n\n If not set, interpreted as false.\n",
+                      "expression": "/// Include IPv6 results.\n            ///\n            /// If not set, interpreted as false."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                    "line": 48,
+                    "column": 13,
+                    "length": 91
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 48,
+                "column": 13,
+                "length": 91
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 3,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "bool",
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "sort_addresses",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 59,
+            "column": 16,
+            "length": 14
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Sort addresses in order of preference.\n\n It true, Addresses are sorted according to destination address\n selection described in\n [RFC 6724 Section 6](https://tools.ietf.org/html/rfc6724#section-6).\n\n If not set, interpreted as false.\n",
+                    "expression": "/// Sort addresses in order of preference.\n            ///\n            /// It true, Addresses are sorted according to destination address\n            /// selection described in\n            /// [RFC 6724 Section 6](https://tools.ietf.org/html/rfc6724#section-6).\n            ///\n            /// If not set, interpreted as false.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Sort addresses in order of preference.\n\n It true, Addresses are sorted according to destination address\n selection described in\n [RFC 6724 Section 6](https://tools.ietf.org/html/rfc6724#section-6).\n\n If not set, interpreted as false.\n",
+                      "expression": "/// Sort addresses in order of preference.\n            ///\n            /// It true, Addresses are sorted according to destination address\n            /// selection described in\n            /// [RFC 6724 Section 6](https://tools.ietf.org/html/rfc6724#section-6).\n            ///\n            /// If not set, interpreted as false."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                    "line": 52,
+                    "column": 13,
+                    "length": 327
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 52,
+                "column": 13,
+                "length": 327
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 4,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "bool",
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "canonical_name_lookup",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 64,
+            "column": 16,
+            "length": 21
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " Include the canonical name.\n\n If not set, interpreted as false.\n",
+                    "expression": "/// Include the canonical name.\n            ///\n            /// If not set, interpreted as false.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " Include the canonical name.\n\n If not set, interpreted as false.\n",
+                      "expression": "/// Include the canonical name.\n            ///\n            /// If not set, interpreted as false."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                    "line": 60,
+                    "column": 13,
+                    "length": 97
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 60,
+                "column": 13,
+                "length": 97
+              }
+            },
+            {
+              "name": "available",
+              "arguments": [
+                {
+                  "name": "added",
+                  "type": "uint32",
+                  "value": {
+                    "kind": "literal",
+                    "value": "12",
+                    "expression": "12",
+                    "literal": {
+                      "kind": "numeric",
+                      "value": "12",
+                      "expression": "12"
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                    "line": 63,
+                    "column": 24,
+                    "length": 8
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 63,
+                "column": 13,
+                "length": 20
+              }
+            }
+          ]
+        }
+      ],
+      "strict": false,
+      "resource": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 2,
+        "max_handles": 0,
+        "max_out_of_line": 32,
+        "has_padding": true,
+        "has_flexible_envelope": true
+      }
+    },
+    {
+      "name": "fuchsia.net.name/LookupResult",
+      "naming_context": [
+        "Lookup",
+        "LookupIp",
+        "Response",
+        "response",
+        "result"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+        "line": 67,
+        "column": 48,
+        "length": 514
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "generated_name",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "LookupResult",
+                "expression": "\"LookupResult\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "LookupResult",
+                  "expression": "\"LookupResult\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 67,
+                "column": 32,
+                "length": 14
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 67,
+            "column": 16,
+            "length": 31
+          }
+        }
+      ],
+      "members": [
+        {
+          "ordinal": 1,
+          "type": {
+            "kind_v2": "vector",
+            "element_type": {
+              "kind_v2": "identifier",
+              "identifier": "fuchsia.net/IpAddress",
+              "nullable": false,
+              "type_shape_v2": {
+                "inline_size": 16,
+                "alignment": 8,
+                "depth": 1,
+                "max_handles": 0,
+                "max_out_of_line": 16,
+                "has_padding": false,
+                "has_flexible_envelope": false
+              }
+            },
+            "maybe_element_count": 1024,
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 0,
+              "max_out_of_line": 32768,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "addresses",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 72,
+            "column": 16,
+            "length": 9
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The IP addresses resulting from a lookup.\n\n If sorting was requested, `addresses` is sorted in order of\n preference, most preferred destination address first.\n",
+                    "expression": "/// The IP addresses resulting from a lookup.\n            ///\n            /// If sorting was requested, `addresses` is sorted in order of\n            /// preference, most preferred destination address first.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The IP addresses resulting from a lookup.\n\n If sorting was requested, `addresses` is sorted in order of\n preference, most preferred destination address first.\n",
+                      "expression": "/// The IP addresses resulting from a lookup.\n            ///\n            /// If sorting was requested, `addresses` is sorted in order of\n            /// preference, most preferred destination address first."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                    "line": 68,
+                    "column": 13,
+                    "length": 207
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 68,
+                "column": 13,
+                "length": 207
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 2,
+          "type": {
+            "kind_v2": "string",
+            "maybe_element_count": 255,
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 256,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "fuchsia.net/Hostname",
+            "args": [],
+            "nullable": false
+          },
+          "name": "canonical_name",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+            "line": 77,
+            "column": 16,
+            "length": 14
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The canonical name of the requested hostname.\n\n Provided only if requested.\n",
+                    "expression": "/// The canonical name of the requested hostname.\n            ///\n            /// Provided only if requested.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The canonical name of the requested hostname.\n\n Provided only if requested.\n",
+                      "expression": "/// The canonical name of the requested hostname.\n            ///\n            /// Provided only if requested."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                    "line": 73,
+                    "column": 13,
+                    "length": 109
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 73,
+                "column": 13,
+                "length": 109
+              }
+            },
+            {
+              "name": "available",
+              "arguments": [
+                {
+                  "name": "added",
+                  "type": "uint32",
+                  "value": {
+                    "kind": "literal",
+                    "value": "12",
+                    "expression": "12",
+                    "literal": {
+                      "kind": "numeric",
+                      "value": "12",
+                      "expression": "12"
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                    "line": 76,
+                    "column": 24,
+                    "length": 8
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+                "line": 76,
+                "column": 13,
+                "length": 20
+              }
+            }
+          ]
+        }
+      ],
+      "strict": false,
+      "resource": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 4,
+        "max_handles": 0,
+        "max_out_of_line": 33072,
+        "has_padding": true,
+        "has_flexible_envelope": true
+      }
+    },
+    {
+      "name": "fuchsia.net.name/NdpDnsServerSource",
+      "naming_context": [
+        "DnsServer",
+        "source",
+        "ndp"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+        "line": 25,
+        "column": 54,
+        "length": 132
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "generated_name",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "NdpDnsServerSource",
+                "expression": "\"NdpDnsServerSource\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "NdpDnsServerSource",
+                  "expression": "\"NdpDnsServerSource\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                "line": 25,
+                "column": 32,
+                "length": 20
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+            "line": 25,
+            "column": 16,
+            "length": 37
+          }
+        }
+      ],
+      "members": [
+        {
+          "ordinal": 1,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint64",
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "source_interface",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+            "line": 27,
+            "column": 16,
+            "length": 16
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The interface index over which this server was discovered.\n",
+                    "expression": "/// The interface index over which this server was discovered.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The interface index over which this server was discovered.\n",
+                      "expression": "/// The interface index over which this server was discovered."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                    "line": 26,
+                    "column": 13,
+                    "length": 62
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                "line": 26,
+                "column": 13,
+                "length": 62
+              }
+            }
+          ]
+        }
+      ],
+      "strict": false,
+      "resource": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 2,
+        "max_handles": 0,
+        "max_out_of_line": 16,
+        "has_padding": false,
+        "has_flexible_envelope": true
+      }
+    },
+    {
+      "name": "fuchsia.net.name/SocketProxyDnsServerSource",
+      "naming_context": [
+        "DnsServer",
+        "source",
+        "socket_proxy"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+        "line": 37,
+        "column": 71,
+        "length": 132
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "generated_name",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "SocketProxyDnsServerSource",
+                "expression": "\"SocketProxyDnsServerSource\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "SocketProxyDnsServerSource",
+                  "expression": "\"SocketProxyDnsServerSource\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                "line": 37,
+                "column": 41,
+                "length": 28
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+            "line": 37,
+            "column": 25,
+            "length": 45
+          }
+        }
+      ],
+      "members": [
+        {
+          "ordinal": 1,
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "uint64",
+            "type_shape_v2": {
+              "inline_size": 8,
+              "alignment": 8,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "name": "source_interface",
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+            "line": 39,
+            "column": 16,
+            "length": 16
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The interface index over which this server was discovered.\n",
+                    "expression": "/// The interface index over which this server was discovered.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The interface index over which this server was discovered.\n",
+                      "expression": "/// The interface index over which this server was discovered."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                    "line": 38,
+                    "column": 13,
+                    "length": 62
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                "line": 38,
+                "column": 13,
+                "length": 62
+              }
+            }
+          ]
+        }
+      ],
+      "strict": false,
+      "resource": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 2,
+        "max_handles": 0,
+        "max_out_of_line": 16,
+        "has_padding": false,
+        "has_flexible_envelope": true
+      }
+    },
+    {
+      "name": "fuchsia.net.name/StaticDnsServerSource",
+      "naming_context": [
+        "DnsServer",
+        "source",
+        "static_source"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+        "line": 18,
+        "column": 67,
+        "length": 8
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "generated_name",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "StaticDnsServerSource",
+                "expression": "\"StaticDnsServerSource\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "StaticDnsServerSource",
+                  "expression": "\"StaticDnsServerSource\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                "line": 18,
+                "column": 42,
+                "length": 23
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+            "line": 18,
+            "column": 26,
+            "length": 40
+          }
+        }
+      ],
+      "members": [],
+      "strict": false,
+      "resource": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": false,
+        "has_flexible_envelope": true
+      }
+    }
+  ],
+  "union_declarations": [
+    {
+      "name": "fuchsia.net.name/DnsServerSource",
+      "naming_context": [
+        "DnsServer",
+        "source"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+        "line": 15,
+        "column": 50,
+        "length": 1373
+      },
+      "deprecated": false,
+      "maybe_attributes": [
+        {
+          "name": "generated_name",
+          "arguments": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": {
+                "kind": "literal",
+                "value": "DnsServerSource",
+                "expression": "\"DnsServerSource\"",
+                "literal": {
+                  "kind": "string",
+                  "value": "DnsServerSource",
+                  "expression": "\"DnsServerSource\""
+                }
+              },
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                "line": 15,
+                "column": 31,
+                "length": 17
+              }
+            }
+          ],
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+            "line": 15,
+            "column": 15,
+            "length": 34
+          }
+        }
+      ],
+      "members": [
+        {
+          "ordinal": 1,
+          "name": "static_source",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/StaticDnsServerSource",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": true
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+            "line": 18,
+            "column": 12,
+            "length": 13
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The server is statically configured through\n [`fuchsia.net.name/LookupAdmin.SetDefaultServers`].\n",
+                    "expression": "/// The server is statically configured through\n        /// [`fuchsia.net.name/LookupAdmin.SetDefaultServers`].",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The server is statically configured through\n [`fuchsia.net.name/LookupAdmin.SetDefaultServers`].\n",
+                      "expression": "/// The server is statically configured through\n        /// [`fuchsia.net.name/LookupAdmin.SetDefaultServers`]."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                    "line": 16,
+                    "column": 9,
+                    "length": 111
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                "line": 16,
+                "column": 9,
+                "length": 111
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 2,
+          "name": "dhcp",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/DhcpDnsServerSource",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 0,
+              "max_out_of_line": 16,
+              "has_padding": false,
+              "has_flexible_envelope": true
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+            "line": 20,
+            "column": 12,
+            "length": 4
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The server was discovered through DHCPv4.\n",
+                    "expression": "/// The server was discovered through DHCPv4.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The server was discovered through DHCPv4.\n",
+                      "expression": "/// The server was discovered through DHCPv4."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                    "line": 19,
+                    "column": 9,
+                    "length": 45
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                "line": 19,
+                "column": 9,
+                "length": 45
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 3,
+          "name": "ndp",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/NdpDnsServerSource",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 0,
+              "max_out_of_line": 16,
+              "has_padding": false,
+              "has_flexible_envelope": true
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+            "line": 25,
+            "column": 12,
+            "length": 3
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The server was discovered through an NDP Router Advertisement.\n",
+                    "expression": "/// The server was discovered through an NDP Router Advertisement.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The server was discovered through an NDP Router Advertisement.\n",
+                      "expression": "/// The server was discovered through an NDP Router Advertisement."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                    "line": 24,
+                    "column": 9,
+                    "length": 66
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                "line": 24,
+                "column": 9,
+                "length": 66
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 4,
+          "name": "dhcpv6",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/Dhcpv6DnsServerSource",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 0,
+              "max_out_of_line": 16,
+              "has_padding": false,
+              "has_flexible_envelope": true
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+            "line": 30,
+            "column": 12,
+            "length": 6
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The server was discovered through DHCPv6.\n",
+                    "expression": "/// The server was discovered through DHCPv6.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The server was discovered through DHCPv6.\n",
+                      "expression": "/// The server was discovered through DHCPv6."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                    "line": 29,
+                    "column": 9,
+                    "length": 45
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                "line": 29,
+                "column": 9,
+                "length": 45
+              }
+            }
+          ]
+        },
+        {
+          "ordinal": 5,
+          "name": "socket_proxy",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/SocketProxyDnsServerSource",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 2,
+              "max_handles": 0,
+              "max_out_of_line": 16,
+              "has_padding": false,
+              "has_flexible_envelope": true
+            }
+          },
+          "location": {
+            "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+            "line": 37,
+            "column": 12,
+            "length": 12
+          },
+          "deprecated": false,
+          "maybe_attributes": [
+            {
+              "name": "doc",
+              "arguments": [
+                {
+                  "name": "value",
+                  "type": "string",
+                  "value": {
+                    "kind": "literal",
+                    "value": " The server was discovered through the socketproxy component, which\n communicates DNS information from networks that are provisioned by\n an agent other than Fuchsia.\n",
+                    "expression": "/// The server was discovered through the socketproxy component, which\n        /// communicates DNS information from networks that are provisioned by\n        /// an agent other than Fuchsia.",
+                    "literal": {
+                      "kind": "string",
+                      "value": " The server was discovered through the socketproxy component, which\n communicates DNS information from networks that are provisioned by\n an agent other than Fuchsia.\n",
+                      "expression": "/// The server was discovered through the socketproxy component, which\n        /// communicates DNS information from networks that are provisioned by\n        /// an agent other than Fuchsia."
+                    }
+                  },
+                  "location": {
+                    "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                    "line": 34,
+                    "column": 9,
+                    "length": 190
+                  }
+                }
+              ],
+              "location": {
+                "filename": "../../sdk/fidl/fuchsia.net.name/dns.fidl",
+                "line": 34,
+                "column": 9,
+                "length": 190
+              }
+            }
+          ]
+        }
+      ],
+      "strict": false,
+      "resource": false,
+      "is_result": false,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 3,
+        "max_handles": 0,
+        "max_out_of_line": 32,
+        "has_padding": false,
+        "has_flexible_envelope": true
+      }
+    },
+    {
+      "name": "fuchsia.net.name/LookupAdmin_SetDnsServers_Result",
+      "naming_context": [
+        "LookupAdmin",
+        "SetDnsServers",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/lookup_admin.fidl",
+        "line": 23,
+        "column": 11,
+        "length": 2
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "ordinal": 1,
+          "name": "response",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/LookupAdmin_SetDnsServers_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 1,
+              "alignment": 1,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "location": {
+            "filename": "generated",
+            "line": 112,
+            "column": 1,
+            "length": 8
+          },
+          "deprecated": false
+        },
+        {
+          "ordinal": 2,
+          "name": "err",
+          "type": {
+            "kind_v2": "primitive",
+            "subtype": "int32",
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "experimental_maybe_from_alias": {
+            "name": "zx/Status",
+            "args": [],
+            "nullable": false
+          },
+          "location": {
+            "filename": "generated",
+            "line": 113,
+            "column": 1,
+            "length": 3
+          },
+          "deprecated": false
+        }
+      ],
+      "strict": true,
+      "resource": false,
+      "is_result": true,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 1,
+        "max_handles": 0,
+        "max_out_of_line": 0,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.net.name/Lookup_LookupHostname_Result",
+      "naming_context": [
+        "Lookup",
+        "LookupHostname",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+        "line": 83,
+        "column": 11,
+        "length": 55
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "ordinal": 1,
+          "name": "response",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/Lookup_LookupHostname_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 1,
+              "max_handles": 0,
+              "max_out_of_line": 256,
+              "has_padding": true,
+              "has_flexible_envelope": false
+            }
+          },
+          "location": {
+            "filename": "generated",
+            "line": 101,
+            "column": 1,
+            "length": 8
+          },
+          "deprecated": false
+        },
+        {
+          "ordinal": 2,
+          "name": "err",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/LookupError",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "location": {
+            "filename": "generated",
+            "line": 102,
+            "column": 1,
+            "length": 3
+          },
+          "deprecated": false
+        }
+      ],
+      "strict": true,
+      "resource": false,
+      "is_result": true,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 2,
+        "max_handles": 0,
+        "max_out_of_line": 272,
+        "has_padding": true,
+        "has_flexible_envelope": false
+      }
+    },
+    {
+      "name": "fuchsia.net.name/Lookup_LookupIp_Result",
+      "naming_context": [
+        "Lookup",
+        "LookupIp",
+        "Response"
+      ],
+      "location": {
+        "filename": "../../sdk/fidl/fuchsia.net.name/lookup.fidl",
+        "line": 66,
+        "column": 11,
+        "length": 579
+      },
+      "deprecated": false,
+      "members": [
+        {
+          "ordinal": 1,
+          "name": "response",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/Lookup_LookupIp_Response",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 16,
+              "alignment": 8,
+              "depth": 4,
+              "max_handles": 0,
+              "max_out_of_line": 33072,
+              "has_padding": true,
+              "has_flexible_envelope": true
+            }
+          },
+          "location": {
+            "filename": "generated",
+            "line": 93,
+            "column": 1,
+            "length": 8
+          },
+          "deprecated": false
+        },
+        {
+          "ordinal": 2,
+          "name": "err",
+          "type": {
+            "kind_v2": "identifier",
+            "identifier": "fuchsia.net.name/LookupError",
+            "nullable": false,
+            "type_shape_v2": {
+              "inline_size": 4,
+              "alignment": 4,
+              "depth": 0,
+              "max_handles": 0,
+              "max_out_of_line": 0,
+              "has_padding": false,
+              "has_flexible_envelope": false
+            }
+          },
+          "location": {
+            "filename": "generated",
+            "line": 97,
+            "column": 1,
+            "length": 3
+          },
+          "deprecated": false
+        }
+      ],
+      "strict": true,
+      "resource": false,
+      "is_result": true,
+      "type_shape_v2": {
+        "inline_size": 16,
+        "alignment": 8,
+        "depth": 5,
+        "max_handles": 0,
+        "max_out_of_line": 33088,
+        "has_padding": true,
+        "has_flexible_envelope": true
+      }
+    }
+  ],
+  "alias_declarations": [],
+  "new_type_declarations": [],
+  "declaration_order": [
+    "fuchsia.net.name/DhcpDnsServerSource",
+    "fuchsia.net.name/Dhcpv6DnsServerSource",
+    "fuchsia.net.name/StaticDnsServerSource",
+    "fuchsia.net.name/NdpDnsServerSource",
+    "fuchsia.net.name/SocketProxyDnsServerSource",
+    "fuchsia.net.name/DnsServerSource",
+    "fuchsia.net.name/DnsServer",
+    "fuchsia.net.name/DnsServerWatcherWatchServersResponse",
+    "fuchsia.net.name/DnsServerWatcher",
+    "fuchsia.net.name/MAX_ADDRESSES",
+    "fuchsia.net.name/LookupError",
+    "fuchsia.net.name/LookupLookupHostnameRequest",
+    "fuchsia.net.name/Lookup_LookupHostname_Response",
+    "fuchsia.net.name/LookupIpOptions",
+    "fuchsia.net.name/LookupLookupIpRequest",
+    "fuchsia.net.name/LookupResult",
+    "fuchsia.net.name/Lookup_LookupIp_Response",
+    "fuchsia.net.name/Lookup_LookupIp_Result",
+    "fuchsia.net.name/Lookup_LookupHostname_Result",
+    "fuchsia.net.name/Lookup",
+    "fuchsia.net.name/LookupAdminSetDnsServersRequest",
+    "fuchsia.net.name/LookupAdmin_SetDnsServers_Response",
+    "fuchsia.net.name/LookupAdmin_SetDnsServers_Result",
+    "fuchsia.net.name/LookupAdminGetDnsServersResponse",
+    "fuchsia.net.name/LookupAdmin"
+  ],
+  "declarations": {
+    "fuchsia.net.name/MAX_ADDRESSES": "const",
+    "fuchsia.net.name/LookupError": "enum",
+    "fuchsia.net.name/DnsServerWatcher": "protocol",
+    "fuchsia.net.name/Lookup": "protocol",
+    "fuchsia.net.name/LookupAdmin": "protocol",
+    "fuchsia.net.name/DnsServerWatcherWatchServersResponse": "struct",
+    "fuchsia.net.name/LookupAdminGetDnsServersResponse": "struct",
+    "fuchsia.net.name/LookupAdminSetDnsServersRequest": "struct",
+    "fuchsia.net.name/LookupAdmin_SetDnsServers_Response": "struct",
+    "fuchsia.net.name/LookupLookupHostnameRequest": "struct",
+    "fuchsia.net.name/LookupLookupIpRequest": "struct",
+    "fuchsia.net.name/Lookup_LookupHostname_Response": "struct",
+    "fuchsia.net.name/Lookup_LookupIp_Response": "struct",
+    "fuchsia.net.name/DhcpDnsServerSource": "table",
+    "fuchsia.net.name/Dhcpv6DnsServerSource": "table",
+    "fuchsia.net.name/DnsServer": "table",
+    "fuchsia.net.name/LookupIpOptions": "table",
+    "fuchsia.net.name/LookupResult": "table",
+    "fuchsia.net.name/NdpDnsServerSource": "table",
+    "fuchsia.net.name/SocketProxyDnsServerSource": "table",
+    "fuchsia.net.name/StaticDnsServerSource": "table",
+    "fuchsia.net.name/DnsServerSource": "union",
+    "fuchsia.net.name/LookupAdmin_SetDnsServers_Result": "union",
+    "fuchsia.net.name/Lookup_LookupHostname_Result": "union",
+    "fuchsia.net.name/Lookup_LookupIp_Result": "union"
+  }
+}

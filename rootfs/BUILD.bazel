@@ -1,0 +1,80 @@
+load("@zircon_toolchains//:paths.bzl", "FUCHSIA_QEMU_AARCH64", "FUCHSIA_QEMU_X64")
+load("//bazel:zircon_rules.bzl", "zircon_qemu_runner", "zircon_zbi_image")
+
+package(default_visibility = ["//visibility:public"])
+
+exports_files(["build_rootfs_tar.py"])
+
+genrule(
+    name = "rootfs_tar",
+    srcs = [
+        "init_xfce4.sh",
+        "build_rootfs_tar.py",
+        "//userland:zx_test",
+        "//userland:x11_fb_bridge",
+        "//userland:x11_probe",
+        "@alpine_x86_64//:xfce4_apks",
+    ],
+    outs = ["xfce4_rootfs.tar"],
+    cmd = """
+        python3 $(location build_rootfs_tar.py) \
+            --output $@ \
+            --init $(location init_xfce4.sh) \
+            --xfce4-config \
+            --extra-bin bin/zx_test=$(location //userland:zx_test) \
+            --extra-bin bin/x11_fb_bridge=$(location //userland:x11_fb_bridge) \
+            --extra-bin bin/x11_probe=$(location //userland:x11_probe) \
+            $(locations @alpine_x86_64//:xfce4_apks)
+    """,
+)
+
+zircon_zbi_image(
+    name = "xfce4_system",
+    init_bin = "//src/shim:zircon_linux_init",
+    rootfs_tar = ":rootfs_tar",
+)
+
+zircon_qemu_runner(
+    name = "verify",
+    qemu_bin = FUCHSIA_QEMU_X64,
+    script = "verify_xfce4.py",
+    zbi_image = ":xfce4_system",
+)
+
+genrule(
+    name = "rootfs_tar_arm64",
+    srcs = [
+        "init_xfce4.sh",
+        "build_rootfs_tar.py",
+        "//userland:zx_test_arm64",
+        "//userland:x11_fb_bridge_arm64",
+        "//userland:x11_probe_arm64",
+        "@alpine_aarch64//:xfce4_apks",
+    ],
+    outs = ["xfce4_rootfs_arm64.tar"],
+    cmd = """
+        python3 $(location build_rootfs_tar.py) \
+            --output $@ \
+            --init $(location init_xfce4.sh) \
+            --xfce4-config \
+            --extra-bin bin/zx_test=$(location //userland:zx_test_arm64) \
+            --extra-bin bin/x11_fb_bridge=$(location //userland:x11_fb_bridge_arm64) \
+            --extra-bin bin/x11_probe=$(location //userland:x11_probe_arm64) \
+            $(locations @alpine_aarch64//:xfce4_apks)
+    """,
+)
+
+zircon_zbi_image(
+    name = "xfce4_system_arm64",
+    arch = "arm64",
+    init_bin = "//src/shim:zircon_linux_init_arm64",
+    rootfs_tar = ":rootfs_tar_arm64",
+)
+
+zircon_qemu_runner(
+    name = "verify_arm64",
+    arch = "arm64",
+    qemu_bin = FUCHSIA_QEMU_AARCH64,
+    script = "verify_xfce4.py",
+    zbi_image = ":xfce4_system_arm64",
+)

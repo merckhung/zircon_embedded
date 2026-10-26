@@ -1,0 +1,508 @@
+diff --git a/chrome/browser/chrome_browser_main_linux.cc b/chrome/browser/chrome_browser_main_linux.cc
+index 4e6d8da9f5..28b4487fab 100644
+--- a/chrome/browser/chrome_browser_main_linux.cc
++++ b/chrome/browser/chrome_browser_main_linux.cc
+@@ -28,6 +28,12 @@
+ #include "ui/ozone/public/ozone_platform.h"
+ #if BUILDFLAG(USE_DBUS)
+ #include "components/dbus/thread_linux/dbus_thread_linux.h"
++#else
++#include "chrome/browser/notifications/notification_platform_bridge.h"
++#include "chrome/browser/platform_util.h"
++#include "chrome/browser/platform_util_internal.h"
++#include "device/bluetooth/floss/floss_features.h"
++#include "url/gurl.h"
+ #endif  // BUILDFLAG(USE_DBUS)
+ #endif  // BUILDFLAG(IS_LINUX)
+ 
+@@ -130,8 +136,8 @@ void ChromeBrowserMainPartsLinux::PostDestroyThreads() {
+ #else
+ #if BUILDFLAG(USE_DBUS)
+   session_end_listener_.reset();
+-#endif
+   bluez::BluezDBusManager::Shutdown();
++#endif
+   // TODO(shelley.vohr): Call dbus_thread_linux::Shutdown() here. It cannot run
+   // yet because the in-process device service (battery, wifi, wake lock) is
+   // destroyed after this last BrowserMainParts hook and still dereferences
+@@ -141,3 +147,29 @@ void ChromeBrowserMainPartsLinux::PostDestroyThreads() {
+ 
+   ChromeBrowserMainPartsPosix::PostDestroyThreads();
+ }
++
++#if BUILDFLAG(IS_LINUX) && !BUILDFLAG(USE_DBUS)
++std::unique_ptr<NotificationPlatformBridge>
++NotificationPlatformBridge::Create() {
++  return nullptr;
++}
++
++bool NotificationPlatformBridge::CanHandleType(
++    NotificationHandler::Type notification_type) {
++  return false;
++}
++
++namespace platform_util {
++void ShowItemInFolder(Profile* profile, const base::FilePath& full_path) {}
++void OpenExternal(const GURL& url) {}
++namespace internal {
++void PlatformOpenVerifiedItem(const base::FilePath& path, OpenItemType type) {}
++}  // namespace internal
++}  // namespace platform_util
++
++namespace floss::features {
++bool IsFlossEnabled() {
++  return false;
++}
++}  // namespace floss::features
++#endif  // BUILDFLAG(IS_LINUX) && !BUILDFLAG(USE_DBUS)
+diff --git a/chrome/browser/net/profile_network_context_service.cc b/chrome/browser/net/profile_network_context_service.cc
+index 62ff3787b2..d29d1a3b57 100644
+--- a/chrome/browser/net/profile_network_context_service.cc
++++ b/chrome/browser/net/profile_network_context_service.cc
+@@ -324,7 +324,7 @@ void UpdateCookieSettings(Profile* profile, ContentSettingsType type) {
+ 
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+     BUILDFLAG(IS_ANDROID)
+-std::unique_ptr<net::ClientCertStore> GetWrappedCertStore(
++[[maybe_unused]] std::unique_ptr<net::ClientCertStore> GetWrappedCertStore(
+     Profile* profile,
+     std::unique_ptr<net::ClientCertStore> platform_store) {
+   client_certificates::CertificateProvisioningService*
+@@ -1313,6 +1313,8 @@ ProfileNetworkContextService::CreateClientCertStore() {
+   // the OS as part of the call to show the cert selection dialog.
+   return GetWrappedCertStore(profile_,
+                              std::make_unique<net::ClientCertStoreEmpty>());
++#elif BUILDFLAG(IS_LINUX)
++  return nullptr;
+ #else
+ #error Unknown platform.
+ #endif
+diff --git a/chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc b/chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc
+index d3ed8b3bdf..2997426146 100644
+--- a/chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc
++++ b/chrome/browser/ui/webui/certificate_manager/client_cert_sources.cc
+@@ -128,7 +128,7 @@ class ClientCertStoreLoader {
+       active_requests_;
+ };
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_NSS_CLIENT_CERTS)
+ class ClientCertStoreFactoryNSS : public ClientCertStoreFactory {
+  public:
+   std::unique_ptr<net::ClientCertStore> CreateClientCertStore() override {
+@@ -153,7 +153,7 @@ class ClientCertStoreFactoryMac : public ClientCertStoreFactory {
+ };
+ #endif
+ 
+-#if !BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_LINUX)
++#if !BUILDFLAG(IS_CHROMEOS) && !(BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_NSS_CLIENT_CERTS))
+ std::unique_ptr<ClientCertStoreLoader> CreatePlatformClientCertLoader(
+     Profile* profile) {
+ #if BUILDFLAG(IS_WIN)
+@@ -324,7 +324,7 @@ class ClientCertSource : public CertificateManagerPageHandler::CertSource {
+   std::optional<net::CertificateList> certs_;
+ };
+ 
+-#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_CHROMEOS) || (BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_NSS_CLIENT_CERTS))
+ // ChromeOS currently can use either Kcer or NSS for listing client certs, and
+ // Linux uses NSS only. This interface provides an abstraction to hide that
+ // from WritableClientCertSource. Currently this class only handles reading
+@@ -1033,7 +1033,7 @@ CreatePlatformClientCertSource(
+     mojo::Remote<certificate_manager::mojom::CertificateManagerPage>*
+         remote_client,
+     Profile* profile) {
+-#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_CHROMEOS) || (BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_NSS_CLIENT_CERTS))
+   return std::make_unique<WritableClientCertSource>(remote_client, profile);
+ #else
+   return std::make_unique<ClientCertSource>(
+diff --git a/chrome/browser/web_applications/BUILD.gn b/chrome/browser/web_applications/BUILD.gn
+index 0f477a1376..7cfd6e32bf 100644
+--- a/chrome/browser/web_applications/BUILD.gn
++++ b/chrome/browser/web_applications/BUILD.gn
+@@ -456,13 +456,17 @@ source_set("web_applications") {
+   if (is_linux) {
+     # Desktop linux, doesn't count ChromeOS.
+     sources += [
+-      "os_integration/dynamic_launcher_portal.cc",
+-      "os_integration/dynamic_launcher_portal.h",
+       "os_integration/web_app_file_handler_registration_linux.cc",
+       "os_integration/web_app_run_on_os_login_linux.cc",
+       "os_integration/web_app_shortcut_linux.cc",
+       "os_integration/web_app_shortcut_linux.h",
+     ]
++    if (use_dbus) {
++      sources += [
++        "os_integration/dynamic_launcher_portal.cc",
++        "os_integration/dynamic_launcher_portal.h",
++      ]
++    }
+   }
+ 
+   if (is_mac) {
+@@ -1099,10 +1103,12 @@ source_set("web_applications_unit_tests") {
+   if (is_linux) {
+     # Desktop linux, doesn't count ChromeOS.
+     sources += [
+-      "os_integration/dynamic_launcher_portal_unittest.cc",
+       "os_integration/web_app_run_on_os_login_linux_unittest.cc",
+       "os_integration/web_app_shortcut_linux_unittest.cc",
+     ]
++    if (use_dbus) {
++      sources += [ "os_integration/dynamic_launcher_portal_unittest.cc" ]
++    }
+   }
+ 
+   if (!is_android && !is_chromeos) {
+diff --git a/chrome/utility/importer/nss_decryptor.cc b/chrome/utility/importer/nss_decryptor.cc
+index 6e46b74770..843d18e5de 100644
+--- a/chrome/utility/importer/nss_decryptor.cc
++++ b/chrome/utility/importer/nss_decryptor.cc
+@@ -110,6 +110,7 @@ std::u16string NSSDecryptor::Decrypt(const std::string& crypt) const {
+   // by a leading '~'. Otherwise, we should decrypt the text.
+   std::string plain;
+   if (crypt[0] != '~') {
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(USE_NSS_CERTS)
+     std::string decoded_data;
+     if (!base::Base64Decode(crypt, &decoded_data))
+       return std::u16string();
+@@ -137,6 +138,9 @@ std::u16string NSSDecryptor::Decrypt(const std::string& crypt) const {
+ 
+     SECITEM_FreeItem(&reply, PR_FALSE);
+     FreeSlot(slot);
++#else
++    return std::u16string();
++#endif
+   } else {
+     // Deletes the leading '~' before decoding.
+     if (!base::Base64Decode(crypt.substr(1), &plain))
+diff --git a/chrome/utility/importer/nss_decryptor.h b/chrome/utility/importer/nss_decryptor.h
+index 24eb151b1f..ecb1ca5716 100644
+--- a/chrome/utility/importer/nss_decryptor.h
++++ b/chrome/utility/importer/nss_decryptor.h
+@@ -13,7 +13,28 @@
+ #elif BUILDFLAG(USE_NSS_CERTS)
+ #include "chrome/utility/importer/nss_decryptor_system_nss.h"
+ #else
+-#error NSSDecryptor not implemented.
++#include <string>
++#include <vector>
++#include "base/files/file_path.h"
++struct FirefoxRawPasswordInfo;
++namespace user_data_importer {
++struct ImportedPasswordForm;
++}
++class NSSDecryptor {
++ public:
++  NSSDecryptor() = default;
++  ~NSSDecryptor() = default;
++  bool Init(const base::FilePath&, const base::FilePath&) { return false; }
++  std::u16string Decrypt(const std::string& crypt) const;
++  bool ReadAndParseLogins(
++      const base::FilePath& json_file,
++      std::vector<user_data_importer::ImportedPasswordForm>* forms);
++ private:
++  bool CreatePasswordFormFromRawInfo(
++      const FirefoxRawPasswordInfo& raw_password_info,
++      user_data_importer::ImportedPasswordForm* form);
++  bool is_nss_initialized_ = false;
++};
+ #endif
+ 
+ #endif  // CHROME_UTILITY_IMPORTER_NSS_DECRYPTOR_H_
+diff --git a/net/cert/cert_verify_proc.cc b/net/cert/cert_verify_proc.cc
+index 042b35bec9..d08000b070 100644
+--- a/net/cert/cert_verify_proc.cc
++++ b/net/cert/cert_verify_proc.cc
+@@ -419,7 +419,7 @@ scoped_refptr<CertVerifyProc> CertVerifyProc::CreateBuiltinWithChromeRootStore(
+   return CreateCertVerifyProcBuiltin(
+       std::move(cert_net_fetcher), std::move(crl_set), std::move(ct_verifier),
+       std::move(ct_policy_enforcer),
+-#if BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_CHROMEOS) || !BUILDFLAG(USE_NSS_CERTS)
+       CreateChromeOnlySystemTrustStore(std::move(chrome_root)),
+ #else
+       CreateSslSystemTrustStoreChromeRoot(std::move(chrome_root)),
+diff --git a/net/cert/internal/system_trust_store.cc b/net/cert/internal/system_trust_store.cc
+index b8462e0798..9ea5c80cff 100644
+--- a/net/cert/internal/system_trust_store.cc
++++ b/net/cert/internal/system_trust_store.cc
+@@ -425,6 +425,13 @@ void InitializeTrustStoreAndroid() {}
+ 
+ #endif  // CHROME_ROOT_STORE_SUPPORTED
+ 
++#elif BUILDFLAG(IS_LINUX) && BUILDFLAG(CHROME_ROOT_STORE_SUPPORTED)
++
++std::unique_ptr<SystemTrustStore> CreateSslSystemTrustStoreChromeRoot(
++    std::unique_ptr<TrustStoreChrome> chrome_root) {
++  return CreateChromeOnlySystemTrustStore(std::move(chrome_root));
++}
++
+ #endif
+ 
+ }  // namespace net
+diff --git a/net/cert/internal/system_trust_store.h b/net/cert/internal/system_trust_store.h
+index 6c3696aaa6..3bc622e15c 100644
+--- a/net/cert/internal/system_trust_store.h
++++ b/net/cert/internal/system_trust_store.h
+@@ -115,7 +115,7 @@ NET_EXPORT std::unique_ptr<SystemTrustStore> CreateSslSystemTrustStore();
+ 
+ #if BUILDFLAG(CHROME_ROOT_STORE_SUPPORTED)
+ #if BUILDFLAG(USE_NSS_SERVER_CERTS) || BUILDFLAG(IS_MAC) || \
+-    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_ANDROID)
++    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
+ // Creates an instance of SystemTrustStore that wraps the current platform's SSL
+ // trust store for user added roots, but uses the Chrome Root Store trust
+ // anchors. This cannot return nullptr.
+diff --git a/ui/base/accelerators/global_accelerator_listener/global_accelerator_listener_ozone.cc b/ui/base/accelerators/global_accelerator_listener/global_accelerator_listener_ozone.cc
+index 94acc1dc03..48abbdad46 100644
+--- a/ui/base/accelerators/global_accelerator_listener/global_accelerator_listener_ozone.cc
++++ b/ui/base/accelerators/global_accelerator_listener/global_accelerator_listener_ozone.cc
+@@ -68,8 +68,8 @@ GlobalAcceleratorListener* GlobalAcceleratorListener::GetInstance() {
+         new GlobalAcceleratorListenerLinux(nullptr, GetSessionName());
+     return linux_instance;
+   }
+-  return nullptr;
+ #endif
++  return nullptr;
+ }
+ 
+ // static
+diff --git a/ui/base/x/selection_owner.cc b/ui/base/x/selection_owner.cc
+index bc77404668..362f3bc318 100644
+--- a/ui/base/x/selection_owner.cc
++++ b/ui/base/x/selection_owner.cc
+@@ -21,6 +21,7 @@
+ 
+ #if BUILDFLAG(IS_LINUX)
+ #include "base/strings/string_view_util.h"
++#include "build/config/linux/dbus/buildflags.h"
+ #include "ui/base/clipboard/clipboard_constants.h"
+ #include "ui/base/clipboard/clipboard_util_linux.h"
+ #endif
+@@ -118,7 +119,7 @@ void SelectionOwner::RetrieveTargets(std::vector<x11::Atom>* targets) {
+ 
+   add_if_present(GetURIListAtomsFrom());
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_DBUS)
+   // Lazily advertise portal atoms if we have a URI list.
+   if (format_map_.contains(x11::GetAtom(kMimeTypeUriList))) {
+     for (const char* mime :
+@@ -162,7 +163,7 @@ void SelectionOwner::OnSelectionRequest(
+   x11::Atom requested_target = request.target;
+   x11::Atom requested_property = request.property;
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_DBUS)
+   // Handle portal requests asynchronously.
+   // NOTE: MULTIPLE requests are intentionally unsupported for portal paths
+   // because we handle them by early-returning here before the MULTIPLE logic.
+diff --git a/ui/base/x/x11_drag_context.cc b/ui/base/x/x11_drag_context.cc
+index 7b6aab307d..5c773be356 100644
+--- a/ui/base/x/x11_drag_context.cc
++++ b/ui/base/x/x11_drag_context.cc
+@@ -7,6 +7,7 @@
+ #include "base/logging.h"
+ #include "base/memory/ref_counted_memory.h"
+ #include "build/build_config.h"
++#include "build/config/linux/dbus/buildflags.h"
+ #include "ui/base/dragdrop/drag_drop_types.h"
+ #include "ui/base/x/x11_drag_drop_client.h"
+ #include "ui/base/x/x11_util.h"
+@@ -15,7 +16,7 @@
+ #include "ui/gfx/x/connection.h"
+ #include "ui/gfx/x/xproto.h"
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_DBUS)
+ #include "ui/base/clipboard/clipboard_constants.h"
+ #include "ui/base/clipboard/clipboard_util_linux.h"
+ #include "ui/base/x/selection_utils.h"
+@@ -150,7 +151,7 @@ void XDragContext::OnSelectionNotify(const x11::SelectionNotifyEvent& event) {
+     scoped_refptr<base::RefCountedMemory> data;
+     x11::Atom type = x11::Atom::None;
+     if (GetRawBytesOfProperty(local_window_, property, &data, &type)) {
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_DBUS)
+       // If the source provided a portal key, retrieve the files now.
+       if (target == x11::GetAtom(kMimeTypePortalFileTransfer) ||
+           target == x11::GetAtom(kMimeTypePortalFiles)) {
+@@ -169,7 +170,7 @@ void XDragContext::OnSelectionNotify(const x11::SelectionNotifyEvent& event) {
+         RequestNextTargetOrComplete();
+         return;
+       }
+-#endif  // BUILDFLAG(IS_LINUX)
++#endif  // BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_DBUS)
+       fetched_targets_.Insert(target, data);
+     }
+   } else {
+@@ -196,7 +197,7 @@ void XDragContext::RequestNextTargetOrComplete() {
+   }
+ }
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_DBUS)
+ void XDragContext::OnPortalPathsExtracted(std::vector<std::string> paths) {
+   if (!paths.empty()) {
+     auto data = base::MakeRefCounted<base::RefCountedString>(
+diff --git a/ui/base/x/x11_drag_context.h b/ui/base/x/x11_drag_context.h
+index 980f6cca88..508db098ea 100644
+--- a/ui/base/x/x11_drag_context.h
++++ b/ui/base/x/x11_drag_context.h
+@@ -19,6 +19,7 @@
+ 
+ #if BUILDFLAG(IS_LINUX)
+ #include "base/memory/weak_ptr.h"
++#include "build/config/linux/dbus/buildflags.h"
+ #endif
+ 
+ namespace ui {
+diff --git a/ui/gl/gl_display.cc b/ui/gl/gl_display.cc
+index 171d4870a7..7fb10ded66 100644
+--- a/ui/gl/gl_display.cc
++++ b/ui/gl/gl_display.cc
+@@ -239,12 +239,14 @@ EGLDisplay GetDisplayFromType(
+       extra_display_attribs.push_back(EGL_PLATFORM_ANGLE_DEVICE_TYPE_ANGLE);
+       extra_display_attribs.push_back(
+           EGL_PLATFORM_ANGLE_DEVICE_TYPE_SWIFTSHADER_ANGLE);
+-#if BUILDFLAG(IS_CHROMEOS) && BUILDFLAG(SUPPORTS_OZONE_X11)
++#if (BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)) && \
++    BUILDFLAG(SUPPORTS_OZONE_X11)
+       extra_display_attribs.push_back(
+           EGL_PLATFORM_ANGLE_NATIVE_PLATFORM_TYPE_ANGLE);
+       extra_display_attribs.push_back(
+           EGL_PLATFORM_VULKAN_DISPLAY_MODE_HEADLESS_ANGLE);
+-#endif  // BUILDFLAG(IS_CHROMEOS) && BUILDFLAG(SUPPORTS_OZONE_X11)
++#endif  // (BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)) &&
++        // BUILDFLAG(SUPPORTS_OZONE_X11)
+       return GetPlatformANGLEDisplay(
+           display, EGL_PLATFORM_ANGLE_TYPE_VULKAN_ANGLE, enabled_angle_features,
+           disabled_angle_features, extra_display_attribs);
+diff --git a/ui/ozone/platform/x11/BUILD.gn b/ui/ozone/platform/x11/BUILD.gn
+index 7998b35afb..0fa927c6ea 100644
+--- a/ui/ozone/platform/x11/BUILD.gn
++++ b/ui/ozone/platform/x11/BUILD.gn
+@@ -52,6 +52,7 @@ source_set("x11") {
+   deps = [
+     "//base",
+     "//build:chromecast_buildflags",
++    "//build/config/linux/dbus:buildflags",
+     "//components/viz/common/resources:shared_image_format",
+     "//gpu/vulkan:buildflags",
+     "//net",
+@@ -98,11 +99,13 @@ source_set("x11") {
+       "linux_ui_delegate_x11.cc",
+       "linux_ui_delegate_x11.h",
+     ]
+-    deps += [
+-      "//components/dbus",
+-      "//ui/base/clipboard:clipboard_util_linux",
+-      "//ui/linux:linux_ui",
+-    ]
++    deps += [ "//ui/linux:linux_ui" ]
++    if (use_dbus) {
++      deps += [
++        "//components/dbus",
++        "//ui/base/clipboard:clipboard_util_linux",
++      ]
++    }
+   }
+ 
+   if (is_chromeos) {
+diff --git a/ui/ozone/platform/x11/x11_clipboard_ozone.cc b/ui/ozone/platform/x11/x11_clipboard_ozone.cc
+index 21a6ddb18d..c628753624 100644
+--- a/ui/ozone/platform/x11/x11_clipboard_ozone.cc
++++ b/ui/ozone/platform/x11/x11_clipboard_ozone.cc
+@@ -11,10 +11,11 @@
+ 
+ #include "base/functional/bind.h"
+ #include "build/build_config.h"
++#include "build/config/linux/dbus/buildflags.h"
+ #include "ui/base/clipboard/clipboard_constants.h"
+ #include "ui/base/x/x11_clipboard_helper.h"
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_DBUS)
+ #include "base/strings/string_view_util.h"
+ #include "ui/base/clipboard/clipboard_util_linux.h"
+ #include "ui/gfx/x/atom_cache.h"
+@@ -54,7 +55,7 @@ void X11ClipboardOzone::RequestClipboardData(
+     PlatformClipboard::RequestDataClosure callback) {
+   DCHECK(!callback.is_null());
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_DBUS)
+   if (mime_type == kMimeTypeUriList) {
+     auto uri_list_atoms = helper_->GetAtomsForFormat(
+         ClipboardFormatType::CustomPlatformType(kMimeTypeUriList));
+@@ -85,7 +86,7 @@ void X11ClipboardOzone::RequestClipboardData(
+                          std::move(callback)));
+ }
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_DBUS)
+ void X11ClipboardOzone::OnPortalKeyRead(
+     PlatformClipboard::RequestDataClosure callback,
+     SelectionData selection_data) {
+@@ -145,7 +146,7 @@ void X11ClipboardOzone::OnSelectionChanged(ClipboardBuffer buffer) {
+     clipboard_changed_callback_.Run(buffer);
+ }
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_DBUS)
+ void X11ClipboardOzone::OnGetAvailableMimeTypesForPortal(
+     ClipboardBuffer buffer,
+     std::vector<x11::Atom> uri_list_atoms,
+diff --git a/ui/ozone/platform/x11/x11_clipboard_ozone.h b/ui/ozone/platform/x11/x11_clipboard_ozone.h
+index 50dd308715..1d473195a1 100644
+--- a/ui/ozone/platform/x11/x11_clipboard_ozone.h
++++ b/ui/ozone/platform/x11/x11_clipboard_ozone.h
+@@ -10,11 +10,13 @@
+ #include <vector>
+ 
+ #include "base/functional/callback.h"
++#include "build/build_config.h"
++#include "build/config/linux/dbus/buildflags.h"
+ #include "ui/base/clipboard/clipboard_buffer.h"
+ #include "ui/base/x/selection_utils.h"
+ #include "ui/ozone/public/platform_clipboard.h"
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_DBUS)
+ #include "base/memory/weak_ptr.h"
+ #endif
+ 
+@@ -58,7 +60,7 @@ class X11ClipboardOzone : public PlatformClipboard {
+  private:
+   void OnSelectionChanged(ClipboardBuffer buffer);
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_DBUS)
+   void OnPortalKeyRead(PlatformClipboard::RequestDataClosure callback,
+                        SelectionData selection_data);
+   void OnPathsExtracted(PlatformClipboard::RequestDataClosure callback,
+@@ -75,7 +77,7 @@ class X11ClipboardOzone : public PlatformClipboard {
+ 
+   ClipboardDataChangedCallback clipboard_changed_callback_;
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_DBUS)
+   base::WeakPtrFactory<X11ClipboardOzone> weak_factory_{this};
+ #endif
+ };
+diff --git a/ui/ozone/platform/x11/x11_surface_factory.cc b/ui/ozone/platform/x11/x11_surface_factory.cc
+index a0eaf03ee8..85eac0acb9 100644
+--- a/ui/ozone/platform/x11/x11_surface_factory.cc
++++ b/ui/ozone/platform/x11/x11_surface_factory.cc
+@@ -127,6 +127,9 @@ class GLOzoneEGLX11 : public GLOzoneEGL {
+  protected:
+   // GLOzoneEGL:
+   gl::EGLDisplayPlatform GetNativeDisplay() override {
++    if (is_swiftshader_) {
++      return gl::EGLDisplayPlatform(EGL_DEFAULT_DISPLAY);
++    }
+     return gl::EGLDisplayPlatform(reinterpret_cast<EGLNativeDisplayType>(
+         x11::Connection::Get()->GetXlibDisplay().display()));
+   }

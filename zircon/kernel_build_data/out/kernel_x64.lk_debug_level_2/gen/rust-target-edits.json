@@ -1,0 +1,93 @@
+[
+  "x86_64-unknown-fuchsia",
+  {
+    "action": "set",
+    "key": "cpu",
+    "value": "x86-64-v2"
+  },
+  {
+    "action": "set",
+    "key": "rustc-abi",
+    "value": "softfloat"
+  },
+  {
+    "action": "append",
+    "key": "features",
+    "value": [
+      "+soft-float",
+      "-mmx",
+      "-sse",
+      "-sse2",
+      "-sse3",
+      "-ssse3",
+      "-sse4.1",
+      "-sse4.2",
+      "-avx",
+      "-avx2"
+    ]
+  },
+  {
+    "action": "set",
+    "key": "code-model",
+    "value": "kernel"
+  },
+  {
+    "action": "set",
+    "key": "disable-redzone",
+    "value": true
+  },
+  {
+    "action": "append",
+    "key": "supported-sanitizers",
+    "value": "safestack"
+  },
+  {
+    "action": "set",
+    "key": "default-sanitizers",
+    "value": [
+      "safestack"
+    ]
+  },
+  {
+    "action": "append",
+    "key": "features",
+    "value": [
+      "+harden-sls-ijmp",
+      "+harden-sls-ret"
+    ]
+  },
+  {
+    "action": "set",
+    "key": "no-default-libraries",
+    "value": true
+  },
+  {
+    "action": "set",
+    "key": "direct-access-external-data",
+    "value": true
+  },
+  {
+    "action": "set",
+    "key": "default-visibility",
+    "value": "hidden"
+  },
+  {
+    "action": "set",
+    "key": "relocation-model",
+    "value": "pie"
+  },
+  {
+    "action": "unset",
+    "key": "pre-link-objects"
+  },
+  {
+    "action": "set",
+    "key": "linker",
+    "value": "../../prebuilt/third_party/clang/linux-x64/bin/lld"
+  },
+  {
+    "action": "set",
+    "key": "linker-flavor",
+    "value": "gnu-lld"
+  }
+]

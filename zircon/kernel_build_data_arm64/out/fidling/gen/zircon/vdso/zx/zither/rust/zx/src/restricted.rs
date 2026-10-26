@@ -1,0 +1,13 @@
+// Copyright 2022 The Fuchsia Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+// DO NOT EDIT.
+// Generated from FIDL library `zx` by zither, a Fuchsia platform tool.
+
+use zerocopy::{FromBytes, Immutable, IntoBytes};
+
+/// ExceptionReport is a stand-in for zx_exception_report_t.
+#[repr(C)]
+#[derive(Clone, Copy, Debug, Eq, FromBytes, Immutable, IntoBytes, PartialEq)]
+pub struct ExceptionReport {}

@@ -1,0 +1,8 @@
+obj/third_party/rust_crates/scopeguard-v1_2_0.actual/libscopeguard-13be818cdb7baccf.rlib
+obj/third_party/rust_crates/scopeguard-v1_2_0.actual/libscopeguard-13be818cdb7baccf.rmeta
+host_x64/obj/third_party/rust_crates/serde_derive-v1_0_229.actual/libserde_derive-6e5702ca913dc32e.so
+host_x64/obj/third_party/rust_crates/serde_derive-v1_0_229.actual/libserde_derive-6e5702ca913dc32e.rmeta
+obj/third_party/rust_crates/serde_core-v1_0_229.actual/libserde_core-fa0896c771ca5b37.rlib
+obj/third_party/rust_crates/serde_core-v1_0_229.actual/libserde_core-fa0896c771ca5b37.rmeta
+obj/third_party/rust_crates/serde-v1_0_229.actual/libserde-5cb5ef4973f9305d.rlib
+obj/third_party/rust_crates/serde-v1_0_229.actual/libserde-5cb5ef4973f9305d.rmeta

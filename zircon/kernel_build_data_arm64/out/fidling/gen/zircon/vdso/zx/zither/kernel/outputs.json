@@ -1,0 +1,8 @@
+[
+	"fidling/gen/zircon/vdso/zx/zither/kernel/lib/syscalls/category.inc",
+	"fidling/gen/zircon/vdso/zx/zither/kernel/lib/syscalls/kernel.inc",
+	"fidling/gen/zircon/vdso/zx/zither/kernel/lib/syscalls/kernel-wrappers.inc",
+	"fidling/gen/zircon/vdso/zx/zither/kernel/lib/syscalls/syscall_sigs.rs",
+	"fidling/gen/zircon/vdso/zx/zither/kernel/lib/syscalls/syscalls.inc",
+	"fidling/gen/zircon/vdso/zx/zither/kernel/lib/syscalls/zx-syscall-numbers.h"
+]

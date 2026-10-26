@@ -1,0 +1,22 @@
+[
+  {
+    "label": "//zircon/kernel/arch/x86/user-copy:_x86_copy_to_or_from_user_movsb(//zircon/kernel/switch/set/lk_debug_level_2:kernel_x64.lk_debug_level_2)",
+    "name": "_x86_copy_to_or_from_user_movsb",
+    "path": "kernel_x64.lk_debug_level_2/obj/zircon/kernel/arch/x86/user-copy/_x86_copy_to_or_from_user_movsb.bin"
+  },
+  {
+    "label": "//zircon/kernel/arch/x86/user-copy:_x86_copy_to_or_from_user_movsb_smap(//zircon/kernel/switch/set/lk_debug_level_2:kernel_x64.lk_debug_level_2)",
+    "name": "_x86_copy_to_or_from_user_movsb_smap",
+    "path": "kernel_x64.lk_debug_level_2/obj/zircon/kernel/arch/x86/user-copy/_x86_copy_to_or_from_user_movsb_smap.bin"
+  },
+  {
+    "label": "//zircon/kernel/arch/x86/user-copy:_x86_copy_to_or_from_user_movsq(//zircon/kernel/switch/set/lk_debug_level_2:kernel_x64.lk_debug_level_2)",
+    "name": "_x86_copy_to_or_from_user_movsq",
+    "path": "kernel_x64.lk_debug_level_2/obj/zircon/kernel/arch/x86/user-copy/_x86_copy_to_or_from_user_movsq.bin"
+  },
+  {
+    "label": "//zircon/kernel/arch/x86/user-copy:_x86_copy_to_or_from_user_movsq_smap(//zircon/kernel/switch/set/lk_debug_level_2:kernel_x64.lk_debug_level_2)",
+    "name": "_x86_copy_to_or_from_user_movsq_smap",
+    "path": "kernel_x64.lk_debug_level_2/obj/zircon/kernel/arch/x86/user-copy/_x86_copy_to_or_from_user_movsq_smap.bin"
+  }
+]
