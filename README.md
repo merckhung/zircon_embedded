@@ -144,7 +144,7 @@ bazel run //chromium_rootfs:run_qemu_arm64    # ARM64
 - `chromium_rootfs/`: 3rd rootfs packaging Xfce4 + prebuilt 64-bit Chromium browser, `glibc` runtime libraries, CA certificates, and QEMU verification/interactive runners (`x86_64` and `arm64`).
 - `chromium/prebuilt/`: Rebuilt Linux `x86_64` Chromium binaries (`chrome`, `chrome_crashpad_handler`), SwiftShader/Vulkan shared libraries, and assets. ANGLE is linked statically into Chrome.
 - `chromium/prebuilt_arm64/`: Linux `arm64` Chromium bundle rebuilt from the pinned patched source; QEMU verification passes.
-- `docs/screenshots/`: Fresh verified desktop/terminal QMP captures for both architectures and a fresh verified x64 Chromium capture; ARM64 Chromium capture awaits its rebuilt browser.
+- `docs/screenshots/`: Fresh verified desktop, terminal and Chromium QMP captures for both architectures.
 
 ---
 
@@ -153,11 +153,29 @@ bazel run //chromium_rootfs:run_qemu_arm64    # ARM64
 All desktop, terminal and Chromium images below are fresh, inspected QMP captures from the rebuilt variants:
 
 ### ARM64 (`aarch64`)
-- **Xfce4 Desktop Home Screen**: [`docs/screenshots/xfce4_desktop_arm64.png`](docs/screenshots/xfce4_desktop_arm64.png)
-- **Xfce4 Terminal Session**: [`docs/screenshots/xfce4_terminal_arm64.png`](docs/screenshots/xfce4_terminal_arm64.png)
-- **Chromium Browser Rendering `www.yahoo.com`**: [`docs/screenshots/xfce4_chromium_yahoo_arm64.png`](docs/screenshots/xfce4_chromium_yahoo_arm64.png)
+
+**Xfce4 Desktop Home Screen**
+
+![ARM64 Xfce4 desktop](docs/screenshots/xfce4_desktop_arm64.png)
+
+**Xfce4 Terminal Session**
+
+![ARM64 Xfce4 terminal session](docs/screenshots/xfce4_terminal_arm64.png)
+
+**Chromium Browser Rendering `www.yahoo.com`**
+
+![ARM64 Chromium rendering Yahoo](docs/screenshots/xfce4_chromium_yahoo_arm64.png)
 
 ### x86_64
-- **Xfce4 Desktop Home Screen**: [`docs/screenshots/xfce4_desktop.png`](docs/screenshots/xfce4_desktop.png)
-- **Xfce4 Terminal Session**: [`docs/screenshots/xfce4_terminal.png`](docs/screenshots/xfce4_terminal.png)
-- **Chromium Browser Rendering `www.yahoo.com`**: [`docs/screenshots/xfce4_chromium_yahoo.png`](docs/screenshots/xfce4_chromium_yahoo.png)
+
+**Xfce4 Desktop Home Screen**
+
+![x86_64 Xfce4 desktop](docs/screenshots/xfce4_desktop.png)
+
+**Xfce4 Terminal Session**
+
+![x86_64 Xfce4 terminal session](docs/screenshots/xfce4_terminal.png)
+
+**Chromium Browser Rendering `www.yahoo.com`**
+
+![x86_64 Chromium rendering Yahoo](docs/screenshots/xfce4_chromium_yahoo.png)
